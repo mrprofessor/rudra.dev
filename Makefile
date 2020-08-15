@@ -15,5 +15,4 @@ clean:
 
 deploy:
 	git add docs/
-	git commit -m "Site build"
 	git push origin master
