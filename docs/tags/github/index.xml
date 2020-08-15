@@ -1,2 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>github on rudra narayan</title><link>https://rudra.dev/tags/github/</link><description>Recent content in github on rudra narayan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a GitHub authentication service</title><link>https://rudra.dev/posts/building-a-github-auth-service/</link><pubDate>Sat, 11 Apr 2020 00:00:00 +0530</pubDate><guid>https://rudra.dev/posts/building-a-github-auth-service/</guid><description>Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit as an inventory of resources where the history and the changes were easier to maintain. So for me GitHub was the perfect choice as a free storage with elegant history/commit management.</description></item><item><title>Maintaining multiple GitHub accounts</title><link>https://rudra.dev/posts/maintaining-multiple-github-accounts/</link><pubDate>Sat, 24 Feb 2018 00:00:00 +0530</pubDate><guid>https://rudra.dev/posts/maintaining-multiple-github-accounts/</guid><description>I recently left a huge IT corporation for a promising startup.I was asked to change my GitHub handler name as it was too cool(I think) for them.Well instead of changing I created another account using my company email.
-Now I got a problem.Every day when I come home and start hacking around my own projects I had to manually set my username and email id in git config in order to reflect my contributions in the graph and most of the time I forget to do so.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on rudra narayan</title>
+    <link>https://rudra.dev/tags/github/</link>
+    <description>Recent content in github on rudra narayan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://rudra.dev/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a GitHub authentication service</title>
+      <link>https://rudra.dev/posts/building-a-github-auth-service/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/posts/building-a-github-auth-service/</guid>
+      <description>Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit as an inventory of resources where the history and the changes were easier to maintain. So for me GitHub was the perfect choice as a free storage with elegant history/commit management.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining multiple GitHub accounts</title>
+      <link>https://rudra.dev/posts/maintaining-multiple-github-accounts/</link>
+      <pubDate>Sat, 24 Feb 2018 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/posts/maintaining-multiple-github-accounts/</guid>
+      <description>I recently left a huge IT corporation for a promising startup.I was asked to change my GitHub handler name as it was too cool(I think) for them.Well instead of changing I created another account using my company email.
+Now I got a problem.Every day when I come home and start hacking around my own projects I had to manually set my username and email id in git config in order to reflect my contributions in the graph and most of the time I forget to do so.</description>
+    </item>
+    
+  </channel>
+</rss>

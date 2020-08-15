@@ -1,61 +1,344 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=icon type=image/png href=/images/favicon.ico><title itemprop=name>Generate and serve files from Flask | thoughts, obsessions and mostly rants</title><meta name=description content="thoughts, obsessions and mostly rants"><meta name=author content="Rudra Narayan"><link rel=stylesheet href=/scss/main.min.dce009fb0e8e452ae77ff6285fa6b7f4006e5e178b6795d59536f0d627ff4d9a.css media=screen><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.8.1/css/all.css integrity=sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf crossorigin=anonymous><meta property="og:title" content="Generate and serve files from Flask | thoughts, obsessions and mostly rants"><meta name=twitter:title content="Generate and serve files from Flask | thoughts, obsessions and mostly rants"><meta itemprop=name content="Generate and serve files from Flask | thoughts, obsessions and mostly rants"><meta name=application-name content="Generate and serve files from Flask | thoughts, obsessions and mostly rants"><meta property="og:site_name" content="Rudra Narayan Kar blog"><meta name=description content="thoughts, obsessions and mostly rants"><meta itemprop=description content="thoughts, obsessions and mostly rants"><meta property="og:description" content="thoughts, obsessions and mostly rants"><meta name=twitter:description content="thoughts, obsessions and mostly rants"><base href=https://rudra.dev/posts/generate-and-serve-files-from-flask/><link rel=canonical href=https://rudra.dev/posts/generate-and-serve-files-from-flask/ itemprop=url><meta name=url content="https://rudra.dev/posts/generate-and-serve-files-from-flask/"><meta name=twitter:url content="https://rudra.dev/posts/generate-and-serve-files-from-flask/"><meta property="og:url" content="https://rudra.dev/posts/generate-and-serve-files-from-flask/"><meta property="og:article:author" content="mrprofessor"><meta property="article:author" content="mrprofessor"><meta name=author content="mrprofessor"><meta property="og:locale" content="en"><meta name=language content="English"><meta property="og:updated_time" content="2019-10-05T00:00:00+0530"><link rel=sitemap type=application/xml title=Sitemap href=https://rudra.dev/sitemap.xml><meta property="og:type" content="article"><meta property="article:publisher" content="https://github.com/mrprofessor"><meta property="og:article:published_time" content="2019-10-05T00:00:00+0530"><meta property="article:published_time" content="2019-10-05T00:00:00+0530"><meta property="og:article:author" content="Rudra narayan"><meta property="article:author" content="Rudra narayan"><meta name=author content="Rudra narayan"><script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"Generate and serve files from Flask","author":{"@type":"Person","name":"https:\/\/github.com\/mrprofessor"},"datePublished":"2019-10-05","description":"","wordCount":308,"mainEntityOfPage":"True","dateModified":"2019-10-05","image":{"@type":"imageObject","url":""},"publisher":{"@type":"Organization","name":"rudra narayan","logo":{"@type":"imageObject","url":"https://rudra.dev/images/favicon.ico"}}}</script><meta name=robots content="index,follow"><meta name=googlebot content="index,follow"><meta name=twitter:site content="@weary_beard"><meta name=twitter:creator content="@weary_beard"><meta name=theme-color content="#141414"><meta name=msapplication-TileColor content="#141414"><meta name=keywords content><meta name=imagemode content="force"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=HandheldFriendly content="True"><meta name=msapplication-tap-highlight content="no"><meta name=apple-mobile-web-app-title content="Rudra Narayan Kar blog"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=apple-touch-fullscreen content="yes"></head><body><div class=layout><header><div class=title-wrapper><a href=/><h2 class=title>rudra narayan</h2></a><nav><ul><li><a href=/posts/>posts</a></li><li><a href=/projects/>projects</a></li><li><a href=https://github.com/mrprofessor/resume/blob/master/rudra_narayan_resume.pdf target=_blank>resume</a></li></ul></nav></div></header><main><article><h1>Generate and serve files from Flask</h1><time>Oct 05, 2019</time><div class=tags><ul><li><a href=/tags/python>python</a></li><li><a href=/tags/flask>flask</a></li></ul></div><div class=blog-post-content><p>Flask is one of the most used python frameworks for web development. Its
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        <title itemprop="name">Generate and serve files from Flask | thoughts, obsessions and mostly rants</title>
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Narayan">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.dce009fb0e8e452ae77ff6285fa6b7f4006e5e178b6795d59536f0d627ff4d9a.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        
+
+        
+        
+
+<meta property="og:title" content="Generate and serve files from Flask | thoughts, obsessions and mostly rants" />
+<meta name="twitter:title" content="Generate and serve files from Flask | thoughts, obsessions and mostly rants" />
+<meta itemprop="name" content="Generate and serve files from Flask | thoughts, obsessions and mostly rants" />
+<meta name="application-name" content="Generate and serve files from Flask | thoughts, obsessions and mostly rants" />
+<meta property="og:site_name" content="Rudra Narayan Kar blog" />
+
+<meta name="description" content="thoughts, obsessions and mostly rants" />
+<meta itemprop="description" content="thoughts, obsessions and mostly rants" />
+<meta property="og:description" content="thoughts, obsessions and mostly rants" />
+<meta name="twitter:description" content="thoughts, obsessions and mostly rants" />
+
+<base href="https://rudra.dev/posts/generate-and-serve-files-from-flask/">
+<link rel="canonical" href="https://rudra.dev/posts/generate-and-serve-files-from-flask/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/generate-and-serve-files-from-flask/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/generate-and-serve-files-from-flask/" />
+<meta property="og:url" content="https://rudra.dev/posts/generate-and-serve-files-from-flask/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+
+
+<meta property="og:updated_time" content=2019-10-05T00:00:00&#43;0530 />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2019-10-05T00:00:00&#43;0530 />
+<meta property="article:published_time" content=2019-10-05T00:00:00&#43;0530 />
+
+
+    <meta property="og:article:author" content="Rudra narayan" />
+    <meta property="article:author" content="Rudra narayan" />
+    <meta name="author" content="Rudra narayan" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Generate and serve files from Flask",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2019-10-05",
+      "description": "",
+      "wordCount":  308 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2019-10-05",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra narayan",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Narayan Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+	
+	<div class="title-wrapper">
+		<a href="/">
+			<h2 class="title">rudra narayan</h2>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="/posts/">posts</a></li>
+				<li><a href="/projects/">projects</a></li>
+				<li><a href=https://github.com/mrprofessor/resume/blob/master/rudra_narayan_resume.pdf target="_blank">resume</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	
+
+	
+</header>
+
+            
+	<main>
+		<article>
+			<h1>Generate and serve files from Flask</h1>
+
+			
+				<time>Oct 05, 2019</time>
+			
+
+			
+
+			
+			<div class="tags">
+				<ul>
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/flask">flask</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<div class="blog-post-content">
+				<p>Flask is one of the most used python frameworks for web development. Its
 simplicity and extensibility makes it convenient for both small and
-large applications alike.</p><p>In this blog we are going to create a simple flask web application that
-will generate and serve files without storing them in the server.</p><blockquote><p>Note: For flask and python installation visit
-<a href=https://flask.palletsprojects.com/en/1.1.x/ target=_blank>flask documentation</a></p></blockquote><p>Let&rsquo;s create a flask application with a basic route.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
-  <span style=color:#080;font-weight:700>from</span> <span style=color:#0e84b5;font-weight:700>flask</span> <span style=color:#080;font-weight:700>import</span> Flask
+large applications alike.</p>
+<p>In this blog we are going to create a simple flask web application that
+will generate and serve files without storing them in the server.</p>
+<blockquote>
+<p>Note: For flask and python installation visit
+<a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">flask documentation</a>
+</p>
+</blockquote>
+<p>Let&rsquo;s create a flask application with a basic route.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+  <span style="color:#080;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">flask</span> <span style="color:#080;font-weight:bold">import</span> Flask
 
-  app <span style=color:#333>=</span> Flask(__name__)
+  app <span style="color:#333">=</span> Flask(__name__)
 
 
-  <span style=color:#555;font-weight:700>@app.route</span>(<span style=background-color:#fff0f0>&#34;/&#34;</span>)
-  <span style=color:#080;font-weight:700>def</span> <span style=color:#06b;font-weight:700>index</span>():
-      <span style=color:#080;font-weight:700>return</span> <span style=background-color:#fff0f0>&#34;Hello Flask!&#34;</span>
-</code></pre></div><p>and voila! We have our server up and running with only 5 lines of code.</p><p>Now we need to create a route which will accept a file name as
-parameter.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
-  <span style=color:#555;font-weight:700>@app.route</span>(<span style=background-color:#fff0f0>&#34;/file/&lt;file_name&gt;&#34;</span>)
-  <span style=color:#080;font-weight:700>def</span> <span style=color:#06b;font-weight:700>get_file</span>(file_name):
-      <span style=color:#080;font-weight:700>return</span> file_name
+  <span style="color:#555;font-weight:bold">@app.route</span>(<span style="background-color:#fff0f0">&#34;/&#34;</span>)
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">index</span>():
+      <span style="color:#080;font-weight:bold">return</span> <span style="background-color:#fff0f0">&#34;Hello Flask!&#34;</span>
+</code></pre></div><p>and voila! We have our server up and running with only 5 lines of code.</p>
+<p>Now we need to create a route which will accept a file name as
+parameter.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+  <span style="color:#555;font-weight:bold">@app.route</span>(<span style="background-color:#fff0f0">&#34;/file/&lt;file_name&gt;&#34;</span>)
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">get_file</span>(file_name):
+      <span style="color:#080;font-weight:bold">return</span> file_name
 </code></pre></div><p>For our use case we need to generate a csv file using fake data.We need
-to install <a href=https://github.com/joke2k/faker target=_blank>faker</a>
-to generate fake
+to install <a href="https://github.com/joke2k/faker" target="_blank">faker</a>
+ to generate fake
 data such as name, address, birthdate etc. Also we are using
-<a href=https://github.com/pandas-dev/pandas target=_blank>pandas</a>
-to generate dataframes
-that can be used to create both csv and spreadsheets.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>
+<a href="https://github.com/pandas-dev/pandas" target="_blank">pandas</a>
+ to generate dataframes
+that can be used to create both csv and spreadsheets.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">
   python3 -m pip install faker pandas
 </code></pre></div><p>Let&rsquo;s add functions that will generate csv files using the fake data we
-get from Faker.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
-  <span style=color:#080;font-weight:700>def</span> <span style=color:#06b;font-weight:700>generate_fake_data</span>():
-      fake_data <span style=color:#333>=</span> [fake<span style=color:#333>.</span>simple_profile() <span style=color:#080;font-weight:700>for</span> item <span style=color:#000;font-weight:700>in</span> <span style=color:#007020>range</span>(<span style=color:#00d;font-weight:700>5</span>)]
-      <span style=color:#080;font-weight:700>return</span> pd<span style=color:#333>.</span>DataFrame(fake_data)
+get from Faker.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">generate_fake_data</span>():
+      fake_data <span style="color:#333">=</span> [fake<span style="color:#333">.</span>simple_profile() <span style="color:#080;font-weight:bold">for</span> item <span style="color:#000;font-weight:bold">in</span> <span style="color:#007020">range</span>(<span style="color:#00d;font-weight:bold">5</span>)]
+      <span style="color:#080;font-weight:bold">return</span> pd<span style="color:#333">.</span>DataFrame(fake_data)
 
 
-  <span style=color:#080;font-weight:700>def</span> <span style=color:#06b;font-weight:700>generate_csv_file</span>(file_df):
-      <span style=color:#888># Create an o/p buffer</span>
-      file_buffer <span style=color:#333>=</span> StringIO()
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">generate_csv_file</span>(file_df):
+      <span style="color:#888"># Create an o/p buffer</span>
+      file_buffer <span style="color:#333">=</span> StringIO()
 
-      <span style=color:#888># Write the dataframe to the buffer</span>
-      file_df<span style=color:#333>.</span>to_csv(file_buffer, encoding<span style=color:#333>=</span><span style=background-color:#fff0f0>&#34;utf-8&#34;</span>, index<span style=color:#333>=</span>False, sep<span style=color:#333>=</span><span style=background-color:#fff0f0>&#34;,&#34;</span>)
+      <span style="color:#888"># Write the dataframe to the buffer</span>
+      file_df<span style="color:#333">.</span>to_csv(file_buffer, encoding<span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;utf-8&#34;</span>, index<span style="color:#333">=</span>False, sep<span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;,&#34;</span>)
 
-      <span style=color:#888># Seek to the beginning of the stream</span>
-      file_buffer<span style=color:#333>.</span>seek(<span style=color:#00d;font-weight:700>0</span>)
-      <span style=color:#080;font-weight:700>return</span> file_buffer
+      <span style="color:#888"># Seek to the beginning of the stream</span>
+      file_buffer<span style="color:#333">.</span>seek(<span style="color:#00d;font-weight:bold">0</span>)
+      <span style="color:#080;font-weight:bold">return</span> file_buffer
 </code></pre></div><p>Now we need to call these functions from our routing method and send the
-file as response.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
-  <span style=color:#555;font-weight:700>@app.route</span>(<span style=background-color:#fff0f0>&#34;/file/&lt;file_name&gt;&#34;</span>)
-  <span style=color:#080;font-weight:700>def</span> <span style=color:#06b;font-weight:700>get_file</span>(file_name):
-      fake_df <span style=color:#333>=</span> generate_fake_data()
-      generated_file <span style=color:#333>=</span> generate_csv_file(fake_df)
-      response <span style=color:#333>=</span> Response(generated_file, mimetype<span style=color:#333>=</span><span style=background-color:#fff0f0>&#34;text/csv&#34;</span>)
-      <span style=color:#888># add a filename</span>
-      response<span style=color:#333>.</span>headers<span style=color:#333>.</span>set(
-          <span style=background-color:#fff0f0>&#34;Content-Disposition&#34;</span>, <span style=background-color:#fff0f0>&#34;attachment&#34;</span>, filename<span style=color:#333>=</span><span style=background-color:#fff0f0>&#34;{0}.csv&#34;</span><span style=color:#333>.</span>format(file_name)
+file as response.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+  <span style="color:#555;font-weight:bold">@app.route</span>(<span style="background-color:#fff0f0">&#34;/file/&lt;file_name&gt;&#34;</span>)
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">get_file</span>(file_name):
+      fake_df <span style="color:#333">=</span> generate_fake_data()
+      generated_file <span style="color:#333">=</span> generate_csv_file(fake_df)
+      response <span style="color:#333">=</span> Response(generated_file, mimetype<span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;text/csv&#34;</span>)
+      <span style="color:#888"># add a filename</span>
+      response<span style="color:#333">.</span>headers<span style="color:#333">.</span>set(
+          <span style="background-color:#fff0f0">&#34;Content-Disposition&#34;</span>, <span style="background-color:#fff0f0">&#34;attachment&#34;</span>, filename<span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;{0}.csv&#34;</span><span style="color:#333">.</span>format(file_name)
       )
-      <span style=color:#080;font-weight:700>return</span> response
+      <span style="color:#080;font-weight:bold">return</span> response
 </code></pre></div><p>Once we hit the above route with a file name the browser will ask for
-permission to download the csv file.</p><p>Here is the full source code with a working example.</p><div class=glitch-embed-wrap style=height:420px;width:100%><iframe src="https://glitch.com/embed/#!/embed/bubble-curio?path=server.py&previewSize=0&sidebarCollapsed=true" title="exclusive-sneezeweed on Glitch" style=height:100%;width:100%;border:0></iframe></div><p>Feel free to edit and play around. Adios!</p></div></main><footer><div class=bottom-nav><nav><ul><li><a href=/about/>about</a></li><li><a href=/logs/>logs</a></li><li><a href=/privacy/>privacy</a></li></ul></nav></div><div><script src=https://utteranc.es/client.js repo=mrprofessor/rudra.dev issue-term=pathname label=rudra.dev theme=github-light crossorigin=anonymous async></script></div></footer></div></body><script>(function(){const links=document.querySelectorAll("nav a")
-const currentUrl=location.href
-for(const link of links){if(location.href.split("/").length===4&&link.href.endsWith("/posts/")){link.classList.add("active-link")
-break;}
-if(link.href===currentUrl){link.classList.add("active-link")}}}())</script><script>!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE',{api_host:'https://profhog.herokuapp.com'})</script><script async src=https://prof-ackee.herokuapp.com/tracker.js data-ackee-server=https://prof-ackee.herokuapp.com data-ackee-domain-id=45af9210-721f-4c09-a69d-77e66fe7bc5d></script></html>
+permission to download the csv file.</p>
+<p>Here is the full source code with a working example.</p>
+<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+  <iframe
+    src="https://glitch.com/embed/#!/embed/bubble-curio?path=server.py&previewSize=0&sidebarCollapsed=true"
+    title="exclusive-sneezeweed on Glitch"
+    style="height: 100%; width: 100%; border: 0;">
+  </iframe>
+</div>
+<p>Feel free to edit and play around. Adios!</p>
+
+			</div>
+			
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		<nav>
+			<ul>
+				<li><a href="/about/">about</a></li>
+				<li><a href="/logs/">logs</a></li>
+				<li><a href="/privacy/">privacy</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                 link.classList.add("active-link")
+             }
+         }
+     }())
+    </script>
+
+    
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE', {api_host: 'https://profhog.herokuapp.com'})
+    </script>
+
+    
+    <script async
+        src="https://prof-ackee.herokuapp.com/tracker.js"
+        data-ackee-server="https://prof-ackee.herokuapp.com"
+        data-ackee-domain-id="45af9210-721f-4c09-a69d-77e66fe7bc5d"
+    >
+    </script>
+
+</html>

@@ -1,9 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>log on rudra narayan</title><link>https://rudra.dev/tags/log/</link><description>Recent content in log on rudra narayan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/log/index.xml" rel="self" type="application/rss+xml"/><item><title>Nothing's wrong with reinventing the wheel</title><link>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</link><pubDate>Sun, 05 Apr 2020 00:00:00 +0530</pubDate><guid>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</guid><description>I have heard it many times and I have had enough.
-Some devs(mostly junior) come up to me and ask what to build as a side project and my answer always has been is to build something that you see everyday and improve if possible. Then the next thing I get is &amp;ldquo;I wanna build that but it already exists&amp;rdquo; or something like &amp;ldquo;Even if I build it I can&amp;rsquo;t show it on my resume because there is a better alternative.</description></item><item><title>Switching to Emacs</title><link>https://rudra.dev/logs/switching-to-emacs/</link><pubDate>Sun, 09 Feb 2020 00:00:00 +0530</pubDate><guid>https://rudra.dev/logs/switching-to-emacs/</guid><description>I have spend enormous time on configuring and reconfiguring my vimrc file for the past 4 years. I have been using (neo)vim at work for last 2 years and I am really happy how this has turned out. Now I am pretty confident on most of the vim key-bindings, the register management and a lot of other amazing features.
-Fuck it! I am switching to Emacs.</description></item><item><title>Wrap up 2019</title><link>https://rudra.dev/logs/wrap-up-2019/</link><pubDate>Tue, 31 Dec 2019 00:00:00 +0530</pubDate><guid>https://rudra.dev/logs/wrap-up-2019/</guid><description>Guess it&amp;rsquo;s time to retrospect the last 12 months.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>log on rudra narayan</title>
+    <link>https://rudra.dev/tags/log/</link>
+    <description>Recent content in log on rudra narayan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://rudra.dev/tags/log/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nothing&#39;s wrong with reinventing the wheel</title>
+      <link>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</guid>
+      <description>I have heard it many times and I have had enough.
+Some devs(mostly junior) come up to me and ask what to build as a side project and my answer always has been is to build something that you see everyday and improve if possible. Then the next thing I get is &amp;ldquo;I wanna build that but it already exists&amp;rdquo; or something like &amp;ldquo;Even if I build it I can&amp;rsquo;t show it on my resume because there is a better alternative.</description>
+    </item>
+    
+    <item>
+      <title>Switching to Emacs</title>
+      <link>https://rudra.dev/logs/switching-to-emacs/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/switching-to-emacs/</guid>
+      <description>I have spend enormous time on configuring and reconfiguring my vimrc file for the past 4 years. I have been using (neo)vim at work for last 2 years and I am really happy how this has turned out. Now I am pretty confident on most of the vim key-bindings, the register management and a lot of other amazing features.
+Fuck it! I am switching to Emacs.
+ </description>
+    </item>
+    
+    <item>
+      <title>Wrap up 2019</title>
+      <link>https://rudra.dev/logs/wrap-up-2019/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/wrap-up-2019/</guid>
+      <description>Guess it&amp;rsquo;s time to retrospect the last 12 months.
 I will be talking about topics that I have worked on or learned. These are listed in no particular order.
-Python In June I switched my job and accepted a position of a back-end developer in a fairly new company with a brand new project. The tech stack was python and angular. Even though Python was my first love, by that time I was more of a JavaScript guy rather than a Pythonista.</description></item><item><title>Status update #1</title><link>https://rudra.dev/logs/status-update-1/</link><pubDate>Tue, 17 Dec 2019 00:00:00 +0530</pubDate><guid>https://rudra.dev/logs/status-update-1/</guid><description>I have been spending so much time and energy tweaking this website, that I feel like I should maintain a log for it. No Git commit messages are not enough anymore. It&amp;rsquo;s kinda fun owning a place on the internet but at the same time it should at least mean something.
-This update brings a list of logs where I will be writing more often now. Logs will be mostly unimportant and personal(Not that personal).</description></item><item><title>Status update #2</title><link>https://rudra.dev/logs/status-update-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rudra.dev/logs/status-update-2/</guid><description>Guess it&amp;rsquo;s time for a status update.
+Python In June I switched my job and accepted a position of a back-end developer in a fairly new company with a brand new project. The tech stack was python and angular. Even though Python was my first love, by that time I was more of a JavaScript guy rather than a Pythonista.</description>
+    </item>
+    
+    <item>
+      <title>Status update #1</title>
+      <link>https://rudra.dev/logs/status-update-1/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/status-update-1/</guid>
+      <description>I have been spending so much time and energy tweaking this website, that I feel like I should maintain a log for it. No Git commit messages are not enough anymore. It&amp;rsquo;s kinda fun owning a place on the internet but at the same time it should at least mean something.
+This update brings a list of logs where I will be writing more often now. Logs will be mostly unimportant and personal(Not that personal).</description>
+    </item>
+    
+    <item>
+      <title>Status update #2</title>
+      <link>https://rudra.dev/logs/status-update-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rudra.dev/logs/status-update-2/</guid>
+      <description>Guess it&amp;rsquo;s time for a status update.
 2020 huh. Well as usual I don&amp;rsquo;t have a resolution this year. My resolution deadlines are quite small and always ends with utter disappointment, so I better not mention it here.(recruiters ignore this)
-Let&amp;rsquo;s get serious!
-New project In January, I started working on a project named Solitude. It&amp;rsquo;s a note taking application which is using GitHub as a CMS. It will create and maintain a repository of notes and will sync them in real-time.</description></item></channel></rss>
+ Let&amp;rsquo;s get serious!
+ New project In January, I started working on a project named Solitude. It&amp;rsquo;s a note taking application which is using GitHub as a CMS. It will create and maintain a repository of notes and will sync them in real-time.</description>
+    </item>
+    
+  </channel>
+</rss>

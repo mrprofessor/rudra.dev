@@ -3,7 +3,8 @@
 VERSION ?= latest
 
 build:
-	hugo -D --destination docs --minify 
+	# hugo -D --destination docs --minify
+	hugo -D --destination docs
 	cp static/CNAME docs/
 
 run:

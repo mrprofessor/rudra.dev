@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>rant on rudra narayan</title><link>https://rudra.dev/tags/rant/</link><description>Recent content in rant on rudra narayan</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/rant/index.xml" rel="self" type="application/rss+xml"/><item><title>GatsbyJs: An overkill for a static site generator</title><link>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</link><pubDate>Thu, 18 Jun 2020 00:00:00 +0530</pubDate><guid>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</guid><description>So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&amp;rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.
-So why am I moving away you ask? As with my career decisions I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer.</description></item><item><title>Nothing's wrong with reinventing the wheel</title><link>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</link><pubDate>Sun, 05 Apr 2020 00:00:00 +0530</pubDate><guid>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</guid><description>I have heard it many times and I have had enough.
-Some devs(mostly junior) come up to me and ask what to build as a side project and my answer always has been is to build something that you see everyday and improve if possible. Then the next thing I get is &amp;ldquo;I wanna build that but it already exists&amp;rdquo; or something like &amp;ldquo;Even if I build it I can&amp;rsquo;t show it on my resume because there is a better alternative.</description></item><item><title>CSS and JavaScript aren't byte code !!</title><link>https://rudra.dev/posts/css-and-js-are-not-bytecode/</link><pubDate>Wed, 21 Sep 2016 00:00:00 +0530</pubDate><guid>https://rudra.dev/posts/css-and-js-are-not-bytecode/</guid><description>Disclaimer: This post literally doesn&amp;rsquo;t make any sense. I just didn&amp;rsquo;t wanted to delete it as it was my first blog.
-The earliest computers were often programmed without the help of a programming language, by writing programs in absolute machine language. The programs, in decimal or binary form (mostly binary),were read in from punched cards or magnetic tape or toggled in on switches on the front panel of the computer.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rant on rudra narayan</title>
+    <link>https://rudra.dev/tags/rant/</link>
+    <description>Recent content in rant on rudra narayan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://rudra.dev/tags/rant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GatsbyJs: An overkill for a static site generator</title>
+      <link>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</guid>
+      <description>So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&amp;rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.
+So why am I moving away you ask? As with my career decisions I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer.</description>
+    </item>
+    
+    <item>
+      <title>Nothing&#39;s wrong with reinventing the wheel</title>
+      <link>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</guid>
+      <description>I have heard it many times and I have had enough.
+Some devs(mostly junior) come up to me and ask what to build as a side project and my answer always has been is to build something that you see everyday and improve if possible. Then the next thing I get is &amp;ldquo;I wanna build that but it already exists&amp;rdquo; or something like &amp;ldquo;Even if I build it I can&amp;rsquo;t show it on my resume because there is a better alternative.</description>
+    </item>
+    
+    <item>
+      <title>CSS and JavaScript aren&#39;t byte code !!</title>
+      <link>https://rudra.dev/posts/css-and-js-are-not-bytecode/</link>
+      <pubDate>Wed, 21 Sep 2016 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/posts/css-and-js-are-not-bytecode/</guid>
+      <description>Disclaimer: This post literally doesn&amp;rsquo;t make any sense. I just didn&amp;rsquo;t wanted to delete it as it was my first blog.
+ The earliest computers were often programmed without the help of a programming language, by writing programs in absolute machine language. The programs, in decimal or binary form (mostly binary),were read in from punched cards or magnetic tape or toggled in on switches on the front panel of the computer.</description>
+    </item>
+    
+  </channel>
+</rss>
