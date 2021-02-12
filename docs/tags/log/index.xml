@@ -6,11 +6,7 @@
     <description>Recent content in log on rudra narayan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/tags/log/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/log/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nothing&#39;s wrong with reinventing the wheel</title>
       <link>https://rudra.dev/logs/nothing-is-wrong-with-reinventing-the-wheel/</link>
@@ -33,6 +29,18 @@ Fuck it! I am switching to Emacs.
     </item>
     
     <item>
+      <title>Status update #2</title>
+      <link>https://rudra.dev/logs/status-update-2/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/status-update-2/</guid>
+      <description>Guess it&amp;rsquo;s time for a status update.
+2020 huh. Well as usual I don&amp;rsquo;t have a resolution this year. My resolution deadlines are quite small and always ends with utter disappointment, so I better not mention it here.(recruiters ignore this)
+ Let&amp;rsquo;s get serious!
+ New project In January, I started working on a project named Solitude. It&amp;rsquo;s a note taking application which is using GitHub as a CMS. It will create and maintain a repository of notes and will sync them in real-time.</description>
+    </item>
+    
+    <item>
       <title>Wrap up 2019</title>
       <link>https://rudra.dev/logs/wrap-up-2019/</link>
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0530</pubDate>
@@ -51,18 +59,6 @@ Python In June I switched my job and accepted a position of a back-end developer
       <guid>https://rudra.dev/logs/status-update-1/</guid>
       <description>I have been spending so much time and energy tweaking this website, that I feel like I should maintain a log for it. No Git commit messages are not enough anymore. It&amp;rsquo;s kinda fun owning a place on the internet but at the same time it should at least mean something.
 This update brings a list of logs where I will be writing more often now. Logs will be mostly unimportant and personal(Not that personal).</description>
-    </item>
-    
-    <item>
-      <title>Status update #2</title>
-      <link>https://rudra.dev/logs/status-update-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rudra.dev/logs/status-update-2/</guid>
-      <description>Guess it&amp;rsquo;s time for a status update.
-2020 huh. Well as usual I don&amp;rsquo;t have a resolution this year. My resolution deadlines are quite small and always ends with utter disappointment, so I better not mention it here.(recruiters ignore this)
- Let&amp;rsquo;s get serious!
- New project In January, I started working on a project named Solitude. It&amp;rsquo;s a note taking application which is using GitHub as a CMS. It will create and maintain a repository of notes and will sync them in real-time.</description>
     </item>
     
   </channel>

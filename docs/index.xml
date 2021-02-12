@@ -6,11 +6,7 @@
     <description>Recent content on rudra narayan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GatsbyJs: An overkill for a static site generator</title>
       <link>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</link>
@@ -71,6 +67,18 @@ Fuck it! I am switching to Emacs.
       <description>In this post I am going to plug about a cool trick(probably useless) that I discovered geeking around the internet.
 I was building a tiny microservice which would let the client side application securely authenticate with GitHub. After writing the only required API, I wanted to render the README.md file on the index page.
 So I planned to convert markdown to html and serve the resultant string everytime we hit the index.</description>
+    </item>
+    
+    <item>
+      <title>Status update #2</title>
+      <link>https://rudra.dev/logs/status-update-2/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/logs/status-update-2/</guid>
+      <description>Guess it&amp;rsquo;s time for a status update.
+2020 huh. Well as usual I don&amp;rsquo;t have a resolution this year. My resolution deadlines are quite small and always ends with utter disappointment, so I better not mention it here.(recruiters ignore this)
+ Let&amp;rsquo;s get serious!
+ New project In January, I started working on a project named Solitude. It&amp;rsquo;s a note taking application which is using GitHub as a CMS. It will create and maintain a repository of notes and will sync them in real-time.</description>
     </item>
     
     <item>
@@ -164,18 +172,6 @@ Using Proxy with NPM Once you have obtained the proxy settings (server URL, port
       <guid>https://rudra.dev/posts/css-and-js-are-not-bytecode/</guid>
       <description>Disclaimer: This post literally doesn&amp;rsquo;t make any sense. I just didn&amp;rsquo;t wanted to delete it as it was my first blog.
  The earliest computers were often programmed without the help of a programming language, by writing programs in absolute machine language. The programs, in decimal or binary form (mostly binary),were read in from punched cards or magnetic tape or toggled in on switches on the front panel of the computer.</description>
-    </item>
-    
-    <item>
-      <title>Status update #2</title>
-      <link>https://rudra.dev/logs/status-update-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rudra.dev/logs/status-update-2/</guid>
-      <description>Guess it&amp;rsquo;s time for a status update.
-2020 huh. Well as usual I don&amp;rsquo;t have a resolution this year. My resolution deadlines are quite small and always ends with utter disappointment, so I better not mention it here.(recruiters ignore this)
- Let&amp;rsquo;s get serious!
- New project In January, I started working on a project named Solitude. It&amp;rsquo;s a note taking application which is using GitHub as a CMS. It will create and maintain a repository of notes and will sync them in real-time.</description>
     </item>
     
   </channel>

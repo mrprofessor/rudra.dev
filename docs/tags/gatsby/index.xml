@@ -6,11 +6,7 @@
     <description>Recent content in gatsby on rudra narayan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/tags/gatsby/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/gatsby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GatsbyJs: An overkill for a static site generator</title>
       <link>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</link>
