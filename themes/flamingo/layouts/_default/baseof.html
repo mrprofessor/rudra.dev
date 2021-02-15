@@ -26,7 +26,12 @@
     </head>
     <body>
         <div class="layout">
-            {{ partial "header" . }}
+            <!-- Only list and post pages should have Nav -->
+            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "logs"))) }}
+                <a class="active-link" href="/">← home</a>
+            {{ else }}
+                {{ partial "header" . }}
+            {{ end }}
             {{ block "main" . }}{{ end }}
             {{ partial "footer" . }}
         </div>
