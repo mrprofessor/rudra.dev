@@ -6,7 +6,25 @@
     <description>Recent content in Tags on rudra narayan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>log</title>
+      <link>https://rudra.dev/tags/log/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>status</title>
+      <link>https://rudra.dev/tags/status/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/tags/status/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>editor</title>
       <link>https://rudra.dev/tags/editor/</link>
@@ -130,24 +148,6 @@
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>log</title>
-      <link>https://rudra.dev/tags/log/</link>
-      <pubDate>Sun, 05 Apr 2020 00:00:00 +0530</pubDate>
-      
-      <guid>https://rudra.dev/tags/log/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>status</title>
-      <link>https://rudra.dev/tags/status/</link>
-      <pubDate>Sun, 09 Feb 2020 00:00:00 +0530</pubDate>
-      
-      <guid>https://rudra.dev/tags/status/</guid>
       <description></description>
     </item>
     

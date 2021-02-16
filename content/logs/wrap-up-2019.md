@@ -82,7 +82,7 @@ Honestly it was a pretty good year for me. A new job, new city and a
 bunch of cool stuff to learn!
 
 <div class="post-image">
-  <img src="/images/loki.jpg" />
+  <img src="/images/loki_2019.jpg" />
 </div>
 
 Hope Loki approves this post.
