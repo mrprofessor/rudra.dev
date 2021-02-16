@@ -168,18 +168,17 @@ nav {
             list-style-type: none;
             text-align: center;
             a {
-                border: 1px solid $post-link-color;
+                border: 1px solid;
                 border-radius: 3px;
-                background: $post-link-color;
+                background: $background-color;
                 padding: 0.2em;
-                color: #fff;
-                // color: $primary-color;
+                color: $post-link-color;
                 margin: 10px 2px 10px 0;
                 line-height: 1em;
             }
             a:hover {
-                background: $background-color;
-                color: $post-link-color;
+                background: $post-link-color;
+                color: $background-color;
             }
         }
         li:not(:last-child) {

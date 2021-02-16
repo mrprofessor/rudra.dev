@@ -2,18 +2,18 @@
 title = "GatsbyJs: An overkill for a static site generator"
 author = ["mrprofessor"]
 date = 2020-06-18
-tags = ["gatsby", "react", "emacs", "hugo", "orgmode", "rant"]
+tags = ["gatsby", "react", "emacs", "hugo", "orgmode", "rant", "editor"]
 draft = false
 +++
 
 So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component's are written in react, I can query my post data from graphQL and so many other goodies.
 
 
-## So why am I moving away you ask? {#so-why-am-i-moving-away-you-ask}
+## So what went wrong? {#so-what-went-wrong}
 
-As with my career decisions I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn't be the norm of web development. The whole ecosystem around React is maddening. It's certainly built for highly interactive web applications, but in my opinion it has no place in a static blog generation.
+As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn't be the norm of web development. The whole ever-changing ecosystem around React is maddening. It's certainly built for highly interactive and complex web applications, but in my opinion it doesn't hold much value in static blog generation.
 
-Also GraphQL is kinda overkill for a blog too.
+Also GraphQL seemed a bit overkill for a blog too.
 
 There are certain pain points that were bugging me for a long time.
 
@@ -30,15 +30,15 @@ It's definitely not for people who like a comfortable blogging system like [Word
 
 ## My new workflow {#my-new-workflow}
 
-I have always loved markdown until I discovered [Org-mode](https://orgmode.org/). It simply blew me away. I never thought I could do so much with plain text. And when I learned about [ox-hugo](https://ox-hugo.scripter.co/), the idea of publishing a blog completely from emacs fascinated me.
+I have always loved markdown until I discovered [Org-mode](https://orgmode.org/). It simply blew me away. I never thought I could do so much with plain text, and when I learned about [ox-hugo](https://ox-hugo.scripter.co/), the idea of publishing a blog completely from emacs fascinated me.
+
+Also the fact that this is somewhat a programming blog, having the ability to [execute source code](https://orgmode.org/worg/org-contrib/babel/) inside the document is really helpful.
 
 <div class="post-image">
   <img src="/images/org-hugo-setup.png" />
 </div>
 
-`Org-mode` coupled with `ox-hugo` gave me a significant advantage by managing all my pages in a single org-file. With `ox-hugo` I can convert my articles to hugo supported directory structure and the coolest thing is I can still add posts in markdown which can be independent of my master content file.
-
-Given the fact that this is a programming blog, having the ability to [execute source code](https:orgmode.org/worg/org-contrib/babel/) inside the document is really helpful.
+`Org-mode` coupled with `ox-hugo` gave me a significant advantage by managing all my pages in a single org-file. Ox-hugo converts the contents of my org-files to a directory of markdown files, So for my setup I decided to have one org-file per each sub-route(logs/, posts/, etc).
 
 
 ## Conclusion {#conclusion}

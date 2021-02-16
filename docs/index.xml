@@ -14,7 +14,7 @@
       
       <guid>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</guid>
       <description>So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&amp;rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.
-So why am I moving away you ask? As with my career decisions I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer.</description>
+So what went wrong? As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer.</description>
     </item>
     
     <item>

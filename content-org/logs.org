@@ -245,4 +245,3 @@ skills in certain areas.
 So bottom line is if you find any project that's fun, copy it, reverse
 engineer it, go nuts and make it happen. There is nothing wrong with
 reinventing the wheel.
-

@@ -2,7 +2,7 @@
 title = "CSS and JavaScript aren't byte code !!"
 author = ["mrprofessor"]
 date = 2016-09-21
-tags = ["rant", "css", "js", "web"]
+tags = ["rant", "css", "javascript", "web"]
 draft = false
 aliases = "/post/css-and-js-are-not-bytecode"
 +++

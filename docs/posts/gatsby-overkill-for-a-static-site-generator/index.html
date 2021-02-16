@@ -13,7 +13,7 @@
         <meta name="author" content="Rudra Narayan">
 
         
-        <link rel="stylesheet" href="/scss/main.min.dce009fb0e8e452ae77ff6285fa6b7f4006e5e178b6795d59536f0d627ff4d9a.css" media="screen">
+        <link rel="stylesheet" href="/scss/main.min.25c30ea8c272af9ff8e944b6ecef5575f4548be2e30441c990588c181fbf9498.css" media="screen">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         
@@ -87,7 +87,7 @@
       },
       "datePublished": "2020-06-18",
       "description": "",
-      "wordCount":  496 ,
+      "wordCount":  491 ,
       "mainEntityOfPage": "True",
       "dateModified": "2020-06-18",
       "image": {
@@ -177,15 +177,17 @@
 					
 					<li><a href="/tags/rant">rant</a></li>
 					
+					<li><a href="/tags/editor">editor</a></li>
+					
 				</ul>
 			</div>
 			
 
 			<div class="blog-post-content">
 				<p>So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.</p>
-<h2 id="so-why-am-i-moving-away-you-ask">So why am I moving away you ask?</h2>
-<p>As with my career decisions I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn&rsquo;t be the norm of web development. The whole ecosystem around React is maddening. It&rsquo;s certainly built for highly interactive web applications, but in my opinion it has no place in a static blog generation.</p>
-<p>Also GraphQL is kinda overkill for a blog too.</p>
+<h2 id="so-what-went-wrong">So what went wrong?</h2>
+<p>As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn&rsquo;t be the norm of web development. The whole ever-changing ecosystem around React is maddening. It&rsquo;s certainly built for highly interactive and complex web applications, but in my opinion it doesn&rsquo;t hold much value in static blog generation.</p>
+<p>Also GraphQL seemed a bit overkill for a blog too.</p>
 <p>There are certain pain points that were bugging me for a long time.</p>
 <ol>
 <li>It&rsquo;s hard to leverage any library that doesn&rsquo;t have a React component or Gatsby plugin built for it. e.g <a href="https://utteranc.es/" target="_blank">Utterances</a>
@@ -204,14 +206,14 @@
 , which can be set up in one afternoon. The returns we get for using and understanding such a complex stack is relatively less if you ask me.</p>
 <h2 id="my-new-workflow">My new workflow</h2>
 <p>I have always loved markdown until I discovered <a href="https://orgmode.org/" target="_blank">Org-mode</a>
-. It simply blew me away. I never thought I could do so much with plain text. And when I learned about <a href="https://ox-hugo.scripter.co/" target="_blank">ox-hugo</a>
+. It simply blew me away. I never thought I could do so much with plain text, and when I learned about <a href="https://ox-hugo.scripter.co/" target="_blank">ox-hugo</a>
 , the idea of publishing a blog completely from emacs fascinated me.</p>
+<p>Also the fact that this is somewhat a programming blog, having the ability to <a href="https://orgmode.org/worg/org-contrib/babel/" target="_blank">execute source code</a>
+ inside the document is really helpful.</p>
 <div class="post-image">
   <img src="/images/org-hugo-setup.png" />
 </div>
-<p><code>Org-mode</code> coupled with <code>ox-hugo</code> gave me a significant advantage by managing all my pages in a single org-file. With <code>ox-hugo</code> I can convert my articles to hugo supported directory structure and the coolest thing is I can still add posts in markdown which can be independent of my master content file.</p>
-<p>Given the fact that this is a programming blog, having the ability to <a href="https:orgmode.org/worg/org-contrib/babel/" target="_blank">execute source code</a>
- inside the document is really helpful.</p>
+<p><code>Org-mode</code> coupled with <code>ox-hugo</code> gave me a significant advantage by managing all my pages in a single org-file. Ox-hugo converts the contents of my org-files to a directory of markdown files, So for my setup I decided to have one org-file per each sub-route(logs/, posts/, etc).</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This post is not about bashing Gatsby or showing it&rsquo;s inferiority. It&rsquo;s an humble explanation of it&rsquo;s pitfalls while creating a basic blog. Gatsby has served me good over the past years. Undoubtedly  it is a great software, just not well suited for my needs at the time.</p>
 <p>If you are a front-end developer with the knowledge of React and always willing to dive in and tweak whenever you need a change, then by all means go ahead. But if you don&rsquo;t want to go down that rabbit-hole, just know that there are much easier options available.</p>

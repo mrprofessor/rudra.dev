@@ -2,7 +2,7 @@
 #+hugo_section: posts
 
 * Posts
-** CSS and JavaScript aren't byte code !! :rant:css:js:web:
+** CSS and JavaScript aren't byte code !! :rant:css:javascript:web:
    :PROPERTIES:
    :EXPORT_FILE_NAME: css-and-js-are-not-bytecode
    :EXPORT_DATE: 2016-09-21
@@ -149,7 +149,7 @@ And that five minute I save every day from this hack..spends for...I
 don't know.
 
 Adios.
-** Setting up (Neo)vim for React development :vim:react:editor:js:web:
+** Setting up (Neo)vim for React development :vim:react:editor:javascript:web:
    :PROPERTIES:
    :EXPORT_FILE_NAME: setting-up-vim-for-react
    :EXPORT_DATE: 2019-05-03
@@ -1371,7 +1371,7 @@ as we have nested structures. As long as we understand the basic JSON
 functions and sub-queries we can build almost any kind of structure
 without stressing the back-end processes.
 
-** GatsbyJs: An overkill for a static site generator :gatsby:react:emacs:hugo:orgmode:rant:
+** GatsbyJs: An overkill for a static site generator :gatsby:react:emacs:hugo:orgmode:rant:editor:
    :PROPERTIES:
    :EXPORT_FILE_NAME: gatsby-overkill-for-a-static-site-generator
    :EXPORT_DATE: 2020-06-18
@@ -1379,11 +1379,11 @@ without stressing the back-end processes.
 
 So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component's are written in react, I can query my post data from graphQL and so many other goodies.
 
-*** So why am I moving away you ask?
+*** So what went wrong?
 
-As with my career decisions I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn't be the norm of web development. The whole ecosystem around React is maddening. It's certainly built for highly interactive web applications, but in my opinion it has no place in a static blog generation.
+As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn't be the norm of web development. The whole ever-changing ecosystem around React is maddening. It's certainly built for highly interactive and complex web applications, but in my opinion it doesn't hold much value in static blog generation.
 
-Also GraphQL is kinda overkill for a blog too.
+Also GraphQL seemed a bit overkill for a blog too.
 
 There are certain pain points that were bugging me for a long time.
 
@@ -1399,7 +1399,9 @@ It's definitely not for people who like a comfortable blogging system like [[htt
 
 *** My new workflow
 
-I have always loved markdown until I discovered [[https://orgmode.org/][Org-mode]]. It simply blew me away. I never thought I could do so much with plain text. And when I learned about [[https://ox-hugo.scripter.co/][ox-hugo]], the idea of publishing a blog completely from emacs fascinated me.
+I have always loved markdown until I discovered [[https://orgmode.org/][Org-mode]]. It simply blew me away. I never thought I could do so much with plain text, and when I learned about [[https://ox-hugo.scripter.co/][ox-hugo]], the idea of publishing a blog completely from emacs fascinated me.
+
+Also the fact that this is somewhat a programming blog, having the ability to [[https://orgmode.org/worg/org-contrib/babel/][execute source code]] inside the document is really helpful.
 
 #+BEGIN_EXPORT HTML
   <div class="post-image">
@@ -1407,9 +1409,8 @@ I have always loved markdown until I discovered [[https://orgmode.org/][Org-mode
   </div>
 #+END_EXPORT
 
-=Org-mode= coupled with =ox-hugo= gave me a significant advantage by managing all my pages in a single org-file. With =ox-hugo= I can convert my articles to hugo supported directory structure and the coolest thing is I can still add posts in markdown which can be independent of my master content file.
+=Org-mode= coupled with =ox-hugo= gave me a significant advantage by managing all my pages in a single org-file. Ox-hugo converts the contents of my org-files to a directory of markdown files, So for my setup I decided to have one org-file per each sub-route(logs/, posts/, etc).
 
-Given the fact that this is a programming blog, having the ability to [[https:orgmode.org/worg/org-contrib/babel/][execute source code]] inside the document is really helpful.
 
 *** Conclusion
 

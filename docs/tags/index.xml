@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>editor</title>
+      <link>https://rudra.dev/tags/editor/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/tags/editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>emacs</title>
       <link>https://rudra.dev/tags/emacs/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0530</pubDate>
@@ -161,15 +170,6 @@
     </item>
     
     <item>
-      <title>editor</title>
-      <link>https://rudra.dev/tags/editor/</link>
-      <pubDate>Sat, 12 Oct 2019 00:00:00 +0530</pubDate>
-      
-      <guid>https://rudra.dev/tags/editor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>neovim</title>
       <link>https://rudra.dev/tags/neovim/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0530</pubDate>
@@ -197,11 +197,11 @@
     </item>
     
     <item>
-      <title>js</title>
-      <link>https://rudra.dev/tags/js/</link>
+      <title>javascript</title>
+      <link>https://rudra.dev/tags/javascript/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0530</pubDate>
       
-      <guid>https://rudra.dev/tags/js/</guid>
+      <guid>https://rudra.dev/tags/javascript/</guid>
       <description></description>
     </item>
     
