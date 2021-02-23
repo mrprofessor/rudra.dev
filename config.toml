@@ -19,6 +19,45 @@ canonifyURLs = true
 
 publishDir = "docs"
 
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "projects"
+    url = "/projects/"
+    weight = 11
+
+  [[menu.main]]
+    identifier = "resume"
+    name = "resume"
+    url = "https://github.com/mrprofessor/resume/blob/master/rudra_narayan_resume.pdf/"
+    weight = 12
+
+
+  [[menu.secondary]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 10
+
+  [[menu.secondary]]
+    identifier = "logs"
+    name = "logs"
+    url = "/logs/"
+    weight = 11
+
+  [[menu.secondary]]
+    identifier = "privacy"
+    name = "privacy"
+    url = "privacy"
+    weight = 12
+
 [params]
   author = "Rudra Narayan"
   description = "thoughts, obsessions and mostly rants"

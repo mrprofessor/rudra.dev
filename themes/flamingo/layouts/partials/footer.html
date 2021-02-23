@@ -1,13 +1,16 @@
 <footer>
 	<div class="bottom-nav">
+		{{ with .Site.Menus.secondary }}
 		<nav>
 			<ul>
-				<li><a href="/about/">about</a></li>
-				<li><a href="/logs/">logs</a></li>
-				<li><a href="/privacy/">privacy</a></li>
+				{{ range . }}
+				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				{{ end }}
 			</ul>
 		</nav>
+		{{ end }}
 	</div>
+
 
 	{{ if eq .IsPage true }}
 		{{ if (or (eq .Section "posts") (eq .Section "logs")) }}

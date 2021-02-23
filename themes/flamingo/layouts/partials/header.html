@@ -8,24 +8,17 @@
 			    <h2 class="title">{{ .Site.Title }}</h2>
             {{ end }}
 		</a>
+
+		{{ with .Site.Menus.main }}
 		<nav>
 			<ul>
-				<li><a href="/posts/">posts</a></li>
-				<li><a href="/projects/">projects</a></li>
-				<li><a href={{ .Site.Params.resume }} target="_blank">resume</a></li>
-				<!-- <li><a href="/resume/" target="_blank" >resume</a></li> -->
+				{{ range . }}
+				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				{{ end }}
 			</ul>
 		</nav>
+		{{ end }}
 	</div>
 	<!-- title wrapper end -->
 
-	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
 </header>
