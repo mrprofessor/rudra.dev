@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on rudra narayan</title>
+    <link>https://rudra.dev/tags/vim/</link>
+    <description>Recent content in vim on rudra narayan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A floating terminal for (Neo)vim</title>
+      <link>https://rudra.dev/posts/a-floating-terminal-for-vim/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/posts/a-floating-terminal-for-vim/</guid>
+      <description>I love working in terminal and editing with (Neo)vim . Though I have been using vim since my college days, for past two years I am using it as my full-time editor.
+I remember vividly when I first switched to vim at work. It was a horrible experience for the first week which made me flood my vimrc file with plugins to make it work. I have definitely moved past that phase and learned to grok vi since then.</description>
+    </item>
+    
+    <item>
+      <title>Setting up (Neo)vim for React development</title>
+      <link>https://rudra.dev/posts/setting-up-vim-for-react/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://rudra.dev/posts/setting-up-vim-for-react/</guid>
+      <description>It&amp;rsquo;s been 8 months since I have been using (neo)vim as my primary text editor. Initially it was incredibly tough to adopt and use it in work. Well that would be another story to tell.
+Back then I was working mostly in backend using CoffeeScript (I know 🙈). VS Code had a little support for CoffeeScript so I didn&amp;rsquo;t had any problems using vim full time.
+But things changed drastically when I moved into UI development this year.</description>
+    </item>
+    
+  </channel>
+</rss>
