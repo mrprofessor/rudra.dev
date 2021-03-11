@@ -16,4 +16,5 @@ clean:
 
 deploy:
 	git add docs/
+	git commit -m "Rebuild"
 	git push origin master
