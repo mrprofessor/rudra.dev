@@ -7,6 +7,7 @@
    :EXPORT_FILE_NAME: css-and-js-are-not-bytecode
    :EXPORT_DATE: 2016-09-21
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/css-and-js-are-not-bytecode
+   :EXPORT_HUGO_DRAFT: true
    :END:
 
 #+BEGIN_QUOTE
@@ -1410,7 +1411,6 @@ Also the fact that this is somewhat a programming blog, having the ability to [[
 #+END_EXPORT
 
 =Org-mode= coupled with =ox-hugo= gave me a significant advantage by managing all my pages in a single org-file. Ox-hugo converts the contents of my org-files to a directory of markdown files, So for my setup I decided to have one org-file per each sub-route(logs/, posts/, etc).
-
 
 *** Conclusion
 
