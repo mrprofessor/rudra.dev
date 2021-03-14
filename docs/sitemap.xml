@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rudra.dev/posts/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rudra.dev/</loc>
+    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rudra.dev/tags/log/</loc>
     <lastmod>2021-02-16T00:00:00+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://rudra.dev/logs/</loc>
-    <lastmod>2021-02-16T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rudra.dev/</loc>
     <lastmod>2021-02-16T00:00:00+05:30</lastmod>
   </url>
   
@@ -59,11 +69,6 @@
   
   <url>
     <loc>https://rudra.dev/tags/orgmode/</loc>
-    <lastmod>2020-06-18T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rudra.dev/posts/</loc>
     <lastmod>2020-06-18T00:00:00+05:30</lastmod>
   </url>
   

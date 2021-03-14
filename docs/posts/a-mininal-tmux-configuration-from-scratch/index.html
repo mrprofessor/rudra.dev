@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        <title itemprop="name">A mininal tmux configuration from scratch | thoughts, obsessions and mostly rants</title>
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Narayan">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.94859faa54fef2cd3b3bd44daf3bf8424d5067550d28323df70fe6f92775bae3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        
+
+        
+        
+
+<meta property="og:title" content="A mininal tmux configuration from scratch | thoughts, obsessions and mostly rants" />
+<meta name="twitter:title" content="A mininal tmux configuration from scratch | thoughts, obsessions and mostly rants" />
+<meta itemprop="name" content="A mininal tmux configuration from scratch | thoughts, obsessions and mostly rants" />
+<meta name="application-name" content="A mininal tmux configuration from scratch | thoughts, obsessions and mostly rants" />
+<meta property="og:site_name" content="Rudra Narayan Kar blog" />
+
+<meta name="description" content="thoughts, obsessions and mostly rants" />
+<meta itemprop="description" content="thoughts, obsessions and mostly rants" />
+<meta property="og:description" content="thoughts, obsessions and mostly rants" />
+<meta name="twitter:description" content="thoughts, obsessions and mostly rants" />
+
+<base href="https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/">
+<link rel="canonical" href="https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/" />
+<meta property="og:url" content="https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+
+
+<meta property="og:updated_time" content=2021-03-14T00:00:00&#43;0530 />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2021-03-14T00:00:00&#43;0530 />
+<meta property="article:published_time" content=2021-03-14T00:00:00&#43;0530 />
+
+
+    <meta property="og:article:author" content="Rudra narayan" />
+    <meta property="article:author" content="Rudra narayan" />
+    <meta name="author" content="Rudra narayan" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "A mininal tmux configuration from scratch",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2021-03-14",
+      "description": "",
+      "wordCount":  933 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2021-03-14",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra narayan",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Narayan Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            
+            
+                <a class="active-link" href="/">← home</a>
+            
+            
+	<main>
+		<article>
+			<h1>A mininal tmux configuration from scratch</h1>
+
+			
+				<time>Mar 14, 2021</time>
+			
+
+			
+
+			
+
+			<div class="blog-post-content">
+				<p>Tmux is a terminal multiplexer program that manages terminal windows and lets us switch between them with ease.</p>
+<p>Tmux sessions are persistent, so we can disconnect from the session and the applications will continue to run in the background, which is quite useful running applications confidently over SSH connections.</p>
+<div class="post-image">
+  <img src="/images/tmux-shot1.png" />
+</div>
+<p>Here is what our tmux should look with this configuration.</p>
+<blockquote>
+<p>Install Tmux -&gt; <a href="https://github.com/tmux/tmux/wiki/Installing">https://github.com/tmux/tmux/wiki/Installing</a></p>
+</blockquote>
+<h2 id="general-configuration">General configuration</h2>
+<p>We need to create a <code>~/.tmux.conf</code> file in our home directory. This will be the configuration file for our setup.</p>
+<p>If the underlying terminal emulator has <code>XTERM-256</code> support then we can add 256 colors support to tmux.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007020">set</span> -g default-terminal <span style="background-color:#fff0f0">&#34;tmux-256color&#34;</span>
+</code></pre></div><p>By default tmux windows start with number <code>0</code>. We could start numbering with <code>1</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007020">set</span> -g base-index <span style="color:#60e;font-weight:bold">1</span>
+</code></pre></div><p>Set the escape time to 0 for faster key repetition. Tmux generally waits for a certain time after an escape is input to determine if it is a part of a function or meta key sequences. The default is 500 milliseconds.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007020">set</span> -s escape-time <span style="color:#60e;font-weight:bold">0</span>
+</code></pre></div><p>By default the mouse support for tmux is set to <code>off</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007020">set</span> -g mouse on
+</code></pre></div><h2 id="keybindings">Keybindings</h2>
+<p>By default tmux uses <code>ctrl-b</code> (<code>C-b</code>) as the prefix key. Personally I found this to be a bit less ergonomic for my taste. Let&rsquo;s change that to <code>C-a</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">set-option -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+</code></pre></div><p>Being a VIM(EVIL) user I have trained myself to use <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> for left, down, up and right movements respectively.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007020">bind</span> h <span style="color:#080;font-weight:bold">select</span>-pane -L
+<span style="color:#007020">bind</span> j <span style="color:#080;font-weight:bold">select</span>-pane -D
+<span style="color:#007020">bind</span> k <span style="color:#080;font-weight:bold">select</span>-pane -U
+<span style="color:#007020">bind</span> l <span style="color:#080;font-weight:bold">select</span>-pane -R
+</code></pre></div><p>Hot-reloading tmux without restarting it can be really handy for people who tweaks their dotfiles as much as I do.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007020">bind</span> r source-file ~/.tmux.conf
+</code></pre></div><p>After saving the <code>~/.tmux.conf</code> file, we can now use <code>C-a r</code> to reload tmux.</p>
+<p>Use Vi/Emacs keybinding to move around the buffer.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#888"># Enable vi keys.</span>
+setw -g mode-keys vi
+
+<span style="color:#888"># Escape turns on copy mode</span>
+<span style="color:#007020">bind</span> Escape copy-mode
+
+<span style="color:#888"># v in copy mode starts making selection</span>
+bind-key -T copy-mode v send -X begin-selection
+bind-key -T copy-mode y send -X copy-selection
+
+<span style="color:#888"># make Prefix p paste the buffer.</span>
+unbind p
+<span style="color:#007020">bind</span> p paste-buffer
+</code></pre></div><h2 id="customize-status-bar">Customize Status Bar</h2>
+<blockquote>
+<p>Some of the commands(to check OS version, battery info and CPU usage info) I will be using are exclusive to Mac Os. Do drop a comment if you want me to test and figure out the linux equivalents.</p>
+</blockquote>
+<p>The default tmux status line looks something like this. Let&rsquo;s make it a bit more appealing.</p>
+<div class="post-image">
+  <img src="/images/tmux_status_line_diagram_github.png" />
+</div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#888"># Set status bar on</span>
+<span style="color:#007020">set</span> -g status on
+
+<span style="color:#888"># Update the status line every second</span>
+<span style="color:#007020">set</span> -g status-interval <span style="color:#60e;font-weight:bold">1</span>
+
+<span style="color:#888"># Set the position of window lists.</span>
+<span style="color:#007020">set</span> -g status-justify centre <span style="color:#888"># [left | centre | right]</span>
+
+<span style="color:#888"># Set Vi style keybinding in the status line</span>
+<span style="color:#007020">set</span> -g status-keys vi
+
+<span style="color:#888"># Set the status bar position</span>
+<span style="color:#007020">set</span> -g status-position top <span style="color:#888"># [top, bottom]</span>
+
+<span style="color:#888"># Set status bar background and foreground color.</span>
+<span style="color:#007020">set</span> -g status-style <span style="color:#963">fg</span><span style="color:#333">=</span>colour136,bg<span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;#002b36&#34;</span>
+</code></pre></div><p>We have centered the window lists and got enough real-estate on both sides.</p>
+<div class="post-image">
+  <img src="/images/tmux-shot2.png" />
+</div>
+<p>Now let&rsquo;s add some useful stuff up there.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#888"># Set left side status bar length and style</span>
+<span style="color:#007020">set</span> -g status-left-length <span style="color:#60e;font-weight:bold">60</span>
+<span style="color:#007020">set</span> -g status-left-style default
+
+<span style="color:#888"># Display the session name</span>
+<span style="color:#007020">set</span> -g status-left <span style="background-color:#fff0f0">&#34;#[fg=green] ❐ #S #[default]&#34;</span>
+
+<span style="color:#888"># Display the os version (Mac Os)</span>
+<span style="color:#007020">set</span> -ag status-left <span style="background-color:#fff0f0">&#34; #[fg=black] #[fg=green,bright]  #(sw_vers -productVersion) #[default]&#34;</span>
+
+<span style="color:#888"># Display the battery percentage (Mac OS)</span>
+<span style="color:#007020">set</span> -ag status-left <span style="background-color:#fff0f0">&#34;#[fg=green,bg=default,bright] 🔋 #(pmset -g batt | tail -1 | awk &#39;{print </span><span style="color:#963">$3</span><span style="background-color:#fff0f0">}&#39; | tr -d &#39;;&#39;) #[default]&#34;</span>
+
+<span style="color:#888"># Set right side status bar length and style</span>
+<span style="color:#007020">set</span> -g status-right-length <span style="color:#60e;font-weight:bold">140</span>
+<span style="color:#007020">set</span> -g status-right-style default
+
+<span style="color:#888"># Display the cpu load (Mac OS)</span>
+<span style="color:#007020">set</span> -g status-right <span style="background-color:#fff0f0">&#34;#[fg=green,bg=default,bright]  #(top -l 1 | grep -E &#34;</span>^CPU<span style="background-color:#fff0f0">&#34; | sed &#39;s/.*://&#39;) #[default]&#34;</span>
+
+<span style="color:#888"># Display the date</span>
+<span style="color:#007020">set</span> -ag status-right <span style="background-color:#fff0f0">&#34;#[fg=white,bg=default]  %a %d #[default]&#34;</span>
+
+<span style="color:#888"># Display the time</span>
+<span style="color:#007020">set</span> -ag status-right <span style="background-color:#fff0f0">&#34;#[fg=colour172,bright,bg=default] ⌚︎%l:%M %p #[default]&#34;</span>
+
+<span style="color:#888"># Display the hostname</span>
+<span style="color:#007020">set</span> -ag status-right <span style="background-color:#fff0f0">&#34;#[fg=cyan,bg=default] ☠ #H #[default]&#34;</span>
+
+<span style="color:#888"># Set the inactive window color and style</span>
+<span style="color:#007020">set</span> -g window-status-style <span style="color:#963">fg</span><span style="color:#333">=</span>colour244,bg<span style="color:#333">=</span>default
+<span style="color:#007020">set</span> -g window-status-format <span style="background-color:#fff0f0">&#39; #I #W &#39;</span>
+
+<span style="color:#888"># Set the active window color and style</span>
+<span style="color:#007020">set</span> -g window-status-current-style <span style="color:#963">fg</span><span style="color:#333">=</span>black,bg<span style="color:#333">=</span>colour136
+<span style="color:#007020">set</span> -g window-status-current-format <span style="background-color:#fff0f0">&#39; #I #W &#39;</span>
+</code></pre></div><div class="post-image">
+  <img src="/images/tmux-shot3.png" />
+</div>
+<p>Well who needs an activity monitor now!</p>
+<h2 id="customize-active-pane">Customize Active Pane</h2>
+<p>We need some subtle style changes in order to easily distinguish the active pane form the inactive ones.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#888"># Colors for pane borders(default)</span>
+setw -g pane-border-style <span style="color:#963">fg</span><span style="color:#333">=</span>green,bg<span style="color:#333">=</span>black
+setw -g pane-active-border-style <span style="color:#963">fg</span><span style="color:#333">=</span>white,bg<span style="color:#333">=</span>black
+
+<span style="color:#888"># Active pane normal, other shaded out</span>
+setw -g window-style <span style="color:#963">fg</span><span style="color:#333">=</span>colour240,bg<span style="color:#333">=</span>colour235
+setw -g window-active-style <span style="color:#963">fg</span><span style="color:#333">=</span>white,bg<span style="color:#333">=</span>black
+</code></pre></div><p>The inactive panes has the green border while as the active one has the white border. Also the inactive panes are a bit greyed out while the active one looks sharper/more
+vibrant.</p>
+<blockquote>
+<p>The above color combination works with dark terminal themes. Do change the colors accordingly as per the terminal theme for better asthetics.</p>
+</blockquote>
+<div class="post-image">
+  <img src="/images/tmux-shot4.gif" />
+</div>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<p>Here are some useful tweaks for a quiter tmux with a more native Mac like experience.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#888"># Mac Os Command+K (Clear scrollback buffer)</span>
+<span style="color:#007020">bind</span> -n C-k clear-history
+
+<span style="color:#888"># Set a larger scroll back</span>
+set-option -g history-limit <span style="color:#60e;font-weight:bold">100000</span>
+
+<span style="color:#888"># A quiter setup</span>
+<span style="color:#007020">set</span> -g visual-activity off
+<span style="color:#007020">set</span> -g visual-bell off
+<span style="color:#007020">set</span> -g visual-silence off
+setw -g monitor-activity off
+<span style="color:#007020">set</span> -g bell-action none
+</code></pre></div><h2 id="who-wants-a-minimal-config-anyway">Who wants a minimal config anyway!</h2>
+<p>There is much more to tmux than what I have done here with ~50 lines of config. I would highly recommend the <a href="https://github.com/tmux/tmux/wiki" target="_blank">official documentation</a>
+ for understanding various features of tmux.</p>
+<p>Also check out <a href="https://github.com/rothgar/awesome-tmux" target="_blank">Awesome tmux</a>
+ for almost all the best resources out there for tmux and don&rsquo;t forget to share your screenshots in the comments.</p>
+<p>Here is my <a href="https://github.com/mrprofessor/dotfiles/blob/master/tmux.conf" target="_blank">tmux.conf</a>
+.</p>
+
+			</div>
+			
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		
+		<nav>
+			<ul>
+				
+				<li><a href="/about/">about</a></li>
+				
+				<li><a href="/logs/">logs</a></li>
+				
+				<li><a href="/privacy">privacy</a></li>
+				
+			</ul>
+		</nav>
+		
+	</div>
+
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                 link.classList.add("active-link")
+             }
+         }
+     }())
+    </script>
+
+    
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE', {api_host: 'https://profhog.herokuapp.com'})
+    </script>
+
+    
+    <script async
+        src="https://prof-ackee.herokuapp.com/tracker.js"
+        data-ackee-server="https://prof-ackee.herokuapp.com"
+        data-ackee-domain-id="45af9210-721f-4c09-a69d-77e66fe7bc5d"
+    >
+    </script>
+
+</html>

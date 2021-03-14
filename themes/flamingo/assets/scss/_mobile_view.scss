@@ -206,6 +206,11 @@ nav {
     }
 }
 
+// Add margin to the image after a code-block.
+.highlight + .post-image {
+    margin-top: 1rem;
+}
+
 // Style blockquotes
 // https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
 // Worth looking at
