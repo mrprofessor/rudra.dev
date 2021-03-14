@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: $title-font-size;
+}
+
 .brand-icon {
     color: $post-link-color;
     display: inline-flex;
