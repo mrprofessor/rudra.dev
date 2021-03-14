@@ -108,6 +108,43 @@ coz that company backs it."/ trend.
 
 Inspired from this
 [[https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f/][article]].
+** Configuring nodejs and npm behind a proxy :node:npm:productivity:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: configuring-npm-behind-a-proxy
+   :EXPORT_DATE: 2017-05-27
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/configuring-npm-behind-a-proxy
+   :END:
+
+For people who work in a company and squeez out some of their time to
+learn nodejs, setting up an dev-environment can be a real pain. Proxy
+servers are pretty common in college and business type institutions.
+
+You can locate your proxy settings from your browser's settings panel.
+
+*** Using Proxy with NPM
+    :PROPERTIES:
+    :CUSTOM_ID: using-proxy-with-npm
+    :END:
+
+Once you have obtained the proxy settings (server URL, port, username
+and password); you need to configure your npm configurations as follows.
+
+#+BEGIN_SRC sh
+  npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+  npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
+#+END_SRC
+
+You would have to replace =<username>=, =<password>=,
+=<proxy-server-url>=, =<port>= with the values specific to your proxy
+server credentials.
+
+These fields are optional. For instance, your proxy server might not
+even require =<username>= and =<password>=, or that it might be running
+on port 80 (in which case =<port>= is not required).
+
+Once you have set these, your npm install, =npm i -g etc=. would work
+properly.
+
 ** Maintaining multiple GitHub accounts :git:github:
    :PROPERTIES:
    :EXPORT_FILE_NAME: maintaining-multiple-github-accounts
@@ -392,7 +429,7 @@ Here is the full source code with a working example.
 
 Feel free to edit and play around. Adios!
 
-** A floating terminal for (Neo)vim :vim:neovim:editor:productivity:
+** A floating terminal for (Neo)vim :unix:vim:neovim:editor:productivity:
    :PROPERTIES:
    :EXPORT_FILE_NAME: a-floating-terminal-for-vim
    :EXPORT_DATE: 2019-10-12
@@ -778,43 +815,6 @@ The above mentioned code can be found here.
 [[https://github.com/mrprofessor/celery-timer/][repo]]
 
 Adios!
-
-** Configuring nodejs and npm behind a proxy :node:npm:productivity:
-   :PROPERTIES:
-   :EXPORT_FILE_NAME: configuring-npm-behind-a-proxy
-   :EXPORT_DATE: 2017-05-27
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/configuring-npm-behind-a-proxy
-   :END:
-
-For people who work in a company and squeez out some of their time to
-learn nodejs, setting up an dev-environment can be a real pain. Proxy
-servers are pretty common in college and business type institutions.
-
-You can locate your proxy settings from your browser's settings panel.
-
-*** Using Proxy with NPM
-    :PROPERTIES:
-    :CUSTOM_ID: using-proxy-with-npm
-    :END:
-
-Once you have obtained the proxy settings (server URL, port, username
-and password); you need to configure your npm configurations as follows.
-
-#+BEGIN_SRC sh
-  npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
-  npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
-#+END_SRC
-
-You would have to replace =<username>=, =<password>=,
-=<proxy-server-url>=, =<port>= with the values specific to your proxy
-server credentials.
-
-These fields are optional. For instance, your proxy server might not
-even require =<username>= and =<password>=, or that it might be running
-on port 80 (in which case =<port>= is not required).
-
-Once you have set these, your npm install, =npm i -g etc=. would work
-properly.
 
 ** Rendering markdown from Flask :python:flask:markdown:
    :PROPERTIES:
@@ -1418,7 +1418,7 @@ This post is not about bashing Gatsby or showing it's inferiority. It's an humbl
 
 If you are a front-end developer with the knowledge of React and always willing to dive in and tweak whenever you need a change, then by all means go ahead. But if you don't want to go down that rabbit-hole, just know that there are much easier options available.
 
-** A mininal tmux configuration from scratch
+** A mininal tmux configuration from scratch :tmux:productivity:unix:mac:
    :PROPERTIES:
    :EXPORT_FILE_NAME: a-mininal-tmux-configuration-from-scratch
    :EXPORT_DATE: 2021-03-14
