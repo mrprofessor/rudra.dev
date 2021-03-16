@@ -1435,10 +1435,6 @@ Tmux sessions are persistent, so we can disconnect from the session and the appl
 #+end_export
 Here is what our tmux should look with this configuration.
 
-#+BEGIN_QUOTE
-Install Tmux -> https://github.com/tmux/tmux/wiki/Installing
-#+END_QUOTE
-
 *** General configuration
 
 We need to create a =~/.tmux.conf= file in our home directory. This will be the configuration file for our setup.

@@ -16,8 +16,6 @@ Tmux sessions are persistent, so we can disconnect from the session and the appl
 
 Here is what our tmux should look with this configuration.
 
-> Install Tmux -> <https://github.com/tmux/tmux/wiki/Installing>
-
 
 ## General configuration {#general-configuration}
 

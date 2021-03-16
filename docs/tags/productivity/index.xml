@@ -16,8 +16,7 @@
       <description>Tmux is a terminal multiplexer program that manages terminal windows and lets us switch between them with ease.
 Tmux sessions are persistent, so we can disconnect from the session and the applications will continue to run in the background, which is quite useful running applications confidently over SSH connections.
  Here is what our tmux should look with this configuration.
- Install Tmux -&amp;gt; https://github.com/tmux/tmux/wiki/Installing
- General configuration We need to create a ~/.</description>
+General configuration We need to create a ~/.tmux.conf file in our home directory.</description>
     </item>
     
     <item>
