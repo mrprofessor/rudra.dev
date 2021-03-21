@@ -13,7 +13,7 @@
       <pubDate>Sat, 27 May 2017 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/configuring-npm-behind-a-proxy/</guid>
-      <description>For people who work in a company and squeez out some of their time to learn nodejs, setting up an dev-environment can be a real pain. Proxy servers are pretty common in college and business type institutions.
+      <description>Table of Contents   Using Proxy with NPM      For people who work in a company and squeez out some of their time to learn nodejs, setting up an dev-environment can be a real pain. Proxy servers are pretty common in college and business type institutions.
 You can locate your proxy settings from your browser&amp;rsquo;s settings panel.
 Using Proxy with NPM Once you have obtained the proxy settings (server URL, port, username and password); you need to configure your npm configurations as follows.</description>
     </item>

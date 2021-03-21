@@ -13,7 +13,7 @@
         <meta name="author" content="Rudra Narayan">
 
         
-        <link rel="stylesheet" href="/scss/main.min.f052c4b7e2a64217beb1b4de872d3ca7846f5d04e48f9b8a6432f5d7ff2117ab.css" media="screen">
+        <link rel="stylesheet" href="/scss/main.min.082edc4e27e91c20fceb464dd51ba77603656b85163d341922cd355445849bc6.css" media="screen">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         
@@ -87,7 +87,7 @@
       },
       "datePublished": "2020-02-04",
       "description": "",
-      "wordCount":  276 ,
+      "wordCount":  289 ,
       "mainEntityOfPage": "True",
       "dateModified": "2020-02-04",
       "image": {
@@ -176,10 +176,44 @@
 			
 
 			<div class="blog-post-content">
-				<p>In this post I am going to plug about a cool trick(probably useless)
+				<div class="ox-hugo-toc toc">
+<div></div>
+<div class="heading">Table of Contents</div>
+<ul>
+<li>
+<a
+    href="#lets-go-hacking"
+>
+    Let&rsquo;s go hacking
+</a>
+</li>
+<li>
+<a
+    href="#not-quite-there-yet"
+>
+    Not quite there yet!
+</a>
+</li>
+<li>
+<a
+    href="#gimme-the-code"
+>
+    Gimme the code!
+</a>
+</li>
+</ul>
+</div>
+<!--endtoc-->
+<p>In this post I am going to plug about a cool trick(probably useless)
 that I discovered geeking around the internet.</p>
 <p>I was building a tiny
-<a href="https://github.com/solitudenote/gitkeeper" target="_blank">microservice</a>
+
+<a
+    href="https://github.com/solitudenote/gitkeeper"
+    target="_blank"
+>
+    microservice
+</a>
  which would
 let the client side application securely authenticate with GitHub. After
 writing the only required API, I wanted to render the <em>README.md</em> file
@@ -209,20 +243,62 @@ everytime we hit the index.</p>
 
   <span style="color:#080;font-weight:bold">if</span> __name__ <span style="color:#333">==</span> <span style="background-color:#fff0f0">&#34;__main__&#34;</span>:
       app<span style="color:#333">.</span>run()
-</code></pre></div><p>In the above snippet we are using <a href="https://flask.palletsprojects.com" target="_blank">Flask</a>
-(my current favorite) as the web framework, <a href="https://github.com/Python-Markdown/markdown" target="_blank">Python-Markdown</a>
- to convert markdown files to HTML, and <a href="https://python-markdown.github.io/extensions/fenced%5Fcode%5Fblocks/" target="_blank">fenced_code</a>
+</code></pre></div><p>In the above snippet we are using 
+<a
+    href="https://flask.palletsprojects.com"
+    target="_blank"
+>
+    Flask
+</a>
+(my current favorite) as the web framework, 
+<a
+    href="https://github.com/Python-Markdown/markdown"
+    target="_blank"
+>
+    Python-Markdown
+</a>
+ to convert markdown files to HTML, and 
+<a
+    href="https://python-markdown.github.io/extensions/fenced%5Fcode%5Fblocks/"
+    target="_blank"
+>
+    fenced_code
+</a>
  extension to support code blocks.</p>
 <p>And it looked something like this</p>
 <div class="post-image">
   <img src="/images/markdown-render-plain.png" />
 </div>
 <h2 id="not-quite-there-yet">Not quite there yet!</h2>
-<p>Well even though <a href="https://en.wikipedia.org/wiki/Richard%5FStallman" target="_blank">Richard Stallman</a>
- remains my hero, fortunately I do not share his <a href="https://stallman.org/" target="_blank">taste</a>
+<p>Well even though 
+<a
+    href="https://en.wikipedia.org/wiki/Richard%5FStallman"
+    target="_blank"
+>
+    Richard Stallman
+</a>
+ remains my hero, fortunately I do not share his 
+<a
+    href="https://stallman.org/"
+    target="_blank"
+>
+    taste
+</a>
  on web design. So without
-over-engineering our little snippet I thought of adding syntax highlighting with <a href="https://pygments.org/" target="_blank">pygments</a>
- and <a href="https://python-markdown.github.io/extensions/code%5Fhilite/" target="_blank">CodeHilite</a>
+over-engineering our little snippet I thought of adding syntax highlighting with 
+<a
+    href="https://pygments.org/"
+    target="_blank"
+>
+    pygments
+</a>
+ and 
+<a
+    href="https://python-markdown.github.io/extensions/code%5Fhilite/"
+    target="_blank"
+>
+    CodeHilite
+</a>
  extension.</p>
 <p>Let&rsquo;s generate css for syntax highlighting using pygments</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#080;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">pygments.formatters</span> <span style="color:#080;font-weight:bold">import</span> HtmlFormatter
@@ -235,7 +311,13 @@ over-engineering our little snippet I thought of adding syntax highlighting with
   <span style="color:#080;font-weight:bold">return</span> md_template
 </code></pre></div><blockquote>
 <p>Alternatively we can use
-<a href="https://github.com/richleland/pygments-css" target="_blank">pygments-css</a>
+
+<a
+    href="https://github.com/richleland/pygments-css"
+    target="_blank"
+>
+    pygments-css
+</a>
 
 repository to get pre-generated CSS files.</p>
 </blockquote>
@@ -321,17 +403,9 @@ repository to get pre-generated CSS files.</p>
     </script>
 
     
-    <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE', {api_host: 'https://profhog.herokuapp.com'})
-    </script>
+    
 
     
-    <script async
-        src="https://prof-ackee.herokuapp.com/tracker.js"
-        data-ackee-server="https://prof-ackee.herokuapp.com"
-        data-ackee-domain-id="45af9210-721f-4c09-a69d-77e66fe7bc5d"
-    >
-    </script>
+    
 
 </html>

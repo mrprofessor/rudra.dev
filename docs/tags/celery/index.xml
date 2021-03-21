@@ -13,7 +13,7 @@
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/</guid>
-      <description>The first thing that comes to mind while considering a task scheduler is a cron job. As most of the today&amp;rsquo;s servers are hosted on linux machines, setting a cron job for periodic task might seem like a good option for many. However in production having a crontab is nothing but a pain in the a**. It can be a bit tricky to configure different timezones depending upon the location of the server.</description>
+      <description>Table of Contents   Let&amp;rsquo;s go hacking    Monitoring events    Conclusion      The first thing that comes to mind while considering a task scheduler is a cron job. As most of the today&amp;rsquo;s servers are hosted on linux machines, setting a cron job for periodic task might seem like a good option for many. However in production having a crontab is nothing but a pain in the a**.</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/building-a-github-auth-service/</guid>
-      <description>Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit as an inventory of resources where the history and the changes were easier to maintain. So for me GitHub was the perfect choice as a free storage with elegant history/commit management.</description>
+      <description>Table of Contents   The GitHub OAuth process    Why do we need a back-end server    The proxy    Conclusion      Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit  as an inventory of resources where the history and the changes were easier to maintain.</description>
     </item>
     
     <item>
@@ -22,9 +22,8 @@
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/rendering-markdown-from-flask/</guid>
-      <description>In this post I am going to plug about a cool trick(probably useless) that I discovered geeking around the internet.
-I was building a tiny microservice which would let the client side application securely authenticate with GitHub. After writing the only required API, I wanted to render the README.md file on the index page.
-So I planned to convert markdown to html and serve the resultant string everytime we hit the index.</description>
+      <description>Table of Contents   Let&amp;rsquo;s go hacking    Not quite there yet!    Gimme the code!      In this post I am going to plug about a cool trick(probably useless) that I discovered geeking around the internet.
+I was building a tiny microservice  which would let the client side application securely authenticate with GitHub. After writing the only required API, I wanted to render the README.</description>
     </item>
     
     <item>
@@ -33,7 +32,7 @@ So I planned to convert markdown to html and serve the resultant string everytim
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/</guid>
-      <description>The first thing that comes to mind while considering a task scheduler is a cron job. As most of the today&amp;rsquo;s servers are hosted on linux machines, setting a cron job for periodic task might seem like a good option for many. However in production having a crontab is nothing but a pain in the a**. It can be a bit tricky to configure different timezones depending upon the location of the server.</description>
+      <description>Table of Contents   Let&amp;rsquo;s go hacking    Monitoring events    Conclusion      The first thing that comes to mind while considering a task scheduler is a cron job. As most of the today&amp;rsquo;s servers are hosted on linux machines, setting a cron job for periodic task might seem like a good option for many. However in production having a crontab is nothing but a pain in the a**.</description>
     </item>
     
     <item>
@@ -44,7 +43,7 @@ So I planned to convert markdown to html and serve the resultant string everytim
       <guid>https://rudra.dev/posts/generate-and-serve-files-from-flask/</guid>
       <description>Flask is one of the most used python frameworks for web development. Its simplicity and extensibility makes it convenient for both small and large applications alike.
 In this blog we are going to create a simple flask web application that will generate and serve files without storing them in the server.
- Note: For flask and python installation visit flask documentation  Let&amp;rsquo;s create a flask application with a basic route.</description>
+ Note: For flask and python installation visit flask documentation   Let&amp;rsquo;s create a flask application with a basic route.</description>
     </item>
     
   </channel>

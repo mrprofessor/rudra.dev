@@ -249,3 +249,20 @@ time {
     font-size: 80%;
     margin-right: 1rem;
 }
+
+
+// TOC
+.ox-hugo-toc {
+    border: 1px solid $toc-border;
+    background: toc-background;
+    padding: 1rem;
+
+    a {
+        color: $subscript-color;
+        text-decoration: none;
+    }
+
+    .heading {
+        color: $subscript-color;
+    }
+}

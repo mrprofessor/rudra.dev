@@ -13,10 +13,8 @@
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/</guid>
-      <description>Tmux is a terminal multiplexer program that manages terminal windows and lets us switch between them with ease.
-Tmux sessions are persistent, so we can disconnect from the session and the applications will continue to run in the background, which is quite useful running applications confidently over SSH connections.
- Here is what our tmux should look with this configuration.
-General configuration We need to create a ~/.tmux.conf file in our home directory.</description>
+      <description>Table of Contents   General configuration    Keybindings    Customize Status Bar    Customize Active Pane    Miscellaneous    Who wants a minimal config anyway!      General configuration We need to create a ~/.tmux.conf file in our home directory. This will be the configuration file for our setup.
+If the underlying terminal emulator has XTERM-256 support then we can add 256 colors support to tmux.</description>
     </item>
     
   </channel>

@@ -2,7 +2,7 @@
 #+hugo_section: posts
 #+OPTIONS: toc:2
 
-** Table of contents :toc:
+* Contents :toc:
 - [[#posts][Posts]]
   - [[#css-and-javascript-arent-byte-code-][CSS and JavaScript aren't byte code !!]]
   - [[#configuring-nodejs-and-npm-behind-a-proxy][Configuring nodejs and npm behind a proxy]]

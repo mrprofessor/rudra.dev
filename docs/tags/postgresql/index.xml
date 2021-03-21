@@ -13,9 +13,7 @@
       <pubDate>Tue, 19 May 2020 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/generate-beautiful-json-from-postgresql/</guid>
-      <description>PostgreSQL provides a set of built-in JSON creation functions that can be used to build basic JSON structures. This increases the performance up to 10 times more than building it at the back-end layer.
- This post is about building different JSON structures using PostgreSQL built-in functions. It doesn&amp;rsquo;t talk about storing and manipulating JSON in PostgreSQL.
- In order to proceed with some examples, first we need to setup a test database.</description>
+      <description>Table of Contents   1. Get the table data as JSON objects    2. Get the table data with specific columns    3. Get the table data as a single JSON object    4. Build JSON object with multiple tables    5. Build JSON object by resolving foreign keys    Conclusion      PostgreSQL provides a set of built-in JSON creation functions  that can be used to build basic JSON structures.</description>
     </item>
     
   </channel>

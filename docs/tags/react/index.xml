@@ -13,8 +13,7 @@
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/</guid>
-      <description>So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&amp;rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.
-So what went wrong? As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer.</description>
+      <description>Table of Contents   So what went wrong?    My new workflow    Conclusion      So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&amp;rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.</description>
     </item>
     
     <item>
@@ -23,9 +22,8 @@ So what went wrong? As my career progressed, I have gradually moved from being a
       <pubDate>Fri, 03 May 2019 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/setting-up-vim-for-react/</guid>
-      <description>It&amp;rsquo;s been 8 months since I have been using (neo)vim as my primary text editor. Initially it was incredibly tough to adopt and use it in work. Well that would be another story to tell.
-Back then I was working mostly in backend using CoffeeScript (I know 🙈). VS Code had a little support for CoffeeScript so I didn&amp;rsquo;t had any problems using vim full time.
-But things changed drastically when I moved into UI development this year.</description>
+      <description>Table of Contents   Syntax Highlighting    Linters and Formatters    Autocompletion    Commenting    Conclusion      It&amp;rsquo;s been 8 months since I have been using (neo)vim as my primary text editor. Initially it was incredibly tough to adopt and use it in work. Well that would be another story to tell.
+Back then I was working mostly in backend using CoffeeScript  (I know 🙈).</description>
     </item>
     
   </channel>

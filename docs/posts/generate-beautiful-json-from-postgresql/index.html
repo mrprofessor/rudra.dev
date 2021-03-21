@@ -13,7 +13,7 @@
         <meta name="author" content="Rudra Narayan">
 
         
-        <link rel="stylesheet" href="/scss/main.min.f052c4b7e2a64217beb1b4de872d3ca7846f5d04e48f9b8a6432f5d7ff2117ab.css" media="screen">
+        <link rel="stylesheet" href="/scss/main.min.082edc4e27e91c20fceb464dd51ba77603656b85163d341922cd355445849bc6.css" media="screen">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         
@@ -87,7 +87,7 @@
       },
       "datePublished": "2020-05-19",
       "description": "",
-      "wordCount":  744 ,
+      "wordCount":  789 ,
       "mainEntityOfPage": "True",
       "dateModified": "2020-05-19",
       "image": {
@@ -176,8 +176,63 @@
 			
 
 			<div class="blog-post-content">
-				<p>PostgreSQL provides a set of built-in <a href="https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-CREATION-TABLE" target="_blank">JSON
-creation functions</a>
+				<div class="ox-hugo-toc toc">
+<div></div>
+<div class="heading">Table of Contents</div>
+<ul>
+<li>
+<a
+    href="#1-get-the-table-data-as-json-objects"
+>
+    1. Get the table data as JSON objects
+</a>
+</li>
+<li>
+<a
+    href="#2-get-the-table-data-with-specific-columns"
+>
+    2. Get the table data with specific columns
+</a>
+</li>
+<li>
+<a
+    href="#3-get-the-table-data-as-a-single-json-object"
+>
+    3. Get the table data as a single JSON object
+</a>
+</li>
+<li>
+<a
+    href="#4-build-json-object-with-multiple-tables"
+>
+    4. Build JSON object with multiple tables
+</a>
+</li>
+<li>
+<a
+    href="#5-build-json-object-by-resolving-foreign-keys"
+>
+    5. Build JSON object by resolving foreign keys
+</a>
+</li>
+<li>
+<a
+    href="#conclusion"
+>
+    Conclusion
+</a>
+</li>
+</ul>
+</div>
+<!--endtoc-->
+<p>PostgreSQL provides a set of built-in 
+<a
+    href="https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-CREATION-TABLE"
+    target="_blank"
+>
+    JSON
+creation functions
+</a>
  that can be used to build basic JSON structures. This increases the performance up to 10 times more than building it at the back-end layer.</p>
 <blockquote>
 <p>This post is about building different JSON structures using PostgreSQL
@@ -439,17 +494,9 @@ without stressing the back-end processes.</p>
     </script>
 
     
-    <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE', {api_host: 'https://profhog.herokuapp.com'})
-    </script>
+    
 
     
-    <script async
-        src="https://prof-ackee.herokuapp.com/tracker.js"
-        data-ackee-server="https://prof-ackee.herokuapp.com"
-        data-ackee-domain-id="45af9210-721f-4c09-a69d-77e66fe7bc5d"
-    >
-    </script>
+    
 
 </html>

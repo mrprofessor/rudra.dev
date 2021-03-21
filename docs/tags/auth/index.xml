@@ -13,7 +13,7 @@
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0530</pubDate>
       
       <guid>https://rudra.dev/posts/building-a-github-auth-service/</guid>
-      <description>Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit as an inventory of resources where the history and the changes were easier to maintain. So for me GitHub was the perfect choice as a free storage with elegant history/commit management.</description>
+      <description>Table of Contents   The GitHub OAuth process    Why do we need a back-end server    The proxy    Conclusion      Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit  as an inventory of resources where the history and the changes were easier to maintain.</description>
     </item>
     
   </channel>

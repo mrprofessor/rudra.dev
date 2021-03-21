@@ -13,7 +13,7 @@
         <meta name="author" content="Rudra Narayan">
 
         
-        <link rel="stylesheet" href="/scss/main.min.f052c4b7e2a64217beb1b4de872d3ca7846f5d04e48f9b8a6432f5d7ff2117ab.css" media="screen">
+        <link rel="stylesheet" href="/scss/main.min.082edc4e27e91c20fceb464dd51ba77603656b85163d341922cd355445849bc6.css" media="screen">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         
@@ -87,7 +87,7 @@
       },
       "datePublished": "2020-04-11",
       "description": "",
-      "wordCount":  653 ,
+      "wordCount":  670 ,
       "mainEntityOfPage": "True",
       "dateModified": "2020-04-11",
       "image": {
@@ -178,11 +178,52 @@
 			
 
 			<div class="blog-post-content">
-				<p>Recently I was building a GitHub OAuth app to authentiacate one my
+				<div class="ox-hugo-toc toc">
+<div></div>
+<div class="heading">Table of Contents</div>
+<ul>
+<li>
+<a
+    href="#the-github-oauth-process"
+>
+    The GitHub OAuth process
+</a>
+</li>
+<li>
+<a
+    href="#why-do-we-need-a-back-end-server"
+>
+    Why do we need a back-end server
+</a>
+</li>
+<li>
+<a
+    href="#the-proxy"
+>
+    The proxy
+</a>
+</li>
+<li>
+<a
+    href="#conclusion"
+>
+    Conclusion
+</a>
+</li>
+</ul>
+</div>
+<!--endtoc-->
+<p>Recently I was building a GitHub OAuth app to authentiacate one my
 client-side application with GitHub. The application was all about
 taking notes and maintaining them on a private repository. I have had
 worked on such an architecture in one of my previous jobs where we have
-used <a href="https://aws.amazon.com/codecommit/" target="_blank">AWS CodeCommit</a>
+used 
+<a
+    href="https://aws.amazon.com/codecommit/"
+    target="_blank"
+>
+    AWS CodeCommit
+</a>
  as an
 inventory of resources where the history and the changes were easier to
 maintain. So for me GitHub was the perfect choice as a free storage with
@@ -190,11 +231,23 @@ elegant history/commit management.</p>
 <p>Like most OAuth process it was not so straightforward even though at
 first glance it seemed so.</p>
 <h2 id="the-github-oauth-process">The GitHub OAuth process</h2>
-<p>After going through the GitHub&rsquo;s <a href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/" target="_blank">guide</a>
+<p>After going through the GitHub&rsquo;s 
+<a
+    href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/"
+    target="_blank"
+>
+    guide
+</a>
  and a bunch of other development blogs I came up with a set of steps.</p>
 <ol>
 <li>
-<p>First we need to create an OAuth application. The steps to create one are mentioned <a href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/" target="_blank">here</a>
+<p>First we need to create an OAuth application. The steps to create one are mentioned 
+<a
+    href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/"
+    target="_blank"
+>
+    here
+</a>
 .</p>
 </li>
 <li>
@@ -223,7 +276,13 @@ user details.</p>
 </ol>
 <blockquote>
 <p>Follow the official
-<a href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow" target="_blank">web-application-flow</a>
+
+<a
+    href="https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow"
+    target="_blank"
+>
+    web-application-flow
+</a>
 
 guide for more details and all possible parameters of the
 authentication APIs.</p>
@@ -285,12 +344,24 @@ call. We are also wrapping the default error message with a more
 sophisticated one.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This kind of design is pretty common with most OAuth authentication
-processes. Here for hosting I have used <a href="https://glitch.com/" target="_blank">Glitch</a>
+processes. Here for hosting I have used 
+<a
+    href="https://glitch.com/"
+    target="_blank"
+>
+    Glitch
+</a>
 
 as it is free and easy to maintain. If you are expecting an high volume
 of requests, a more serious server would be a better choice.</p>
 <p>The complete source code can be found
-<a href="https://github.com/solitudenote/gitkeeper" target="_blank">here</a>
+
+<a
+    href="https://github.com/solitudenote/gitkeeper"
+    target="_blank"
+>
+    here
+</a>
 . Feel free to fork
 and play around. Adios.</p>
 
@@ -360,17 +431,9 @@ and play around. Adios.</p>
     </script>
 
     
-    <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE', {api_host: 'https://profhog.herokuapp.com'})
-    </script>
+    
 
     
-    <script async
-        src="https://prof-ackee.herokuapp.com/tracker.js"
-        data-ackee-server="https://prof-ackee.herokuapp.com"
-        data-ackee-domain-id="45af9210-721f-4c09-a69d-77e66fe7bc5d"
-    >
-    </script>
+    
 
 </html>
