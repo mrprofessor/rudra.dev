@@ -7,6 +7,20 @@ draft = false
 aliases = "/post/setting-up-vim-for-react"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [Syntax Highlighting](#syntax-highlighting)
+- [Linters and Formatters](#linters-and-formatters)
+- [Autocompletion](#autocompletion)
+- [Commenting](#commenting)
+- [Conclusion](#conclusion)
+
+</div>
+<!--endtoc-->
+
 It's been 8 months since I have been using (neo)vim as my primary text
 editor. Initially it was incredibly tough to adopt and use it in work.
 Well that would be another story to tell.

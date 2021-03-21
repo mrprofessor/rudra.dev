@@ -1,5 +1,21 @@
 #+hugo_base_dir: ../
 #+hugo_section: posts
+#+OPTIONS: toc:2
+
+** Table of contents :toc:
+- [[#posts][Posts]]
+  - [[#css-and-javascript-arent-byte-code-][CSS and JavaScript aren't byte code !!]]
+  - [[#configuring-nodejs-and-npm-behind-a-proxy][Configuring nodejs and npm behind a proxy]]
+  - [[#maintaining-multiple-github-accounts][Maintaining multiple GitHub accounts]]
+  - [[#setting-up-neovim-for-react-development][Setting up (Neo)vim for React development]]
+  - [[#generate-and-serve-files-from-flask][Generate and serve files from Flask]]
+  - [[#a-floating-terminal-for-neovim][A floating terminal for (Neo)vim]]
+  - [[#setting-up-a-task-scheduler-in-flask][Setting up a task scheduler in Flask]]
+  - [[#rendering-markdown-from-flask][Rendering markdown from Flask]]
+  - [[#building-a-github-authentication-service][Building a GitHub authentication service]]
+  - [[#generate-beautiful-json-from-postgresql][Generate beautiful JSON from PostgreSQL]]
+  - [[#gatsbyjs-an-overkill-for-a-static-site-generator][GatsbyJs: An overkill for a static site generator]]
+  - [[#a-mininal-tmux-configuration-from-scratch][A mininal tmux configuration from scratch]]
 
 * Posts
 ** CSS and JavaScript aren't byte code !! :rant:css:javascript:web:
@@ -1423,17 +1439,6 @@ If you are a front-end developer with the knowledge of React and always willing 
    :EXPORT_FILE_NAME: a-mininal-tmux-configuration-from-scratch
    :EXPORT_DATE: 2021-03-14
    :END:
-
-Tmux is a terminal multiplexer program that manages terminal windows and lets us switch between them with ease.
-
-Tmux sessions are persistent, so we can disconnect from the session and the applications will continue to run in the background, which is quite useful running applications confidently over SSH connections.
-
-#+begin_export html
-  <div class="post-image">
-    <img src="/images/tmux-shot1.png" />
-  </div>
-#+end_export
-Here is what our tmux should look with this configuration.
 
 *** General configuration
 

@@ -7,6 +7,18 @@ draft = false
 aliases = "/post/setting-up-a-task-scheduler-in-flask"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [Let's go hacking](#lets-go-hacking)
+- [Monitoring events](#monitoring-events)
+- [Conclusion](#conclusion)
+
+</div>
+<!--endtoc-->
+
 The first thing that comes to mind while considering a task scheduler is
 a cron job. As most of the today's servers are hosted on linux machines,
 setting a cron job for periodic task might seem like a good option for

@@ -7,6 +7,18 @@ draft = false
 aliases = "/post/rendering-markdown-from-flask"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [Let's go hacking](#lets-go-hacking)
+- [Not quite there yet!](#not-quite-there-yet)
+- [Gimme the code!](#gimme-the-code)
+
+</div>
+<!--endtoc-->
+
 In this post I am going to plug about a cool trick(probably useless)
 that I discovered geeking around the internet.
 

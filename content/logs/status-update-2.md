@@ -7,6 +7,17 @@ draft = false
 aliases = "/log/status-update-2"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [**New project**](#new-project)
+- [**New languages**](#new-languages)
+
+</div>
+<!--endtoc-->
+
 Guess it's time for a status update.
 
 2020 huh. Well as usual I don't have a resolution this year. My

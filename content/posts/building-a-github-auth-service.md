@@ -7,6 +7,19 @@ draft = false
 aliases = "/post/building-a-github-auth-service"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [The GitHub OAuth process](#the-github-oauth-process)
+- [Why do we need a back-end server](#why-do-we-need-a-back-end-server)
+- [The proxy](#the-proxy)
+- [Conclusion](#conclusion)
+
+</div>
+<!--endtoc-->
+
 Recently I was building a GitHub OAuth app to authentiacate one my
 client-side application with GitHub. The application was all about
 taking notes and maintaining them on a private repository. I have had

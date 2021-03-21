@@ -7,6 +7,21 @@ draft = false
 aliases = "/post/generate-beautiful-json-from-postgresql"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [1. Get the table data as JSON objects](#1-get-the-table-data-as-json-objects)
+- [2. Get the table data with specific columns](#2-get-the-table-data-with-specific-columns)
+- [3. Get the table data as a single JSON object](#3-get-the-table-data-as-a-single-json-object)
+- [4. Build JSON object with multiple tables](#4-build-json-object-with-multiple-tables)
+- [5. Build JSON object by resolving foreign keys](#5-build-json-object-by-resolving-foreign-keys)
+- [Conclusion](#conclusion)
+
+</div>
+<!--endtoc-->
+
 PostgreSQL provides a set of built-in [JSON
 creation functions](https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-CREATION-TABLE) that can be used to build basic JSON structures. This increases the performance up to 10 times more than building it at the back-end layer.
 

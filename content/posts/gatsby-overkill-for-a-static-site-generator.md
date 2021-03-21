@@ -6,6 +6,18 @@ tags = ["gatsby", "react", "emacs", "hugo", "orgmode", "rant", "editor"]
 draft = false
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [So what went wrong?](#so-what-went-wrong)
+- [My new workflow](#my-new-workflow)
+- [Conclusion](#conclusion)
+
+</div>
+<!--endtoc-->
+
 So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component's are written in react, I can query my post data from graphQL and so many other goodies.
 
 

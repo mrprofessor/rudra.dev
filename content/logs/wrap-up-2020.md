@@ -7,6 +7,22 @@ draft = false
 aliases = "/log/wrap-up-2020"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [The good/ususal times](#the-good-ususal-times)
+- [The pandemic](#the-pandemic)
+- [The learnings](#the-learnings)
+- [New job](#new-job)
+- [New rig](#new-rig)
+- [Loki](#loki)
+- [epilogue](#epilogue)
+
+</div>
+<!--endtoc-->
+
 It took me a some time to compile my thoughts down for this post. 2020 hasn't been easy on the most and hence this won't be a normal `retrospect a year` log, rather I will introspect the revelations I had during the past year.
 
 

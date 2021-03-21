@@ -7,6 +7,18 @@ draft = true
 aliases = "/post/css-and-js-are-not-bytecode"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [Is there any twist in this story..coz I'm getting bored !](#is-there-any-twist-in-this-storycoz-im-getting-bored-)
+- [What's your point man..Can't you be just happy](#whats-your-point-mancant-you-be-just-happy)
+- [Adios](#adios)
+
+</div>
+<!--endtoc-->
+
 > Disclaimer: This post literally doesn't make any sense. I just didn't wanted
 > to delete it as it was my first blog.
 

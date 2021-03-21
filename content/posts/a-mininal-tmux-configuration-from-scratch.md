@@ -6,15 +6,20 @@ tags = ["tmux", "productivity", "unix", "mac"]
 draft = false
 +++
 
-Tmux is a terminal multiplexer program that manages terminal windows and lets us switch between them with ease.
+<div class="ox-hugo-toc toc">
+<div></div>
 
-Tmux sessions are persistent, so we can disconnect from the session and the applications will continue to run in the background, which is quite useful running applications confidently over SSH connections.
+<div class="heading">Table of Contents</div>
 
-<div class="post-image">
-  <img src="/images/tmux-shot1.png" />
+- [General configuration](#general-configuration)
+- [Keybindings](#keybindings)
+- [Customize Status Bar](#customize-status-bar)
+- [Customize Active Pane](#customize-active-pane)
+- [Miscellaneous](#miscellaneous)
+- [Who wants a minimal config anyway!](#who-wants-a-minimal-config-anyway)
+
 </div>
-
-Here is what our tmux should look with this configuration.
+<!--endtoc-->
 
 
 ## General configuration {#general-configuration}

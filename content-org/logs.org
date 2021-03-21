@@ -1,6 +1,15 @@
 #+hugo_base_dir: ../
 #+hugo_section: logs
+#+OPTIONS: toc:2
 
+* Contents :toc:
+- [[#logs][Logs]]
+  - [[#status-update-1][Status update #1]]
+  - [[#status-update-2][Status update #2]]
+  - [[#wrap-up-2019][Wrap up 2019]]
+  - [[#switching-to-emacs][Switching to Emacs]]
+  - [[#nothings-wrong-with-reinventing-the-wheel][Nothing's wrong with reinventing the wheel]]
+  - [[#wrap-up-2020][Wrap up 2020]]
 
 * Logs
 ** Status update #1 :log:status:

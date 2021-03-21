@@ -7,6 +7,20 @@ draft = false
 aliases = "/log/wrap-up-2019"
 +++
 
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+- [**Python**](#python)
+- [**React**](#react)
+- [**Touch typing**](#touch-typing)
+- [**vi**](#vi)
+- [**epilogue**](#epilogue)
+
+</div>
+<!--endtoc-->
+
 Guess it's time to retrospect the last 12 months.
 
 I will be talking about topics that I have worked on or learned. These
