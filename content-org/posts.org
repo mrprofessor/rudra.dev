@@ -16,6 +16,7 @@
   - [[#generate-beautiful-json-from-postgresql][Generate beautiful JSON from PostgreSQL]]
   - [[#gatsbyjs-an-overkill-for-a-static-site-generator][GatsbyJs: An overkill for a static site generator]]
   - [[#a-mininal-tmux-configuration-from-scratch][A mininal tmux configuration from scratch]]
+  - [[#building-a-gaming-rig-in-2020][Building a gaming rig in 2020]]
 
 * Posts
 ** CSS and JavaScript aren't byte code !! :rant:css:javascript:web:
@@ -1654,3 +1655,88 @@ There is much more to tmux than what I have done here with ~50 lines of config. 
 Also check out [[https://github.com/rothgar/awesome-tmux][Awesome tmux]] for almost all the best resources out there for tmux and don't forget to share your screenshots in the comments.
 
 Here is my [[https://github.com/mrprofessor/dotfiles/blob/master/tmux.conf][tmux.conf]].
+
+** Building a gaming rig in 2020 :gaming:hardware:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: building-a-gaming-rig-in-2020
+   :EXPORT_DATE: 2021-03-28
+   :EXPORT_HUGO_DRAFT: true
+   :END:
+
+Since childhood I have been dreaming to build a powerful enough machine to play all latest and greatest games with max settings. As a child/teen I was a bit short on budget and as an adult a bit short on time.
+
+*** Research
+
+I was always very careful before investing(spending) on a computer, So I had to research everything before making a decision. Turns out it was really fun and I got hooked instantly.
+
+Since it was always in my mind to build a nice computer, I had been watching Linus tech tips, Gamers Nexus and Hardware unboxed at my free time since past 2 years. Joined [[https://www.reddit.com/r/pcmasterrace/][r/pcmasterrace]], [[https://www.reddit.com/r/indiangaming][r/indiangaming]], [[https://www.reddit.com/r/sffpc/][r/sffpc]] to check others configuration to draw inspiration.
+
+**** *Cabinet*
+I know! Cabinet can't be the first item you would think while building a computer. Well wrong!
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/aloy_1.jpg" />
+  </div>
+#+END_EXPORT
+
+Cabinet dimensions are important if the size and aesthetics matters to you, and I did matter a lot to me. You need to buy hardware that can fit the case and not otherwise.
+
+I wanted the PC to look beautiful and have a smaller footprint on my desk. Also a smaller PC means occasional portability, as I have lived in 4 cities in past 5 years.
+
+There were great options available worldwide, in India however SFF cases didn't have a lager audience. There were 3/4 cases that were available and I chose the iconic fire hazard =NZXT H1=.
+
+It was quite pricey ($500), had average cooling options and possibly could burn down your house. But it was smaller, tall enough to fit a 2 slot graphics card, had pre-routed cables and had a PSU and a riser cable included in the package.
+
+With all it's shortcomings I loved it.
+
+**** *Processor*
+Intel doesn't win all battles anymore unlike the last decade. AMD did an amazing job with getting their first with their 7nm processors.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/aloy_1.jpg" />
+  </div>
+#+END_EXPORT
+
+I chose to go with AMD. Got a Ryzen 5 5600 and a gigabyte b550i motherboard.
+**** *Graphics card*
+Well there were no options whatsoever. World had never seen silicon shortage like this ever. I reached out to Nvdia, who then referred me to their sole Indian distributor.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/aloy_1.jpg" />
+  </div>
+#+END_EXPORT
+
+I wanted a =RTX 3080= but they were having a shipment of =RTX 3070= coming. Got it as soon as I can, and didn't regret later. It only went downhill from that point after the interest rose in mining in December.
+
+*** Configuration
+
+Here is the configuration of my computer.
+
+| Component   | Model            | Price |
+|-------------+------------------+-------|
+| CPU         | Ryzen 5600x      | 26990 |
+| GPU         | Nvidia 3080      | 44500 |
+| RAM         | 16GB 3200mhz * 2 |  9800 |
+| MotherBoard | B550I            | 15000 |
+| Case        | NZXT H1          | 34000 |
+| Storage     | 1 tb m.2 nvme    |  7500 |
+| PSU         | NA               |     0 |
+| Cooler      | NA               |     0 |
+
+Total: 137790
+
+*** Mods
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/aloy_1.jpg" />
+  </div>
+#+END_EXPORT
+
+The GPU was getting too hot with temperatures hovering over 80c. Added two arctic 140mm fans in the back, and the temps now around 75c. Pretty good for a tiny case ngl!
+
+*** Games
+*** Final thoughts and future usage plans

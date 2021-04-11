@@ -254,7 +254,8 @@ time {
 // TOC
 .ox-hugo-toc {
     border: 1px solid $toc-border;
-    background: toc-background;
+    color: $post-link-color;
+    background: $toc-background;
     padding: 1rem;
 
     a {
