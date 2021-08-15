@@ -1,0 +1,13 @@
+#+hugo_base_dir: ../
+#+hugo_section: collections
+#+OPTIONS: toc:2
+
+
+* collections
+** Placeholder #1 :keyboards:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: placeholder-1
+   :EXPORT_DATE: 2021-08-15
+   :END:
+
+A place holder post. lorem ipsum etc.
