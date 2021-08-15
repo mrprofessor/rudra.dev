@@ -14,7 +14,6 @@
 
         {{ $styles := resources.Get "scss/main.scss" | resources.ToCSS | minify | fingerprint}}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         {{ with .OutputFormats.Get "RSS" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
@@ -56,6 +55,27 @@
              }
          }
      }())
+    </script>
+
+    <script>
+     // Script to add # to headers
+     var tags = ["H2", "H3", "H4", "H5", "H6"]
+     function addAnchor(element) {
+         if (tags.includes(element.nodeName)) {
+            headerLvl = Number(element.nodeName[1])
+            element.innerText = "#".repeat(headerLvl) + " " + element.innerText
+         }
+     }
+
+     document.addEventListener('DOMContentLoaded', function () {
+         var elements = []
+         for (i = 0; i < tags.length; i++) {
+            var headers = document.querySelectorAll('article ' + tags[i])
+            if (headers) {
+                headers.forEach(addAnchor)
+            }
+         }
+     })
     </script>
 
     <!-- Posthog -->
