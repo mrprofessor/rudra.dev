@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rudra.dev/collections/</loc>
+    <lastmod>2021-08-15T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rudra.dev/tags/keyboards/</loc>
+    <lastmod>2021-08-15T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rudra.dev/collections/placeholder-1/</loc>
+    <lastmod>2021-08-15T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rudra.dev/</loc>
+    <lastmod>2021-08-15T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rudra.dev/tags/</loc>
+    <lastmod>2021-08-15T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rudra.dev/posts/a-mininal-tmux-configuration-from-scratch/</loc>
     <lastmod>2021-03-14T00:00:00+05:30</lastmod>
   </url>
@@ -19,16 +44,6 @@
   
   <url>
     <loc>https://rudra.dev/tags/productivity/</loc>
-    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rudra.dev/</loc>
-    <lastmod>2021-03-14T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rudra.dev/tags/</loc>
     <lastmod>2021-03-14T00:00:00+05:30</lastmod>
   </url>
   
@@ -138,6 +153,11 @@
   </url>
   
   <url>
+    <loc>https://rudra.dev/tags/git/</loc>
+    <lastmod>2020-04-11T00:00:00+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rudra.dev/tags/github/</loc>
     <lastmod>2020-04-11T00:00:00+05:30</lastmod>
   </url>
@@ -228,11 +248,6 @@
   </url>
   
   <url>
-    <loc>https://rudra.dev/tags/git/</loc>
-    <lastmod>2018-02-24T00:00:00+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rudra.dev/posts/maintaining-multiple-github-accounts/</loc>
     <lastmod>2018-02-24T00:00:00+05:30</lastmod>
   </url>
@@ -258,10 +273,6 @@
   
   <url>
     <loc>https://rudra.dev/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rudra.dev/privacy/</loc>
   </url>
   
   <url>

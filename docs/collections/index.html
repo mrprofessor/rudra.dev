@@ -8,23 +8,22 @@
         
         <link rel="icon" type="image/png" href="/images/favicon.ico" />
 
-        <title itemprop="name">Privacy | thoughts, obsessions and mostly rants</title>
+        <title itemprop="name">Collections | thoughts, obsessions and mostly rants</title>
         <meta name="description" content="thoughts, obsessions and mostly rants">
         <meta name="author" content="Rudra Narayan">
 
         
-        <link rel="stylesheet" href="/scss/main.min.56d22a37782050714c85acfee30fce2ddd0a33dd9514159d962fd806ba5c5818.css" media="screen">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/scss/main.min.b3a27d4005a6e6ebafa751403f0d00c5b21f48060ce5c5b2eb2395516444f509.css" media="screen">
 
-        <link rel="alternate" type="application/rss+xml" href="/privacy/index.xml" title="rudra narayan">
+        <link rel="alternate" type="application/rss+xml" href="/collections/index.xml" title="rudra narayan">
 
         
         
 
-<meta property="og:title" content="Privacy | thoughts, obsessions and mostly rants" />
-<meta name="twitter:title" content="Privacy | thoughts, obsessions and mostly rants" />
-<meta itemprop="name" content="Privacy | thoughts, obsessions and mostly rants" />
-<meta name="application-name" content="Privacy | thoughts, obsessions and mostly rants" />
+<meta property="og:title" content="Collections | thoughts, obsessions and mostly rants" />
+<meta name="twitter:title" content="Collections | thoughts, obsessions and mostly rants" />
+<meta itemprop="name" content="Collections | thoughts, obsessions and mostly rants" />
+<meta name="application-name" content="Collections | thoughts, obsessions and mostly rants" />
 <meta property="og:site_name" content="Rudra Narayan Kar blog" />
 
 <meta name="description" content="thoughts, obsessions and mostly rants" />
@@ -32,11 +31,11 @@
 <meta property="og:description" content="thoughts, obsessions and mostly rants" />
 <meta name="twitter:description" content="thoughts, obsessions and mostly rants" />
 
-<base href="https://rudra.dev/privacy/">
-<link rel="canonical" href="https://rudra.dev/privacy/" itemprop="url" />
-<meta name="url" content="https://rudra.dev/privacy/" />
-<meta name="twitter:url" content="https://rudra.dev/privacy/" />
-<meta property="og:url" content="https://rudra.dev/privacy/" />
+<base href="https://rudra.dev/collections/">
+<link rel="canonical" href="https://rudra.dev/collections/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/collections/" />
+<meta name="twitter:url" content="https://rudra.dev/collections/" />
+<meta property="og:url" content="https://rudra.dev/collections/" />
 
 
 <meta property="og:article:author" content="mrprofessor" />
@@ -49,15 +48,15 @@
 
 
 
-<meta property="og:updated_time" content=0001-01-01T00:00:00Z />
+<meta property="og:updated_time" content=2021-08-15T00:00:00&#43;0530 />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
 
 
 
-    <link href="https://rudra.dev/privacy/index.xml" rel="alternate" type="application/rss+xml" title="rudra narayan" />
-    <link href="https://rudra.dev/privacy/index.xml" rel="feed" type="application/rss+xml" title="rudra narayan" />
+    <link href="https://rudra.dev/collections/index.xml" rel="alternate" type="application/rss+xml" title="rudra narayan" />
+    <link href="https://rudra.dev/collections/index.xml" rel="feed" type="application/rss+xml" title="rudra narayan" />
 
 
 
@@ -137,24 +136,41 @@
             
             
 	<main>
-		<article>
-			<h1>Privacy</h1>
+		
+			<div class="slim-description">
+    <p>
+        Like many many nerds out there, I also worship the rectangles I type on
+        every day. Recently I have started to collect and restore vintage
+        keyboards, especially the IBM ones.
+    </p>
+    <p>
+        On this page, I have tried to document all the keyboards I currently
+        have. The restoration and other related articles go to the
+        <a href="/posts">posts</a> page.
+    </p>
+</div>
+
+		
+
+		<div class="blog-list">
+			
+				<article class="list-item">
+    <div class="post-title">
+        <a href="https://rudra.dev/collections/placeholder-1/">Placeholder #1</a>
+    </div>
+
+    
+    
+
+    <span className="date-label">
+        15th Aug, 2021
+    </span>
+
+    
+</article>
 
 			
-
-			
-
-			
-
-			<div class="blog-post-content">
-				<p>So you care about privacy then.</p>
-<p>I don&rsquo;t care who you are, where you live or how many dogs you have. Be
-assured that you won&rsquo;t be tracked once you leave my site.</p>
-<p>All I care about is what you do while you are here. I am probably
-watching your cursor moves as you are going close the tab. Good
-decision.</p>
-
-			</div>
+		</div>
 			
 	</main>
 	
@@ -169,7 +185,7 @@ decision.</p>
 				
 				<li><a href="/logs/">logs</a></li>
 				
-				<li><a href="/privacy">privacy</a></li>
+				<li><a href="/collections">collections</a></li>
 				
 			</ul>
 		</nav>
@@ -203,6 +219,27 @@ decision.</p>
              }
          }
      }())
+    </script>
+
+    <script>
+     
+     var tags = ["H2", "H3", "H4", "H5", "H6"]
+     function addAnchor(element) {
+         if (tags.includes(element.nodeName)) {
+            headerLvl = Number(element.nodeName[1])
+            element.innerText = "#".repeat(headerLvl) + " " + element.innerText
+         }
+     }
+
+     document.addEventListener('DOMContentLoaded', function () {
+         var elements = []
+         for (i = 0; i < tags.length; i++) {
+            var headers = document.querySelectorAll('article ' + tags[i])
+            if (headers) {
+                headers.forEach(addAnchor)
+            }
+         }
+     })
     </script>
 
     

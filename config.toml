@@ -53,9 +53,9 @@ publishDir = "docs"
     weight = 11
 
   [[menu.secondary]]
-    identifier = "privacy"
-    name = "privacy"
-    url = "privacy"
+    identifier = "collections"
+    name = "collections"
+    url = "collections"
     weight = 12
 
 [params]
