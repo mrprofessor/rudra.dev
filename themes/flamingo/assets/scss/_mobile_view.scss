@@ -28,15 +28,6 @@ h1 {
     font-size: $title-font-size;
 }
 
-.brand-icon {
-    color: $post-link-color;
-    display: inline-flex;
-}
-
-.brand-icon:hover {
-    border-bottom: 1px solid;
-}
-
 .layout {
     .title-wrapper {
         @include flex-column;
@@ -74,7 +65,7 @@ nav {
                 border-bottom: 1px solid $background-color;
             }
             a:hover {
-                color: $post-link-color;
+                color: $link-color;
                 border-bottom: 1px solid;
             }
         }
@@ -87,12 +78,25 @@ nav {
 .slim-description {
     margin-bottom: calc(#{$global-font-size} * 2);
     color: $subscript-color;
+    p {
+        letter-spacing: normal;
+    }
+
+    a {
+        color: $link-color
+    }
+
+    a:hover {
+        // border-bottom: 1px solid;
+        font-weight: 600;
+    }
+
 }
 
 
 .blog-post-content {
     a {
-        color: $post-link-color;
+        color: $link-color;
         text-decoration: none;
         border-bottom: 1px solid;
     }
@@ -105,8 +109,6 @@ nav {
         margin-top: 2rem;
     }
 }
-
-
 
 .blog-list {
     .list-item {
@@ -124,11 +126,10 @@ nav {
             //transition: border-bottom .3s;
         }
         a:hover {
-            //border-bottom: 1px solid $post-link-color;
             color: $post-link-color;
+            font-weight: 600;
         }
     }
-
     .date-label {
         font-size: 80%;
         margin-right: 1rem;
@@ -154,16 +155,22 @@ nav {
     img {
         width:100%;
     }
+
+    p {
+        code {
+            background: $code-background;
+            color: $code-color;
+        }
+    }
+
 }
 
 .post-image {
     @include full-width-mobile
-
     img {
         width:100%;
     }
 }
-
 
 .tags {
     font-size: .9em;
@@ -181,12 +188,12 @@ nav {
                 border-radius: 3px;
                 background: $background-color;
                 padding: 0.2em;
-                color: $post-link-color;
+                color: $link-color;
                 margin: 10px 2px 10px 0;
                 line-height: 1em;
             }
             a:hover {
-                background: $post-link-color;
+                background: $link-color;
                 color: $background-color;
             }
         }
@@ -254,7 +261,7 @@ time {
 // TOC
 .ox-hugo-toc {
     border: 1px solid $toc-border;
-    color: $post-link-color;
+    color: $link-color;
     background: $toc-background;
     padding: 1rem;
 
@@ -266,4 +273,9 @@ time {
     .heading {
         color: $subscript-color;
     }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    // Automatically switch to dark mode, a good thing??
 }

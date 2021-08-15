@@ -1,5 +1,5 @@
 // Font family
-@import url('https://fonts.googleapis.com/css?family=Noticia+Text&display=swap+Display:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -27,4 +27,10 @@ tags {
 
 article h1 {
     font-weight: 600;
+}
+
+
+.slim-description {
+    font-family: "consolas", 'monospace',;
+    font-family: "Operator Mono A", "Operator Mono B";
 }

@@ -4,6 +4,8 @@
 			{{ partial "post-description.html" }}
 		{{ else if (eq .Page.Name "Logs") }}
 			{{ partial "log-description.html" }}
+		{{ else if (eq .Page.Name "Collections") }}
+			{{ partial "collection-description.html" }}
 		{{ end }}
 
 		<div class="blog-list">
