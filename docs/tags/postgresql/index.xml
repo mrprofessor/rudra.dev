@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>postgresql on rudra narayan</title>
+    <title>postgresql on rudra kar</title>
     <link>https://rudra.dev/tags/postgresql/</link>
-    <description>Recent content in postgresql on rudra narayan</description>
+    <description>Recent content in postgresql on rudra kar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generate beautiful JSON from PostgreSQL</title>
       <link>https://rudra.dev/posts/generate-beautiful-json-from-postgresql/</link>

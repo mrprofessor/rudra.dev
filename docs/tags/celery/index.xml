@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>celery on rudra narayan</title>
+    <title>celery on rudra kar</title>
     <link>https://rudra.dev/tags/celery/</link>
-    <description>Recent content in celery on rudra narayan</description>
+    <description>Recent content in celery on rudra kar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/tags/celery/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/celery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up a task scheduler in Flask</title>
       <link>https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/</link>

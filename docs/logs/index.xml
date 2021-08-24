@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Logs on rudra narayan</title>
+    <title>Logs on rudra kar</title>
     <link>https://rudra.dev/logs/</link>
-    <description>Recent content in Logs on rudra narayan</description>
+    <description>Recent content in Logs on rudra kar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/logs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/logs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wrap up 2020</title>
       <link>https://rudra.dev/logs/wrap-up-2020/</link>

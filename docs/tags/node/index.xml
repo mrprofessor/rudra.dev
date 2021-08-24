@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>node on rudra narayan</title>
+    <title>node on rudra kar</title>
     <link>https://rudra.dev/tags/node/</link>
-    <description>Recent content in node on rudra narayan</description>
+    <description>Recent content in node on rudra kar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0530</lastBuildDate>
-    
-	<atom:link href="https://rudra.dev/tags/node/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 27 May 2017 00:00:00 +0530</lastBuildDate><atom:link href="https://rudra.dev/tags/node/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuring nodejs and npm behind a proxy</title>
       <link>https://rudra.dev/posts/configuring-npm-behind-a-proxy/</link>
