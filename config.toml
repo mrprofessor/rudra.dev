@@ -7,7 +7,7 @@ pygmentsStyle = "colorful"
 
 paginate = 20
 
-title = "rudra narayan"
+title = "rudra kar"
 theme = "flamingo"
 [markup.goldmark.renderer]
 unsafe = true
@@ -59,7 +59,7 @@ publishDir = "docs"
     weight = 12
 
 [params]
-  author = "Rudra Narayan"
+  author = "Rudra Kar"
   description = "thoughts, obsessions and mostly rants"
   sitename = "Rudra Narayan Kar blog"
   github = "https://github.com/mrprofessor"
