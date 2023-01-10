@@ -16,9 +16,7 @@ image = "/images/keyboards/rama_u80a/u80a_mt3_elvish_01.jpg"
 -   Cherry MX clone Gazzew Boba U4t 62g (Unlubed)
 -   MT3 Elvish base keycaps
 
-\#+BEGIN_EXPORT html
-&lt;div class="post-image"&gt;
-  &lt;img src="/images/keyboards/rama_u80a/u80a_mt3_godspeed_01.jpg" loading="lazy"/&gt;
-  &lt;span class="img-description"&gt; U-80a with MT3 GodSpeed set&lt;/span&gt;
-&lt;/div&gt;
-+END_EXPORT
+<div class="post-image">
+  <img src="/images/keyboards/rama_u80a/u80a_mt3_godspeed_01.jpg" loading="lazy"/>
+  <span class="img-description"> U-80a with MT3 GodSpeed set</span>
+</div>

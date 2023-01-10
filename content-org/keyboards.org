@@ -1182,7 +1182,7 @@ in my collection.
   <img src="/images/keyboards/rama_u80a/u80a_mt3_godspeed_01.jpg" loading="lazy"/>
   <span class="img-description"> U-80a with MT3 GodSpeed set</span>
 </div>
-+END_EXPORT
+#+END_EXPORT
 
 
 
@@ -1338,3 +1338,74 @@ This is one of my toughest acquisitions so far, and I couldn’t be happier.
 The keyboard delivers and is one of the finest boards I have in my
 collection.
 
+
+** KFE CE :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: kfe_ce
+   :EXPORT_DATE: 2023-01-10
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/kfe_ce/kfe_ce_oranges_04.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: cherryb-freyr
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    -   Design by Bisoromi(Inspired from OTD Koala, designed by Korellas)
+    -   Royal purple aluminium case
+    -   H88c PCB and Jane v2 alps aluminium plate
+    -   C3 Stabilizers
+    -   Alps SKCM Orange
+    -   DCS 9009 Alps keycaps
+    -   Top mount configuration
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_01.jpg" loading="lazy"/>
+  <span class="img-description"> Alps SKCM Orange </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_02.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_03.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_05.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_06.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_back_07.jpg" loading="lazy"/>
+  <span class="img-description"> KFE CE with external brass weights </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_back_08.jpg" loading="lazy"/>
+  <span class="img-description"> KFE CE with external aluminium weights </span>
+</div>
+#+END_EXPORT
