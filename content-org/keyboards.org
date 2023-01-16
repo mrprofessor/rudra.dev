@@ -1345,7 +1345,7 @@ collection.
    :EXPORT_DATE: 2023-01-10
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/kfe_ce/kfe_ce_oranges_04.jpg
    :EXPORT_HUGO_DRAFT: false
-   :CUSTOM_ID: cherryb-freyr
+   :CUSTOM_ID: kfe_ce
    :END:
    
 *** Configuration
@@ -1409,3 +1409,26 @@ collection.
   <span class="img-description"> KFE CE with external aluminium weights </span>
 </div>
 #+END_EXPORT
+
+
+** F1-8X 722 :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: f18x_722
+   :EXPORT_DATE: 2023-01-16
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/f18x_722/f18x_722_cat_butt.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: f18x_722
+   :END:
+
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    -   Design by Geon, from [[https://geon.works][geon.works]]
+    -   Raw machined aluminium case
+    -   MW8X hotswap PCB by Maelk
+    -   1.0 aluminium standard leaf spring V4 plate by Geon
+    -   C3 Stabilizers
+    -   Cherry MX Black switches (Hyperglides)
+    -   O-ring/Gasket mount
