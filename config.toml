@@ -5,7 +5,7 @@ DefaultContentLanguage = "en"
 pygmentsCodefences = true
 pygmentsStyle = "manni"
 
-paginate = 20
+paginate = 30
 
 title = "rudra kar"
 theme = "flamingo"

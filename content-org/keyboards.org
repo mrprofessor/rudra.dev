@@ -989,7 +989,6 @@ At the time of writing, this board is one the favourites in my collection.
 I love the travel of the switch, the case acoustics, quality keycaps and
 those huge bezels.
 
-
 ** Leading Edge DC-2014 :vintage:keyboards:leading_edge:alps:
    :PROPERTIES:
    :EXPORT_FILE_NAME: leading_edge_dc_2014
@@ -1155,7 +1154,6 @@ in my collection.
 </div>
 #+END_EXPORT
 
-
 ** Rama U-80A seq2 :custom:keyboards:mx:
    :PROPERTIES:
    :EXPORT_FILE_NAME: rama_u80a_seq2
@@ -1183,7 +1181,6 @@ in my collection.
   <span class="img-description"> U-80a with MT3 GodSpeed set</span>
 </div>
 #+END_EXPORT
-
 
 
 ** IBM Pingmaster :ibm:alps:vintage:keyboards:
@@ -1338,7 +1335,6 @@ This is one of my toughest acquisitions so far, and I couldn’t be happier.
 The keyboard delivers and is one of the finest boards I have in my
 collection.
 
-
 ** KFE CE :custom:keyboards:mx:
    :PROPERTIES:
    :EXPORT_FILE_NAME: kfe_ce
@@ -1410,7 +1406,6 @@ collection.
 </div>
 #+END_EXPORT
 
-
 ** F1-8X 722 :custom:keyboards:mx:
    :PROPERTIES:
    :EXPORT_FILE_NAME: f18x_722
@@ -1432,3 +1427,4 @@ collection.
     -   C3 Stabilizers
     -   Cherry MX Black switches (Hyperglides)
     -   O-ring/Gasket mount
+      
