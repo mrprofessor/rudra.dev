@@ -8,7 +8,6 @@ aliases = "/post/setting-up-a-task-scheduler-in-flask"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -59,55 +58,55 @@ asynchronous task execution which comes in handy for long running tasks.
 > without worrying so much about local dev infrastructure.
 
 ```text
-  flask-celery
-  │
-  │  app.py
-  │  docker-compose.yml
-  │  Dockerfile
-  │  entrypoint.sh
-  │  requirements.txt
-  │
-  └────────────────────────
+flask-celery
+│
+│  app.py
+│  docker-compose.yml
+│  Dockerfile
+│  entrypoint.sh
+│  requirements.txt
+│
+└────────────────────────
 ```
 
 Let's start with the Dockerfile
 
 ```dockerfile
-  FROM python:3.7
+FROM python:3.7
 
-  # Create a directory named flask
-  RUN mkdir flask
+# Create a directory named flask
+RUN mkdir flask
 
-  # Copy everything to flask folder
-  COPY . /flask/
+# Copy everything to flask folder
+COPY . /flask/
 
-  # Make flask as working directory
-  WORKDIR /flask
+# Make flask as working directory
+WORKDIR /flask
 
-  # Install the Python libraries
-  RUN pip3 install --no-cache-dir -r requirements.txt
+# Install the Python libraries
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-  EXPOSE 5000
+EXPOSE 5000
 
-  # Run the entrypoint script
-  CMD ["bash", "entrypoint.sh"]
+# Run the entrypoint script
+CMD ["bash", "entrypoint.sh"]
 ```
 
 The packages required for this application are mentioned in the
 requirement.txt file.
 
 ```text
-  Flask==1.0.2
-  celery==4.3.0
-  redis==3.3.11
+Flask==1.0.2
+celery==4.3.0
+redis==3.3.11
 ```
 
 The entry point script goes here.
 
 ```sh
-  #!/bin/sh
+#!/bin/sh
 
-  flask run --host=0.0.0.0 --port 5000
+flask run --host=0.0.0.0 --port 5000
 ```
 
 Celery uses a message broker to pass messages between the web app and
@@ -115,31 +114,31 @@ celery workers. Here we will setup a Redis container which will be used
 as the message broker.
 
 ```dockerfile
-  version: "3.7"
+version: "3.7"
 
-  services:
+services:
 
-    redis:
-      container_name: redis_dev_container
-      image: redis
-      ports:
-        - "6379:6379"
+  redis:
+    container_name: redis_dev_container
+    image: redis
+    ports:
+      - "6379:6379"
 
-    flask_service:
-      container_name: flask_dev_container
-      restart: always
-      image: flask
-      build:
-        context: ./
-        dockerfile: Dockerfile
-      depends_on:
-          - redis
-      ports:
-        - "5000:5000"
-      volumes:
-        - ./:/flask
-      environment:
-          - FLASK_DEBUG=1
+  flask_service:
+    container_name: flask_dev_container
+    restart: always
+    image: flask
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+	- redis
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/flask
+    environment:
+	- FLASK_DEBUG=1
 ```
 
 Now we are all set to start our little experiment. We have a redis
@@ -148,16 +147,16 @@ container running on port 6379 and a flask container running on
 application works.
 
 ```python
-  from flask import Flask
+from flask import Flask
 
-  app = Flask(__name__)
+app = Flask(__name__)
 
-  @app.route("/")
-  def index_view():
-      return "Flask-celery task scheduler!"
+@app.route("/")
+def index_view():
+    return "Flask-celery task scheduler!"
 
-  if __name__ == "__main__":
-      app.run()
+if __name__ == "__main__":
+    app.run()
 ```
 
 And voila!
@@ -193,9 +192,9 @@ database to store the time.
   # Add periodic tasks
   celery_beat_schedule = {
       "time_scheduler": {
-          "task": "app.timer",
-          # Run every second
-          "schedule": 1.0,
+	  "task": "app.timer",
+	  # Run every second
+	  "schedule": 1.0,
       }
   }
 
@@ -227,13 +226,13 @@ def timer_view():
 def timer():
     second_counter = int(redis_db.get("second")) + 1
     if second_counter >= 59:
-        # Reset the counter
-        redis_db.set("second", 0)
-        # Increment the minute
-        redis_db.set("minute", int(redis_db.get("minute")) + 1)
+	# Reset the counter
+	redis_db.set("second", 0)
+	# Increment the minute
+	redis_db.set("minute", int(redis_db.get("minute")) + 1)
     else:
-        # Increment the second
-        redis_db.set("second", second_counter)
+	# Increment the second
+	redis_db.set("second", second_counter)
 
 
 if __name__ == "__main__":
@@ -244,15 +243,15 @@ Let's update the `entrypoint.js` to run both Celery worker and beat
 server as background processes.
 
 ```sh
-  #!/bin/sh
+#!/bin/sh
 
-  # Run Celery worker
-  celery -A app.celery worker --loglevel=INFO --detach --pidfile=''
+# Run Celery worker
+celery -A app.celery worker --loglevel=INFO --detach --pidfile=''
 
-  # Run Celery Beat
-  celery -A app.celery beat --loglevel=INFO --detach --pidfile=''
+# Run Celery Beat
+celery -A app.celery beat --loglevel=INFO --detach --pidfile=''
 
-  flask run --host=0.0.0.0 --port 5000
+flask run --host=0.0.0.0 --port 5000
 ```
 
 Our very own timer
@@ -273,15 +272,15 @@ workers and events. We need to log into the container to enable and
 monitor events.
 
 ```sh
-  docker exec -it flask_dev_container bash
+docker exec -it flask_dev_container bash
 ```
 
 Enable and list all events
 
 ```sh
-  celery -A app.celery control enable_events
+celery -A app.celery control enable_events
 
-  celery -A app.celery events
+celery -A app.celery events
 ```
 
 This spins up a nice interactive terminal ui listing all the details of

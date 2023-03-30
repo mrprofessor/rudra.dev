@@ -7,7 +7,6 @@ draft = false
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -35,7 +34,7 @@ There are certain pain points that were bugging me for a long time.
 4.  Lack of dedicated and switchable themes.
 5.  The humongous amount of public files.
 
-> Creating a blog shouldn't have to be so complex. A bunch of markdown files and a simple script to convert them into HTML should be enough.
+&gt; Creating a blog shouldn't have to be so complex. A bunch of markdown files and a simple script to convert them into HTML should be enough.
 
 It's definitely not for people who like a comfortable blogging system like [Wordpress](https://wordpress.org/) or [Jeykill](https://jekyllrb.com/), which can be set up in one afternoon. The returns we get for using and understanding such a complex stack is relatively less if you ask me.
 

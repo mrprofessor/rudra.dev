@@ -7,6 +7,9 @@ draft = false
 image = "/images/keyboards/rama_u80a/u80a_mt3_elvish_01.jpg"
 +++
 
+> I don't own this keyboard anymore.
+
+
 ## Configuration {#configuration}
 
 -   Design by Rama

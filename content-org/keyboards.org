@@ -1163,6 +1163,10 @@ in my collection.
    :EXPORT_HUGO_DRAFT: false
    :CUSTOM_ID: rama-u-80a-seq2
    :END:
+   
+#+begin_quote
+I don't own this keyboard anymore.
+#+end_quote
 
 *** Configuration
 :PROPERTIES:
@@ -1583,3 +1587,48 @@ a modern build in the future.
 I believe the AT102W case is one of the best-sounding alps cases available.
 I particularly like the light tactility of the SKCM black switches, which
 makes the board quite enjoyable.
+
+** Frog TKL :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: frog_tkl
+   :EXPORT_DATE: 2023-03-22
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/frog_tkl/frog_tkl_01.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: kfe_ce
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    - Design by Geon, from [[https://geon.works][geon.works]]
+    - Burgandy aluminium case
+    - [[https://github.com/4pplet/waffling80][Waffling 80]] PCB by 4pplet
+    - FR4 PCB made by 4pplet
+    - Original Space invader stabilizers
+    - Hi-tek 725(space invader) Black switches
+    - Harvested space invader keycaps 
+    - Tadpole mount
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/frog_tkl/frog_tkl_02.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/frog_tkl/frog_tkl_03.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/frog_tkl/frog_tkl_04.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+

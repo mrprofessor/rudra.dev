@@ -8,7 +8,6 @@ aliases = "/post/generate-beautiful-json-from-postgresql"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -33,46 +32,46 @@ In order to proceed with some examples, first we need to setup a test
 database.
 
 ```sql
-  CREATE DATABASE jsonland
+CREATE DATABASE jsonland
 ```
 
 Let's create the following tables.
 
 ```sql
-  CREATE TABLE "user" (
-    id SERIAL NOT NULL,
-    name VARCHAR(100),
-    email_address VARCHAR(150),
-    PRIMARY KEY(id)
-  )
+CREATE TABLE "user" (
+  id SERIAL NOT NULL,
+  name VARCHAR(100),
+  email_address VARCHAR(150),
+  PRIMARY KEY(id)
+)
 
-  CREATE TABLE team (
-    id SERIAL NOT NULL,
-    name VARCHAR(100),
-    PRIMARY KEY(id)
-  )
+CREATE TABLE team (
+  id SERIAL NOT NULL,
+  name VARCHAR(100),
+  PRIMARY KEY(id)
+)
 
-  CREATE TABLE team_user (
-    id SERIAL NOT NULL,
-    team_id INTEGER NOT NULL,
-    user_id INTEGER NOT NULL,
-    FOREIGN KEY(team_id) REFERENCES "team" (id),
-    FOREIGN KEY(user_id) REFERENCES "user" (id),
-    PRIMARY KEY(id)
-  )
+CREATE TABLE team_user (
+  id SERIAL NOT NULL,
+  team_id INTEGER NOT NULL,
+  user_id INTEGER NOT NULL,
+  FOREIGN KEY(team_id) REFERENCES "team" (id),
+  FOREIGN KEY(user_id) REFERENCES "user" (id),
+  PRIMARY KEY(id)
+)
 ```
 
 Let's Seed the tables with random data.
 
 ```sql
-  INSERT INTO "team" ("id", "name")
-  VALUES (1, 'team1'), (2, 'team2');
+INSERT INTO "team" ("id", "name")
+VALUES (1, 'team1'), (2, 'team2');
 
-  INSERT INTO "user" ("id", "name", "email_address")
-  VALUES (1, 'user1', 'user1@mail.com'), (2, 'user2', 'user2@mail.com');
+INSERT INTO "user" ("id", "name", "email_address")
+VALUES (1, 'user1', 'user1@mail.com'), (2, 'user2', 'user2@mail.com');
 
-  INSERT INTO "team_user" ("id", "team_id", "user_id")
-  VALUES (1, 1, 1), (2, 1, 2), (3, 2, 2);
+INSERT INTO "team_user" ("id", "team_id", "user_id")
+VALUES (1, 1, 1), (2, 1, 2), (3, 2, 2);
 ```
 
 We have created three tables i.e. `team`, `user` and `team_user`.
@@ -83,14 +82,14 @@ teams.
 ## 1. Get the table data as JSON objects {#1-get-the-table-data-as-json-objects}
 
 ```sql
-  SELECT row_to_json("user") FROM "user";
+SELECT row_to_json("user") FROM "user";
 
-  +-----------------------------------------------------------+
-  | row_to_json                                               |
-  |-----------------------------------------------------------|
-  | {"id":1,"name":"user1","email_address":"user1@gmail.com"} |
-  | {"id":2,"name":"user2","email_address":"user2@gmail.com"} |
-  +-----------------------------------------------------------+
++-----------------------------------------------------------+
+| row_to_json                                               |
+|-----------------------------------------------------------|
+| {"id":1,"name":"user1","email_address":"user1@gmail.com"} |
+| {"id":2,"name":"user2","email_address":"user2@gmail.com"} |
++-----------------------------------------------------------+
 ```
 
 The above mentioned query will return all the columns of each row as
@@ -103,28 +102,28 @@ We can specify the particular columns we need rather than getting all at
 once.
 
 ```sql
-  SELECT row_to_json(row('id', 'name')) FROM "user";
+SELECT row_to_json(row('id', 'name')) FROM "user";
 
-  +-------------------------+
-  | row_to_json             |
-  |-------------------------|
-  | {"f1":"id","f2":"name"} |
-  | {"f1":"id","f2":"name"} |
-  +-------------------------+
++-------------------------+
+| row_to_json             |
+|-------------------------|
+| {"f1":"id","f2":"name"} |
+| {"f1":"id","f2":"name"} |
++-------------------------+
 ```
 
 Now certainly the keys `f1` and `f2` in the objects are not very useful
 to us. We would rather want the column names instead of those keys.
 
 ```sql
-  SELECT row_to_json(users) FROM (SELECT id, name FROM "user") AS users;
+SELECT row_to_json(users) FROM (SELECT id, name FROM "user") AS users;
 
-  +-------------------------+
-  | row_to_json             |
-  |-------------------------|
-  | {"id":1,"name":"user1"} |
-  | {"id":2,"name":"user2"} |
-  +-------------------------+
++-------------------------+
+| row_to_json             |
+|-------------------------|
+| {"id":1,"name":"user1"} |
+| {"id":2,"name":"user2"} |
++-------------------------+
 ```
 
 
@@ -135,23 +134,23 @@ Ideally we would want a single array of these objects which won't need
 any further manipulation at back-end layer.
 
 ```sql
-  SELECT array_to_json(array_agg(row_to_json(users)))
-      FROM (
-          SELECT id, name from "user"
-      ) users
+SELECT array_to_json(array_agg(row_to_json(users)))
+    FROM (
+	SELECT id, name from "user"
+    ) users
 
-  -- OR
+-- OR
 
-  SELECT json_agg(row_to_json(users))
-      FROM (
-          SELECT id, name from "user"
-      ) users
+SELECT json_agg(row_to_json(users))
+    FROM (
+	SELECT id, name from "user"
+    ) users
 
-  +----------------------------------------------------+
-  | json_agg                                           |
-  |----------------------------------------------------|
-  | [{"id":1,"name":"user1"}, {"id":2,"name":"user2"}] |
-  +----------------------------------------------------+
++----------------------------------------------------+
+| json_agg                                           |
+|----------------------------------------------------|
+| [{"id":1,"name":"user1"}, {"id":2,"name":"user2"}] |
++----------------------------------------------------+
 ```
 
 In the above query we are aggregating all the JSON objects and using
@@ -169,40 +168,40 @@ specify the keys and values. Let's create an object that will contain
 data from both team and user table.
 
 ```sql
-  SELECT json_build_object(
-    'users', (SELECT json_agg(row_to_json("user")) from "user"),
-    'teams', (SELECT json_agg(row_to_json("team")) from "team")
-  )
+SELECT json_build_object(
+  'users', (SELECT json_agg(row_to_json("user")) from "user"),
+  'teams', (SELECT json_agg(row_to_json("team")) from "team")
+)
 ```
 
 This query generates a JSON structure that will have all the users and
 teams each as arrays of objects.
 
 ```json
-  {
-    "users": [
-      {
-        "id": 1,
-        "name": "user1",
-        "email_address": "user1@mail.com"
-      },
-      {
-        "id": 2,
-        "name": "user2",
-        "email_address": "user2@mail.com"
-      }
-    ],
-    "teams": [
-      {
-        "id": 1,
-        "name": "team1"
-      },
-      {
-        "id": 2,
-        "name": "team2"
-      }
-    ]
-  }
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "user1",
+      "email_address": "user1@mail.com"
+    },
+    {
+      "id": 2,
+      "name": "user2",
+      "email_address": "user2@mail.com"
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "name": "team1"
+    },
+    {
+      "id": 2,
+      "name": "team2"
+    }
+  ]
+}
 ```
 
 
@@ -212,15 +211,15 @@ We can generate JSON structures by resolving foreign key references and
 joining multiple tables.
 
 ```sql
-  select json_agg(row_to_json(tu))
-      from (
-          select id, (
-              select row_to_json(team) from team where team_user.team_id = team.id
-          ) team, (
-              select row_to_json("user") from "user" where team_user.user_id = "user".id
-          ) "user"
-      from team_user
-  ) tu
+select json_agg(row_to_json(tu))
+    from (
+	select id, (
+	    select row_to_json(team) from team where team_user.team_id = team.id
+	) team, (
+	    select row_to_json("user") from "user" where team_user.user_id = "user".id
+	) "user"
+    from team_user
+) tu
 ```
 
 This query contains multiple sub-queries to generate a complex
@@ -232,37 +231,37 @@ the corresponding row.
     {
       "id": 1,
       "team": {
-        "id": 1,
-        "name": "team1"
+	"id": 1,
+	"name": "team1"
       },
       "user": {
-        "id": 1,
-        "name": "user1",
-        "email_address": "user1@mail.com"
+	"id": 1,
+	"name": "user1",
+	"email_address": "user1@mail.com"
       }
     },
     {
       "id": 2,
       "team": {
-        "id": 1,
-        "name": "team1"
+	"id": 1,
+	"name": "team1"
       },
       "user": {
-        "id": 2,
-        "name": "user2",
-        "email_address": "user2@mail.com"
+	"id": 2,
+	"name": "user2",
+	"email_address": "user2@mail.com"
       }
     },
     {
       "id": 3,
       "team": {
-        "id": 2,
-        "name": "team2"
+	"id": 2,
+	"name": "team2"
       },
       "user": {
-        "id": 2,
-        "name": "user2",
-        "email_address": "user2@mail.com"
+	"id": 2,
+	"name": "user2",
+	"email_address": "user2@mail.com"
       }
     }
   ]

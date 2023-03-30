@@ -8,7 +8,6 @@ aliases = "/post/setting-up-vim-for-react"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -45,7 +44,7 @@ Out of the box vim/nvim supports syntax highlighting for major
 programming languages.
 
 ```bash
-  ls /usr/share/vim/vim80/syntax/
+ls /usr/share/vim/vim80/syntax/
 ```
 
 [vim-jsx](https://github.com/mxw/vim-jsx) is by far the best jsx
@@ -55,8 +54,8 @@ better syntax highlighting and code folding support compared to the
 default one.
 
 ```vim
-  Plugin 'mxw/vim-jsx'
-  Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 ```
 
 But It is yet to add `jsx` to its inventory. Also there are some
@@ -74,28 +73,28 @@ code. It supports mnay language specific linters and formatters. ALE
 also lets people configure the signs for errors and warnings.
 
 ```vim
-  Plugin 'w0rp/ale'
+Plugin 'w0rp/ale'
 ```
 
 For JS/React development to add `eslint` as a linter and `prettier` I
 added this to my vimrc
 
 ```vim
-  let g:ale_linters = {
-    \ 'javascript': ['eslint'],
-    \}
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \}
 
-  let g:ale_fixers = {
-    \ 'javascript': ['prettier', 'eslint']
-    \ }
+let g:ale_fixers = {
+  \ 'javascript': ['prettier', 'eslint']
+  \ }
 ```
 
 I also mapped `leader+d` as my ale fixer and configured to format each
 time I save the file.
 
 ```vim
-  let g:ale_fix_on_save = 1
-  nmap <leader>d <Plug>(ale_fix)
+let g:ale_fix_on_save = 1
+nmap <leader>d <Plug>(ale_fix)
 ```
 
 
@@ -117,7 +116,7 @@ definitely going to save you a few additional key-presses a day and
 being a vimmer is all about that.
 
 ```vim
-  Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 ```
 
 

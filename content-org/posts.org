@@ -3,6 +3,9 @@
 #+OPTIONS: toc:2
 
 * Contents :toc:
+:PROPERTIES:
+:CUSTOM_ID: contents
+:END:
 - [[#posts][Posts]]
   - [[#css-and-javascript-arent-byte-code-][CSS and JavaScript aren't byte code !!]]
   - [[#configuring-nodejs-and-npm-behind-a-proxy][Configuring nodejs and npm behind a proxy]]
@@ -19,12 +22,16 @@
   - [[#using-auth0-with-a-custom-user-store][Using Auth0 with a custom user store]]
 
 * Posts
+:PROPERTIES:
+:CUSTOM_ID: posts
+:END:
 ** CSS and JavaScript aren't byte code !! :rant:css:javascript:web:
    :PROPERTIES:
    :EXPORT_FILE_NAME: css-and-js-are-not-bytecode
    :EXPORT_DATE: 2016-09-21
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/css-and-js-are-not-bytecode
    :EXPORT_HUGO_DRAFT: true
+   :CUSTOM_ID: css-and-javascript-aren-t-byte-code
    :END:
 
 #+BEGIN_QUOTE
@@ -130,6 +137,7 @@ Inspired from this
    :EXPORT_FILE_NAME: configuring-npm-behind-a-proxy
    :EXPORT_DATE: 2017-05-27
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/configuring-npm-behind-a-proxy
+   :CUSTOM_ID: configuring-nodejs-and-npm-behind-a-proxy
    :END:
 
 For people who work in a company and squeez out some of their time to
@@ -167,6 +175,7 @@ properly.
    :EXPORT_FILE_NAME: maintaining-multiple-github-accounts
    :EXPORT_DATE: 2018-02-24
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/maintaining-multiple-github-accounts
+   :CUSTOM_ID: maintaining-multiple-github-accounts
    :END:
 
 I recently left a huge IT corporation for a promising startup.I was
@@ -209,6 +218,7 @@ Adios.
    :EXPORT_FILE_NAME: setting-up-vim-for-react
    :EXPORT_DATE: 2019-05-03
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/setting-up-vim-for-react
+   :CUSTOM_ID: setting-up-neo-vim-for-react-development
    :END:
 
 It's been 8 months since I have been using (neo)vim as my primary text
@@ -338,6 +348,7 @@ My full vim setup can be found
    :EXPORT_FILE_NAME: generate-and-serve-files-from-flask
    :EXPORT_DATE: 2019-10-05
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/generate-and-serve-files-from-flask
+   :CUSTOM_ID: generate-and-serve-files-from-flask
    :END:
 
 Flask is one of the most used python frameworks for web development. Its
@@ -451,6 +462,7 @@ Feel free to edit and play around. Adios!
    :EXPORT_FILE_NAME: a-floating-terminal-for-vim
    :EXPORT_DATE: 2019-10-12
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/a-floating-terminal-for-vim
+   :CUSTOM_ID: a-floating-terminal-for-neo-vim
    :END:
 
 I love working in terminal and editing with
@@ -527,6 +539,7 @@ Adios!
    :EXPORT_FILE_NAME: setting-up-a-task-scheduler-in-flask
    :EXPORT_DATE: 2019-11-30
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/setting-up-a-task-scheduler-in-flask
+   :CUSTOM_ID: setting-up-a-task-scheduler-in-flask
    :END:
 
 The first thing that comes to mind while considering a task scheduler is
@@ -838,6 +851,7 @@ Adios!
    :EXPORT_FILE_NAME: rendering-markdown-from-flask
    :EXPORT_DATE: 2020-02-04
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/rendering-markdown-from-flask
+   :CUSTOM_ID: rendering-markdown-from-flask
    :END:
 
 In this post I am going to plug about a cool trick(probably useless)
@@ -962,6 +976,7 @@ Feel free to remix and play around. Adios!
    :EXPORT_FILE_NAME: building-a-github-auth-service
    :EXPORT_DATE: 2020-04-11
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/building-a-github-auth-service
+   :CUSTOM_ID: building-a-github-authentication-service
    :END:
 
 Recently I was building a GitHub OAuth app to authentiacate one my
@@ -1118,6 +1133,7 @@ and play around. Adios.
    :EXPORT_FILE_NAME: generate-beautiful-json-from-postgresql
    :EXPORT_DATE: 2020-05-19
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/generate-beautiful-json-from-postgresql
+   :CUSTOM_ID: generate-beautiful-json-from-postgresql
    :END:
 
 PostgreSQL provides a set of built-in [[https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-CREATION-TABLE][JSON
@@ -1393,11 +1409,15 @@ without stressing the back-end processes.
    :PROPERTIES:
    :EXPORT_FILE_NAME: gatsby-overkill-for-a-static-site-generator
    :EXPORT_DATE: 2020-06-18
+   :CUSTOM_ID: gatsbyjs-an-overkill-for-a-static-site-generator
    :END:
 
 So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component's are written in react, I can query my post data from graphQL and so many other goodies.
 
 *** So what went wrong?
+:PROPERTIES:
+:CUSTOM_ID: so-what-went-wrong
+:END:
 
 As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn't be the norm of web development. The whole ever-changing ecosystem around React is maddening. It's certainly built for highly interactive and complex web applications, but in my opinion it doesn't hold much value in static blog generation.
 
@@ -1416,6 +1436,9 @@ There are certain pain points that were bugging me for a long time.
 It's definitely not for people who like a comfortable blogging system like [[https://wordpress.org/][Wordpress]] or [[https://jekyllrb.com/][Jeykill]], which can be set up in one afternoon. The returns we get for using and understanding such a complex stack is relatively less if you ask me.
 
 *** My new workflow
+:PROPERTIES:
+:CUSTOM_ID: my-new-workflow
+:END:
 
 I have always loved markdown until I discovered [[https://orgmode.org/][Org-mode]]. It simply blew me away. I never thought I could do so much with plain text, and when I learned about [[https://ox-hugo.scripter.co/][ox-hugo]], the idea of publishing a blog completely from emacs fascinated me.
 
@@ -1439,9 +1462,13 @@ If you are a front-end developer with the knowledge of React and always willing 
    :PROPERTIES:
    :EXPORT_FILE_NAME: a-mininal-tmux-configuration-from-scratch
    :EXPORT_DATE: 2021-03-14
+   :CUSTOM_ID: a-mininal-tmux-configuration-from-scratch
    :END:
 
 *** General configuration
+:PROPERTIES:
+:CUSTOM_ID: general-configuration
+:END:
 
 We need to create a =~/.tmux.conf= file in our home directory. This will be the configuration file for our setup.
 
@@ -1470,6 +1497,9 @@ set -g mouse on
 #+end_src
 
 *** Keybindings
+:PROPERTIES:
+:CUSTOM_ID: keybindings
+:END:
 
 By default tmux uses =ctrl-b= (=C-b=) as the prefix key. Personally I found this to be a bit less ergonomic for my taste. Let's change that to =C-a=.
 
@@ -1516,6 +1546,9 @@ bind p paste-buffer
 #+end_src
 
 *** Customize Status Bar
+:PROPERTIES:
+:CUSTOM_ID: customize-status-bar
+:END:
 #+begin_quote
 Some of the commands(to check OS version, battery info and CPU usage info) I will be using are exclusive to Mac Os. Do drop a comment if you want me to test and figure out the linux equivalents.
 #+end_quote
@@ -1604,6 +1637,9 @@ set -g window-status-current-format ' #I #W '
 Well who needs an activity monitor now!
 
 *** Customize Active Pane
+:PROPERTIES:
+:CUSTOM_ID: customize-active-pane
+:END:
 We need some subtle style changes in order to easily distinguish the active pane form the inactive ones.
 
 #+begin_src sh
@@ -1630,6 +1666,9 @@ The above color combination works with dark terminal themes. Do change the color
 #+end_export
 
 *** Miscellaneous
+:PROPERTIES:
+:CUSTOM_ID: miscellaneous
+:END:
 
 Here are some useful tweaks for a quiter tmux with a more native Mac like experience.
 
@@ -1650,6 +1689,9 @@ set -g bell-action none
 #+end_src
 
 *** Who wants a minimal config anyway!
+:PROPERTIES:
+:CUSTOM_ID: who-wants-a-minimal-config-anyway
+:END:
 There is much more to tmux than what I have done here with ~50 lines of config. I would highly recommend the [[https://github.com/tmux/tmux/wiki][official documentation]] for understanding various features of tmux.
 
 Also check out [[https://github.com/rothgar/awesome-tmux][Awesome tmux]] for almost all the best resources out there for tmux and don't forget to share your screenshots in the comments.
@@ -1659,19 +1701,25 @@ Here is my [[https://github.com/mrprofessor/dotfiles/blob/master/tmux.conf][tmux
 ** Using Auth0 with a custom user store :auth:python:
    :PROPERTIES:
    :EXPORT_FILE_NAME: custom_user_store_with_auth0
-   :EXPORT_DATE: 2022-03-28
+   :EXPORT_DATE: 2023-03-23
    :EXPORT_HUGO_DRAFT: true
+   :CUSTOM_ID: using-auth0-with-a-custom-user-store
    :END:
 
-Auth0 is an identity management solution for Web, Mobile, and IoT devices. It supports almost all types of authentication mechanisms and eases the complexity of both authentication and authorization. However, like everything else it has it's limits. Particularly there is one limit I have recently faced, and this post is nothing but a POC to the solution.
+Auth0 is a comprehensive identity management solution designed for Web, Mobile, and IoT devices. With its wide range of supported authentication mechanisms, it simplifies the complexities of authentication and authorization. However, even with its many advantages, Auth0 has limitations that can hinder its effectiveness.Recently, I encountered one such limitation, and this post serves as a proof of concept for the solution.
 
 *** The problem
+:PROPERTIES:
+:CUSTOM_ID: the-problem
+:END:
 
-Auth0 has it's own user store; however, it requires that =email= address must be unique for each user(per connection). In other words, Auth0 doesn't support unique username based user database, where email may not be unique. This =one user per email= is a widely popular pattern, since the Internet chose it for us.
-
+Although Auth0 provides its own user store, it enforces a unique =email= address for each user within a given connection. As a result, Auth0 does not support a user database based on unique usernames where emails may not be unique. The practice of having =one user per email= is a widely adopted pattern on the internet, which Auth0 does not accommodate.
 *** Ground work
+:PROPERTIES:
+:CUSTOM_ID: ground-work
+:END:
 
-So in this post, we will setup a PostgreSQL database with some user data. Then we will connect the Auth0 to our database and test some usual authentication stuff.
+In this post, we will be setting up a PostgreSQL database with a set of user data. Subsequently, we will integrate Auth0 with our database and test typical authentication processes.
 
 **** Set up the Database
 
@@ -1779,5 +1827,8 @@ And we get the Auth0 login page.
 #+END_EXPORT
 
 *** Auth0 actions configuration
+:PROPERTIES:
+:CUSTOM_ID: auth0-actions-configuration
+:END:
 
-Now that we got everything set up, we can work on the Auth0 actions(login, sign up, password change etc). Auth0 allows users to create their custom scripts to autheticate with their database, but the script must return an unique =user_id=. The scripts must be written in Javascript, which will run as anonymous functions on Auth0's Node.js platform.
+With the setup in place, our focus can now shift to performing Auth0 actions such as logging in, signing up, and changing passwords. While Auth0 allows users to create custom scripts for authentication with their database, these scripts must return a unique =user_id=. They must be written in JavaScript and will run as anonymous functions on Auth0's Node.js platform.

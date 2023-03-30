@@ -8,7 +8,6 @@ aliases = "/post/configuring-npm-behind-a-proxy"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -30,8 +29,8 @@ Once you have obtained the proxy settings (server URL, port, username
 and password); you need to configure your npm configurations as follows.
 
 ```sh
-  npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
-  npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
+npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
 ```
 
 You would have to replace `<username>`, `<password>`,

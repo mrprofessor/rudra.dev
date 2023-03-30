@@ -8,7 +8,6 @@ aliases = "/post/rendering-markdown-from-flask"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -37,34 +36,34 @@ everytime we hit the index.
 _Required packages_
 
 ```sh
-  pip3 install Flask markdown
+pip3 install Flask markdown
 ```
 
 _app.py_
 
 ```python
-  import markdown
-  from flask import Flask
-  import markdown.extensions.fenced_code
+import markdown
+from flask import Flask
+import markdown.extensions.fenced_code
 
-  app = Flask(__name__)
-
-
-  @app.route("/")
-  def index():
-      readme_file = open("README.md", "r")
-      md_template_string = markdown.markdown(
-          readme_file.read(), extensions=["fenced_code"]
-      )
-
-      return md_template_string
+app = Flask(__name__)
 
 
-  if __name__ == "__main__":
-      app.run()
+@app.route("/")
+def index():
+    readme_file = open("README.md", "r")
+    md_template_string = markdown.markdown(
+	readme_file.read(), extensions=["fenced_code"]
+    )
+
+    return md_template_string
+
+
+if __name__ == "__main__":
+    app.run()
 ```
 
-In the above snippet we are using [Flask](https://flask.palletsprojects.com)(my current favorite) as the web framework, [Python-Markdown](https://github.com/Python-Markdown/markdown) to convert markdown files to HTML, and [fenced\_code](https://python-markdown.github.io/extensions/fenced%5Fcode%5Fblocks/) extension to support code blocks.
+In the above snippet we are using [Flask](https://flask.palletsprojects.com)(my current favorite) as the web framework, [Python-Markdown](https://github.com/Python-Markdown/markdown) to convert markdown files to HTML, and [fenced_code](https://python-markdown.github.io/extensions/fenced_code_blocks/) extension to support code blocks.
 
 And it looked something like this
 
@@ -75,24 +74,24 @@ And it looked something like this
 
 ## Not quite there yet! {#not-quite-there-yet}
 
-Well even though [Richard Stallman](https://en.wikipedia.org/wiki/Richard%5FStallman) remains my hero, fortunately I do not share his [taste](https://stallman.org/) on web design. So without
-over-engineering our little snippet I thought of adding syntax highlighting with [pygments](https://pygments.org/) and [CodeHilite](https://python-markdown.github.io/extensions/code%5Fhilite/) extension.
+Well even though [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman) remains my hero, fortunately I do not share his [taste](https://stallman.org/) on web design. So without
+over-engineering our little snippet I thought of adding syntax highlighting with [pygments](https://pygments.org/) and [CodeHilite](https://python-markdown.github.io/extensions/code_hilite/) extension.
 
 Let's generate css for syntax highlighting using pygments
 
 ```python
-  from pygments.formatters import HtmlFormatter
+from pygments.formatters import HtmlFormatter
 
-  formatter = HtmlFormatter(style="emacs",full=True,cssclass="codehilite")
-  css_string = formatter.get_style_defs()
+formatter = HtmlFormatter(style="emacs",full=True,cssclass="codehilite")
+css_string = formatter.get_style_defs()
 ```
 
-Now we need to append the css\_string to the markdown converted HTML string.
+Now we need to append the css_string to the markdown converted HTML string.
 
 ```python
-  md_css_string = "<style>" + css_string + "</style>"
-  md_template = md_css_string + md_template_string
-  return md_template
+md_css_string = "<style>" + css_string + "</style>"
+md_template = md_css_string + md_template_string
+return md_template
 ```
 
 > Alternatively we can use

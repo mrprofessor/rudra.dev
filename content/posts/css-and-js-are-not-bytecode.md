@@ -8,7 +8,6 @@ aliases = "/post/css-and-js-are-not-bytecode"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -29,11 +28,11 @@ from punched cards or magnetic tape or toggled in on switches on the
 front panel of the computer. I guess they started creating programming
 languages in order to make it human readable. Then they developed
 [First
-Gen](https://en.wikipedia.org/wiki/First-generation%5Fprogramming%5Flanguage),
+Gen](https://en.wikipedia.org/wiki/First-generation_programming_language),
 [Assembly
-languages](https://en.wikipedia.org/wiki/First-generation%5Fprogramming%5Flanguage)(_Ah..my first project_) and created something called
+languages](https://en.wikipedia.org/wiki/First-generation_programming_language)(_Ah..my first project_) and created something called
 [
-high-level programming language](https://en.wikipedia.org/wiki/High-level%5Fprogramming%5Flanguage).
+high-level programming language](https://en.wikipedia.org/wiki/High-level_programming_language).
 
 But we didn't stop there, did we ? We had C,we got Python, a more
 readable yet slow language.People wrote languages like Basic, Scratch,

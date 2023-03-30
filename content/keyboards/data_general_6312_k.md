@@ -67,5 +67,5 @@ Upon removing the membrane, we could see the switches fitted to the switch plate
 ## Verdict {#verdict}
 
 At the time of writing, this board is one the favourites in my collection.
-I love the travel of the switch, the case acoustics, quality keycaps and
+I love the switch-travel, the case acoustics, quality keycaps and
 those huge bezels.

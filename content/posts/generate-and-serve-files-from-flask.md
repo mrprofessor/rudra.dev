@@ -21,14 +21,14 @@ Let's create a flask application with a basic route.
 
 ```python
 
-  from flask import Flask
+from flask import Flask
 
-  app = Flask(__name__)
+app = Flask(__name__)
 
 
-  @app.route("/")
-  def index():
-      return "Hello Flask!"
+@app.route("/")
+def index():
+    return "Hello Flask!"
 ```
 
 and voila! We have our server up and running with only 5 lines of code.
@@ -38,9 +38,9 @@ parameter.
 
 ```python
 
-  @app.route("/file/<file_name>")
-  def get_file(file_name):
-      return file_name
+@app.route("/file/<file_name>")
+def get_file(file_name):
+    return file_name
 ```
 
 For our use case we need to generate a csv file using fake data.We need
@@ -51,7 +51,7 @@ that can be used to create both csv and spreadsheets.
 
 ```sh
 
-  python3 -m pip install faker pandas
+python3 -m pip install faker pandas
 ```
 
 Let's add functions that will generate csv files using the fake data we
@@ -59,21 +59,21 @@ get from Faker.
 
 ```python
 
-  def generate_fake_data():
-      fake_data = [fake.simple_profile() for item in range(5)]
-      return pd.DataFrame(fake_data)
+def generate_fake_data():
+    fake_data = [fake.simple_profile() for item in range(5)]
+    return pd.DataFrame(fake_data)
 
 
-  def generate_csv_file(file_df):
-      # Create an o/p buffer
-      file_buffer = StringIO()
+def generate_csv_file(file_df):
+    # Create an o/p buffer
+    file_buffer = StringIO()
 
-      # Write the dataframe to the buffer
-      file_df.to_csv(file_buffer, encoding="utf-8", index=False, sep=",")
+    # Write the dataframe to the buffer
+    file_df.to_csv(file_buffer, encoding="utf-8", index=False, sep=",")
 
-      # Seek to the beginning of the stream
-      file_buffer.seek(0)
-      return file_buffer
+    # Seek to the beginning of the stream
+    file_buffer.seek(0)
+    return file_buffer
 ```
 
 Now we need to call these functions from our routing method and send the
@@ -81,16 +81,16 @@ file as response.
 
 ```python
 
-  @app.route("/file/<file_name>")
-  def get_file(file_name):
-      fake_df = generate_fake_data()
-      generated_file = generate_csv_file(fake_df)
-      response = Response(generated_file, mimetype="text/csv")
-      # add a filename
-      response.headers.set(
-          "Content-Disposition", "attachment", filename="{0}.csv".format(file_name)
-      )
-      return response
+@app.route("/file/<file_name>")
+def get_file(file_name):
+    fake_df = generate_fake_data()
+    generated_file = generate_csv_file(fake_df)
+    response = Response(generated_file, mimetype="text/csv")
+    # add a filename
+    response.headers.set(
+	"Content-Disposition", "attachment", filename="{0}.csv".format(file_name)
+    )
+    return response
 ```
 
 Once we hit the above route with a file name the browser will ask for

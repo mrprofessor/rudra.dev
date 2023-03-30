@@ -1,7 +1,7 @@
 +++
 title = "Using Auth0 with a custom user store"
 author = ["mrprofessor"]
-date = 2022-03-28
+date = 2023-03-23
 tags = ["auth", "python"]
 draft = true
 +++
@@ -19,17 +19,17 @@ draft = true
 </div>
 <!--endtoc-->
 
-Auth0 is an identity management solution for Web, Mobile, and IoT devices. It supports almost all types of authentication mechanisms and eases the complexity of both authentication and authorization. However, like everything else it has it's limits. Particularly there is one limit I have recently faced, and this post is nothing but a POC to the solution.
+Auth0 is a comprehensive identity management solution designed for Web, Mobile, and IoT devices. With its wide range of supported authentication mechanisms, it simplifies the complexities of authentication and authorization. However, even with its many advantages, Auth0 has limitations that can hinder its effectiveness.Recently, I encountered one such limitation, and this post serves as a proof of concept for the solution.
 
 
 ## The problem {#the-problem}
 
-Auth0 has it's own user store; however, it requires that `email` address must be unique for each user(per connection). In other words, Auth0 doesn't support unique username based user database, where email may not be unique. This `one user per email` is a widely popular pattern, since the Internet chose it for us.
+Although Auth0 provides its own user store, it enforces a unique `email` address for each user within a given connection. As a result, Auth0 does not support a user database based on unique usernames where emails may not be unique. The practice of having `one user per email` is a widely adopted pattern on the internet, which Auth0 does not accommodate.
 
 
 ## Ground work {#ground-work}
 
-So in this post, we will setup a PostgreSQL database with some user data. Then we will connect the Auth0 to our database and test some usual authentication stuff.
+In this post, we will be setting up a PostgreSQL database with a set of user data. Subsequently, we will integrate Auth0 with our database and test typical authentication processes.
 
 
 ### Set up the Database {#set-up-the-database}
@@ -66,7 +66,7 @@ And we got some users in.
 ```shell
 > select * from "user";
 
-                  id                  |     name     |    login
+		  id                  |     name     |    login
 --------------------------------------+--------------+--------------
  b49daf2a-af3b-4d91-966f-92159c726601 | Rick Sanchez | rick_sanchez
  01906f5b-7be3-4ce8-87c0-418e7e20d610 | Morty Smith  | morty_smith
@@ -129,4 +129,4 @@ And we get the Auth0 login page.
 
 ## Auth0 actions configuration {#auth0-actions-configuration}
 
-Now that we got everything set up, we can work on the Auth0 actions(login, sign up, password change etc). Auth0 allows users to create their custom scripts to autheticate with their database, but the script must return an unique `user_id`. The scripts must be written in Javascript, which will run as anonymous functions on Auth0's Node.js platform.
+With the setup in place, our focus can now shift to performing Auth0 actions such as logging in, signing up, and changing passwords. While Auth0 allows users to create custom scripts for authentication with their database, these scripts must return a unique `user_id`. They must be written in JavaScript and will run as anonymous functions on Auth0's Node.js platform.

@@ -8,7 +8,6 @@ aliases = "/post/building-a-github-auth-service"
 +++
 
 <div class="ox-hugo-toc toc">
-<div></div>
 
 <div class="heading">Table of Contents</div>
 
@@ -41,35 +40,30 @@ After going through the GitHub's [guide](https://developer.github.com/apps/build
 
 2.  Once we create an OAuth application, we need to call the GitHub API
     for an authentication code. This API call looks something like this.
-
     ```text
-            https://github.com/login/oauth/authorize?client_id=0000000000000&scope=repo&redirect_uri=https://xyz.io/myapp/
+    https://github.com/login/oauth/authorize?client_id=0000000000000&scope=repo&redirect_uri=https://xyz.io/myapp/
     ```
-
-    This redirects to the redirect\_uri with an authentication code which
+    This redirects to the redirect_uri with an authentication code which
     looks something like this.
-
     ```text
-            https://xyz.io/myapp/?code=a17ccd77d36b2be92aa4
+    https://xyz.io/myapp/?code=a17ccd77d36b2be92aa4
     ```
 
 3.  After getting the code, we need to make a POST call to get the
-    access\_token.
-
+    access_token.
     ```sh
-              curl --location --request POST 'https://github.com/login/oauth/access_token' \
-              --header 'Cookie: _octo=GH1.1.206637387.1578955864; logged_in=no' \
-              --form 'client_id=xxxxxxxxxxxxxx' \
-              --form 'client_secret=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
-              --form 'code=a17ccd77d36b2be92aa4'
+    curl --location --request POST 'https://github.com/login/oauth/access_token' \
+    --header 'Cookie: _octo=GH1.1.206637387.1578955864; logged_in=no' \
+    --form 'client_id=xxxxxxxxxxxxxx' \
+    --form 'client_secret=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+    --form 'code=a17ccd77d36b2be92aa4'
     ```
 
-4.  Once we have the access\_token we can start making call to GitHub and
+4.  Once we have the access_token we can start making call to GitHub and
     interact with repositories. Here is an example to get the current
     user details.
-
     ```sh
-              curl -H "Authorization: 2434543442242394sfes34dds" https://api.github.com/user
+    curl -H "Authorization: 2434543442242394sfes34dds" https://api.github.com/user
     ```
 
 > Follow the official
@@ -104,43 +98,43 @@ parameter for the API.
 The API call to the proxy/server should look something like this.
 
 ```text
-  https://your-proxy.glitch.me/authenticate/a17ccd77d36b2be92aa4
+https://your-proxy.glitch.me/authenticate/a17ccd77d36b2be92aa4
 ```
 
 Here we are using Python and Flask to build the server, but it can be
 any stack of your choice.
 
 ```python
-    @app.route("/authenticate/<code>", methods=["GET"])
-    def authenticate(code):
-        creds = get_access_token(*build_config(code))
-        return jsonify(creds)
+@app.route("/authenticate/<code>", methods=["GET"])
+def authenticate(code):
+    creds = get_access_token(*build_config(code))
+    return jsonify(creds)
 
 
-    def build_config(code):
-        url = config["oauth_url"]
-        headers = {"Content-Type": "application/json"}
-        payload = {
-            "client_id": os.environ.get(config["oauth_client_id"]),
-            "client_secret": os.environ.get(config["oauth_client_secret"]),
-            "code": code,
-        }
-        # Raise exceptions if client_id or client_secret not found.
-        if not payload["client_id"]:
-            raise APIException("Client Id is not found in environment", status_code=422)
-        if not payload["client_secret"]:
-            raise APIException("Client secret is not found in environment", status_code=422)
-        return url, headers, payload
+def build_config(code):
+    url = config["oauth_url"]
+    headers = {"Content-Type": "application/json"}
+    payload = {
+	"client_id": os.environ.get(config["oauth_client_id"]),
+	"client_secret": os.environ.get(config["oauth_client_secret"]),
+	"code": code,
+    }
+    # Raise exceptions if client_id or client_secret not found.
+    if not payload["client_id"]:
+	raise APIException("Client Id is not found in environment", status_code=422)
+    if not payload["client_secret"]:
+	raise APIException("Client secret is not found in environment", status_code=422)
+    return url, headers, payload
 
 
-    def get_access_token(url, headers, payload):
-        response = requests.post(url, headers=headers, params=payload)
-        # If client id not found
-        if response.text == "Not Found":
-            raise APIException("Client id is invalid", status_code=404)
-        qs = dict(parse_qsl(response.text))
-        creds = {item: qs[item] for item in qs}
-        return creds
+def get_access_token(url, headers, payload):
+    response = requests.post(url, headers=headers, params=payload)
+    # If client id not found
+    if response.text == "Not Found":
+	raise APIException("Client id is invalid", status_code=404)
+    qs = dict(parse_qsl(response.text))
+    creds = {item: qs[item] for item in qs}
+    return creds
 ```
 
 Here we are storing the client id and client secret as environment
