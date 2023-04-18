@@ -1338,7 +1338,7 @@ This is one of my toughest acquisitions so far, and I couldn’t be happier.
 The keyboard delivers and is one of the finest boards I have in my
 collection.
 
-** KFE CE :custom:keyboards:mx:
+** KFE CE :custom:keyboards:alps:
    :PROPERTIES:
    :EXPORT_FILE_NAME: kfe_ce
    :EXPORT_DATE: 2023-01-10
@@ -1514,7 +1514,6 @@ collection.
 </div>
 #+END_EXPORT
 
-
 ** Dell AT102W :vintage:alps:dell:keyboards:
 :PROPERTIES:
 :EXPORT_FILE_NAME: dell_at102w
@@ -1597,13 +1596,13 @@ I believe the AT102W case is one of the best-sounding alps cases available.
 I particularly like the light tactility of the SKCM black switches, which
 makes the board quite enjoyable.
 
-** Frog TKL :custom:keyboards:mx:
+** Frog TKL :custom:keyboards:space_invader:
    :PROPERTIES:
    :EXPORT_FILE_NAME: frog_tkl
    :EXPORT_DATE: 2023-03-22
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/frog_tkl/frog_tkl_01.jpg
    :EXPORT_HUGO_DRAFT: false
-   :CUSTOM_ID: kfe_ce
+   :CUSTOM_ID: frog-tkl
    :END:
    
 *** Configuration
@@ -1614,7 +1613,7 @@ makes the board quite enjoyable.
     - Design by Geon, from [[https://geon.works][geon.works]]
     - Burgandy aluminium case
     - [[https://github.com/4pplet/waffling80][Waffling 80]] PCB by 4pplet
-    - FR4 PCB made by 4pplet
+    - FR4 Plate made by 4pplet
     - Original Space invader stabilizers
     - Hi-tek 725(space invader) Black switches
     - Harvested space invader keycaps 
@@ -1637,6 +1636,39 @@ makes the board quite enjoyable.
 #+BEGIN_EXPORT html
 <div class="post-image">
   <img src="/images/keyboards/frog_tkl/frog_tkl_04.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+** NCR 80 :custom:keyboards:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ncr_80_alps_buid
+   :EXPORT_DATE: 2023-04-17
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ncr80_alps/NCR80_cover.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ncr-80
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration-ncr80
+:END:
+
+    - NCR 80 Round 2 Case
+    - Alps + MX PCB and Fr4 plate by Maelk
+    - NOS Alps SKCM Whites
+    - DCS Pingmaster keycaps
+      
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/ncr80_alps/NCR80_01.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/ncr80_alps/NCR80_02.jpg" loading="lazy"/>
   <span class="img-description"> </span>
 </div>
 #+END_EXPORT

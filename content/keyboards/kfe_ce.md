@@ -2,7 +2,7 @@
 title = "KFE CE"
 author = ["mrprofessor"]
 date = 2023-01-10
-tags = ["custom", "keyboards", "mx"]
+tags = ["custom", "keyboards", "alps"]
 draft = false
 image = "/images/keyboards/kfe_ce/kfe_ce_oranges_04.jpg"
 +++

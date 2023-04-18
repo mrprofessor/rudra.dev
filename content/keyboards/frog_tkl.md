@@ -2,7 +2,7 @@
 title = "Frog TKL"
 author = ["mrprofessor"]
 date = 2023-03-22
-tags = ["custom", "keyboards", "mx"]
+tags = ["custom", "keyboards", "space-invader"]
 draft = false
 image = "/images/keyboards/frog_tkl/frog_tkl_01.jpg"
 +++
@@ -12,7 +12,7 @@ image = "/images/keyboards/frog_tkl/frog_tkl_01.jpg"
 -   Design by Geon, from [geon.works](https://geon.works)
 -   Burgandy aluminium case
 -   [Waffling 80](https://github.com/4pplet/waffling80) PCB by 4pplet
--   FR4 PCB made by 4pplet
+-   FR4 Plate made by 4pplet
 -   Original Space invader stabilizers
 -   Hi-tek 725(space invader) Black switches
 -   Harvested space invader keycaps
