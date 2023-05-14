@@ -1,16 +1,34 @@
 // Font family
 // @import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600&display=swap');
+
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    src: url("/fonts/DejaVuSansMono.woff2") format('woff2');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/font/DejaVuSansMono-Bold.woff2');
+    font-weight: bold;
+    font-display: block;
+}
+
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    // font-family: 'Enriqueta','Georgia',sans-serif;
-    font-family: 'Operator A', 'Operator B';
+    font-family: DejaVu Sans Mono, monospace;
 }
 h1, h2, h3, h4 {
     font-family: 'Operator A', 'Operator B';
     font-weight: 400;
+}
+.blog-post-content h2 {
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: $blog-header-font-size;
+    font-weight: 600;
 }
 code[class*="language-"], nav, .blog-list {
     font-family: "Operator Mono A", "Operator Mono B";
@@ -19,17 +37,16 @@ code[class*="language-"], nav, .blog-list {
     font-size: 1.025rem;
 }
 code {
-    font-family: "Operator Mono A", "Operator Mono B";
+    // font-family: "Operator Mono A", "Operator Mono B";
 }
 
 tags {
-    font-family: "Operator Mono A", "Operator Mono B";
+    // font-family: "Operator Mono A", "Operator Mono B";
 }
 
 article h1 {
     font-weight: 600;
 }
-
 
 .slim-description {
     font-family: "Operator Mono A", "Operator Mono B";
