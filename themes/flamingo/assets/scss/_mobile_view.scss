@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    line-height: $global-line-height;
+    line-height: 1.8em;
     color: $primary-color;
     background: $background-color;
 }
@@ -13,7 +13,7 @@ body {
 }
 
 p, sub, nav{
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.05rem;
 }
 
 .title-wrapper, .title {
@@ -76,10 +76,8 @@ nav {
 }
 
 .slim-description {
-    font-size: $large-display-font-size;
     margin-bottom: calc(#{$global-font-size} * 2);
     color: $subscript-color;
-    line-height: $large-display-line-height;
     p {
         letter-spacing: normal;
     }
@@ -108,16 +106,11 @@ nav {
 
     // Add some spaces before a sub-heading
     h2 {
-	margin-top: 2rem;
-	padding-bottom: 1rem;
-	border-bottom: solid 1px $subscript-color;
-	text-transform: uppercase;
+        margin-top: 2rem;
     }
 }
 
 .blog-list {
-    line-height: $large-display-line-height;
-    font-size: $large-display-font-size;
     .list-item {
         display: flex;
         flex-direction: column-reverse;
@@ -272,7 +265,6 @@ time {
 
 // TOC
 .ox-hugo-toc {
-    line-height: $large-display-line-height;
     color: $link-color;
     background: $toc-background;
     padding: 1rem;
