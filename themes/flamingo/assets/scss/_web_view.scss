@@ -4,11 +4,6 @@
     font-size: $global-font-size;
   }
 
-  body {
-    line-height: $global-line-height-mobile;
-  }
-
-
   .layout {
     .title-wrapper {
       @include flexify;
@@ -50,13 +45,5 @@
   .collection-card {
       flex: 0 1 48%;
       margin-bottom: 1rem;
-  }
-
-  .slim-description {
-      font-size: $large-display-font-size;
-  }
-
-  .blog-list {
-      font-size: $large-display-font-size;
   }
 }
