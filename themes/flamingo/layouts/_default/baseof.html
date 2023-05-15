@@ -65,23 +65,23 @@
 
     <script>
      // Script to add # to headers
-     var tags = ["H2", "H3", "H4", "H5", "H6"]
-     function addAnchor(element) {
-         if (tags.includes(element.nodeName)) {
-            headerLvl = Number(element.nodeName[1])
-            element.innerText = "#".repeat(headerLvl) + " " + element.innerText
-         }
-     }
+     // var tags = ["H2", "H3", "H4", "H5", "H6"]
+     // function addAnchor(element) {
+     //     if (tags.includes(element.nodeName)) {
+     //        headerLvl = Number(element.nodeName[1])
+     //        element.innerText = "#".repeat(headerLvl) + " " + element.innerText
+     //     }
+     // }
 
-     document.addEventListener('DOMContentLoaded', function () {
-         var elements = []
-         for (i = 0; i < tags.length; i++) {
-            var headers = document.querySelectorAll('article ' + tags[i])
-            if (headers) {
-                headers.forEach(addAnchor)
-            }
-         }
-     })
+     // document.addEventListener('DOMContentLoaded', function () {
+     //     var elements = []
+     //     for (i = 0; i < tags.length; i++) {
+     //        var headers = document.querySelectorAll('article ' + tags[i])
+     //        if (headers) {
+     //            headers.forEach(addAnchor)
+     //        }
+     //     }
+     // })
     </script>
 
     <!-- Posthog -->

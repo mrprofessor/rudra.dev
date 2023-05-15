@@ -106,7 +106,10 @@ nav {
 
     // Add some spaces before a sub-heading
     h2 {
-        margin-top: 2rem;
+	margin-top: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: solid 1px $subscript-color;
+	text-transform: uppercase;
     }
 }
 
