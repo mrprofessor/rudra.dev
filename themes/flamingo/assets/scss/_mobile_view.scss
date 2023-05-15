@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    line-height: $global-line-height;
+    line-height: $global-line-height-mobile;
     color: $primary-color;
     background: $background-color;
 }
@@ -26,6 +26,7 @@ a {
 
 h1 {
     font-size: $title-font-size;
+    line-height: $large-display-line-height;
 }
 
 .layout {
@@ -76,7 +77,7 @@ nav {
 }
 
 .slim-description {
-    font-size: $large-display-font-size;
+    font-size: $global-font-size-mobile;
     margin-bottom: calc(#{$global-font-size} * 2);
     color: $subscript-color;
     line-height: $large-display-line-height;
@@ -117,7 +118,7 @@ nav {
 
 .blog-list {
     line-height: $large-display-line-height;
-    font-size: $large-display-font-size;
+    font-size: $global-font-size-mobile;
     .list-item {
         display: flex;
         flex-direction: column-reverse;
