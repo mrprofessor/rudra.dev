@@ -1,6 +1,6 @@
 +++
 title = "Data General/Acer 6312-k"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-04-23
 tags = ["vintage", "keyboards", "acer", "data-general", "membrane"]
 draft = false

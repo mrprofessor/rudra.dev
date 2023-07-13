@@ -1,6 +1,6 @@
 +++
 title = "NMB RT-8700 series keyboard"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-03-28
 tags = ["vintage", "keyboards", "nmb", "space-invader"]
 draft = false

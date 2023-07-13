@@ -1,6 +1,6 @@
 +++
 title = "Leading Edge DC-2014"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-07-23
 tags = ["vintage", "keyboards", "leading-edge", "alps"]
 draft = false

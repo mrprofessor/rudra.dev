@@ -1,6 +1,6 @@
 +++
 title = "Northgate Omnikey Ultra"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-04-14
 tags = ["vintage", "keyboards", "northgate", "omnikey", "alps"]
 draft = false
@@ -86,9 +86,7 @@ layouts, swap modifier keys, and change protocols.
   <span class="img-description"> Northgate Omnikey Ultra PCB</span>
 </div>
 
-**\***
-Restoration
 
-:CUSTOM_ID: restoration01
+## Restoration {#restoration01}
 
 The keyboard wasn’t in a good state when I acquired it. It needed some cleaning and some retr0briting to bring it back to its original condition. I have greased the stabilizers with di-electric grease to reduce the rattle; However, the switches could use some cleaning. This keyboard is by far the most practical vintage keyboard I have ever owned, and I intend to keep using it in the coming years.

@@ -1,6 +1,6 @@
 +++
 title = "Monterey K104"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-03-17
 tags = ["vintage", "keyboards", "monterey", "alps"]
 draft = false

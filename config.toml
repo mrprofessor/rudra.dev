@@ -29,9 +29,9 @@ publishDir = "docs"
     weight = 10
 
   [[menu.main]]
-    identifier = "projects"
-    name = "projects"
-    url = "/projects/"
+    identifier = "about"
+    name = "about"
+    url = "/about/"
     weight = 11
 
   [[menu.main]]
@@ -42,16 +42,16 @@ publishDir = "docs"
 
 
   [[menu.secondary]]
-    identifier = "about"
-    name = "about"
-    url = "/about/"
-    weight = 10
-
-  [[menu.secondary]]
     identifier = "resume"
     name = "resume"
     url = "https://github.com/mrprofessor/resume/blob/master/rudra_kar_resume.pdf/"
-    weight = 11
+    weight = 10
+
+  [[menu.secondary]]
+    identifier = "uses"
+    name = "uses"
+    url = "/uses/"
+    weight = 10
 
   [[menu.secondary]]
     identifier = "logs"

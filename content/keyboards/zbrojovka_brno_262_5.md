@@ -1,6 +1,6 @@
 +++
 title = "Zbrojovka Brno 262.5"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-02-17
 tags = ["vintage", "keyboards", "zbrojokva"]
 draft = false

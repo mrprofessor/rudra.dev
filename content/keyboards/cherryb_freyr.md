@@ -1,6 +1,6 @@
 +++
 title = "CherryB Freyr"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-09-17
 tags = ["custom", "keyboards", "mx"]
 draft = false

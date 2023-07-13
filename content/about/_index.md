@@ -1,20 +1,16 @@
 +++
 title = "About"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 layout = "single"
 draft = false
 +++
 
-I build large and scalable web applications at work. I dream of building
+I build expansive and scalable web applications at work. I aspire to create
 tiny and useful applications at home.
 
-I can probably free up some hours in a week for software consulting if I
-like your idea. You can even hire me full-time if you are shipping
-applications with a
-[Free Software
-Foundation](https://www.gnu.org/licenses/license-list.html) license.
+If your idea captures my interest, I am willing to dedicate a few hours each
+week to software consulting. You can even hire me full-time if you are
+shipping applications with a [Free Software Foundation](https://www.gnu.org/licenses/license-list.html) license.
 
-If you need any help regarding any of my articles do drop a comment
-instead sending me e-mails.
-
-Thanks for showing interest. Go away now. Bye!
+If you need any help regarding any of my articles, Please drop a comment
+and/or send me an email at contact[at]rudra.dev.

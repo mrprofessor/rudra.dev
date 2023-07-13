@@ -1,6 +1,6 @@
 +++
 title = "Rama U-80A seq2"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-09-18
 tags = ["custom", "keyboards", "mx"]
 draft = false

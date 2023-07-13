@@ -1,6 +1,6 @@
 +++
 title = "KFE CE"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2023-01-10
 tags = ["custom", "keyboards", "alps"]
 draft = false

@@ -1,6 +1,6 @@
 +++
 title = "Televideo 990/995 DEC keyboard"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2022-03-18
 tags = ["vintage", "keyboards", "nmb", "space-invader"]
 draft = false

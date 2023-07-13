@@ -1,6 +1,6 @@
 +++
 title = "IBM Model F AT"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2021-12-11
 tags = ["vintage", "keyboards", "ibm", "modelF", "AT"]
 draft = false

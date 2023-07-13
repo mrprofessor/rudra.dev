@@ -893,8 +893,7 @@ layouts, swap modifier keys, and change protocols.
   </div>
 #+END_EXPORT
 
-***
-Restoration
+*** Restoration
 :PROPERTIES:
 :CUSTOM_ID: restoration01
 :END:
