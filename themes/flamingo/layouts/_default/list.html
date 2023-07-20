@@ -9,12 +9,21 @@
         {{ end }}
 
         <div class="blog-list">
+            <!-- First list the custom keyboards and then the vintage ones -->
             {{ if (eq .Page.Name "Keyboards") }}
-                <div class="collection-board">
-                    {{ range .Paginator.Pages }}
-                        {{ .Render "keyboards-summary" }}
+            <div class="collection-board">
+              {{ range .Paginator.Pages }}
+                {{if in .Params.tags "custom"}}
+                    {{ .Render "keyboards-summary" }}
                     {{ end }}
-                </div>
+              {{ end }}
+              {{ range .Paginator.Pages }}
+                {{if in .Params.tags "vintage"}}
+                    {{ .Render "keyboards-summary" }}
+                {{ end }}
+            {{ end }}
+            </div>
+            <!-- Default listing for everything else -->
             {{ else }}
                 {{ range .Paginator.Pages }}
                     {{ .Render "summary" }}
