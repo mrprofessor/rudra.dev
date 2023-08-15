@@ -1,36 +1,39 @@
 // Font family
-// @import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    // font-family: 'Enriqueta','Georgia',sans-serif;
-    font-family: 'Operator A', 'Operator B';
+    font-family: 'IBM Plex Mono', monospace;
+
 }
 h1, h2, h3, h4 {
-    font-family: 'Operator A', 'Operator B';
+    // font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
 }
+
+
 code[class*="language-"], nav, .blog-list {
-    font-family: "Operator Mono A", "Operator Mono B";
+    // font-family: 'IBM Plex Mono', monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 1.025rem;
 }
 code {
-    font-family: "Operator Mono A", "Operator Mono B";
+    // font-family: 'IBM Plex Mono', monospace;
 }
 
 tags {
-    font-family: "Operator Mono A", "Operator Mono B";
+    // font-family: 'IBM Plex Mono', monospace;
 }
 
 article h1 {
+    // font-family: 'IBM Plex Mono', monospace;
     font-weight: 600;
 }
 
 
 .slim-description {
-    font-family: "Operator Mono A", "Operator Mono B";
+    // font-family: 'IBM Plex Mono', monospace;
 }
