@@ -10,7 +10,7 @@ image = "/images/keyboards/frog_tkl/frog_tkl_01.jpg"
 ## Configuration {#configuration}
 
 -   Design by Geon, from [geon.works](https://geon.works)
--   Burgandy aluminium case
+-   Burgundy aluminium case
 -   [Waffling 80](https://github.com/4pplet/waffling80) PCB by 4pplet
 -   FR4 Plate made by 4pplet
 -   Original Space invader stabilizers

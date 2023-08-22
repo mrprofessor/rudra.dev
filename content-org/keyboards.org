@@ -1610,7 +1610,7 @@ makes the board quite enjoyable.
 :END:
 
     - Design by Geon, from [[https://geon.works][geon.works]]
-    - Burgandy aluminium case
+    - Burgundy aluminium case
     - [[https://github.com/4pplet/waffling80][Waffling 80]] PCB by 4pplet
     - FR4 Plate made by 4pplet
     - Original Space invader stabilizers
