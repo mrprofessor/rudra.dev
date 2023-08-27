@@ -1,6 +1,6 @@
 +++
 title = "NCR 80"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2023-04-17
 tags = ["custom", "keyboards", "alps"]
 draft = false

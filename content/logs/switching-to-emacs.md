@@ -1,6 +1,6 @@
 +++
 title = "Switching to Emacs"
-author = ["mrprofessor"]
+author = ["rudra kar"]
 date = 2020-02-09
 tags = ["log", "emacs", "status"]
 draft = false

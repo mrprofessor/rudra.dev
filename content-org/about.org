@@ -1,5 +1,6 @@
 #+hugo_base_dir: ../
 #+hugo_section: about
+#+author: rudra kar
 
 * About
    :PROPERTIES:

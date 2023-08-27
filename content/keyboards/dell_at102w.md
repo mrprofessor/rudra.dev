@@ -1,6 +1,6 @@
 +++
 title = "Dell AT102W"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2023-01-19
 tags = ["vintage", "alps", "dell", "keyboards"]
 draft = false

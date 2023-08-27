@@ -1,8 +1,12 @@
 #+hugo_base_dir: ../
 #+hugo_section: logs
+#+author: rudra kar
 #+OPTIONS: toc:2
 
 * Contents :toc:
+:PROPERTIES:
+:CUSTOM_ID: contents
+:END:
 - [[#logs][Logs]]
   - [[#status-update-1][Status update #1]]
   - [[#status-update-2][Status update #2]]
@@ -14,11 +18,15 @@
   - [[#my-keyboard-addiction][My keyboard addiction]]
 
 * Logs
+:PROPERTIES:
+:CUSTOM_ID: logs
+:END:
 ** Status update #1 :log:status:
    :PROPERTIES:
    :EXPORT_FILE_NAME: status-update-1
    :EXPORT_DATE: 2019-12-17
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/status-update-1
+   :CUSTOM_ID: status-update-1
    :END:
 
 I have been spending so much time and energy tweaking this website, that I feel
@@ -43,6 +51,7 @@ P.S: Unedited and raw stuff
    :EXPORT_FILE_NAME: status-update-2
    :EXPORT_DATE: 2020-01-31
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/status-update-2
+   :CUSTOM_ID: status-update-2
    :END:
 
 Guess it's time for a status update.
@@ -103,6 +112,7 @@ P.S: Unedited and raw stuff
    :EXPORT_FILE_NAME: wrap-up-2019
    :EXPORT_DATE: 2019-12-31
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/wrap-up-2019
+   :CUSTOM_ID: wrap-up-2019
    :END:
 
 Guess it's time to retrospect the last 12 months.
@@ -203,6 +213,7 @@ He got me this year too.
    :EXPORT_FILE_NAME: switching-to-emacs
    :EXPORT_DATE: 2020-02-09
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/switching-to-emacs
+   :CUSTOM_ID: switching-to-emacs
    :END:
 
 I have spend enormous time on configuring and reconfiguring my vimrc
@@ -224,6 +235,7 @@ lot of other amazing features.
    :EXPORT_FILE_NAME: nothing-is-wrong-with-reinventing-the-wheel
    :EXPORT_DATE: 2020-04-05
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/nothing-is-wrong-with-reinventing-the-wheel
+   :CUSTOM_ID: nothing-s-wrong-with-reinventing-the-wheel
    :END:
 
 I have heard it many times and I have had enough.
@@ -263,13 +275,20 @@ reinventing the wheel.
    :EXPORT_DATE: 2021-02-16
    :EXPORT_HUGO_DRAFT: false
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/wrap-up-2020
+   :CUSTOM_ID: wrap-up-2020
    :END:
 
 It took me a some time to compile my thoughts down for this post. 2020 hasn't been easy on the most and hence this won't be a normal =retrospect a year= log, rather I will introspect the revelations I had during the past year.
 
 *** The good/ususal times
+:PROPERTIES:
+:CUSTOM_ID: the-good-ususal-times
+:END:
 Ye, the first two months!. Just came back to my usual life from a beautiful snowy vacation and everything was still great.
 *** The pandemic
+:PROPERTIES:
+:CUSTOM_ID: the-pandemic
+:END:
 Well it wasn't expected, no-one was prepared and there were chaos!
 
 Couldn't return to my apartment and had to stay with my parents the whole year. The company lost clients and I had to search for a new job. The first company that offered me a job, postponed the joining date for two months. Couldn't find any cat food due to the lockdown related logistical halt.
@@ -277,17 +296,26 @@ Couldn't return to my apartment and had to stay with my parents the whole year. 
 I was definitely not as affected as others whose loss was much greater than me, however these things changed my perspective towards life.
 
 *** The learnings
+:PROPERTIES:
+:CUSTOM_ID: the-learnings
+:END:
 
 - At the end everything we do is to survive and go to a higher peking order by accumulating more resources.
 - The life we live is based on an extremely delicate supply chain and can be disrupted by anything slightly threatening.
 - Liquid assets may not matter at those times, but having some is better than none.
 
 *** New job
+:PROPERTIES:
+:CUSTOM_ID: new-job
+:END:
 Eventually I landed a job in a much better [[https://rackspace.com][place]] with a great tech stack.
 
 There was a giant learning curve, the pressure of working with a highly talented team and hence the imposter syndrome, but with time things gradually became normal as I began to understand the architecture better.
 
 *** New rig
+:PROPERTIES:
+:CUSTOM_ID: new-rig
+:END:
 Finally got enough time to build a gaming rig, and *play* on it. It was surreal.
 
 #+BEGIN_EXPORT HTML
@@ -299,6 +327,9 @@ Finally got enough time to build a gaming rig, and *play* on it. It was surreal.
 I mostly played [[https://rust.facepunch.com/][Rust]], [[https://www.rockstargames.com/reddeadredemption2/][Read dead redemption 2]], and [[https://www.cyberpunk.net/][Cyberpunk 2077]] last year. Out of those I absolutely loved playing Rust. It's a wonderful open-world, sandboxed, interactive and a pretty brutal game. Nothing beats getting yelled at by a bunch of kids.
 
 *** Loki
+:PROPERTIES:
+:CUSTOM_ID: loki
+:END:
 
 2020 turned out to be quite eventful for Loki too. He travelled economy with me, the flight attendants loved him. So he is now living with my parents, seems like he loves the garden, chasing birds on the roof and running around the house, rather than living in a tiny apartment.
 
@@ -322,12 +353,16 @@ I have gotten a bit lazier, probably a bit wiser, put on some weight, didn't lea
    :EXPORT_DATE: 2022-02-18
    :EXPORT_HUGO_DRAFT: false
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /log/wrap-up-2021
+   :CUSTOM_ID: wrap-up-2021
    :END:
 
 I started this =logs= page to write frequently, but it is not going very well.
 Here we go, yet another yearly log.
 
 *** New hobbies
+:PROPERTIES:
+:CUSTOM_ID: new-hobbies
+:END:
 
 I started collecting vintage keyboards during the early months of last year. I
 initially started with IBM boards due to my love for clicky switches. Then after
@@ -345,6 +380,9 @@ I have started a page to document most of them and learned to take better
 pictures of my boards. Technically, I am now a tech hoarder.
 
 *** Loki
+:PROPERTIES:
+:CUSTOM_ID: loki
+:END:
 
 Loki has been staying with my parents for the past two years and he is a happy
 cat. He enjoys his mornings and evenings chasing butterflies in their garden and
@@ -373,6 +411,7 @@ seems like I couldn't care less about it anymore.
    :EXPORT_HUGO_DRAFT: false
    :EXPORT_OPTIONS: toc:0
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/logs/my_keyboard_addiction/bbox60_bakeneko.jpg
+   :CUSTOM_ID: my-keyboard-addiction
    :END:
 
 So here I am, finally acknowledging an issue I am both suffering from and
@@ -383,6 +422,9 @@ suffering from Compulsive Buying Disorder, and the only time I stop is when I
 run out of money.
 
 *** The Beginning
+:PROPERTIES:
+:CUSTOM_ID: the-beginning
+:END:
 
 It all started 5 years ago, I was working for a start-up and was
 typing(programming) a lot on a day-to-day basis. I thought of spending some
@@ -402,6 +444,9 @@ Ctrl keyboard with Box white switches. I lived with that for six months before
 I got tired and wanted to try something different.
 
 *** Vintage Boards
+:PROPERTIES:
+:CUSTOM_ID: vintage-boards
+:END:
 
 It was about time when I wanted the most loved keyboard of all time, the IBM
 Model M. I joined Deskthority, in search of a refurbished Model M, and found
@@ -430,6 +475,9 @@ At the time of writing, I have around 50 boards in my closet and another 20
 keyboards with my proxies in different countries.
 
 *** Modern Boards
+:PROPERTIES:
+:CUSTOM_ID: modern-boards
+:END:
 
 After hanging out with Deskthority folks, I started disliking the modern
 keyboards. The modern keyboards felt boring, monotonus, and without a character.
@@ -440,6 +488,9 @@ mechmarket a while back. It was perfect, with my favorite capacitive buckling
 spring switches, It became my daily driver very quickly.
 
 *** The real problem
+:PROPERTIES:
+:CUSTOM_ID: the-real-problem
+:END:
 
 So I do enjoy collecting keyboards and trying them. The real issue is I spend
 too much money on acquiring them, and it's slowly hurting my financial
@@ -461,6 +512,9 @@ always has been. I was completely wrong, more money just made me more careless
 with it. I kept buying pricier boards and didn't think even think about it.
 
 *** An interim solution
+:PROPERTIES:
+:CUSTOM_ID: an-interim-solution
+:END:
 
 The good thing is I have now around 25 keyboards which don't work with modern
 keyboards. I intend to focus on converting them to use with modern boards, and

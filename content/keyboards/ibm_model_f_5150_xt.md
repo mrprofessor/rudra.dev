@@ -1,6 +1,6 @@
 +++
 title = "IBM Model F 5150(XT)"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2021-11-22
 tags = ["keyboards", "ibm", "modelf", "xt", "vintage"]
 draft = false

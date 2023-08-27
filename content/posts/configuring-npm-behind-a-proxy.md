@@ -1,6 +1,6 @@
 +++
 title = "Configuring nodejs and npm behind a proxy"
-author = ["Rudra Kar"]
+author = ["rudra kar"]
 date = 2017-05-27
 tags = ["node", "npm", "productivity"]
 draft = false

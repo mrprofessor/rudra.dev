@@ -1,6 +1,6 @@
 +++
 title = "Rendering markdown from Flask"
-author = ["Rudra Kar"]
+author = ["rudra kar"]
 date = 2020-02-04
 tags = ["python", "flask", "markdown"]
 draft = false

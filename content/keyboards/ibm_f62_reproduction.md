@@ -1,6 +1,6 @@
 +++
 title = "IBM Model F62 reproduction"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2021-11-21
 tags = ["vintage", "keyboards", "ibm", "modelf"]
 draft = false

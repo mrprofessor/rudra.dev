@@ -1,6 +1,6 @@
 +++
 title = "IBM Pingmaster"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2022-12-07
 tags = ["ibm", "alps", "vintage", "keyboards"]
 draft = false

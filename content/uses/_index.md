@@ -1,6 +1,6 @@
 +++
 title = "Uses"
-author = ["Rudra Kar"]
+author = ["rudra kar"]
 layout = "single"
 draft = false
 +++

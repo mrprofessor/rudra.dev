@@ -1,6 +1,6 @@
 +++
 title = "Status update #1"
-author = ["mrprofessor"]
+author = ["rudra kar"]
 date = 2019-12-17
 tags = ["log", "status"]
 draft = false

@@ -1,6 +1,6 @@
 +++
 title = "Apple Extended Keyboard II"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2022-03-15
 tags = ["vintage", "keyboards", "apple", "alps"]
 draft = false

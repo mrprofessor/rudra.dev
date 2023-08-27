@@ -1,6 +1,6 @@
 +++
 title = "Setting up (Neo)vim for React development"
-author = ["Rudra Kar"]
+author = ["rudra kar"]
 date = 2019-05-03
 tags = ["vim", "react", "editor", "javascript", "web"]
 draft = false

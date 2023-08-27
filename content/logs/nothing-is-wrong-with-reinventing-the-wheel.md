@@ -1,6 +1,6 @@
 +++
 title = "Nothing's wrong with reinventing the wheel"
-author = ["mrprofessor"]
+author = ["rudra kar"]
 date = 2020-04-05
 tags = ["log", "rant"]
 draft = false

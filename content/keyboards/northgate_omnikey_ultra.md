@@ -1,6 +1,6 @@
 +++
 title = "Northgate Omnikey Ultra"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2022-04-14
 tags = ["vintage", "keyboards", "northgate", "omnikey", "alps"]
 draft = false

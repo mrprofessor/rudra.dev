@@ -1,6 +1,6 @@
 +++
 title = "Wrap up 2019"
-author = ["mrprofessor"]
+author = ["rudra kar"]
 date = 2019-12-31
 tags = ["log", "status"]
 draft = false

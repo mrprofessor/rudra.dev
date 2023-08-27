@@ -1,5 +1,6 @@
 #+hugo_base_dir: ../
 #+hugo_section: keyboards
+#+author: mrprofessor
 
 
 * keyboards
@@ -1716,13 +1717,9 @@ makes the board quite enjoyable.
 </div>
 #+END_EXPORT
 
-
 #+BEGIN_EXPORT html
 <div class="post-image">
   <img src="/images/keyboards/tgr_jane_v2_me/tgr_jane_me_02.jpg" loading="lazy"/>
   <span class="img-description"> Yet another top-down photo </span>
 </div>
 #+END_EXPORT
-
-
-

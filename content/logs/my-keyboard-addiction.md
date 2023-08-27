@@ -1,6 +1,6 @@
 +++
 title = "My keyboard addiction"
-author = ["mrprofessor"]
+author = ["rudra kar"]
 date = 2022-07-02
 tags = ["log", "status"]
 draft = false

@@ -1,6 +1,6 @@
 +++
 title = "IBM Model M122(BattleCruiser)"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2021-08-17
 tags = ["vintage", "keyboards", "ibm", "modelm"]
 draft = true

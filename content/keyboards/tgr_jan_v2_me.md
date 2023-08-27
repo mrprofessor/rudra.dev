@@ -1,6 +1,6 @@
 +++
 title = "TGR Jane V2 ME"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2023-07-20
 tags = ["custom", "keyboards", "mx"]
 draft = false

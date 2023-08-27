@@ -1,6 +1,6 @@
 +++
 title = "GatsbyJs: An overkill for a static site generator"
-author = ["Rudra Kar"]
+author = ["rudra kar"]
 date = 2020-06-18
 tags = ["gatsby", "react", "emacs", "hugo", "orgmode", "rant", "editor"]
 draft = false

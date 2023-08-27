@@ -1,5 +1,6 @@
 #+hugo_base_dir: ../
 #+hugo_section: uses
+#+author: rudra kar
 
 * Uses
    :PROPERTIES:

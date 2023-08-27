@@ -1,6 +1,6 @@
 +++
 title = "Apple M0110 keyboard"
-author = ["Rudra Kar"]
+author = ["mrprofessor"]
 date = 2022-04-12
 tags = ["vintage", "keyboards", "apple", "alps", "skcc"]
 draft = false

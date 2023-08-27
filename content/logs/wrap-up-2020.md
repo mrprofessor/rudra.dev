@@ -1,6 +1,6 @@
 +++
 title = "Wrap up 2020"
-author = ["mrprofessor"]
+author = ["rudra kar"]
 date = 2021-02-16
 tags = ["log", "status"]
 draft = false

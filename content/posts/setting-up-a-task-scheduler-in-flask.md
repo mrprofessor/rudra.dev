@@ -1,6 +1,6 @@
 +++
 title = "Setting up a task scheduler in Flask"
-author = ["Rudra Kar"]
+author = ["rudra kar"]
 date = 2019-11-30
 tags = ["python", "flask", "celery"]
 draft = false
