@@ -1,6 +1,6 @@
 +++
 title = "Rendering markdown from Flask"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2020-02-04
 tags = ["python", "flask", "markdown"]
 draft = false
@@ -53,7 +53,7 @@ app = Flask(__name__)
 def index():
     readme_file = open("README.md", "r")
     md_template_string = markdown.markdown(
-	readme_file.read(), extensions=["fenced_code"]
+        readme_file.read(), extensions=["fenced_code"]
     )
 
     return md_template_string

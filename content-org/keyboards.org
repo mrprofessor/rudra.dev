@@ -1686,7 +1686,7 @@ makes the board quite enjoyable.
 :CUSTOM_ID: configuration
 :END:
 
-    - Design by Yutski
+    - Design by Yuktsi
     - Silver aluminium case with Suave blue back plate
     - TGR Jane PCB
     - KFE CE Aluminium Plate

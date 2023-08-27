@@ -1,6 +1,6 @@
 +++
 title = "Generate beautiful JSON from PostgreSQL"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2020-05-19
 tags = ["postgresql", "json", "sql"]
 draft = false
@@ -136,14 +136,14 @@ any further manipulation at back-end layer.
 ```sql
 SELECT array_to_json(array_agg(row_to_json(users)))
     FROM (
-	SELECT id, name from "user"
+        SELECT id, name from "user"
     ) users
 
 -- OR
 
 SELECT json_agg(row_to_json(users))
     FROM (
-	SELECT id, name from "user"
+        SELECT id, name from "user"
     ) users
 
 +----------------------------------------------------+
@@ -213,11 +213,11 @@ joining multiple tables.
 ```sql
 select json_agg(row_to_json(tu))
     from (
-	select id, (
-	    select row_to_json(team) from team where team_user.team_id = team.id
-	) team, (
-	    select row_to_json("user") from "user" where team_user.user_id = "user".id
-	) "user"
+        select id, (
+            select row_to_json(team) from team where team_user.team_id = team.id
+        ) team, (
+            select row_to_json("user") from "user" where team_user.user_id = "user".id
+        ) "user"
     from team_user
 ) tu
 ```
@@ -231,37 +231,37 @@ the corresponding row.
     {
       "id": 1,
       "team": {
-	"id": 1,
-	"name": "team1"
+        "id": 1,
+        "name": "team1"
       },
       "user": {
-	"id": 1,
-	"name": "user1",
-	"email_address": "user1@mail.com"
+        "id": 1,
+        "name": "user1",
+        "email_address": "user1@mail.com"
       }
     },
     {
       "id": 2,
       "team": {
-	"id": 1,
-	"name": "team1"
+        "id": 1,
+        "name": "team1"
       },
       "user": {
-	"id": 2,
-	"name": "user2",
-	"email_address": "user2@mail.com"
+        "id": 2,
+        "name": "user2",
+        "email_address": "user2@mail.com"
       }
     },
     {
       "id": 3,
       "team": {
-	"id": 2,
-	"name": "team2"
+        "id": 2,
+        "name": "team2"
       },
       "user": {
-	"id": 2,
-	"name": "user2",
-	"email_address": "user2@mail.com"
+        "id": 2,
+        "name": "user2",
+        "email_address": "user2@mail.com"
       }
     }
   ]

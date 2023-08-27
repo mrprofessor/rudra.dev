@@ -18,7 +18,7 @@
   - [[#building-a-github-authentication-service][Building a GitHub authentication service]]
   - [[#generate-beautiful-json-from-postgresql][Generate beautiful JSON from PostgreSQL]]
   - [[#gatsbyjs-an-overkill-for-a-static-site-generator][GatsbyJs: An overkill for a static site generator]]
-  - [[#a-mininal-tmux-configuration-from-scratch][A mininal tmux configuration from scratch]]
+  - [[#a-minimal-tmux-configuration-from-scratch][A minimal tmux configuration from scratch]]
   - [[#using-auth0-with-a-custom-user-store][Using Auth0 with a custom user store]]
 
 * Posts
@@ -1458,11 +1458,11 @@ This post is not about bashing Gatsby or showing it's inferiority. It's an humbl
 
 If you are a front-end developer with the knowledge of React and always willing to dive in and tweak whenever you need a change, then by all means go ahead. But if you don't want to go down that rabbit-hole, just know that there are much easier options available.
 
-** A mininal tmux configuration from scratch :tmux:productivity:unix:mac:
+** A minimal tmux configuration from scratch     :tmux:productivity:unix:mac:
    :PROPERTIES:
-   :EXPORT_FILE_NAME: a-mininal-tmux-configuration-from-scratch
+   :EXPORT_FILE_NAME: a-minimal-tmux-configuration-from-scratch
    :EXPORT_DATE: 2021-03-14
-   :CUSTOM_ID: a-mininal-tmux-configuration-from-scratch
+   :CUSTOM_ID: a-minimal-tmux-configuration-from-scratch
    :END:
 
 *** General configuration

@@ -1,6 +1,6 @@
 +++
 title = "Setting up a task scheduler in Flask"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2019-11-30
 tags = ["python", "flask", "celery"]
 draft = false
@@ -132,13 +132,13 @@ services:
       context: ./
       dockerfile: Dockerfile
     depends_on:
-	- redis
+        - redis
     ports:
       - "5000:5000"
     volumes:
       - ./:/flask
     environment:
-	- FLASK_DEBUG=1
+        - FLASK_DEBUG=1
 ```
 
 Now we are all set to start our little experiment. We have a redis
@@ -192,9 +192,9 @@ database to store the time.
   # Add periodic tasks
   celery_beat_schedule = {
       "time_scheduler": {
-	  "task": "app.timer",
-	  # Run every second
-	  "schedule": 1.0,
+          "task": "app.timer",
+          # Run every second
+          "schedule": 1.0,
       }
   }
 
@@ -226,13 +226,13 @@ def timer_view():
 def timer():
     second_counter = int(redis_db.get("second")) + 1
     if second_counter >= 59:
-	# Reset the counter
-	redis_db.set("second", 0)
-	# Increment the minute
-	redis_db.set("minute", int(redis_db.get("minute")) + 1)
+        # Reset the counter
+        redis_db.set("second", 0)
+        # Increment the minute
+        redis_db.set("minute", int(redis_db.get("minute")) + 1)
     else:
-	# Increment the second
-	redis_db.set("second", second_counter)
+        # Increment the second
+        redis_db.set("second", second_counter)
 
 
 if __name__ == "__main__":

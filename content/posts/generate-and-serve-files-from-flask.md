@@ -1,6 +1,6 @@
 +++
 title = "Generate and serve files from Flask"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2019-10-05
 tags = ["python", "flask"]
 draft = false
@@ -88,7 +88,7 @@ def get_file(file_name):
     response = Response(generated_file, mimetype="text/csv")
     # add a filename
     response.headers.set(
-	"Content-Disposition", "attachment", filename="{0}.csv".format(file_name)
+        "Content-Disposition", "attachment", filename="{0}.csv".format(file_name)
     )
     return response
 ```

@@ -9,7 +9,7 @@ image = "/images/keyboards/tgr_jane_v2_me/tgr_jane_me_cover.jpg"
 
 ## Configuration {#configuration}
 
--   Design by Yutski
+-   Design by Yuktsi
 -   Silver aluminium case with Suave blue back plate
 -   TGR Jane PCB
 -   KFE CE Aluminium Plate

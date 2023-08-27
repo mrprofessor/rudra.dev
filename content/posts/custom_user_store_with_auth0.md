@@ -1,6 +1,6 @@
 +++
 title = "Using Auth0 with a custom user store"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2023-03-23
 tags = ["auth", "python"]
 draft = true
@@ -66,7 +66,7 @@ And we got some users in.
 ```shell
 > select * from "user";
 
-		  id                  |     name     |    login
+                  id                  |     name     |    login
 --------------------------------------+--------------+--------------
  b49daf2a-af3b-4d91-966f-92159c726601 | Rick Sanchez | rick_sanchez
  01906f5b-7be3-4ce8-87c0-418e7e20d610 | Morty Smith  | morty_smith

@@ -1,6 +1,6 @@
 +++
 title = "CSS and JavaScript aren't byte code !!"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2016-09-21
 tags = ["rant", "css", "javascript", "web"]
 draft = true

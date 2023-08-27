@@ -1,6 +1,6 @@
 +++
 title = "Building a GitHub authentication service"
-author = ["mrprofessor"]
+author = ["Rudra Kar"]
 date = 2020-04-11
 tags = ["github", "auth", "flask", "python"]
 draft = false
@@ -115,15 +115,15 @@ def build_config(code):
     url = config["oauth_url"]
     headers = {"Content-Type": "application/json"}
     payload = {
-	"client_id": os.environ.get(config["oauth_client_id"]),
-	"client_secret": os.environ.get(config["oauth_client_secret"]),
-	"code": code,
+        "client_id": os.environ.get(config["oauth_client_id"]),
+        "client_secret": os.environ.get(config["oauth_client_secret"]),
+        "code": code,
     }
     # Raise exceptions if client_id or client_secret not found.
     if not payload["client_id"]:
-	raise APIException("Client Id is not found in environment", status_code=422)
+        raise APIException("Client Id is not found in environment", status_code=422)
     if not payload["client_secret"]:
-	raise APIException("Client secret is not found in environment", status_code=422)
+        raise APIException("Client secret is not found in environment", status_code=422)
     return url, headers, payload
 
 
@@ -131,7 +131,7 @@ def get_access_token(url, headers, payload):
     response = requests.post(url, headers=headers, params=payload)
     # If client id not found
     if response.text == "Not Found":
-	raise APIException("Client id is invalid", status_code=404)
+        raise APIException("Client id is invalid", status_code=404)
     qs = dict(parse_qsl(response.text))
     creds = {item: qs[item] for item in qs}
     return creds
