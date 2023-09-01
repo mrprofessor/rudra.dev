@@ -41,8 +41,9 @@ keyboard inventory, job listings, and quick notes, among other things.
 
 ## Hardware {#hardware}
 
-**Primary computer**: I work on an M1 MacBook Pro (2020 model), provided by
-the company I work for. It serves as my main development machine.
+**Primary computer**: I work on a 16" M2 MacBook Max (2023 model), provided
+by the company I work for. It is a complete beast, I usually run multiple
+VMs and K3s clusters simultaneously, and it handles those like a breeze.
 
 **Personal Computer**: I have a desktop computer with a Ryzen 5600x processor
 and Nvidia 3070 graphics card. It's mainly used for gaming and productivity.
