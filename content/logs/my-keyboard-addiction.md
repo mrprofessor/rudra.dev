@@ -81,13 +81,16 @@ additional 20 keyboards are with my proxies in various countries.
 
 ## Modern Boards {#modern-boards}
 
-After hanging out with Deskthority folks, I started disliking the modern
-keyboards. The modern keyboards felt boring, monotonus, and without a character.
-The issue with vintage keyboards is that these are big keyboards. I, on the
-other hand like smaller ones on my desk. I couldn't get accustomed to large
-boards on my desk for a longer period. However, I had snagged a Model F62 from
-mechmarket a while back. It was perfect, with my favorite capacitive buckling
-spring switches, It became my daily driver very quickly.
+After spending time with the Deskthority community, I began to develop a
+distaste for modern keyboards. They felt dull, repetitive, and lacked
+character. The problem with vintage keyboards, though, is that they tend
+to be larger in size. Personally, I prefer smaller keyboards on my desk.
+I find it challenging to use large boards for extended periods.
+
+However, I managed to acquire a Model F62 from mechmarket not too long
+ago. It turned out to be perfect for me, featuring my favorite capacitive
+buckling spring switches. It quickly became my daily driver, and it's
+been a great fit for my desk setup.
 
 
 ## The real problem {#the-real-problem}
