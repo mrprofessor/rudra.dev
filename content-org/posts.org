@@ -14,7 +14,7 @@
   - [[#setting-up-neovim-for-react-development][Setting up (Neo)vim for React development]]
   - [[#generate-and-serve-files-from-flask][Generate and serve files from Flask]]
   - [[#a-floating-terminal-for-neovim][A floating terminal for (Neo)vim]]
-  - [[#setting-up-a-task-scheduler-in-flask][Setting up a task scheduler in Flask]]
+  - [[#setting-up-a-celery-task-scheduler-in-flask][Setting up a celery task scheduler in Flask]]
   - [[#rendering-markdown-from-flask][Rendering markdown from Flask]]
   - [[#building-a-github-authentication-service][Building a GitHub authentication service]]
   - [[#generate-beautiful-json-from-postgresql][Generate beautiful JSON from PostgreSQL]]
@@ -36,8 +36,8 @@
    :END:
 
 #+BEGIN_QUOTE
-  Disclaimer: This post literally doesn't make any sense. I just didn't wanted 
-  to delete it as it was my first blog.
+  Disclaimer: This post literally doesn't make any sense any more. I just
+  didn't want to remove it as it was my first post.
 #+END_QUOTE
 
 The earliest computers were often programmed without the help of a
@@ -535,7 +535,7 @@ Well that's for another post.
 
 Adios!
 
-** Setting up a task scheduler in Flask :python:flask:celery:
+** Setting up a celery task scheduler in Flask         :python:flask:celery:
    :PROPERTIES:
    :EXPORT_FILE_NAME: setting-up-a-task-scheduler-in-flask
    :EXPORT_DATE: 2019-11-30
@@ -543,36 +543,35 @@ Adios!
    :CUSTOM_ID: setting-up-a-task-scheduler-in-flask
    :END:
 
-The first thing that comes to mind while considering a task scheduler is
-a cron job. As most of the today's servers are hosted on linux machines,
-setting a cron job for periodic task might seem like a good option for
-many. However in production having a crontab is nothing but a pain in
-the a**. It can be a bit tricky to configure different timezones
-depending upon the location of the server.
 
-The biggest problem with this approach is when the application is scaled
-into multiple web servers. In that case instead of running one we could
-be running multiple cron jobs which might lead to race conditions. Also
-it's hard to debug if something goes wrong with the task.
+The first thing that comes to mind when considering a task scheduler is a
+CRON job. As most of today's servers are hosted on Linux machines, setting
+a cron job for a periodic task might seem like a good option for many.
+However, in production, having a crontab can be nothing but a pain. It can
+be tricky to configure different time zones depending on the location of
+the server.
 
-With Flask there are multiple ways to address third problem and
-[[http://www.celeryproject.org/][Celery]] is one of the most popular
-ones. Celery addresses the above problems quite gracefully. It uses same
-timezones of [[https://pypi.org/project/pytz/][pytz]] which helps in
-calculating timezones and setting the scheduler timings accurately.
+The biggest problem with this approach arises when the application is
+scaled across multiple web servers. Instead of running one cron job, we
+could be running multiple cron jobs, which might lead to race conditions.
+Additionally, it's hard to debug if something goes wrong with the task.
 
-Celery uses a backend message broker (redis or RabbitMQ) to save the
-state of the schedule which acts as a centralized database server for
-multiple celery workers running on different web servers.The message
-broker ensures that the task is run only once as per the schedule, hence
-eliminating the race condition.
+With Flask, there are multiple ways to address this problem, and [[http://www.celeryproject.org/][Celery]] 
+is one of the most popular solutions. Celery addresses the above issues
+quite gracefully. It uses the same time zones as [[https://pypi.org/project/pytz/][pytz]], which helps in
+accurately calculating time zones and setting the scheduler timings.
 
-Monitoring real time events is also supported by Celery. It includes a
-beautiful built-in terminal interface that shows all the current
-events.A nice standalone project
-[[https://flower.readthedocs.io/en/latest/][Flower]] provides a web
-based tool to administer Celery workers and tasks.It also supports
-asynchronous task execution which comes in handy for long running tasks.
+Celery uses a backend message broker (Redis or RabbitMQ) to save the state
+of the schedule, acting as a centralized database server for multiple
+Celery workers running on different web servers. The message broker
+ensures that the task is run only once per the schedule, thus eliminating
+race conditions.
+
+Monitoring real-time events is also supported by Celery. It includes a
+beautiful built-in terminal interface that shows all the current events. A
+nice standalone project, [[https://flower.readthedocs.io/en/latest/][Flower]], provides a web-based tool to administer
+Celery workers and tasks. It also supports asynchronous task execution,
+which is handy for long-running tasks.
 
 *** Let's go hacking
     :PROPERTIES:
@@ -580,10 +579,10 @@ asynchronous task execution which comes in handy for long running tasks.
     :END:
 
 #+BEGIN_QUOTE
-  Here we will be using a dockerized environment. Now the installation
-  of redis and celery can be different from system to system and docker
-  environments are pretty common now a days to do such kind of exercises
-  without worrying so much about local dev infrastructure.
+  Here, we will be using a Dockerized environment. The installation of
+  Redis and Celery can differ from system to system, and Docker
+  environments are pretty common nowadays for such exercises without
+  worrying much about local development infrastructure.
 #+END_QUOTE
 
 #+BEGIN_EXAMPLE
@@ -598,7 +597,7 @@ asynchronous task execution which comes in handy for long running tasks.
   └────────────────────────
 #+END_EXAMPLE
 
-Let's start with the Dockerfile
+Let’s start with the Dockerfile.
 
 #+BEGIN_SRC dockerfile
   FROM python:3.7
@@ -622,7 +621,7 @@ Let's start with the Dockerfile
 #+END_SRC
 
 The packages required for this application are mentioned in the
-requirement.txt file.
+requirements.txt file.
 
 #+BEGIN_EXAMPLE
   Flask==1.0.2
@@ -639,8 +638,8 @@ The entry point script goes here.
 #+END_SRC
 
 Celery uses a message broker to pass messages between the web app and
-celery workers. Here we will setup a Redis container which will be used
-as the message broker.
+Celery workers. Here, we will set up a Redis container to be used as the
+message broker.
 
 #+BEGIN_SRC dockerfile
   version: "3.7"
@@ -670,9 +669,9 @@ as the message broker.
           - FLASK_DEBUG=1
 #+END_SRC
 
-Now we are all set to start our little experiment. We have a redis
-container running on port 6379 and a flask container running on
-=localhost:5000=. Let's add a simple api to test whether our tiny web
+Now we are all set to start our little experiment. We have a Redis
+container running on port 6379 and a Flask container running on
+~localhost:5000~. Let’s add a simple API to test whether our tiny web
 application works.
 
 #+BEGIN_SRC python
@@ -696,10 +695,10 @@ And voila!
   </div>
 #+END_EXPORT
 
-Now we will be building a simple timer application which will show the
-elapsed time since the application has started. We need to configure
-celery with the Redis server URL and also we will be using another Redis
-database to store the time.
+Now, we will build a simple timer application that will show the elapsed
+time since the application started. We need to configure Celery with the
+Redis server URL, and we will also use another Redis database to store
+the time.
 
 #+BEGIN_SRC python
   from flask import Flask
@@ -770,8 +769,8 @@ if __name__ == "__main__":
     app.run()
 #+END_SRC
 
-Let's update the =entrypoint.js= to run both Celery worker and beat
-server as background processes.
+Let’s update the ~entrypoint.js~ to run both the Celery worker and the
+beat server as background processes.
 
 #+BEGIN_SRC sh
   #!/bin/sh
@@ -794,9 +793,9 @@ Our very own timer
 #+END_EXPORT
 
 #+BEGIN_QUOTE
-  The application is only for demonstration purpose. The counter won't
+  This application is only for demonstration purposes. The counter won’t
   be accurate as the task processing time is not taken into account
-  while calculating time.
+  while calculating the time.
 #+END_QUOTE
 
 *** Monitoring events
@@ -804,15 +803,15 @@ Our very own timer
     :CUSTOM_ID: monitoring-events
     :END:
 
-Celery has a rich support for monitoring various statistics for tasks,
-workers and events. We need to log into the container to enable and
+Celery has rich support for monitoring various statistics for tasks,
+workers, and events. We need to log into the container to enable and
 monitor events.
 
 #+BEGIN_SRC sh
   docker exec -it flask_dev_container bash
 #+END_SRC
 
-Enable and list all events
+Enable and list all events.
 
 #+BEGIN_SRC sh
   celery -A app.celery control enable_events
@@ -820,7 +819,7 @@ Enable and list all events
   celery -A app.celery events
 #+END_SRC
 
-This spins up a nice interactive terminal ui listing all the details of
+This spins up a nice interactive terminal UI listing all the details of
 the scheduled tasks.
 
 #+BEGIN_EXPORT HTML
@@ -834,18 +833,19 @@ the scheduled tasks.
     :CUSTOM_ID: conclusion
     :END:
 
-In this post I have used Celery as an better alternative to crontabs
-even though the primary purpose of Celery is processing tasks queues.
-Both Celery worker and beat server can be run on different containers as
-running background processes on the web container is not regarded as
-best practice.
+In this post, I have used Celery as a better alternative to crontabs,
+even though the primary purpose of Celery is processing task queues.
+Both the Celery worker and beat server can be run on different
+containers as running background processes on the web container is not
+considered best practice.
 
 Unless you are creating a stupid timer application.
 
-The above mentioned code can be found here.
+The above-mentioned code can be found here:
 [[https://github.com/mrprofessor/celery-timer/][repo]]
 
 Adios!
+
 
 ** Rendering markdown from Flask :python:flask:markdown:
    :PROPERTIES:
@@ -1459,7 +1459,7 @@ This post is not about bashing Gatsby or showing it's inferiority. It's an humbl
 
 If you are a front-end developer with the knowledge of React and always willing to dive in and tweak whenever you need a change, then by all means go ahead. But if you don't want to go down that rabbit-hole, just know that there are much easier options available.
 
-** A minimal tmux configuration from scratch     :tmux:productivity:unix:mac:
+** A minimal tmux configuration from scratch :tmux:productivity:unix:mac:
    :PROPERTIES:
    :EXPORT_FILE_NAME: a-minimal-tmux-configuration-from-scratch
    :EXPORT_DATE: 2021-03-14

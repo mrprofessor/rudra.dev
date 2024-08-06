@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on rudra kar</title>
+    <link>https://rudra.dev/tags/mac/</link>
+    <description>Recent content in Mac on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A minimal tmux configuration from scratch</title>
+      <link>https://rudra.dev/posts/a-minimal-tmux-configuration-from-scratch/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/posts/a-minimal-tmux-configuration-from-scratch/</guid>
+      <description>Table of Contents General configuration Keybindings Customize Status Bar Customize Active Pane Miscellaneous Who wants a minimal config anyway! General configuration We need to create a ~/.tmux.conf file in our home directory. This will be the configuration file for our setup.&#xA;If the underlying terminal emulator has XTERM-256 support then we can add 256 colors support to tmux.&#xA;set -g default-terminal &amp;#34;tmux-256color&amp;#34; By default tmux windows start with number 0.</description>
+    </item>
+  </channel>
+</rss>

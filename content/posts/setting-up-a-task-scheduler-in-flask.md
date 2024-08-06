@@ -1,5 +1,5 @@
 +++
-title = "Setting up a task scheduler in Flask"
+title = "Setting up a celery task scheduler in Flask"
 author = ["rudra kar"]
 date = 2019-11-30
 tags = ["python", "flask", "celery"]
@@ -18,44 +18,42 @@ aliases = "/post/setting-up-a-task-scheduler-in-flask"
 </div>
 <!--endtoc-->
 
-The first thing that comes to mind while considering a task scheduler is
-a cron job. As most of the today's servers are hosted on linux machines,
-setting a cron job for periodic task might seem like a good option for
-many. However in production having a crontab is nothing but a pain in
-the a\*\*. It can be a bit tricky to configure different timezones
-depending upon the location of the server.
+The first thing that comes to mind when considering a task scheduler is a
+CRON job. As most of today's servers are hosted on Linux machines, setting
+a cron job for a periodic task might seem like a good option for many.
+However, in production, having a crontab can be nothing but a pain. It can
+be tricky to configure different time zones depending on the location of
+the server.
 
-The biggest problem with this approach is when the application is scaled
-into multiple web servers. In that case instead of running one we could
-be running multiple cron jobs which might lead to race conditions. Also
-it's hard to debug if something goes wrong with the task.
+The biggest problem with this approach arises when the application is
+scaled across multiple web servers. Instead of running one cron job, we
+could be running multiple cron jobs, which might lead to race conditions.
+Additionally, it's hard to debug if something goes wrong with the task.
 
-With Flask there are multiple ways to address third problem and
-[Celery](http://www.celeryproject.org/) is one of the most popular
-ones. Celery addresses the above problems quite gracefully. It uses same
-timezones of [pytz](https://pypi.org/project/pytz/) which helps in
-calculating timezones and setting the scheduler timings accurately.
+With Flask, there are multiple ways to address this problem, and [Celery](http://www.celeryproject.org/)
+is one of the most popular solutions. Celery addresses the above issues
+quite gracefully. It uses the same time zones as [pytz](https://pypi.org/project/pytz/), which helps in
+accurately calculating time zones and setting the scheduler timings.
 
-Celery uses a backend message broker (redis or RabbitMQ) to save the
-state of the schedule which acts as a centralized database server for
-multiple celery workers running on different web servers.The message
-broker ensures that the task is run only once as per the schedule, hence
-eliminating the race condition.
+Celery uses a backend message broker (Redis or RabbitMQ) to save the state
+of the schedule, acting as a centralized database server for multiple
+Celery workers running on different web servers. The message broker
+ensures that the task is run only once per the schedule, thus eliminating
+race conditions.
 
-Monitoring real time events is also supported by Celery. It includes a
-beautiful built-in terminal interface that shows all the current
-events.A nice standalone project
-[Flower](https://flower.readthedocs.io/en/latest/) provides a web
-based tool to administer Celery workers and tasks.It also supports
-asynchronous task execution which comes in handy for long running tasks.
+Monitoring real-time events is also supported by Celery. It includes a
+beautiful built-in terminal interface that shows all the current events. A
+nice standalone project, [Flower](https://flower.readthedocs.io/en/latest/), provides a web-based tool to administer
+Celery workers and tasks. It also supports asynchronous task execution,
+which is handy for long-running tasks.
 
 
 ## Let's go hacking {#lets-go-hacking}
 
-> Here we will be using a dockerized environment. Now the installation
-> of redis and celery can be different from system to system and docker
-> environments are pretty common now a days to do such kind of exercises
-> without worrying so much about local dev infrastructure.
+> Here, we will be using a Dockerized environment. The installation of
+> Redis and Celery can differ from system to system, and Docker
+> environments are pretty common nowadays for such exercises without
+> worrying much about local development infrastructure.
 
 ```text
 flask-celery
@@ -69,7 +67,7 @@ flask-celery
 └────────────────────────
 ```
 
-Let's start with the Dockerfile
+Let’s start with the Dockerfile.
 
 ```dockerfile
 FROM python:3.7
@@ -93,7 +91,7 @@ CMD ["bash", "entrypoint.sh"]
 ```
 
 The packages required for this application are mentioned in the
-requirement.txt file.
+requirements.txt file.
 
 ```text
 Flask==1.0.2
@@ -110,8 +108,8 @@ flask run --host=0.0.0.0 --port 5000
 ```
 
 Celery uses a message broker to pass messages between the web app and
-celery workers. Here we will setup a Redis container which will be used
-as the message broker.
+Celery workers. Here, we will set up a Redis container to be used as the
+message broker.
 
 ```dockerfile
 version: "3.7"
@@ -141,9 +139,9 @@ services:
         - FLASK_DEBUG=1
 ```
 
-Now we are all set to start our little experiment. We have a redis
-container running on port 6379 and a flask container running on
-`localhost:5000`. Let's add a simple api to test whether our tiny web
+Now we are all set to start our little experiment. We have a Redis
+container running on port 6379 and a Flask container running on
+`localhost:5000`. Let’s add a simple API to test whether our tiny web
 application works.
 
 ```python
@@ -165,10 +163,10 @@ And voila!
   <img src="/images/hello-scheduler.png" />
 </div>
 
-Now we will be building a simple timer application which will show the
-elapsed time since the application has started. We need to configure
-celery with the Redis server URL and also we will be using another Redis
-database to store the time.
+Now, we will build a simple timer application that will show the elapsed
+time since the application started. We need to configure Celery with the
+Redis server URL, and we will also use another Redis database to store
+the time.
 
 ```python
   from flask import Flask
@@ -239,8 +237,8 @@ if __name__ == "__main__":
     app.run()
 ```
 
-Let's update the `entrypoint.js` to run both Celery worker and beat
-server as background processes.
+Let’s update the `entrypoint.js` to run both the Celery worker and the
+beat server as background processes.
 
 ```sh
 #!/bin/sh
@@ -260,22 +258,22 @@ Our very own timer
   <img src="/images/timer.png" />
 </div>
 
-> The application is only for demonstration purpose. The counter won't
+> This application is only for demonstration purposes. The counter won’t
 > be accurate as the task processing time is not taken into account
-> while calculating time.
+> while calculating the time.
 
 
 ## Monitoring events {#monitoring-events}
 
-Celery has a rich support for monitoring various statistics for tasks,
-workers and events. We need to log into the container to enable and
+Celery has rich support for monitoring various statistics for tasks,
+workers, and events. We need to log into the container to enable and
 monitor events.
 
 ```sh
 docker exec -it flask_dev_container bash
 ```
 
-Enable and list all events
+Enable and list all events.
 
 ```sh
 celery -A app.celery control enable_events
@@ -283,7 +281,7 @@ celery -A app.celery control enable_events
 celery -A app.celery events
 ```
 
-This spins up a nice interactive terminal ui listing all the details of
+This spins up a nice interactive terminal UI listing all the details of
 the scheduled tasks.
 
 <div class="post-image">
@@ -293,15 +291,15 @@ the scheduled tasks.
 
 ## Conclusion {#conclusion}
 
-In this post I have used Celery as an better alternative to crontabs
-even though the primary purpose of Celery is processing tasks queues.
-Both Celery worker and beat server can be run on different containers as
-running background processes on the web container is not regarded as
-best practice.
+In this post, I have used Celery as a better alternative to crontabs,
+even though the primary purpose of Celery is processing task queues.
+Both the Celery worker and beat server can be run on different
+containers as running background processes on the web container is not
+considered best practice.
 
 Unless you are creating a stupid timer application.
 
-The above mentioned code can be found here.
+The above-mentioned code can be found here:
 [repo](https://github.com/mrprofessor/celery-timer/)
 
 Adios!

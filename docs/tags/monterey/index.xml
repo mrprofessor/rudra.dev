@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monterey on rudra kar</title>
+    <link>https://rudra.dev/tags/monterey/</link>
+    <description>Recent content in Monterey on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/tags/monterey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monterey K104</title>
+      <link>https://rudra.dev/keyboards/monterey_k104_alps_skcm/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/monterey_k104_alps_skcm/</guid>
+      <description>History This keyboard was manufactured by Monterey in the &amp;rsquo;90s. This model came with varieties of switches, including the Alps SKCM white and blue, SMK alps mounts, and &amp;ldquo;alps.tw Type OA2&amp;rdquo;. This particular board has Alps SKCM whites. This board is a Plantron branded keyboard, and the sticker on the back says that Plantron manufactured it. I couldn&amp;rsquo;t find more details about this particular company. As per another back sticker, this board was manufactured in April 1992.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        
+            <title itemprop="name">GatsbyJs: An overkill for a static site generator</title>
+        
+
+        
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Kar">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.8b3b96f0d6f4cbdbf4a85f0a5ff20d3683aec96eab169ba953d637e6b130cec9.css" media="screen">
+
+        
+
+        
+        
+
+<meta property="og:title" content="GatsbyJs: An overkill for a static site generator" />
+<meta name="twitter:title" content="GatsbyJs: An overkill for a static site generator" />
+<meta itemprop="name" content="GatsbyJs: An overkill for a static site generator" />
+<meta name="application-name" content="GatsbyJs: An overkill for a static site generator" />
+<meta property="og:site_name" content="Rudra Kar blog" />
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<base href="https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/">
+<link rel="canonical" href="https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/" />
+<meta property="og:url" content="https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="mrprofessor" />
+<meta name="twitter:title" content="GatsbyJs: An overkill for a static site generator" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+    <link rel="alternate" hreflang="en" href="https://rudra.dev/posts/gatsby-overkill-for-a-static-site-generator/" title="English">
+ 
+
+
+<meta property="og:updated_time" content=2020-06-18T00:00:00Z />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2020-06-18T00:00:00Z />
+<meta property="article:published_time" content=2020-06-18T00:00:00Z />
+
+
+    <meta property="og:article:author" content="Rudra kar" />
+    <meta property="article:author" content="Rudra kar" />
+    <meta name="author" content="Rudra kar" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "GatsbyJs: An overkill for a static site generator",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2020-06-18",
+      "description": "",
+      "wordCount":  498 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2020-06-18",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra kar",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            
+            
+                <a class="active-link" href="/">← home</a>
+            
+            
+	<main>
+		<article>
+			<h1>GatsbyJs: An overkill for a static site generator</h1>
+
+			
+				<time>Jun 18, 2020</time>
+			
+
+			
+
+			
+			<div class="tags">
+				<ul>
+					
+					<li><a href="/tags/gatsby">gatsby</a></li>
+					
+					<li><a href="/tags/react">react</a></li>
+					
+					<li><a href="/tags/emacs">emacs</a></li>
+					
+					<li><a href="/tags/hugo">hugo</a></li>
+					
+					<li><a href="/tags/orgmode">orgmode</a></li>
+					
+					<li><a href="/tags/rant">rant</a></li>
+					
+					<li><a href="/tags/editor">editor</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<div class="blog-post-content">
+				
+				<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="/posts/gatsby-overkill-for-a-static-site-generator/#so-what-went-wrong">So what went wrong?</a></li>
+<li><a href="/posts/gatsby-overkill-for-a-static-site-generator/#my-new-workflow">My new workflow</a></li>
+<li><a href="/posts/gatsby-overkill-for-a-static-site-generator/#conclusion">Conclusion</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<p>So I have been using Gatsby for almost two years now. I have built a nice looking and fast blog with 15 odd posts. With Gatsby I got PWA is out of the box, the component&rsquo;s are written in react, I can query my post data from graphQL and so many other goodies.</p>
+<h2 id="so-what-went-wrong">So what went wrong?</h2>
+<p>As my career progressed, I have gradually moved from being a Full-stack(UI Primary) engineer to a back-end/platform engineer. While I still retain my love for React, I believe React shouldn&rsquo;t be the norm of web development. The whole ever-changing ecosystem around React is maddening. It&rsquo;s certainly built for highly interactive and complex web applications, but in my opinion it doesn&rsquo;t hold much value in static blog generation.</p>
+<p>Also GraphQL seemed a bit overkill for a blog too.</p>
+<p>There are certain pain points that were bugging me for a long time.</p>
+<ol>
+<li>It&rsquo;s hard to leverage any library that doesn&rsquo;t have a React component or Gatsby plugin built for it. e.g <a href="https://utteranc.es/">Utterances</a>.</li>
+<li>Tagging is not so straight-forward. Hugo and Jekyll has a first-class support for it.</li>
+<li>Running an external script always has been tough and need react specific <a href="https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml">hacks</a>.</li>
+<li>Lack of dedicated and switchable themes.</li>
+<li>The humongous amount of public files.</li>
+</ol>
+<p>&gt; Creating a blog shouldn&rsquo;t have to be so complex. A bunch of markdown files and a simple script to convert them into HTML should be enough.</p>
+<p>It&rsquo;s definitely not for people who like a comfortable blogging system like <a href="https://wordpress.org/">Wordpress</a> or <a href="https://jekyllrb.com/">Jeykill</a>, which can be set up in one afternoon. The returns we get for using and understanding such a complex stack is relatively less if you ask me.</p>
+<h2 id="my-new-workflow">My new workflow</h2>
+<p>I have always loved markdown until I discovered <a href="https://orgmode.org/">Org-mode</a>. It simply blew me away. I never thought I could do so much with plain text, and when I learned about <a href="https://ox-hugo.scripter.co/">ox-hugo</a>, the idea of publishing a blog completely from emacs fascinated me.</p>
+<p>Also the fact that this is somewhat a programming blog, having the ability to <a href="https://orgmode.org/worg/org-contrib/babel/">execute source code</a> inside the document is really helpful.</p>
+<div class="post-image">
+  <img src="/images/org-hugo-setup.png" />
+</div>
+<p><code>Org-mode</code> coupled with <code>ox-hugo</code> gave me a significant advantage by managing all my pages in a single org-file. Ox-hugo converts the contents of my org-files to a directory of markdown files, So for my setup I decided to have one org-file per each sub-route(logs/, posts/, etc).</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This post is not about bashing Gatsby or showing it&rsquo;s inferiority. It&rsquo;s an humble explanation of it&rsquo;s pitfalls while creating a basic blog. Gatsby has served me good over the past years. Undoubtedly  it is a great software, just not well suited for my needs at the time.</p>
+<p>If you are a front-end developer with the knowledge of React and always willing to dive in and tweak whenever you need a change, then by all means go ahead. But if you don&rsquo;t want to go down that rabbit-hole, just know that there are much easier options available.</p>
+
+			</div>
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		
+		<nav>
+			<ul>
+				
+				<li><a href="https://github.com/mrprofessor/resume/blob/master/rudra_kar_resume.pdf/">resume</a></li>
+				
+				<li><a href="/uses/">uses</a></li>
+				
+				<li><a href="/logs/">logs</a></li>
+				
+			</ul>
+		</nav>
+		
+	</div>
+
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+             }
+         }
+     }())
+    </script>
+
+    <script>
+     
+     
+     
+     
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    </script>
+
+    
+    
+
+    
+    
+
+</html>

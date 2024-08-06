@@ -18,8 +18,8 @@ aliases = "/post/css-and-js-are-not-bytecode"
 </div>
 <!--endtoc-->
 
-> Disclaimer: This post literally doesn't make any sense. I just didn't wanted
-> to delete it as it was my first blog.
+> Disclaimer: This post literally doesn't make any sense any more. I just
+> didn't want to remove it as it was my first post.
 
 The earliest computers were often programmed without the help of a
 programming language, by writing programs in absolute machine language.

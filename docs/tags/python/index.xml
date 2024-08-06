@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on rudra kar</title>
+    <link>https://rudra.dev/tags/python/</link>
+    <description>Recent content in Python on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a GitHub authentication service</title>
+      <link>https://rudra.dev/posts/building-a-github-auth-service/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/posts/building-a-github-auth-service/</guid>
+      <description>Table of Contents The GitHub OAuth process Why do we need a back-end server The proxy Conclusion Recently I was building a GitHub OAuth app to authentiacate one my client-side application with GitHub. The application was all about taking notes and maintaining them on a private repository. I have had worked on such an architecture in one of my previous jobs where we have used AWS CodeCommit as an inventory of resources where the history and the changes were easier to maintain.</description>
+    </item>
+    <item>
+      <title>Rendering markdown from Flask</title>
+      <link>https://rudra.dev/posts/rendering-markdown-from-flask/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/posts/rendering-markdown-from-flask/</guid>
+      <description>Table of Contents Let&amp;rsquo;s go hacking Not quite there yet! Gimme the code! In this post I am going to plug about a cool trick(probably useless) that I discovered geeking around the internet.&#xA;I was building a tiny microservice which would let the client side application securely authenticate with GitHub. After writing the only required API, I wanted to render the README.md file on the index page.&#xA;So I planned to convert markdown to html and serve the resultant string everytime we hit the index.</description>
+    </item>
+    <item>
+      <title>Setting up a celery task scheduler in Flask</title>
+      <link>https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/</guid>
+      <description>Table of Contents Let&amp;rsquo;s go hacking Monitoring events Conclusion The first thing that comes to mind when considering a task scheduler is a CRON job. As most of today&amp;rsquo;s servers are hosted on Linux machines, setting a cron job for a periodic task might seem like a good option for many. However, in production, having a crontab can be nothing but a pain. It can be tricky to configure different time zones depending on the location of the server.</description>
+    </item>
+    <item>
+      <title>Generate and serve files from Flask</title>
+      <link>https://rudra.dev/posts/generate-and-serve-files-from-flask/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/posts/generate-and-serve-files-from-flask/</guid>
+      <description>Flask is one of the most used python frameworks for web development. Its simplicity and extensibility makes it convenient for both small and large applications alike.&#xA;In this blog we are going to create a simple flask web application that will generate and serve files without storing them in the server.&#xA;Note: For flask and python installation visit flask documentation&#xA;Let&amp;rsquo;s create a flask application with a basic route.&#xA;from flask import Flask app = Flask(__name__) @app.</description>
+    </item>
+  </channel>
+</rss>
