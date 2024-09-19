@@ -1,0 +1,1538 @@
+#+hugo_base_dir: ../
+#+hugo_section: posts
+#+author: rudra kar
+#+OPTIONS: toc:2
+
+* Contents :toc:
+:PROPERTIES:
+:CUSTOM_ID: contents
+:END:
+- [[#posts][Posts]]
+  - [[#configuring-nodejs-and-npm-behind-a-proxy][Configuring nodejs and npm behind a proxy]]
+  - [[#maintaining-multiple-github-accounts][Maintaining multiple GitHub accounts]]
+  - [[#setting-up-neovim-for-react-development][Setting up (Neo)vim for React development]]
+  - [[#generate-and-serve-files-from-flask][Generate and serve files from Flask]]
+  - [[#a-floating-terminal-for-neovim][A floating terminal for (Neo)vim]]
+  - [[#setting-up-a-celery-task-scheduler-in-flask][Setting up a celery task scheduler in Flask]]
+  - [[#rendering-markdown-from-flask][Rendering markdown from Flask]]
+  - [[#building-a-github-authentication-service][Building a GitHub authentication service]]
+  - [[#generate-beautiful-json-from-postgresql][Generate beautiful JSON from PostgreSQL]]
+  - [[#a-minimal-tmux-configuration-from-scratch][A minimal tmux configuration from scratch]]
+
+* Posts
+:PROPERTIES:
+:CUSTOM_ID: posts
+:END:
+
+** Configuring nodejs and npm behind a proxy :node:npm:productivity:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: configuring-npm-behind-a-proxy
+   :EXPORT_DATE: 2017-05-27
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/configuring-npm-behind-a-proxy
+   :CUSTOM_ID: configuring-nodejs-and-npm-behind-a-proxy
+   :END:
+
+For people who work in a company and squeez out some of their time to
+learn nodejs, setting up an dev-environment can be a real pain. Proxy
+servers are pretty common in college and business type institutions.
+
+You can locate your proxy settings from your browser's settings panel.
+
+*** Using Proxy with NPM
+    :PROPERTIES:
+    :CUSTOM_ID: using-proxy-with-npm
+    :END:
+
+Once you have obtained the proxy settings (server URL, port, username
+and password); you need to configure your npm configurations as follows.
+
+#+BEGIN_SRC sh
+  npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+  npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
+#+END_SRC
+
+You would have to replace =<username>=, =<password>=,
+=<proxy-server-url>=, =<port>= with the values specific to your proxy
+server credentials.
+
+These fields are optional. For instance, your proxy server might not
+even require =<username>= and =<password>=, or that it might be running
+on port 80 (in which case =<port>= is not required).
+
+Once you have set these, your npm install, =npm i -g etc=. would work
+properly.
+
+** Maintaining multiple GitHub accounts :git:github:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: maintaining-multiple-github-accounts
+   :EXPORT_DATE: 2018-02-24
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/maintaining-multiple-github-accounts
+   :CUSTOM_ID: maintaining-multiple-github-accounts
+   :END:
+
+I recently left a huge IT corporation for a promising startup.I was
+asked to change my GitHub handler name as it was too cool(I think) for
+them.Well instead of changing I created another account using my company
+email.
+
+Now I got a problem.Every day when I come home and start hacking around
+my own projects I had to manually set my username and email id in git
+config in order to reflect my contributions in the graph and most of the
+time I forget to do so.
+
+So I created some aliases to toggle between my two handles.
+
+#+BEGIN_SRC sh
+  # Set user 1 as current user
+  gitfirst() {
+      git config --global user.email 'xxx.yyyy@gmail.com' && git config --global user.name 'mrprofessor'
+      gituser
+  }
+
+  # Set user 2 as current user
+  gitsecond() {
+      git config --global user.email 'zzzzz@corporation.com' && git config --global user.name 'rudrabot'
+      gituser
+  }
+
+  # Print current user
+  gituser() {
+      git config --global user.name && git config --global user.email
+  }
+#+END_SRC
+
+And that five minute I save every day from this hack..spends for...I
+don't know.
+
+Adios.
+** Setting up (Neo)vim for React development :vim:react:editor:javascript:web:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: setting-up-vim-for-react
+   :EXPORT_DATE: 2019-05-03
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/setting-up-vim-for-react
+   :CUSTOM_ID: setting-up-neo-vim-for-react-development
+   :END:
+
+It's been 8 months since I have been using (neo)vim as my primary text
+editor. Initially it was incredibly tough to adopt and use it in work.
+Well that would be another story to tell.
+
+Back then I was working mostly in backend using
+[[https://coffeescript.org/][CoffeeScript]] (I know 🙈). VS Code had a
+little support for CoffeeScript so I didn't had any problems using vim
+full time.
+
+But things changed drastically when I moved into UI development this
+year. I had to spend hours reading blogs, threads on reddit to create at
+least a workable setup for a hassle-less React enviornment. Here I am
+sharing my vim setup for JS/React development.
+
+#+BEGIN_QUOTE
+  Note: I am using [[https://github.com/VundleVim/Vundle.vim][Vundle]]
+  for plugin management.
+#+END_QUOTE
+
+*** Syntax Highlighting
+    :PROPERTIES:
+    :CUSTOM_ID: syntax-highlighting
+    :END:
+
+Out of the box vim/nvim supports syntax highlighting for major
+programming languages.
+
+#+BEGIN_SRC bash
+  ls /usr/share/vim/vim80/syntax/
+#+END_SRC
+
+[[https://github.com/mxw/vim-jsx][vim-jsx]] is by far the best jsx
+plugin for vim.
+[[https://github.com/pangloss/vim-javascript][vim-javascript]] provides
+better syntax highlighting and code folding support compared to the
+default one.
+
+#+BEGIN_SRC vim
+  Plugin 'mxw/vim-jsx'
+  Plugin 'pangloss/vim-javascript'
+#+END_SRC
+
+But It is yet to add =jsx= to its inventory. Also there are some
+javascript specific plugins that makes syntax highlighting much better.
+
+*** Linters and Formatters
+    :PROPERTIES:
+    :CUSTOM_ID: linters-and-formatters
+    :END:
+
+Well everyone has a love hate relationship with linters. Nobody likes
+those annoying red lines on the editor the moment they add a newline.
+
+But with vim You are in luck. [[https://github.com/w0rp/ale][ALE]] is a
+nice plugin that asynchronously checks for syntatical errors in the
+code. It supports mnay language specific linters and formatters. ALE
+also lets people configure the signs for errors and warnings.
+
+#+BEGIN_SRC vim
+  Plugin 'w0rp/ale'
+#+END_SRC
+
+For JS/React development to add =eslint= as a linter and =prettier= I
+added this to my vimrc
+
+#+BEGIN_SRC vim
+  let g:ale_linters = {
+    \ 'javascript': ['eslint'],
+    \}
+
+  let g:ale_fixers = {
+    \ 'javascript': ['prettier', 'eslint']
+    \ }
+#+END_SRC
+
+I also mapped =leader+d= as my ale fixer and configured to format each
+time I save the file.
+
+#+BEGIN_SRC vim
+  let g:ale_fix_on_save = 1
+  nmap <leader>d <Plug>(ale_fix)
+#+END_SRC
+
+*** Autocompletion
+    :PROPERTIES:
+    :CUSTOM_ID: autocompletion
+    :END:
+
+Auto completion in vim is not as good as any modern IDE but
+[[https://github.com/Shougo/deoplete.nvim][Deoplete]] is worth taking a look.
+
+Check the [[https://github.com/Shougo/deoplete.nvim#install][repo]] for installation guides.
+
+*** Commenting
+:PROPERTIES:
+:CUSTOM_ID: commenting
+:END:
+
+Though this is not specific to any particular language I would like to
+discuss an excellent plugin which is pretty good at commenting and
+uncommenting code.
+[[https://github.com/scrooloose/nerdcommenter][NerdCommenter]]
+definitely going to save you a few additional key-presses a day and
+being a vimmer is all about that.
+
+#+BEGIN_SRC vim
+  Plugin 'scrooloose/nerdcommenter'
+#+END_SRC
+
+*** Conclusion
+    :PROPERTIES:
+    :CUSTOM_ID: conclusion
+    :END:
+
+With vim it's hard to find an universal config that suits everyone. It's
+always solving one problem at a time that led me here. This is
+definitely not a full fledge solution to this but it seems to work
+pretty well for me. So if you have any suggestion feel free to ping me
+on [[https://twitter.com/ThisIsRudra][Twitter]].
+
+My full vim setup can be found
+[[https://github.com/mrprofessor/dotfiles/blob/master/.vimrc][here]].
+** Generate and serve files from Flask :python:flask:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: generate-and-serve-files-from-flask
+   :EXPORT_DATE: 2019-10-05
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/generate-and-serve-files-from-flask
+   :CUSTOM_ID: generate-and-serve-files-from-flask
+   :END:
+
+Flask is one of the most used python frameworks for web development. Its
+simplicity and extensibility makes it convenient for both small and
+large applications alike.
+
+In this blog we are going to create a simple flask web application that
+will generate and serve files without storing them in the server.
+
+#+BEGIN_QUOTE
+  Note: For flask and python installation visit
+  [[https://flask.palletsprojects.com/en/1.1.x/][flask documentation]]
+#+END_QUOTE
+
+Let's create a flask application with a basic route.
+
+#+BEGIN_SRC python
+
+  from flask import Flask
+
+  app = Flask(__name__)
+
+
+  @app.route("/")
+  def index():
+      return "Hello Flask!"
+#+END_SRC
+
+and voila! We have our server up and running with only 5 lines of code.
+
+Now we need to create a route which will accept a file name as
+parameter.
+
+#+BEGIN_SRC python
+
+  @app.route("/file/<file_name>")
+  def get_file(file_name):
+      return file_name
+#+END_SRC
+
+For our use case we need to generate a csv file using fake data.We need
+to install [[https://github.com/joke2k/faker][faker]] to generate fake
+data such as name, address, birthdate etc. Also we are using
+[[https://github.com/pandas-dev/pandas][pandas]] to generate dataframes
+that can be used to create both csv and spreadsheets.
+
+#+BEGIN_SRC sh
+
+  python3 -m pip install faker pandas
+#+END_SRC
+
+Let's add functions that will generate csv files using the fake data we
+get from Faker.
+
+#+BEGIN_SRC python
+
+  def generate_fake_data():
+      fake_data = [fake.simple_profile() for item in range(5)]
+      return pd.DataFrame(fake_data)
+
+
+  def generate_csv_file(file_df):
+      # Create an o/p buffer
+      file_buffer = StringIO()
+
+      # Write the dataframe to the buffer
+      file_df.to_csv(file_buffer, encoding="utf-8", index=False, sep=",")
+
+      # Seek to the beginning of the stream
+      file_buffer.seek(0)
+      return file_buffer
+#+END_SRC
+
+Now we need to call these functions from our routing method and send the
+file as response.
+
+#+BEGIN_SRC python
+
+  @app.route("/file/<file_name>")
+  def get_file(file_name):
+      fake_df = generate_fake_data()
+      generated_file = generate_csv_file(fake_df)
+      response = Response(generated_file, mimetype="text/csv")
+      # add a filename
+      response.headers.set(
+          "Content-Disposition", "attachment", filename="{0}.csv".format(file_name)
+      )
+      return response
+
+#+END_SRC
+
+Once we hit the above route with a file name the browser will ask for
+permission to download the csv file.
+
+Here is the full source code with a working example.
+
+#+BEGIN_EXPORT HTML
+  <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+    <iframe
+      src="https://glitch.com/embed/#!/embed/bubble-curio?path=server.py&previewSize=0&sidebarCollapsed=true"
+      title="exclusive-sneezeweed on Glitch"
+      style="height: 100%; width: 100%; border: 0;">
+    </iframe>
+  </div>
+#+END_EXPORT
+
+Feel free to edit and play around. Adios!
+
+** A floating terminal for (Neo)vim :unix:vim:neovim:editor:productivity:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: a-floating-terminal-for-vim
+   :EXPORT_DATE: 2019-10-12
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/a-floating-terminal-for-vim
+   :CUSTOM_ID: a-floating-terminal-for-neo-vim
+   :END:
+
+I love working in terminal and editing with
+[[https://neovim.io/][(Neo)vim]]. Though I have been using vim since my
+college days, for past two years I am using it as my full-time editor.
+
+I remember vividly when I first switched to vim at work. It was a
+horrible experience for the first week which made me flood my vimrc file
+with plugins to make it work. I have definitely moved past that phase
+and learned to [[https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118][grok]] vi since then.
+
+Even now sometimes I tend to miss many nicer features of a full blown
+[[https://en.wikipedia.org/wiki/Integrated_development_environment][IDE]],
+like better language support, familiar clipboard management and inbuilt
+terminal support. Thanks to the developers of Neovim, vim users can use
+the full potential of terminal without quitting or stopping the editor
+
+Last week I came across a plugin named
+[[https://github.com/voldikss/vim-floaterm][vim-termfloat]] which uses
+Neovim's floating window and I realized that I have been(subconsciously)
+wanting this feature for a really long time. This plugin lets me open my
+terminal, restart my server, close the terminal and get back to my
+editor with a few keystrokes.
+
+#+BEGIN_SRC vim
+  " Float baby float
+  Plugin 'voldikss/vim-floaterm'
+#+END_SRC
+
+I have also remapped my =<leader>t= to toggle the floating terminal.
+
+#+BEGIN_SRC vim
+  noremap  <leader>t  :FloatermToggle<CR>i
+  noremap! <leader>t  <Esc>:FloatermToggle<CR>i
+  tnoremap <leader>t  <C-\><C-n>:FloatermToggle<CR>
+#+END_SRC
+
+I have resized the terminal window and set the transparency to zero.
+
+#+BEGIN_SRC vim
+  let g:floaterm_width = 100
+  let g:floaterm_winblend = 0
+#+END_SRC
+
+Time for some action then! Let's quickly run a python script without
+bothering to leave the window.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/py-demo.gif" />
+  </div>
+#+END_EXPORT
+
+The following example shows how I ran gatsby while writing this blog
+post.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/gatsby-dev.gif" />
+  </div>
+#+END_EXPORT
+
+
+Yeah of course I can still use the in built terminal of neovim in a
+different pane or window, but this plugin really makes it easy.
+
+Anyways I did a lot of research on effectively creating these gif files.
+Well that's for another post.
+
+Adios!
+
+** Setting up a celery task scheduler in Flask         :python:flask:celery:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: setting-up-a-task-scheduler-in-flask
+   :EXPORT_DATE: 2019-11-30
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/setting-up-a-task-scheduler-in-flask
+   :CUSTOM_ID: setting-up-a-task-scheduler-in-flask
+   :END:
+
+
+The first thing that comes to mind when considering a task scheduler is a
+CRON job. As most of today's servers are hosted on Linux machines, setting
+a cron job for a periodic task might seem like a good option for many.
+However, in production, having a crontab can be nothing but a pain. It can
+be tricky to configure different time zones depending on the location of
+the server.
+
+The biggest problem with this approach arises when the application is
+scaled across multiple web servers. Instead of running one cron job, we
+could be running multiple cron jobs, which might lead to race conditions.
+Additionally, it's hard to debug if something goes wrong with the task.
+
+With Flask, there are multiple ways to address this problem, and [[http://www.celeryproject.org/][Celery]] 
+is one of the most popular solutions. Celery addresses the above issues
+quite gracefully. It uses the same time zones as [[https://pypi.org/project/pytz/][pytz]], which helps in
+accurately calculating time zones and setting the scheduler timings.
+
+Celery uses a backend message broker (Redis or RabbitMQ) to save the state
+of the schedule, acting as a centralized database server for multiple
+Celery workers running on different web servers. The message broker
+ensures that the task is run only once per the schedule, thus eliminating
+race conditions.
+
+Monitoring real-time events is also supported by Celery. It includes a
+beautiful built-in terminal interface that shows all the current events. A
+nice standalone project, [[https://flower.readthedocs.io/en/latest/][Flower]], provides a web-based tool to administer
+Celery workers and tasks. It also supports asynchronous task execution,
+which is handy for long-running tasks.
+
+*** Let's go hacking
+    :PROPERTIES:
+    :CUSTOM_ID: lets-go-hacking
+    :END:
+
+#+BEGIN_QUOTE
+  Here, we will be using a Dockerized environment. The installation of
+  Redis and Celery can differ from system to system, and Docker
+  environments are pretty common nowadays for such exercises without
+  worrying much about local development infrastructure.
+#+END_QUOTE
+
+#+BEGIN_EXAMPLE
+  flask-celery
+  │
+  │  app.py
+  │  docker-compose.yml
+  │  Dockerfile
+  │  entrypoint.sh
+  │  requirements.txt
+  │
+  └────────────────────────
+#+END_EXAMPLE
+
+Let’s start with the Dockerfile.
+
+#+BEGIN_SRC dockerfile
+  FROM python:3.7
+
+  # Create a directory named flask
+  RUN mkdir flask
+
+  # Copy everything to flask folder
+  COPY . /flask/
+
+  # Make flask as working directory
+  WORKDIR /flask
+
+  # Install the Python libraries
+  RUN pip3 install --no-cache-dir -r requirements.txt
+
+  EXPOSE 5000
+
+  # Run the entrypoint script
+  CMD ["bash", "entrypoint.sh"]
+#+END_SRC
+
+The packages required for this application are mentioned in the
+requirements.txt file.
+
+#+BEGIN_EXAMPLE
+  Flask==1.0.2
+  celery==4.3.0
+  redis==3.3.11
+#+END_EXAMPLE
+
+The entry point script goes here.
+
+#+BEGIN_SRC sh
+  #!/bin/sh
+
+  flask run --host=0.0.0.0 --port 5000
+#+END_SRC
+
+Celery uses a message broker to pass messages between the web app and
+Celery workers. Here, we will set up a Redis container to be used as the
+message broker.
+
+#+BEGIN_SRC dockerfile
+  version: "3.7"
+
+  services:
+
+    redis:
+      container_name: redis_dev_container
+      image: redis
+      ports:
+        - "6379:6379"
+
+    flask_service:
+      container_name: flask_dev_container
+      restart: always
+      image: flask
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      depends_on:
+          - redis
+      ports:
+        - "5000:5000"
+      volumes:
+        - ./:/flask
+      environment:
+          - FLASK_DEBUG=1
+#+END_SRC
+
+Now we are all set to start our little experiment. We have a Redis
+container running on port 6379 and a Flask container running on
+~localhost:5000~. Let’s add a simple API to test whether our tiny web
+application works.
+
+#+BEGIN_SRC python
+  from flask import Flask
+
+  app = Flask(__name__)
+
+  @app.route("/")
+  def index_view():
+      return "Flask-celery task scheduler!"
+
+  if __name__ == "__main__":
+      app.run()
+#+END_SRC
+
+And voila!
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/hello-scheduler.png" />
+  </div>
+#+END_EXPORT
+
+Now, we will build a simple timer application that will show the elapsed
+time since the application started. We need to configure Celery with the
+Redis server URL, and we will also use another Redis database to store
+the time.
+
+#+BEGIN_SRC python
+  from flask import Flask
+  from celery import Celery
+  import redis
+
+  app = Flask(__name__)
+
+  # Add Redis URL configurations
+  app.config["CELERY_BROKER_URL"] = "redis://redis:6379/0"
+  app.config["CELERY_RESULT_BACKEND"] = "redis://redis:6379/0"
+
+  # Connect Redis db
+  redis_db = redis.Redis(
+      host="redis", port="6379", db=1, charset="utf-8", decode_responses=True
+  )
+
+  # Initialize timer in Redis
+  redis_db.mset({"minute": 0, "second": 0})
+
+  # Add periodic tasks
+  celery_beat_schedule = {
+      "time_scheduler": {
+          "task": "app.timer",
+          # Run every second
+          "schedule": 1.0,
+      }
+  }
+
+# Initialize Celery and update its config
+celery = Celery(app.name)
+celery.conf.update(
+    result_backend=app.config["CELERY_RESULT_BACKEND"],
+    broker_url=app.config["CELERY_BROKER_URL"],
+    timezone="UTC",
+    task_serializer="json",
+    accept_content=["json"],
+    result_serializer="json",
+    beat_schedule=celery_beat_schedule,
+)
+
+
+@app.route("/")
+def index_view():
+    return "Flask-celery task scheduler!"
+
+
+@app.route("/timer")
+def timer_view():
+    time_counter = redis_db.mget(["minute", "second"])
+    return f"Minute: {time_counter[0]}, Second: {time_counter[1]}"
+
+
+@celery.task
+def timer():
+    second_counter = int(redis_db.get("second")) + 1
+    if second_counter >= 59:
+        # Reset the counter
+        redis_db.set("second", 0)
+        # Increment the minute
+        redis_db.set("minute", int(redis_db.get("minute")) + 1)
+    else:
+        # Increment the second
+        redis_db.set("second", second_counter)
+
+
+if __name__ == "__main__":
+    app.run()
+#+END_SRC
+
+Let’s update the ~entrypoint.js~ to run both the Celery worker and the
+beat server as background processes.
+
+#+BEGIN_SRC sh
+  #!/bin/sh
+
+  # Run Celery worker
+  celery -A app.celery worker --loglevel=INFO --detach --pidfile=''
+
+  # Run Celery Beat
+  celery -A app.celery beat --loglevel=INFO --detach --pidfile=''
+
+  flask run --host=0.0.0.0 --port 5000
+#+END_SRC
+
+Our very own timer
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/timer.png" />
+  </div>
+#+END_EXPORT
+
+#+BEGIN_QUOTE
+  This application is only for demonstration purposes. The counter won’t
+  be accurate as the task processing time is not taken into account
+  while calculating the time.
+#+END_QUOTE
+
+*** Monitoring events
+    :PROPERTIES:
+    :CUSTOM_ID: monitoring-events
+    :END:
+
+Celery has rich support for monitoring various statistics for tasks,
+workers, and events. We need to log into the container to enable and
+monitor events.
+
+#+BEGIN_SRC sh
+  docker exec -it flask_dev_container bash
+#+END_SRC
+
+Enable and list all events.
+
+#+BEGIN_SRC sh
+  celery -A app.celery control enable_events
+
+  celery -A app.celery events
+#+END_SRC
+
+This spins up a nice interactive terminal UI listing all the details of
+the scheduled tasks.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/events.png" />
+  </div>
+#+END_EXPORT
+
+*** Conclusion
+    :PROPERTIES:
+    :CUSTOM_ID: conclusion
+    :END:
+
+In this post, I have used Celery as a better alternative to crontabs,
+even though the primary purpose of Celery is processing task queues.
+Both the Celery worker and beat server can be run on different
+containers as running background processes on the web container is not
+considered best practice.
+
+Unless you are creating a stupid timer application.
+
+The above-mentioned code can be found here:
+[[https://github.com/mrprofessor/celery-timer/][repo]]
+
+Adios!
+
+** Rendering markdown from Flask :python:flask:markdown:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: rendering-markdown-from-flask
+   :EXPORT_DATE: 2020-02-04
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/rendering-markdown-from-flask
+   :CUSTOM_ID: rendering-markdown-from-flask
+   :END:
+
+In this post I am going to plug about a cool trick(probably useless)
+that I discovered geeking around the internet.
+
+I was building a tiny
+[[https://github.com/solitudenote/gitkeeper][microservice]] which would
+let the client side application securely authenticate with GitHub. After
+writing the only required API, I wanted to render the /README.md/ file
+on the index page.
+
+So I planned to convert markdown to html and serve the resultant string
+everytime we hit the index.
+
+*** Let's go hacking
+    :PROPERTIES:
+    :CUSTOM_ID: lets-go-hacking
+    :END:
+
+/Required packages/
+
+#+BEGIN_SRC sh
+  pip3 install Flask markdown
+#+END_SRC
+
+/app.py/
+
+#+BEGIN_SRC python
+  import markdown
+  from flask import Flask
+  import markdown.extensions.fenced_code
+
+  app = Flask(__name__)
+
+
+  @app.route("/")
+  def index():
+      readme_file = open("README.md", "r")
+      md_template_string = markdown.markdown(
+          readme_file.read(), extensions=["fenced_code"]
+      )
+
+      return md_template_string
+
+
+  if __name__ == "__main__":
+      app.run()
+#+END_SRC
+
+In the above snippet we are using [[https://flask.palletsprojects.com][Flask]](my current favorite) as the web framework, [[https://github.com/Python-Markdown/markdown][Python-Markdown]] to convert markdown files to HTML, and [[https://python-markdown.github.io/extensions/fenced_code_blocks/][fenced_code]] extension to support code blocks.
+
+And it looked something like this
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/markdown-render-plain.png" />
+  </div>
+#+END_EXPORT
+
+*** Not quite there yet!
+    :PROPERTIES:
+    :CUSTOM_ID: not-quite-there-yet
+    :END:
+
+Well even though [[https://en.wikipedia.org/wiki/Richard_Stallman][Richard Stallman]] remains my hero, fortunately I do not share his [[https://stallman.org/][taste]] on web design. So without
+over-engineering our little snippet I thought of adding syntax highlighting with [[https://pygments.org/][pygments]] and [[https://python-markdown.github.io/extensions/code_hilite/][CodeHilite]] extension.
+
+Let's generate css for syntax highlighting using pygments
+
+#+BEGIN_SRC python
+  from pygments.formatters import HtmlFormatter
+
+  formatter = HtmlFormatter(style="emacs",full=True,cssclass="codehilite")
+  css_string = formatter.get_style_defs()
+#+END_SRC
+
+Now we need to append the css_string to the markdown converted HTML string.
+
+#+BEGIN_SRC python
+  md_css_string = "<style>" + css_string + "</style>"
+  md_template = md_css_string + md_template_string
+  return md_template
+#+END_SRC
+
+#+BEGIN_QUOTE
+  Alternatively we can use
+  [[https://github.com/richleland/pygments-css][pygments-css]]
+  repository to get pre-generated CSS files.
+#+END_QUOTE
+
+Let's see how the final version looks!
+
+#+begin_export html
+  <div class="post-image">
+    <img src="/images/markdown-render-hl.png" />
+  </div>
+#+end_export
+
+/Much better if you ask me!/
+
+*** Gimme the code!
+    :PROPERTIES:
+    :CUSTOM_ID: gimme-the-code
+    :END:
+
+Here is the full source code running on Glitch.
+
+#+BEGIN_EXPORT HTML
+  <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+    <iframe
+      src="https://glitch.com/embed/#!/embed/silken-football?path=app.py&previewSize=0&sidebarCollapsed=true"
+      title="silken-football on Glitch"
+      style="height: 100%; width: 100%; border: 0;">
+    </iframe>
+  </div>
+#+END_EXPORT
+
+Feel free to remix and play around. Adios!
+
+** Building a GitHub authentication service :github:auth:flask:python:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: building-a-github-auth-service
+   :EXPORT_DATE: 2020-04-11
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/building-a-github-auth-service
+   :CUSTOM_ID: building-a-github-authentication-service
+   :END:
+
+Recently I was building a GitHub OAuth app to authentiacate one my
+client-side application with GitHub. The application was all about
+taking notes and maintaining them on a private repository. I have had
+worked on such an architecture in one of my previous jobs where we have
+used [[https://aws.amazon.com/codecommit/][AWS CodeCommit]] as an
+inventory of resources where the history and the changes were easier to
+maintain. So for me GitHub was the perfect choice as a free storage with
+elegant history/commit management.
+
+Like most OAuth process it was not so straightforward even though at
+first glance it seemed so.
+
+*** The GitHub OAuth process
+    :PROPERTIES:
+    :CUSTOM_ID: the-github-oauth-process
+    :END:
+
+After going through the GitHub's [[https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/][guide]] and a bunch of other development blogs I came up with a set of steps.
+
+1. First we need to create an OAuth application. The steps to create one are mentioned [[https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/][here]].
+
+2. Once we create an OAuth application, we need to call the GitHub API
+   for an authentication code. This API call looks something like this.
+
+   #+BEGIN_EXAMPLE
+     https://github.com/login/oauth/authorize?client_id=0000000000000&scope=repo&redirect_uri=https://xyz.io/myapp/
+   #+END_EXAMPLE
+
+   This redirects to the redirect_uri with an authentication code which
+   looks something like this.
+
+   #+BEGIN_EXAMPLE
+     https://xyz.io/myapp/?code=a17ccd77d36b2be92aa4
+   #+END_EXAMPLE
+
+3. After getting the code, we need to make a POST call to get the
+   access_token.
+
+   #+BEGIN_SRC sh
+       curl --location --request POST 'https://github.com/login/oauth/access_token' \
+       --header 'Cookie: _octo=GH1.1.206637387.1578955864; logged_in=no' \
+       --form 'client_id=xxxxxxxxxxxxxx' \
+       --form 'client_secret=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+       --form 'code=a17ccd77d36b2be92aa4'
+   #+END_SRC
+
+4. Once we have the access_token we can start making call to GitHub and
+   interact with repositories. Here is an example to get the current
+   user details.
+
+   #+BEGIN_SRC sh
+       curl -H "Authorization: 2434543442242394sfes34dds" https://api.github.com/user
+   #+END_SRC
+
+#+BEGIN_QUOTE
+  Follow the official
+  [[https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow][web-application-flow]]
+  guide for more details and all possible parameters of the
+  authentication APIs.
+#+END_QUOTE
+
+*** Why do we need a back-end server
+    :PROPERTIES:
+    :CUSTOM_ID: why-do-we-need-a-back-end-server
+    :END:
+
+Now with the above four steps it does look simple, doesn't it?
+
+Well no! We really don't want to reveal our client secret to a possible
+attacker, who in turn can get access to all the users and possibly their
+repositories who had authorized this OAuth application. There is no
+safer way to make the 3rd step from a client-side application without
+revealing the client secret.
+
+To securely call the POST API we need a back-end proxy where we can
+store the client secret and make the call. The proxy could be an old
+fashioned server as well as a serverless function hosted on a cloud
+provider.
+
+*** The proxy
+    :PROPERTIES:
+    :CUSTOM_ID: the-proxy
+    :END:
+    We will be needing only one GET API on the proxy/server to authenticate
+our client-side application. We will pre-configure our proxy/server with
+client id and client secret and will accept the authentication code as a
+parameter for the API.
+
+The API call to the proxy/server should look something like this.
+
+#+BEGIN_EXAMPLE
+  https://your-proxy.glitch.me/authenticate/a17ccd77d36b2be92aa4
+#+END_EXAMPLE
+
+Here we are using Python and Flask to build the server, but it can be
+any stack of your choice.
+
+#+BEGIN_SRC python
+    @app.route("/authenticate/<code>", methods=["GET"])
+    def authenticate(code):
+        creds = get_access_token(*build_config(code))
+        return jsonify(creds)
+
+
+    def build_config(code):
+        url = config["oauth_url"]
+        headers = {"Content-Type": "application/json"}
+        payload = {
+            "client_id": os.environ.get(config["oauth_client_id"]),
+            "client_secret": os.environ.get(config["oauth_client_secret"]),
+            "code": code,
+        }
+        # Raise exceptions if client_id or client_secret not found.
+        if not payload["client_id"]:
+            raise APIException("Client Id is not found in environment", status_code=422)
+        if not payload["client_secret"]:
+            raise APIException("Client secret is not found in environment", status_code=422)
+        return url, headers, payload
+
+
+    def get_access_token(url, headers, payload):
+        response = requests.post(url, headers=headers, params=payload)
+        # If client id not found
+        if response.text == "Not Found":
+            raise APIException("Client id is invalid", status_code=404)
+        qs = dict(parse_qsl(response.text))
+        creds = {item: qs[item] for item in qs}
+        return creds
+#+END_SRC
+
+Here we are storing the client id and client secret as environment
+variable and using them to build the required parameters for the POST
+call. We are also wrapping the default error message with a more
+sophisticated one.
+
+*** Conclusion
+    :PROPERTIES:
+    :CUSTOM_ID: conclusion
+    :END:
+
+This kind of design is pretty common with most OAuth authentication
+processes. Here for hosting I have used [[https://glitch.com/][Glitch]]
+as it is free and easy to maintain. If you are expecting an high volume
+of requests, a more serious server would be a better choice.
+
+The complete source code can be found
+[[https://github.com/solitudenote/gitkeeper][here]]. Feel free to fork
+and play around. Adios.
+
+** Generate beautiful JSON from PostgreSQL :postgresql:json:sql:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: generate-beautiful-json-from-postgresql
+   :EXPORT_DATE: 2020-05-19
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: aliases /post/generate-beautiful-json-from-postgresql
+   :CUSTOM_ID: generate-beautiful-json-from-postgresql
+   :END:
+
+PostgreSQL provides a set of built-in [[https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-CREATION-TABLE][JSON
+creation functions]] that can be used to build basic JSON structures. This increases the performance up to 10 times more than building it at the back-end layer.
+
+#+BEGIN_QUOTE
+  This post is about building different JSON structures using PostgreSQL
+  built-in functions. It doesn't talk about storing and manipulating
+  JSON in PostgreSQL.
+#+END_QUOTE
+
+In order to proceed with some examples, first we need to setup a test
+database.
+
+#+BEGIN_SRC sql
+  CREATE DATABASE jsonland
+#+END_SRC
+
+Let's create the following tables.
+
+#+BEGIN_SRC sql
+  CREATE TABLE "user" (
+    id SERIAL NOT NULL,
+    name VARCHAR(100),
+    email_address VARCHAR(150),
+    PRIMARY KEY(id)
+  )
+
+  CREATE TABLE team (
+    id SERIAL NOT NULL,
+    name VARCHAR(100),
+    PRIMARY KEY(id)
+  )
+
+  CREATE TABLE team_user (
+    id SERIAL NOT NULL,
+    team_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    FOREIGN KEY(team_id) REFERENCES "team" (id),
+    FOREIGN KEY(user_id) REFERENCES "user" (id),
+    PRIMARY KEY(id)
+  )
+#+END_SRC
+
+Let's Seed the tables with random data.
+
+#+BEGIN_SRC sql
+  INSERT INTO "team" ("id", "name")
+  VALUES (1, 'team1'), (2, 'team2');
+
+  INSERT INTO "user" ("id", "name", "email_address")
+  VALUES (1, 'user1', 'user1@mail.com'), (2, 'user2', 'user2@mail.com');
+
+  INSERT INTO "team_user" ("id", "team_id", "user_id")
+  VALUES (1, 1, 1), (2, 1, 2), (3, 2, 2);
+#+END_SRC
+
+We have created three tables i.e. =team=, =user= and =team_user=.
+=team_user= table maps one-to-may the relationship between users and
+teams.
+
+*** 1. Get the table data as JSON objects
+    :PROPERTIES:
+    :CUSTOM_ID: 1-get-the-table-data-as-json-objects
+    :END:
+
+#+BEGIN_SRC sql
+  SELECT row_to_json("user") FROM "user";
+
+  +-----------------------------------------------------------+
+  | row_to_json                                               |
+  |-----------------------------------------------------------|
+  | {"id":1,"name":"user1","email_address":"user1@gmail.com"} |
+  | {"id":2,"name":"user2","email_address":"user2@gmail.com"} |
+  +-----------------------------------------------------------+
+#+END_SRC
+
+The above mentioned query will return all the columns of each row as
+JSON objects.
+
+*** 2. Get the table data with specific columns
+    :PROPERTIES:
+    :CUSTOM_ID: 2-get-the-table-data-with-specific-columns
+    :END:
+
+We can specify the particular columns we need rather than getting all at
+once.
+
+#+BEGIN_SRC sql
+  SELECT row_to_json(row('id', 'name')) FROM "user";
+
+  +-------------------------+
+  | row_to_json             |
+  |-------------------------|
+  | {"f1":"id","f2":"name"} |
+  | {"f1":"id","f2":"name"} |
+  +-------------------------+
+#+END_SRC
+
+Now certainly the keys =f1= and =f2= in the objects are not very useful
+to us. We would rather want the column names instead of those keys.
+
+#+BEGIN_SRC sql
+  SELECT row_to_json(users) FROM (SELECT id, name FROM "user") AS users;
+
+  +-------------------------+
+  | row_to_json             |
+  |-------------------------|
+  | {"id":1,"name":"user1"} |
+  | {"id":2,"name":"user2"} |
+  +-------------------------+
+#+END_SRC
+
+*** 3. Get the table data as a single JSON object
+    :PROPERTIES:
+    :CUSTOM_ID: 3-get-the-table-data-as-a-single-json-object
+    :END:
+
+The above examples return us multiple JSON objects(one for each row).
+Ideally we would want a single array of these objects which won't need
+any further manipulation at back-end layer.
+
+#+BEGIN_SRC sql
+  SELECT array_to_json(array_agg(row_to_json(users)))
+      FROM (
+          SELECT id, name from "user"
+      ) users
+
+  -- OR
+
+  SELECT json_agg(row_to_json(users))
+      FROM (
+          SELECT id, name from "user"
+      ) users
+
+  +----------------------------------------------------+
+  | json_agg                                           |
+  |----------------------------------------------------|
+  | [{"id":1,"name":"user1"}, {"id":2,"name":"user2"}] |
+  +----------------------------------------------------+
+#+END_SRC
+
+In the above query we are aggregating all the JSON objects and using
+=array_agg= and then converting them to JSON by applying =array_to_json=
+function.
+
+Also we could do the yield the same results by using =json_agg=
+function, which results into an object instead of JSON string.
+
+*** 4. Build JSON object with multiple tables
+    :PROPERTIES:
+    :CUSTOM_ID: 4-build-json-object-with-multiple-tables
+    :END:
+
+We can also build a new JSON object by using =json_build_object= and
+specify the keys and values. Let's create an object that will contain
+data from both team and user table.
+
+#+BEGIN_SRC sql
+  SELECT json_build_object(
+    'users', (SELECT json_agg(row_to_json("user")) from "user"),
+    'teams', (SELECT json_agg(row_to_json("team")) from "team")
+  )
+#+END_SRC
+
+This query generates a JSON structure that will have all the users and
+teams each as arrays of objects.
+
+#+BEGIN_SRC json
+  {
+    "users": [
+      {
+        "id": 1,
+        "name": "user1",
+        "email_address": "user1@mail.com"
+      },
+      {
+        "id": 2,
+        "name": "user2",
+        "email_address": "user2@mail.com"
+      }
+    ],
+    "teams": [
+      {
+        "id": 1,
+        "name": "team1"
+      },
+      {
+        "id": 2,
+        "name": "team2"
+      }
+    ]
+  }
+#+END_SRC
+
+*** 5. Build JSON object by resolving foreign keys
+    :PROPERTIES:
+    :CUSTOM_ID: 5-build-json-object-by-resolving-foreign-keys
+    :END:
+
+We can generate JSON structures by resolving foreign key references and
+joining multiple tables.
+
+#+BEGIN_SRC sql
+  select json_agg(row_to_json(tu))
+      from (
+          select id, (
+              select row_to_json(team) from team where team_user.team_id = team.id
+          ) team, (
+              select row_to_json("user") from "user" where team_user.user_id = "user".id
+          ) "user"
+      from team_user
+  ) tu
+#+END_SRC
+
+This query contains multiple sub-queries to generate a complex
+structure. It resolved the references of =team_id= and =user_id= into
+the corresponding row.
+
+#+BEGIN_SRC json
+[
+    {
+      "id": 1,
+      "team": {
+        "id": 1,
+        "name": "team1"
+      },
+      "user": {
+        "id": 1,
+        "name": "user1",
+        "email_address": "user1@mail.com"
+      }
+    },
+    {
+      "id": 2,
+      "team": {
+        "id": 1,
+        "name": "team1"
+      },
+      "user": {
+        "id": 2,
+        "name": "user2",
+        "email_address": "user2@mail.com"
+      }
+    },
+    {
+      "id": 3,
+      "team": {
+        "id": 2,
+        "name": "team2"
+      },
+      "user": {
+        "id": 2,
+        "name": "user2",
+        "email_address": "user2@mail.com"
+      }
+    }
+  ]
+#+END_SRC
+
+*** Conclusion
+    :PROPERTIES:
+    :CUSTOM_ID: conclusion
+    :END:
+
+Even though PostgreSQL is almost always faster than the back-end
+language based JSON generation, the query can get complex really quickly
+as we have nested structures. As long as we understand the basic JSON
+functions and sub-queries we can build almost any kind of structure
+without stressing the back-end processes.
+
+** A minimal tmux configuration from scratch :tmux:productivity:unix:mac:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: a-minimal-tmux-configuration-from-scratch
+   :EXPORT_DATE: 2021-03-14
+   :CUSTOM_ID: a-minimal-tmux-configuration-from-scratch
+   :END:
+
+*** General configuration
+:PROPERTIES:
+:CUSTOM_ID: general-configuration
+:END:
+
+We need to create a =~/.tmux.conf= file in our home directory. This will be the configuration file for our setup.
+
+If the underlying terminal emulator has =XTERM-256= support then we can add 256 colors support to tmux.
+
+#+begin_src sh
+set -g default-terminal "tmux-256color"
+#+end_src
+
+By default tmux windows start with number =0=. We could start numbering with =1=.
+
+#+begin_src sh
+set -g base-index 1
+#+end_src
+
+Set the escape time to 0 for faster key repetition. Tmux generally waits for a certain time after an escape is input to determine if it is a part of a function or meta key sequences. The default is 500 milliseconds.
+
+#+begin_src sh
+set -s escape-time 0
+#+end_src
+
+By default the mouse support for tmux is set to =off=.
+
+#+begin_src sh
+set -g mouse on
+#+end_src
+
+*** Keybindings
+:PROPERTIES:
+:CUSTOM_ID: keybindings
+:END:
+
+By default tmux uses =ctrl-b= (=C-b=) as the prefix key. Personally I found this to be a bit less ergonomic for my taste. Let's change that to =C-a=.
+
+#+begin_src sh
+set-option -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+#+end_src
+
+Being a VIM(EVIL) user I have trained myself to use =h=, =j=, =k=, =l= for left, down, up and right movements respectively.
+
+#+begin_src sh
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+#+end_src
+
+Hot-reloading tmux without restarting it can be really handy for people who tweaks their dotfiles as much as I do.
+
+#+begin_src sh
+bind r source-file ~/.tmux.conf
+#+end_src
+
+After saving the =~/.tmux.conf= file, we can now use =C-a r= to reload tmux.
+
+Use Vi/Emacs keybinding to move around the buffer.
+
+#+begin_src sh
+# Enable vi keys.
+setw -g mode-keys vi
+
+# Escape turns on copy mode
+bind Escape copy-mode
+
+# v in copy mode starts making selection
+bind-key -T copy-mode v send -X begin-selection
+bind-key -T copy-mode y send -X copy-selection
+
+# make Prefix p paste the buffer.
+unbind p
+bind p paste-buffer
+
+#+end_src
+
+*** Customize Status Bar
+:PROPERTIES:
+:CUSTOM_ID: customize-status-bar
+:END:
+#+begin_quote
+Some of the commands(to check OS version, battery info and CPU usage info) I will be using are exclusive to Mac Os. Do drop a comment if you want me to test and figure out the linux equivalents.
+#+end_quote
+
+The default tmux status line looks something like this. Let's make it a bit more appealing.
+#+begin_export html
+  <div class="post-image">
+    <img src="/images/tmux_status_line_diagram_github.png" />
+  </div>
+#+end_export
+
+
+#+begin_src sh
+# Set status bar on
+set -g status on
+
+# Update the status line every second
+set -g status-interval 1
+
+# Set the position of window lists.
+set -g status-justify centre # [left | centre | right]
+
+# Set Vi style keybinding in the status line
+set -g status-keys vi
+
+# Set the status bar position
+set -g status-position top # [top, bottom]
+
+# Set status bar background and foreground color.
+set -g status-style fg=colour136,bg="#002b36"
+#+end_src
+
+We have centered the window lists and got enough real-estate on both sides.
+#+begin_export html
+  <div class="post-image">
+    <img src="/images/tmux-shot2.png" />
+  </div>
+#+end_export
+
+Now let's add some useful stuff up there.
+
+#+begin_src sh
+# Set left side status bar length and style
+set -g status-left-length 60
+set -g status-left-style default
+
+# Display the session name
+set -g status-left "#[fg=green] ❐ #S #[default]"
+
+# Display the os version (Mac Os)
+set -ag status-left " #[fg=black] #[fg=green,bright]  #(sw_vers -productVersion) #[default]"
+
+# Display the battery percentage (Mac OS)
+set -ag status-left "#[fg=green,bg=default,bright] 🔋 #(pmset -g batt | tail -1 | awk '{print $3}' | tr -d ';') #[default]"
+
+# Set right side status bar length and style
+set -g status-right-length 140
+set -g status-right-style default
+
+# Display the cpu load (Mac OS)
+set -g status-right "#[fg=green,bg=default,bright]  #(top -l 1 | grep -E "^CPU" | sed 's/.*://') #[default]"
+
+# Display the date
+set -ag status-right "#[fg=white,bg=default]  %a %d #[default]"
+
+# Display the time
+set -ag status-right "#[fg=colour172,bright,bg=default] ⌚︎%l:%M %p #[default]"
+
+# Display the hostname
+set -ag status-right "#[fg=cyan,bg=default] ☠ #H #[default]"
+
+# Set the inactive window color and style
+set -g window-status-style fg=colour244,bg=default
+set -g window-status-format ' #I #W '
+
+# Set the active window color and style
+set -g window-status-current-style fg=black,bg=colour136
+set -g window-status-current-format ' #I #W '
+#+end_src
+
+#+begin_export html
+  <div class="post-image">
+    <img src="/images/tmux-shot3.png" />
+  </div>
+#+end_export
+Well who needs an activity monitor now!
+
+*** Customize Active Pane
+:PROPERTIES:
+:CUSTOM_ID: customize-active-pane
+:END:
+We need some subtle style changes in order to easily distinguish the active pane form the inactive ones.
+
+#+begin_src sh
+# Colors for pane borders(default)
+setw -g pane-border-style fg=green,bg=black
+setw -g pane-active-border-style fg=white,bg=black
+
+# Active pane normal, other shaded out
+setw -g window-style fg=colour240,bg=colour235
+setw -g window-active-style fg=white,bg=black
+#+end_src
+
+The inactive panes has the green border while as the active one has the white border. Also the inactive panes are a bit greyed out while the active one looks sharper/more
+vibrant.
+
+#+begin_quote
+The above color combination works with dark terminal themes. Do change the colors accordingly as per the terminal theme for better asthetics.
+#+end_quote
+
+#+begin_export html
+  <div class="post-image">
+    <img src="/images/tmux-shot4.gif" />
+  </div>
+#+end_export
+
+*** Miscellaneous
+:PROPERTIES:
+:CUSTOM_ID: miscellaneous
+:END:
+
+Here are some useful tweaks for a quiter tmux with a more native Mac like experience.
+
+#+begin_src sh
+# Mac Os Command+K (Clear scrollback buffer)
+bind -n C-k clear-history
+
+# Set a larger scroll back
+set-option -g history-limit 100000
+
+# A quiter setup
+set -g visual-activity off
+set -g visual-bell off
+set -g visual-silence off
+setw -g monitor-activity off
+set -g bell-action none
+
+#+end_src
+
+*** Who wants a minimal config anyway!
+:PROPERTIES:
+:CUSTOM_ID: who-wants-a-minimal-config-anyway
+:END:
+There is much more to tmux than what I have done here with ~50 lines of config. I would highly recommend the [[https://github.com/tmux/tmux/wiki][official documentation]] for understanding various features of tmux.
+
+Also check out [[https://github.com/rothgar/awesome-tmux][Awesome tmux]] for almost all the best resources out there for tmux and don't forget to share your screenshots in the comments.
+
+Here is my [[https://github.com/mrprofessor/dotfiles/blob/master/tmux.conf][tmux.conf]].
+

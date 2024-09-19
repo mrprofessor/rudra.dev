@@ -1,0 +1,22 @@
+// Mixins
+@mixin flexify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin full-width-mobile {
+  margin-left: calc(-#{$horizontal-layout-padding});
+  margin-right: calc(-#{$horizontal-layout-padding});
+}
+
+@mixin full-width-web {
+  margin-left: 0;
+  margin-right: 0;
+}

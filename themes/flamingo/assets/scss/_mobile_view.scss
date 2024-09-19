@@ -1,0 +1,293 @@
+html {
+    font-size: $global-font-size-mobile;
+}
+
+body {
+    line-height: 1.8em;
+    color: $primary-color;
+    background: $background-color;
+}
+
+.post-title, .date-label {
+    // letter-spacing: 0.025rem;
+}
+
+p, sub, nav{
+    // letter-spacing: 0.05rem;
+}
+
+.title-wrapper, .title {
+    letter-spacing: 0.075rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: $title-font-size;
+}
+
+.layout {
+    .title-wrapper {
+        @include flex-column;
+        margin-bottom: 1rem;
+    }
+    .title {
+        color: $primary-color;
+        text-align: left;
+        display: block;
+        font-size: $title-font-size;
+        //font-weight: bold;
+        margin: 0;
+    }
+    max-width: $layout-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $vertical-layout-padding $horizontal-layout-padding;
+}
+
+nav {
+    font-size: $nav-font-size;
+    text-align: center;
+    ul {
+        display: block;
+        padding: 0;
+        //margin: 0.5rem;
+        li {
+            display: inline;
+            list-style-type: none;
+            a {
+                color: $primary-color;
+                display: inline-block;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid $background-color;
+            }
+            a:hover {
+                color: $link-color;
+                border-bottom: 1px solid;
+            }
+        }
+        li:not(:last-child) {
+            padding: 0 1rem 0 0;
+        }
+    }
+}
+
+.slim-description {
+    margin-bottom: calc(#{$global-font-size} * 2);
+    color: $subscript-color;
+    p {
+        letter-spacing: normal;
+    }
+
+    a {
+        color: $link-color
+    }
+
+    a:hover {
+        // border-bottom: 1px solid;
+        font-weight: 600;
+    }
+
+}
+
+
+.blog-post-content {
+    a {
+        color: $link-color;
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
+    a:hover {
+        border-bottom: none;
+    }
+
+    // Add some spaces before a sub-heading
+    h2 {
+	margin-top: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: solid 1px $subscript-color;
+	text-transform: uppercase;
+    }
+
+    h3 {
+	font-weight: 600;
+    }
+   
+}
+
+.blog-list {
+    .list-item {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: baseline;
+        padding: 0.5rem 0.5rem 0.5rem 0;
+    }
+    .post-title {
+        a {
+            text-decoration: none;
+            color: $post-title-color;
+            //font-weight: 600;
+            border-bottom: none;
+            //transition: border-bottom .3s;
+        }
+        a:hover {
+            color: $post-link-color;
+            font-weight: 600;
+        }
+    }
+    .date-label {
+        font-size: 80%;
+        margin-right: 1rem;
+    }
+}
+
+.content {
+    .title {
+        font-size: $content-title-font-size;
+    }
+}
+
+.blog-post-content {
+    a {
+        color: $post-link-color;
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
+    a:hover {
+        border-bottom: none;
+    }
+
+    img {
+        width:100%;
+    }
+
+    p {
+        code {
+            background: $code-background;
+            color: $code-color;
+        }
+    }
+
+}
+
+.post-image {
+    @include full-width-mobile
+    img {
+        width:100%;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .img-description {
+        color: $subscript-color;
+    }
+    text-align: center;
+}
+
+.tags {
+    font-size: .9em;
+    text-align: left;
+    ul {
+        display: block;
+        padding: 0;
+        //margin: 0.5rem;
+        li {
+            display: inline;
+            list-style-type: none;
+            text-align: center;
+            a {
+                border: 1px solid;
+                border-radius: 3px;
+                background: $background-color;
+                padding: 0.2em;
+                color: $link-color;
+                margin: 10px 2px 10px 0;
+                line-height: 1em;
+            }
+            a:hover {
+                background: $link-color;
+                color: $background-color;
+            }
+        }
+        li:not(:last-child) {
+            padding: 0 0.1rem 0 0;
+        }
+    }
+}
+
+.highlight {
+    @include full-width-mobile
+    pre {
+        line-height: 1.2rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: auto;
+        padding: $horizontal-layout-padding;
+        margin: 0;
+        code[class*=language-] {
+            font-size: 0.9em;
+        }
+
+        .token.comment {
+            font-style: italic;
+        }
+    }
+}
+
+// Add margin to the image after a code-block.
+.highlight + .post-image {
+    margin-top: 1rem;
+}
+
+// Style blockquotes
+// https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+// Worth looking at
+// https://codepen.io/frxnz/pen/IvBCr
+blockquote {
+    background: $blockquote-background-color;
+    border-left: 5px solid $primary-color;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: $primary-color;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+time {
+    font-size: 80%;
+    margin-right: 1rem;
+}
+
+
+// TOC
+.ox-hugo-toc {
+    color: $link-color;
+    background: $toc-background;
+    padding: 1rem;
+
+    a {
+        color: $subscript-color;
+        text-decoration: none;
+    }
+
+    .heading {
+        color: $subscript-color;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    // Automatically switch to dark mode, a good thing??
+}

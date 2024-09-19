@@ -1,0 +1,12 @@
+name = "Flamingo"
+license = "MIT"
+licenselink = "https://github.com/vimux/blank/blob/master/LICENSE"
+description = "Starter Hugo theme for developers."
+homepage = "https://github.com/vimux/blank/"
+tags = ["blog", "plain", "starter", "development"]
+features = ["blog"]
+min_version = "0.01"
+
+[author]
+  name = "mrprofessor"
+  homepage = "https://github.com/mrprofessor"

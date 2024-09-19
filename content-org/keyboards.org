@@ -1,0 +1,1760 @@
+#+hugo_base_dir: ../
+#+hugo_section: keyboards
+#+author: mrprofessor
+
+
+* keyboards
+:PROPERTIES:
+:CUSTOM_ID: keyboards
+:END:
+** IBM Model M122(BattleShip) :vintage:keyboards:ibm:modelm:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_model_m_122_battleship
+   :EXPORT_DATE: 2021-08-16
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_model_m_122_battleship.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-model-m122-battleship
+   :END:
+
+No description yet
+
+** IBM Model M122(BattleCruiser) :vintage:keyboards:ibm:modelm:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_model_m_122_battlecruiser
+   :EXPORT_DATE: 2021-08-17
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_model_m_122_battlecruiser.jpg
+   :EXPORT_HUGO_DRAFT: true
+   :CUSTOM_ID: ibm-model-m122-battlecruiser
+   :END:
+
+No description yet
+
+** IBM Model F 3178 :vintage:keyboards:ibm:modelf:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_model_f_3178
+   :EXPORT_DATE: 2021-11-20
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_model_f_3178.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-model-f-3178
+   :END:
+
+No description yet
+
+** IBM Model F 5150(XT) :keyboards:ibm:modelf:xt:vintage:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_model_f_5150_xt
+   :EXPORT_DATE: 2021-11-22
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_model_f_xt.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-model-f-5150-xt
+   :END:
+
+This is the first vintage keyboard I have acquired. Unfortunately, it was broken
+into pieces on its way to me from Florida. However, with a bit of tender love and
+care, it was up and running in a few hours.
+
+I don't know the exact manufacturing date of the board, but there is a sticker
+that says it was repaired in 1989. Most IBM 5150 keyboards were manufactured
+before 1984, So it is at least 37 years old in 2021.
+
+I got a Soarer's converter along with this keyboard. With a bit of remapping, I
+was able to replace it with my Drop CTRL as my new daily driver.
+
+** IBM Model F62 reproduction :vintage:keyboards:ibm:modelf:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_f62_reproduction
+   :EXPORT_DATE: 2021-11-21
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/f62_reproduction.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-model-f62-reproduction
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+This keyboard is a reproduction of one of the original IBM model F 4704 series
+keyboards. Originally it came with the =IBM 4704 FINANCE COMMUNICATION DISPLAY
+STATION MODEL 1 ENHANCED= and mainly used by the banking industry. In 2012, it
+was first documented by a Canadian computer enthusiast who goes by the name
+[[http://kishy.ca/][Kishy]] and hence called the =Kishsaver=.
+
+
+In 2015, Joe Strandberg aka =Ellipse= has decided to make [[https://deskthority.net/viewtopic.php?t=11046][reproductions]] of the F62
+and F77 models. After a long wait of almost 4 years, in 2020 the project started
+shipping the boards for the pre-orders.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="https://web.archive.org/web/20160404205603im_/http://kishy.ca/wp-content/uploads/2013/02/6019284_0005_unwrapped-plug.jpg" loading="lazy"/>
+    <span class="img-description"> An original F62. Photo by Kishi </span>
+  </div>
+#+END_EXPORT
+
+Though it's a reproduction, it isn't an replica of the F 4704. It lacks a beeper,
+stand, beeper volume knob, and stepped caps.
+
+*** Acquisition & Details
+:PROPERTIES:
+:CUSTOM_ID: acquisition-details
+:END:
+
+Like most other IBM enthusiasts, I too entered into Ellipse's group buy. But I
+was too anxious to wait two years to get my hands on one, So I got this board
+from r/mechmarket for a much lower price. Initially, I had planned to repaint
+the keyboard to beige, but I didn't go through it. In real life, this red looks
+quite beautiful.
+
+I got the 609th model, and the sticker on the back says the date of manufacture.
+It was made in China, unlike the original model.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/f62_back.jpg" loading="lazy"/>
+    <span class="img-description"> F62 reproduction back </span>
+  </div>
+#+END_EXPORT
+
+It came with blank beige keycaps, and the seller had included a set of blank
+Mopar blue keycaps. I swapped those beige caps with [[https://www.pckeyboard.com/][Unicomp]] APL caps with orange
+sub legends, and they look pretty impressive. However, some of the switches feel
+scratchier with the Unicomp cap, but I can't figure out why.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/f62_assembly.jpg" loading="lazy"/>
+    <span class="img-description"> Unicomp brilliant white APL caps on the F62 inner assembly </span>
+  </div>
+#+END_EXPORT
+
+My favorite part of the keyboard is its case. The case is built with Zinc and is
+pretty heavy. The powder coating on this particular model is superb, but I have
+heard complaints from other buyers regarding the quality.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/f62_zinc_case.jpg" loading="lazy"/>
+    <span class="img-description"> F62 Zinc case and Phoebe </span>
+  </div>
+#+END_EXPORT
+
+The board uses Model F AT-style barrels and barrel plates. The spring felt a bit
+lighter than my other Model F boards, but it wasn't too different. The spacebar
+uses model M type stabilizers, and it used to rattle a lot. I had to bend the
+stabilizer tabs a little bit and apply some silicone grease to reduce the rattle.
+
+The assembly backplate is heat-treated and has a rainbow effect like the IBM
+Model F keyboards.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/f62_back_assembly.jpg" loading="lazy"/>
+    <span class="img-description"> F62 inner assembly backplate </span>
+  </div>
+#+END_EXPORT
+
+This board uses a compact version of the Xwhatsit controller([[https://deskthority.net/viewtopic.php?f=7&t=13479][designed by wcass]]),
+and I was lucky enough to get the USB-C version. Ellipse made both type-C and
+micro-USB controllers, and unfortunately, the buyers don't get the option to
+choose. The soldering job on my model wasn't up to the mark, and I got some
+unwanted key actuation. I had to clean the excess flux and tape the pins so that
+they won't touch the metal case.
+
+*** Verdict
+:PROPERTIES:
+:CUSTOM_ID: verdict
+:END:
+
+It is pretty rare to find boards that are built as tough as this F62 and still
+offer a unique typing experience. I wouldn't recommend this board to a
+non-hobbyist because of its complexities. That said, I have been daily driving
+this keyboard for the past six months, and it's one of the most practical ones
+in my collection.
+
+** IBM Model 3278 (Beamspring) :vintage:keyboards:ibm:beamspring:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_3278
+   :EXPORT_DATE: 2021-11-23
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_3278_unrestored.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-model-3278-beamspring
+   :END:
+
+
+At the time of writting, this old beamer is the prize of my collection. I have
+acquired this from a DT member who let it go for a fair enough price. They were
+kind enough to send me an metal(iron) door with the board too.
+
+Initially, I liked the battered look of the board, but after a while, I powder
+coated it to black. I couldn't find an "olive-green" or "matte-black" color,
+So I settled for Glossy black. It looked quite good in person but shines a lot
+on camera.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_3278_powdercoated.jpg" />
+    <span class="img-description"> Glossy black powdercoating </span>
+  </div>
+#+END_EXPORT
+
+The board wasn't in a terrible condition when I got it. The foam had turned
+into sticky goo, which needed some cleaning up. I manually cut a craft store
+foam and replaced it.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_3278_foam.jpg" />
+    <span class="img-description"> Handmade replacement foam </span>
+  </div>
+#+END_EXPORT
+
+I got [[https://github.com/purdeaandrei/CompactBeamSpring][Pandrew's version of the Xwhatsit controller]] to replace the original
+controller. I got Pandrew's solenoid driver too, and after a bit of hacking
+around with QMK, I got it working.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_3278_no_case.jpg" />
+    <span class="img-description"> Replacement controllers and solenoid </span>
+  </div>
+#+END_EXPORT
+
+There are some corrosions on the plate but I was told that they won't grow, so
+I didn't bother. There was a bit of rust on the switch springs, so I tried to
+take apart the switches to clean them but found them hard to disassemble and
+ultimately gave up. The rust doesn't affect the smoothness of the switches.
+
+I used the board for a week as my daily driver with the solenoid on. I wasn't
+very impressed with the heavy space bar as it tired my thumb after every 15
+minutes. Apart from that, this board is an absolute joy to have and is
+a thing of beauty.
+
+I love this board, and hopefully, it will be on my secondary machine for years
+to come, but right now, I will get back to my beloved [[/keyboards/ibm_model_f_at/][F AT]] and get some work
+done.
+
+** IBM Model F AT :vintage:keyboards:ibm:modelF:AT:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_model_f_at
+   :EXPORT_DATE: 2021-12-11
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_model_f_at.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-model-f-at
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+This keyboard originally came with IBM Personal Computer AT (PC/AT). This
+computer was released in 1984, and IBM has produced over 100,000 units before
+discontinuing them in 1987. Some sources say that the *AT* stands for *Advanced Technology*.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_model_f_at_units.png" loading="lazy"/>
+    <span class="img-description"> IBM Model F AT key units </span>
+  </div>
+#+END_EXPORT
+
+This model was a successor to the very famous and now weird XT layout. The IBM PS/2 (Personal System/2) was the successor to the IBM PC/AT, and with it came the venerable model M keyboard. The model M keyboard introduced the very layout that is being used worldwide even today.
+
+*** Acquisition & Restoration
+:PROPERTIES:
+:CUSTOM_ID: acquisition-restoration
+:END:
+
+I have acquired this keyboard from eBay for a fair price. It was super dirty and was full of gunk. The barrel plate has rusty, and there were a bunch of dead spiders inside. The keycaps were quite filthy too.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_model_f_at_assembly_front.jpg" loading="lazy"/>
+    <span class="img-description"> Dirty assembly </span>
+  </div>
+#+END_EXPORT
+
+The Foam was rotten and kept falling out the whole time; However, the back rainbow plate was pristine, and there weren't any rust spots on it.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_model_f_at_assembly_back.jpg" loading="lazy"/>
+    <span class="img-description"> Model F AT rainbow plate </span>
+  </div>
+#+END_EXPORT
+
+I removed the caps and barrels and washed them in warm soapy water. Then scrubbed the barrel plate but couldn't repaint it because I ran out of spray paints by then. Replaced the rotten foam with a hand-made 2mm one, and reassembled everything.
+
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/ibm_model_f_at_connector_chain.jpg" loading="lazy"/>
+    <span class="img-description"> AT -> PS/2 -> USB (A) -> USB (C) </span>
+  </div>
+#+END_EXPORT
+
+It was an absolute joy to use the keyboard on modern machines. It uses AT protocol, So using a passive AT to PS/2 converter would do the trick. Since I don't own a computer with a native PS/2 port, I daisy-chained an active PS/2 to USB (A) converter and then another Type A to Type C adapter to connect my Macbook Pro.
+
+** Zbrojovka Brno 262.5 :vintage:keyboards:zbrojokva:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: zbrojovka_brno_262_5
+   :EXPORT_DATE: 2022-02-17
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/zbrojovka_brno_262_5_front.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: zbrojovka-brno-262-5
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+
+This board was manufactured by a Czechoslovakian company called [[http://www.zbrojovka-brno.cz/][Zbrojovka Brno]]
+in the late '80s. Zbrojovka Brno manufactured small arms, motor vehicles, and
+later typewriters and computers.
+
+This board was made in 1988, and it uses the Soviet-era [[https://www.tesla.cz/en/][Tesla]] hall effect
+switches.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/zbrojovka_brno_262_5_back.jpg" loading="lazy"/>
+    <span class="img-description"> Zbrojovka Brno 262.5 back </span>
+  </div>
+#+END_EXPORT
+
+*** Acquisition & Restoration
+:PROPERTIES:
+:CUSTOM_ID: acquisition-restoration
+:END:
+
+It had been up for sale for more than a year on [[https://www.reddit.com/r/mechmarket/][r/mechmarket]], and I was lucky
+enough to snag it for a very fair price.  It took exactly a month to reach
+India from Czechia, and it did survive the trip.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/zbrojovka_brno_262_5_no_case.jpg" loading="lazy"/>
+    <span class="img-description"> Dirty/Rusty assembly </span>
+  </div>
+#+END_EXPORT
+
+The case and keycaps were quite good; however, the plate was rusty, and some of
+the switches were scratchy.  It took a good bit of force to take apart the
+switches from the plate too. Unfortunately, during that process, I scuffed a
+couple of switch stems.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/zbrojovka_brno_262_5_switches1.jpg" loading="lazy"/>
+    <span class="img-description"> Tesla hall effect switches </span>
+  </div>
+#+END_EXPORT
+
+I have planned to lube the switches and swap the rusty springs with the Cherry
+ones. The plate needs to be sanded and repainted. This board uses a DB25
+connector, so I need to find the pin layouts and make a converter for it.
+
+** Apple Extended Keyboard II :vintage:keyboards:apple:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: apple_extended_keyboard_ii
+   :EXPORT_DATE: 2022-03-15
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/apple_m3501/apple_m3501.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: apple-extended-keyboard-ii
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+Apple manufactured this board in the late '80s and early 90s. This board was the
+successor of the venerable Apple Extended Keyboard. These boards were included
+with Apple professional desktops starting with the [[https://en.wikipedia.org/wiki/Macintosh_IIsi][Macintosh IIsi]].
+
+These boards use either Alps or Mitsumi switches. The Mitsumi switches were only
+used on boards made in Japan. M3501s are said to be the last
+"Mechanical Keyboards" that apple has ever made.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/apple_m3501/apple_m3501_back.jpg" loading="lazy"/>
+    <span class="img-description"> Apple Extended Keyboard II back </span>
+  </div>
+#+END_EXPORT
+
+*** Build and features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+I got this German layout M3501 from the Deskthority sale listing for a fair price.
+
+It has thick PBT dye-sublimated keycaps with =Univers 57 Oblique= font, and It uses
+the Alps dampened cream switches. However, the spacebar is made of ABS and hence
+it's yellowed.
+
+The case is also made of ABS, and it had been significantly yellowed when I
+acquired it. The case design is wavy, and I found it quite ergonomic without the
+feet extended.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/apple_m3501/apple_m3501_side_profile.jpg" loading="lazy"/>
+    <span class="img-description"> Apple m3501 side profile with feet extended </span>
+  </div>
+#+END_EXPORT
+
+It features an Apple rainbow logo, and unlike the =AEK I=, the logo is at the top.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/apple_m3501/apple_m3501_logo.jpg" loading="lazy"/>
+    <span class="img-description"> Apple rainbow logo </span>
+  </div>
+#+END_EXPORT
+
+The =Caps Lock= uses an Alps latching switch, which physically locks down when
+activated.
+
+The Apple M3501 features an innovative yet weird feet design. The feet consist
+of a plastic plate instead of two separate ones. There is a scrollbar on the back
+to extend and retract the feet.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/apple_m3501/apple_m3501_feet.jpg" loading="lazy"/>
+    <span class="img-description"> Apple M3501 Feet </span>
+  </div>
+#+END_EXPORT
+
+This particular board has [[https://deskthority.net/wiki/Alps_SKCM_Cream_Damped][Alps SKCM Cream Dampened]] switches, which are the most
+common switches found on AEK IIs. The switches are stacked vertically on the
+function row, which is kind of unique to the AEK series boards.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/apple_m3501/apple_m3501_no_case.jpg" loading="lazy"/>
+    <span class="img-description"> Apple M3501 internals </span>
+  </div>
+#+END_EXPORT
+
+*** Restoration
+:PROPERTIES:
+:CUSTOM_ID: restoration
+:END:
+
+To be honest, It didn't require a lot of restoring,  I have only =retrobrighted=
+the case with =H2O2= and got rid of the excess yellowing. That said, I have plans
+to =wax-boil= the switches and clean the keycaps too. This keyboard didn't come
+with a cable either, I need to procure one.
+
+** Monterey K104 :vintage:keyboards:monterey:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: monterey_k104_alps_skcm
+   :EXPORT_DATE: 2022-03-17
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/monterey_k104/monterey_k104.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: monterey-k104
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+This keyboard was manufactured by [[http://www.monterey.com.tw/][Monterey]] in the '90s. This model came with
+varieties of switches, including the Alps SKCM white and blue, SMK alps mounts,
+and "alps.tw Type OA2". This particular board has Alps SKCM whites. This board
+is a =Plantron= branded keyboard, and the sticker on the back says that Plantron
+manufactured it. I couldn't find more details about this particular company. As
+per another back sticker, this board was manufactured in April 1992.
+
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/monterey_k104/monterey_k104_back.jpg" loading="lazy"/>
+    <span class="img-description"> Monterey K104 back </span>
+  </div>
+#+END_EXPORT
+
+*** Build and Features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+The case is made of ABS, and the keycaps are lasered(likely) thin ABS caps.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/monterey_k104/monterey_k104_no_case.jpg" loading="lazy"/>
+    <span class="img-description"> Monterey K104 without case </span>
+  </div>
+#+END_EXPORT
+
+There is a grill on the top case, and it's a distinguishable feature for Monterey
+K104 series keyboards. On the back, 8 screws keep the chassis together, and it's
+very straightforward to open it up. There is also a button to switch between AT,
+XT, and ST protocols.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/monterey_k104/monterey_k104_switch_protocol.jpg" loading="lazy"/>
+    <span class="img-description"> Monterey K104 AT/XT/ST protocol switch </span>
+  </div>
+#+END_EXPORT
+
+*** Restoration
+:PROPERTIES:
+:CUSTOM_ID: restoration
+:END:
+
+The case was quite yellowed when I got it. I washed the top case with soapy
+water and then retrobrighted the case with H2O2. Surprisingly the keycaps aren't
+yellowed as much. I have plans to waxboil the alps switches, but for now, they
+seem fine.
+
+** Televideo 990/995 DEC keyboard :vintage:keyboards:nmb:space_invader:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: televideo_99x_dec
+   :EXPORT_DATE: 2022-03-18
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :cover /images/keyboards/televideo_99x_dec/televideo_dec_thumbnail.jpg :image /images/keyboards/televideo_99x_dec/televideo_dec_thumbnail.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: televideo-990-995-dec-keyboard
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+This keyboard was manufactured by [[https://www.nmbtc.com/][NMB]] in the early '90s for Televideo terminals.
+This particular board was made for the Televideo 99X series of terminals. This
+layout is known as DEC layout, named after [[https://deskthority.net/wiki/Digital_Equipment_Corporation][Digital Equipment Corporation]] and
+uses a different protocol to communicate with the Terminals.
+
+*** Acquisition
+:PROPERTIES:
+:CUSTOM_ID: acquisition
+:END:
+
+I was lucky enough to get into the [[https://deskthority.net/viewtopic.php?f=2&t=25763][largest vintage computer keyboard]] group-buy
+in history. [[https://deskthority.net/memberlist.php?mode=viewprofile&u=21126][Inoznez]], used his parent's farm to store the boards and slowly
+shipped them out all over the world.
+
+Initially, I wasn't aware of this, but I got an entry when another buyer had to
+drop out of the deal for some reason. I got 10 boards for myself and helped proxy
+some more for the local keyboard enthusiasts.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/nmb_keyboards.jpg" loading="lazy"/>
+    <span class="img-description"> My NMB keyboard haul </span>
+  </div>
+#+END_EXPORT
+
+There were many layouts, such as German, Swedish, Spanish, etc and I got one
+from each. This board is the one with a Swedish layout.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/televideo_99x_dec_with_box.jpg" loading="lazy"/>
+    <span class="img-description">  </span>
+  </div>
+#+END_EXPORT
+
+These boards are NOS(New Old Stock) which means they have never been used and
+are from old production. I haven't removed the plastic cover from the coiled
+cable yet. :)
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/televideo_99x_dec_plastic_cover.jpg" loading="lazy"/>
+    <span class="img-description"> Televideo 99X DEC with plastic cover </span>
+  </div>
+#+END_EXPORT
+
+*** Build and Features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+The case is made of ABS and will yellow over time; However, these boards are NOS,
+and these haven't been yellowed yet.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/televideo_99x_dec.jpg" loading="lazy"/>
+    <span class="img-description"> Televideo 99X DEC keyboard </span>
+  </div>
+#+END_EXPORT
+
+It uses 5th generation NMB Hi-Tek switches, colloquially known as space invader
+switches 👾 . This board has two-eyed linear ones, and they feel pretty smooth
+and have a thockier sound. Even though I usually don't like linear switches, It
+is an absolute joy typing on them.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/televideo_99x_dec_no_case.jpg" loading="lazy"/>
+    <span class="img-description"> Televideo 99X DEC switches and keycaps </span>
+  </div>
+#+END_EXPORT
+
+The keycaps are thick PBT keycaps with dye-sublimated legends. The keycaps have
+their respective rows written on the internals.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/televideo_99x_dec_keycaps.jpg" loading="lazy"/>
+    <span class="img-description"> Televideo 99X DEC PBT keycaps </span>
+  </div>
+#+END_EXPORT
+
+It has two screws and "8" clips on the back that keep the board together. I was
+too afraid to break a clip, so I didn't open it. There wasn't any Televideo or
+NMB branding anywhere on the case.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/televideo_99x_dec_back.jpg" loading="lazy"/>
+    <span class="img-description"> Televideo 99X DEC back (unbranded) </span>
+  </div>
+#+END_EXPORT
+
+*** Restoration
+:PROPERTIES:
+:CUSTOM_ID: restoration
+:END:
+
+Since this is a NOS board, it didn't require any restoration. However, I need
+make a converter for it. Thanks to the genious of [[https://github.com/purdeaandrei][Purdea Andrei]] , TMK now
+[[https://github.com/tmk/tmk_keyboard/pull/711][supports]] the Televideo 990/995 space invader boards.
+
+** Zbrojovka Brno 262.4 :vintage:keyboards:zbrojokva:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: zbrojovka_brno_262_4
+   :EXPORT_DATE: 2022-03-28
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/zbrojovka_brno_262_4/zbrojovka_brno_262_4.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: zbrojovka-brno-262-4
+   :END:
+
+This board was manufactured by a Czechoslovakian company called [[http://www.zbrojovka-brno.cz/][Zbrojovka Brno]]
+in the late '80s. Zbrojovka Brno manufactured small arms, motor vehicles, and
+later typewriters and computers.
+
+I have documented another [[/keyboards/zbrojovka_brno_262_5/][Zbrojokva board,]] and it's very similar to that one.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/zbrojovka_brno_262_4/zbrojovka_brno_262_4_back.jpg" loading="lazy"/>
+    <span class="img-description"> Zbrojovka Brno 262.4 back </span>
+  </div>
+#+END_EXPORT
+
+*** Acquisition
+:PROPERTIES:
+:CUSTOM_ID: acquisition
+:END:
+
+My good friend [[https://www.youtube.com/user/krikun998][krikun98]], helped me buy and ship a few Soviet-era boards along
+with this one. This board is in NOS condition, So I didn't open it up to take
+some pictures.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/zbrojovka_brno_262_4/zbrojovka_brno_262_4_nos.jpg" loading="lazy"/>
+    <span class="img-description"> NOS Zbrojokva Brno 262.4 </span>
+  </div>
+#+END_EXPORT
+
+The switches and keycaps are in excellent condition. The board even came with
+styrofoam, and I believe it is the original one. It doesn't need any
+restoration; however, I need to make a converter for modern systems.
+
+** NMB RT-8700 series keyboard :vintage:keyboards:nmb:space_invader:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: nmb_8700_series
+   :EXPORT_DATE: 2022-03-28
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :cover /images/keyboards/nmb_8700/nmb_8756cdn.jpg :image /images/keyboards/nmb_8700/nmb_8756cdn_cover.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: nmb-rt-8700-series-keyboard
+   :END:
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+RT-8700 is a series of full-sized keyboards manufactured by NMB in the mid-’90s.
+They came with the fifth generation Hi-Tek series 725 switches, which is the
+last generation of its type.
+
+Unlike the 4th generation boards, these have a smaller footprint and thinner
+bezels. Here is the original Ad for these boards.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/nmb_8700/nmb_rt_8700_ad_01.png" loading="lazy"/>
+  </div>
+#+END_EXPORT
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/nmb_8700/nmb_rt_8700_ad_02.png" loading="lazy"/>
+    <span class="img-description"> NMB RT-8700 series keyboard Ad
+    <a target="_blank" href="https://sites.google.com/view/vintkeys-wiki/NMB/Fifth_Generation">source VintKeys</a>
+    </span>
+  </div>
+#+END_EXPORT
+
+NMB used to market them as the “Right Touch” keyboard, and these were the
+alternatives of the venerable IBM Model M and Northgate Omnikey 101s, among
+others.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/nmb_8700/nmb_8756cdn_back.jpg" loading="lazy"/>
+    <span class="img-description"> NOS NMB 8700 series keyboard </span>
+  </div>
+#+END_EXPORT
+
+*** Acquisition
+:PROPERTIES:
+:CUSTOM_ID: acquisition
+:END:
+
+I was lucky enough to get into the [[https://deskthority.net/viewtopic.php?f=2&t=25763][largest vintage computer keyboard]] group-buy
+in history. [[https://deskthority.net/memberlist.php?mode=viewprofile&u=21126][Inoznez]] used his parent's farm to store the boards and slowly
+shipped them out all over the world.
+
+Initially, I wasn't aware of this, but I got an entry when another buyer had to
+drop out of the deal for some reason. I got '10' boards for myself and helped
+proxy some more for the local keyboard enthusiasts.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/televideo_99x_dec/nmb_keyboards.jpg" loading="lazy"/>
+    <span class="img-description"> My NMB keyboard haul </span>
+  </div>
+#+END_EXPORT
+
+There were many layouts, such as German, Swedish, Norwegian, etc and I got one
+from each. This board is the one with a Danish layout.
+
+*** Build and Features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+The case is probably made of thin ABS and it's very poorly made. The whole thing
+creaks a lot, even with a minor flex. The keycaps however, are made of thick PBT
+with dye sublimated legends.
+
+This particular model has clicky Hi-Tek series 725 switches(black). These
+switches are colloquially known as =space invader= switches due to their
+resemblance with the 8-bit space invader arcade game characters.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/nmb_8700/nmb_8756cdn_cover.jpg" loading="lazy"/>
+    <span class="img-description"> Hi-Tek series 725 switches </span>
+  </div>
+#+END_EXPORT
+
+The switches feel a bit stiffer and aren’t as smooth as the white space invader
+switches I got a few weeks back.
+
+I got 6 of these boards, and I have planned to harvest the switches and caps from
+one keyboard and build a custom 60% board using the PCB and Plates from the
+latest group buy.
+
+*** Restoration
+:PROPERTIES:
+:CUSTOM_ID: restoration
+:END:
+
+These boards didn't need any restoration, because they are practically new. I
+got an active PS/2 port to USB converter, and it worked with my computer.
+
+** Apple M0110 keyboard :vintage:keyboards:apple:alps:skcc:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: apple_m0110
+   :EXPORT_DATE: 2022-04-12
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/apple_m0110/apple_m0110_1.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: apple-m0110-keyboard
+   :END:
+
+   No descriptions yet
+
+** Northgate Omnikey Ultra :vintage:keyboards:northgate:omnikey:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: northgate_omnikey_ultra
+   :EXPORT_DATE: 2022-04-14
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/northgate_omnikey_ultra/northgate_omnikey_ultra.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: northgate-omnikey-ultra
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+Northgate Computer Systems was founded in 1987, and they used to sell
+personal computers. They sold their products through direct marketing.
+However, their Omnikey keyboards were sold through dealers. Before the
+introduction of Omnikey series keyboards, Northgate badged keyboards from
+several companies such as Focus and Monterey, and some of the initial
+Omnikey models are said to be manufactured by Focus.
+
+The first generation of Omnikey models was sold in the late ’88s, and the
+Omnikey Ultra series was manufactured in the mid-’90s. Here are some
+advertisements for Omnikey Ultra boards.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/northgate_omnikey_ultra/northgate_omnikey_launch_ad.png" loading="lazy"/>
+    <span class="img-description"> Northgate Omnikey Ultra Launch Ad - PC Magazine 1990 </span>
+  </div>
+#+END_EXPORT
+
+These Omnikey keyboards were widely praised for their reliability and key
+feel. After they ceased their computer production, they kept on marketing
+and selling their keyboard until Avant took over. Many users preferred
+using the Omnikey keyboard instead of the original boards that came with
+their computer. These boards were compatible with both IBM and Apple
+computers.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/northgate_omnikey_ultra/northgate_omnikey_ultra_ad.jpg" loading="lazy"/>
+    <span class="img-description"> Northgate Omnikey Ultra Ad - PC Magazine 1990 (Please don't abandon your keyboards)</span>
+  </div>
+#+END_EXPORT
+
+*** Build & Features
+:PROPERTIES:
+:CUSTOM_ID: build-features
+:END:
+
+This keyboard uses a hard plastic top, and that’s all the plastic you get
+on the board(except the switches and caps). It uses a steel switch-plate
+and a steel back-plate. It weighs around 2.3 kg, which isn’t surprising
+given so much of metal it has. This board is built like a tank and is one
+of the toughest Alps boards I own.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/northgate_omnikey_ultra/northgate_omnikey_no_case.jpg" loading="lazy"/>
+    <span class="img-description"> Northgate Omnikey Ultra without case</span>
+  </div>
+#+END_EXPORT
+
+Opening this board is very straightforward; It has 6 screws in the back
+and 4 more on the switch plate. The back panel is quite heavy and weighs
+around 800 grams. On the back, there are multiple stickers, One with FCC
+id, one with the serial number, and there is another sticker with some
+numbers I couldn’t make any sense of. The feet are rubber coated for
+better friction, and there are two sturdy rubber pads on the bottom.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/northgate_omnikey_ultra/northgate_omnikey_back.jpg" loading="lazy"/>
+    <span class="img-description"> Northgate Omnikey Ultra back side</span>
+  </div>
+#+END_EXPORT
+
+Like most Omnikeys, this board came with Alps complicated pine white
+switches (Alps SKCL whites). The caps are Doubleshot ABS ones, and some of
+the modifier switches have different colors. It features a BAE (Big Ass
+Enter), left side Function row, and a navigation cluster with cross-arrow
+keys. The alphas + modifier layout is very similar to the Monterey layout
+with a Big ass enter and a full-sized backspace.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/northgate_omnikey_ultra/northgate_omnikey_switches.jpg" loading="lazy"/>
+    <span class="img-description"> Northgate Omnikey Ultra switches</span>
+  </div>
+#+END_EXPORT
+
+The PCB is connected to the controller via a white ribbon cable. This PCB
+supports N-key rollover and various layouts including but not limited to
+Dvorak, Amiga, and Qwerty. The controller also features a set of
+DIP(Dual-in-line package) switches, which can be configured to set
+layouts, swap modifier keys, and change protocols.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/northgate_omnikey_ultra/northgate_omnikey_pcb.jpg" loading="lazy"/>
+    <span class="img-description"> Northgate Omnikey Ultra PCB</span>
+  </div>
+#+END_EXPORT
+
+*** Restoration
+:PROPERTIES:
+:CUSTOM_ID: restoration01
+:END:
+
+The keyboard wasn’t in a good state when I acquired it. It needed some cleaning and some retr0briting to bring it back to its original condition. I have greased the stabilizers with di-electric grease to reduce the rattle; However, the switches could use some cleaning. This keyboard is by far the most practical vintage keyboard I have ever owned, and I intend to keep using it in the coming years.
+
+** Data General/Acer 6312-k :vintage:keyboards:acer:data_general:membrane:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: data_general_6312_k
+   :EXPORT_DATE: 2022-04-23
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/data_general_6312_k/data_general_6312_k.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: data-general-acer-6312-k
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+This keyboard was made by Acer and it uses Acer’s patented
+switch-over-membrane design. Acer had produced various models in this
+series, and this particular model is for Data general.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/data_general_6312_k/data_general_6312_k_back.jpg" loading="lazy"/>
+    <span class="img-description"> Acer 6312-k back PCB</span>
+  </div>
+#+END_EXPORT
+
+*** Build and Features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+I have acquired this New old stock keyboard from eBay for a very
+reasonable price. The keyboard isn’t too heavy despite its large footprint.
+However, the board is built very well and doesn’t creak, unlike other
+cheap boards.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/data_general_6312_k/data_general_6312_k_no_case.jpg" loading="lazy"/>
+    <span class="img-description"> Acer 6312-k without top case </span>
+  </div>
+#+END_EXPORT
+
+I am not sure what the keycaps are made of, probably PBT, but the legends
+are sharp and beautiful. These legends are created using an unidentified
+method, which was previously misidentified as being dye sublimated. The
+keycaps are alps compatible and have a chalky matte finish. This
+particular board has a Spanish layout.
+
+The switches feel very crispy and nice to type on. They don’t sound too
+loud unlike blue and white alps, rather a bit muted.
+
+The keyboard membrane is supported by a thick steel plate screwed to the
+switch plate.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/data_general_6312_k/data_general_6312_k_back_plate.jpg" loading="lazy"/>
+    <span class="img-description"> Acer 6312-k back plate </span>
+  </div>
+#+END_EXPORT
+
+The switches are contact based, and they sit on a membrane. Upon pressing
+the switch, the hammer contacts the membrane, and it actuates.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/data_general_6312_k/data_general_6312_k_membrane.jpg" loading="lazy"/>
+    <span class="img-description"> Acer 6312-k membrane </span>
+  </div>
+#+END_EXPORT
+
+Upon removing the membrane, we could see the switches fitted to the switch plate.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/data_general_6312_k/data_general_6312_k_switch_plate.jpg" loading="lazy"/>
+    <span class="img-description"> Acer 6312-k membrane </span>
+  </div>
+#+END_EXPORT
+
+*** Verdict
+:PROPERTIES:
+:CUSTOM_ID: verdict
+:END:
+
+At the time of writing, this board is one the favourites in my collection.
+I love the switch-travel, the case acoustics, quality keycaps and
+those huge bezels.
+
+** Leading Edge DC-2014 :vintage:keyboards:leading_edge:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: leading_edge_dc_2014
+   :EXPORT_DATE: 2022-07-23
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: leading-edge-dc-2014
+   :END:
+
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+Leading Edge DC-2014 keyboard originally came with Leading Edge's Model D
+computer in the 80s.The computer was manufactured by Daewood, and hence the
+keyboard is believed to be manufactured by them. Model D computer was an IBM XT
+clone, and was the most successful product of the company.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014_daewood_branded_pcb.jpg" loading="lazy"/>
+    <span class="img-description"> Leading Edge DC-2014 Daewood branded PCB </span>
+  </div>
+#+END_EXPORT
+
+*** Build and Features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+This one of the better deals I have ever gotten on eBay, The seller was trying
+to sell a bunch of vintage keyboards, and they let it go for $100. The keyboard
+case is made of sturdy and thick ABS plastic, which was very yellowed when I got
+it. It has a pair of spring-loaded feet on the back, which looks a bit
+unconventional in comparison to other vintage keyboards.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014_feet.jpg" loading="lazy"/>
+    <span class="img-description"> Leading Edge DC-2014 feet </span>
+  </div>
+#+END_EXPORT
+
+The iconic Leading Edge triangle logo is a sticker on the case.I was careful not
+to damage it while scrubbing the case to clean. The top case also has a groove,
+I assume it is for keeping pens and pencils.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014_top_case.jpg" loading="lazy"/>
+    <span class="img-description"> Leading Edge DC-2014 top case </span>
+  </div>
+#+END_EXPORT
+
+The back of the case has 4 rubber pads (feet) for protection. I might have
+melted them while retrobrighting with H2O2, I can't say for sure. There is a
+sticker with a model number and serial number on the back.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014_back.jpg" loading="lazy"/>
+    <span class="img-description"> Leading Edge DC-2014 back </span>
+  </div>
+#+END_EXPORT
+
+Opening up the keyboard is easy enough, with 6 screws holding the two pieces
+together. The internal assembly is screwed together with the top case with
+another 4 sets of screws.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014_internal_assembly.jpg" loading="lazy"/>
+    <span class="img-description"> Leading Edge DC-2014 internal assembly </span>
+  </div>
+#+END_EXPORT
+
+The internal assembly consists of a steel plate and a PCB and of course the
+switches. The board comes with the venerable *SKCM Blue Alps* switches. They seem
+to be in a good condition, so I probably won't wax-boil them.
+
+The layout is based on the IBM Model F XT layout with some minor changes.
+
+*** Conversion
+:PROPERTIES:
+:CUSTOM_ID: conversion
+:END:
+
+The keyboard uses XT protocol to communicate, So I have planned to make a
+converter for it. I haven't decided whether to make an internal converter or a
+box, I will edit this section once I get my pro-micro shipments from China.
+
+I have got a bunch of Type-C pro-micros from China.
+
+#+BEGIN_EXPORT HTML
+  <div class="post-image">
+    <img src="/images/keyboards/leading_edge_dc_2014/leading_edge_dc_2014_internal_xt_headers.jpg" loading="lazy"/>
+    <span class="img-description"> Leading Edge DC-2014 XT headers </span>
+  </div>
+#+END_EXPORT
+
+*** Verdict
+:PROPERTIES:
+:CUSTOM_ID: verdict
+:END:
+
+This is an exceptional keyboard with amazing switches and it sounds amazing. The
+XT layout is my favorite layout and by far this is one of the favorite keyboard
+in my collection.
+
+** CherryB Freyr :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: cherryb_freyr
+   :EXPORT_DATE: 2022-09-17
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/cherryb_freyr/freyr_gmk_serika_03.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: cherryb-freyr
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    -   Design by CherryB
+    -   Black aluminium case
+    -   CherryB PCB and aluminium plate
+    -   Durock v2 stabilizers
+    -   Cherry MX clone JWICK all blacks, lubed with krytox 205g0
+    -   GMK Space Cadet II
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/cherryb_freyr/freyr_back.jpg" loading="lazy"/>
+  <span class="img-description"> Freyr weight </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/cherryb_freyr/freyr_gmk_serika_01.jpg" loading="lazy"/>
+  <span class="img-description"> Freyr with GMK Serika R2 </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/cherryb_freyr/freyr_gmk_serika_02.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/cherryb_freyr/freyr_gmk_space_cadet.jpg" loading="lazy"/>
+  <span class="img-description"> Freyr with GMK Space Cadet II </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/cherryb_freyr/freyr_gmk_space_cadet_02.jpg" loading="lazy"/>
+</div>
+#+END_EXPORT
+
+** Rama U-80A seq2 :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: rama_u80a_seq2
+   :EXPORT_DATE: 2022-09-18
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/rama_u80a/u80a_mt3_elvish_01.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: rama-u-80a-seq2
+   :END:
+   
+#+begin_quote
+I don't own this keyboard anymore.
+#+end_quote
+
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    -   Design by Rama
+    -   Soya(Beige-ish) aluminium case
+    -   Wilba U-80A hotswappable PCB
+    -   C3 Equalz stabilizers
+    -   Cherry MX clone Gazzew Boba U4t 62g (Unlubed)
+    -   MT3 Elvish base keycaps
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/rama_u80a/u80a_mt3_godspeed_01.jpg" loading="lazy"/>
+  <span class="img-description"> U-80a with MT3 GodSpeed set</span>
+</div>
+#+END_EXPORT
+
+** IBM Pingmaster :ibm:alps:vintage:keyboards:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ibm_pingmaster_chinese
+   :EXPORT_DATE: 2022-12-07
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ibm_pingmaster/ibm_pingmaster_cover.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ibm-pingmaster
+   :END:
+*** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
+
+IBM 4704 administrative keyboard a.k.a the Pingmaster is one of the most
+iconic vintage keyboards out there. After chasing it for over a year, I
+finally managed to acquire one.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_numpad.jpg" loading="lazy"/>
+  <span class="img-description"> IBM Pingmaster numpad </span>
+</div>
+#+end_export
+
+The earliest appearance of the board was around 1983. In western markets,
+the IBM 4704 terminal came bundled with a 107-key Capacitive buckling
+spring keyboard. In Asian markets, it used to be sold with an Alps
+corporation-made keyboard with Chinese or Japanese legends. This model is
+a Chinese variant, and it was primarily sold in the Chinese market.
+
+This board got attention among the vintage community when one person
+started selling a bunch of these NOS boards for cheap. They first sold
+the Japanese ones and then the Chinese. I believe this board came from
+that stock.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_back.jpg" loading="lazy"/>
+  <span class="img-description"> IBM Pingmaster back </span>
+</div>
+#+end_export
+
+*** Build and features
+:PROPERTIES:
+:CUSTOM_ID: build-and-features
+:END:
+
+The keyboard body is made of Plastic with a really nice grainy texture.
+It has thick Doubleshot ABS keycaps and a bunch of relegendables.
+
+This keyboard has Alps SKCC green switches. These switches are infamous
+for being quite pingy, & hence the name “Pingmaster”. Alps SKCC green has
+the lowest weight among other SKCC switches, around 60 grams of force.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_switches.jpg" loading="lazy"/>
+  <span class="img-description"> IBM Pingmaster switches </span>
+</div>
+#+end_export
+
+The board has exactly 33 relegendable keycaps, and the Numpad is in the
+middle section instead of being on the right. However, I switched that to
+have a more modern look.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_numpad_modern.jpg" loading="lazy"/>
+  <span class="img-description"> Pingmaster updated layout </span>
+</div>
+#+end_export
+
+The whole board has only one wire stabilizer, You guessed it right, it is
+the Spacebar. Other larger caps such as =Shift= and bottom =Enter= have
+stabilizer inserts instead of a wire stabilizer.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_stabilizers.jpg" loading="lazy"/>
+  <span class="img-description"> SpaceBar stabilizer </span>
+</div>
+#+end_export
+
+The back of the PCB was covered by a layer of unknown material probably
+aluminum, I couldn’t say for sure.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_pcb_back.jpg" loading="lazy"/>
+  <span class="img-description"> Backside of the PCB </span>
+</div>
+#+end_export
+
+This board comes with a beeper/speaker that beeps every time a switch is
+actuated, I find it immensely interesting and funny. I doubt whether my
+co-workers would appreciate such a feature. The speaker is mounted on a
+speaker grill on the bottom case.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_beeper.jpg" loading="lazy"/>
+  <span class="img-description"> IBM Pingmaster Beeper </span>
+</div>
+#+end_export
+
+Another interesting feature is that the board has a scroll wheel to
+adjust the volume, and it gets quite loud when turned up 100%. The
+speaker produces a white static noise that is barely noticeable.
+
+*** Conversion
+:PROPERTIES:
+:CUSTOM_ID: conversion
+:END:
+
+Luckily the previous owner of the board included a [[https://geekhack.org/index.php?topic=72052.0][Hasu]] converter with
+the package. However, they forgot to declare it in the customs invoice
+while shipping, and that led to a 30 days customs holdup and 50$ fine.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_hasu_converter.jpg" loading="lazy"/>
+  <span class="img-description"> IBM Pingmaster Hasu converter </span>
+</div>
+#+end_export
+
+The converter was already flashed and worked when I plugged it in. I used
+TMK(Written by Hasu) to reprogram it to a more personally layout. Here
+are the [[https://github.com/tmk/tmk_keyboard/tree/master/converter/ibm4704_usb][instructions]] I followed to reprogram it.
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_layout_layer01.png" loading="lazy"/>
+</div>
+#+end_export
+
+#+begin_export html
+<div class="post-image">
+  <img src="/images/keyboards/ibm_pingmaster/ibm_pingmaster_layout_layer02.png" loading="lazy"/>
+  <span class="img-description"> IBM Pingmaster Layouts </span>
+</div>
+#+end_export
+
+*** Epilogue
+:PROPERTIES:
+:CUSTOM_ID: epilogue
+:END:
+
+This is one of my toughest acquisitions so far, and I couldn’t be happier.
+The keyboard delivers and is one of the finest boards I have in my
+collection.
+
+** KFE CE :custom:keyboards:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: kfe_ce
+   :EXPORT_DATE: 2023-01-10
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/kfe_ce/kfe_ce_oranges_04.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: kfe_ce
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    -   Design by Bisoromi(Inspired from OTD Koala, designed by Korellas)
+    -   Royal purple aluminium case
+    -   H88c PCB and Jane v2 alps aluminium plate
+    -   C3 Stabilizers
+    -   Alps SKCM Orange
+    -   DCS 9009 Alps keycaps
+    -   Top mount configuration
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_01.jpg" loading="lazy"/>
+  <span class="img-description"> Alps SKCM Orange </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_02.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_03.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_05.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_oranges_06.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_back_07.jpg" loading="lazy"/>
+  <span class="img-description"> KFE CE with external brass weights </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/kfe_ce/kfe_ce_back_08.jpg" loading="lazy"/>
+  <span class="img-description"> KFE CE with external aluminium weights </span>
+</div>
+#+END_EXPORT
+
+** F1-8X 722 :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: f18x_722
+   :EXPORT_DATE: 2023-01-16
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/f18x_722/f18x_722_01.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: f18x_722
+   :END:
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    -   Design by Geon, from [[https://geon.works][geon.works]]
+    -   Raw machined aluminium case
+    -   MW8X hotswap PCB by Maelk
+    -   1.0 aluminium standard leaf spring V4 plate by Geon
+    -   C3 Stabilizers
+    -   Cherry MX Black switches (Hyperglides)
+    -   CRP APL 2.2 keycaps
+    -   O-ring/Gasket mount
+      
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_cat_face.jpg" loading="lazy"/>
+  <span class="img-description"> The catto </span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_solarized.jpg" loading="lazy"/>
+  <span class="img-description"> F1 722 with DCS Solarized</span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_06.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_wall.jpg" loading="lazy"/>
+  <span class="img-description"> The wall </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_03.jpg" loading="lazy"/>
+  <span class="img-description"> Plate and the switches </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_02.jpg" loading="lazy"/>
+  <span class="img-description"> Glory shots </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_cat_butt.jpg" loading="lazy"/>
+  <span class="img-description"> Cat butt pics </span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_04.jpg" loading="lazy"/>
+  <span class="img-description"> tilt </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_05.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_07.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/f18x_722/f18x_722_08.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+** Dell AT102W :vintage:alps:dell:keyboards:
+:PROPERTIES:
+:EXPORT_FILE_NAME: dell_at102w
+:EXPORT_DATE: 2023-01-19
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/dell_at102/dell_at102_01.jpg
+:EXPORT_HUGO_DRAFT: false
+:CUSTOM_ID: dell-at-102
+:END:
+
+*** History
+Dell AT102W is one of the mass-produced Alps Bigfoot series keyboards
+made in the late 90s. Dell used to ship them with their personal
+computers. The early Dell keyboards, such as Dell AT 101 were made by
+Alps Electric, but the later models like this one were made by Silitek.
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/dell_at102/dell_at102_02.jpg" loading="lazy"/>
+  <span class="img-description"> Dell AT102W back side </span>
+</div>
+#+END_EXPORT
+
+*** Build and Features
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/dell_at102/dell_at102_06.jpg" loading="lazy"/>
+  <span class="img-description"> Dell AT102W with SKCM Blacks </span>
+</div>
+#+END_EXPORT
+
+The board has Alps SKCM Black switches, which are in pristine condition.
+These are light tactile switches, and I like these more than Oranges
+and Salmons.
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/dell_at102/dell_at102_05.jpg" loading="lazy"/>
+  <span class="img-description"> Dell AT102W internal assembly </span>
+</div>
+#+END_EXPORT
+
+The keycaps are ABS and laser etched, some of these are slightly yellowed.
+
+Like the Pingmaster, the back of the PCB is protected by an aluminium(?)
+sheet.
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/dell_at102/dell_at102_03.jpg" loading="lazy"/>
+  <span class="img-description"> Dell AT102W PCB protection sheet </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/dell_at102/dell_at102_04.jpg" loading="lazy"/>
+  <span class="img-description"> Dell AT102W PCB </span>
+</div>
+#+END_EXPORT
+
+Opening the keyboard seemed fairly easy with 6 screws and 4 plastic tabs,
+but I broke one of the tabs while reassembling it.
+
+*** Restoration
+:PROPERTIES:
+:CUSTOM_ID: restoration02
+:END:
+
+I don't have any plans to restore the keyboard, AT101W/AT102W boards
+are found plenty in the wild. I might harvest the switches to use them in
+a modern build in the future.
+
+*** Conclusion
+:PROPERTIES:
+:CUSTOM_ID: conclusion
+:END:
+
+I believe the AT102W case is one of the best-sounding alps cases available.
+I particularly like the light tactility of the SKCM black switches, which
+makes the board quite enjoyable.
+
+** Frog TKL :custom:keyboards:space_invader:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: frog_tkl
+   :EXPORT_DATE: 2023-03-22
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/frog_tkl/frog_tkl_01.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: frog-tkl
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    - Design by Geon, from [[https://geon.works][geon.works]]
+    - Burgundy aluminium case
+    - [[https://github.com/4pplet/waffling80][Waffling 80]] PCB by 4pplet
+    - FR4 Plate made by 4pplet
+    - Original Space invader stabilizers
+    - Hi-tek 725(space invader) Black switches
+    - Harvested space invader keycaps 
+    - Tadpole mount
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/frog_tkl/frog_tkl_02.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/frog_tkl/frog_tkl_03.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/frog_tkl/frog_tkl_04.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+** NCR 80 :custom:keyboards:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ncr_80_alps_buid
+   :EXPORT_DATE: 2023-04-17
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ncr80_alps/NCR80_cover.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ncr-80
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration-ncr80
+:END:
+
+    - NCR 80 Round 2 Case
+    - Alps + MX PCB and Fr4 plate by Maelk
+    - NOS Alps SKCM Whites
+    - DCS Pingmaster keycaps
+      
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/ncr80_alps/NCR80_01.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/ncr80_alps/NCR80_02.jpg" loading="lazy"/>
+  <span class="img-description"> </span>
+</div>
+#+END_EXPORT
+
+** TGR Jane V2 ME :custom:keyboards:mx:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: tgr_jan_v2_me
+   :EXPORT_DATE: 2023-07-20
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/tgr_jane_v2_me/tgr_jane_me_cover.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: tgr-jane-v2-me
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration
+:END:
+
+    - Design by Yuktsi
+    - Silver aluminium case with Suave blue back plate
+    - TGR Jane PCB
+    - KFE CE Aluminium Plate
+    - Cherry MX Black HyperGlides (Broken-in, Lubed and filmed)
+    - GMK Serika keycaps
+    - TX AP stabilizers
+    - Top mount configuration
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/tgr_jane_v2_me/tgr_jane_me_04.jpg" loading="lazy"/>
+  <span class="img-description">Jane V2 ME Backplate</span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/tgr_jane_v2_me/tgr_jane_me_03.jpg" loading="lazy"/>
+  <span class="img-description">The toblerone </span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/tgr_jane_v2_me/tgr_jane_me_cat.jpg" loading="lazy"/>
+  <span class="img-description">Pheobe, Jane & the plant</span>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/tgr_jane_v2_me/tgr_jane_me_02.jpg" loading="lazy"/>
+  <span class="img-description"> Yet another top-down photo </span>
+</div>
+#+END_EXPORT
+
+** NCR 80 - Beige :custom:keyboards:alps:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: ncr_80_smk_buid
+   :EXPORT_DATE: 2023-10-21
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :image /images/keyboards/ncr80_smk/ncr80_cover_fixed.jpg
+   :EXPORT_HUGO_DRAFT: false
+   :CUSTOM_ID: ncr-80-smk
+   :END:
+   
+*** Configuration
+:PROPERTIES:
+:CUSTOM_ID: configuration-ncr80-smk
+:END:
+
+    - NCR 80 Round 2 Case
+    - Alps + MX  + SMK PCB and Fr4 plate by Maelk
+    - SMK 2nd generation switches with MX mount (New Old Stock)
+    - CRP APL keycaps + GMK Color ring
+      
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/ncr80_smk/ncr_smk_switches.jpg" loading="lazy"/>
+  <span class="img-description"> SMK 2nd gen switches </span>
+</div>
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT html
+<div class="post-image">
+  <img src="/images/keyboards/ncr80_smk/gmk_color_ring.jpg" loading="lazy"/>
+  <span class="img-description"> GMK Color ring </span>
+</div>
+#+END_EXPORT

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<!-- Copy of list.html -->
+<main>
+	{{ partial "post-description.html" . }}
+	<div class="blog-list">
+		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+		{{ range .Paginator.Pages }}
+		{{ .Render "summary" }}
+		{{ end }}
+	</div>
+	<!-- {{ partial "pagination.html" . }} -->
+</main>
+<!-- {{ partial "sidebar.html" . }} -->
+{{ end }}

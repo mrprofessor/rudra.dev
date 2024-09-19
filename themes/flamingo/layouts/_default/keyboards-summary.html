@@ -1,0 +1,14 @@
+<div class="collection-card">
+    <article>
+
+        <a href="{{ .Permalink }}">
+            <picture>
+                <img src={{ .Params.Image }} >
+            </picture>
+
+            <div class="post-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+        </a>
+    </article>
+</div>

@@ -1,0 +1,35 @@
+{{ define "main" }}
+	<main>
+		<article>
+			<h1>{{ .Title }}</h1>
+
+			{{ if .Date }}
+				<time>{{ .Date.Format "Jan 02, 2006" }}</time>
+			{{ end }}
+
+			{{ partial "tagbar.html" }}
+			{{ with .Params.tags }}
+			<div class="tags">
+				<ul>
+					{{ range . }}
+					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+					{{ end }}
+				</ul>
+			</div>
+			{{ end }}
+
+			<div class="blog-post-content">
+				{{ if .Params.Cover }}
+					<div class="post-image">
+						<img src={{ .Params.Cover }} loading="lazy">
+					</div>
+				{{ else if .Params.Image }}
+					<div class="post-image">
+						<img src={{ .Params.Image }} loading="lazy">
+					</div>
+				{{ end }}
+				{{ .Content }}
+			</div>
+	</main>
+	<!-- {{ partial "sidebar.html" . }} -->
+{{ end }}

@@ -1,0 +1,8 @@
+<div>
+    <div class="blog-list">
+        {{ range .Paginator.Pages }}
+        {{ .Render "summary" }}
+        {{ end }}
+    </div>
+    <!-- {{ partial "pagination.html" . }} -->
+</div>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        
+            <title itemprop="name">Rendering markdown from Flask</title>
+        
+
+        
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Kar">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.605fa9ca3b66276ca2908f0ea89d95e2f9621847c1f4427da10156a5c248c1cf.css" media="screen">
+
+        
+
+        
+        
+
+<meta property="og:title" content="Rendering markdown from Flask" />
+<meta name="twitter:title" content="Rendering markdown from Flask" />
+<meta itemprop="name" content="Rendering markdown from Flask" />
+<meta name="application-name" content="Rendering markdown from Flask" />
+<meta property="og:site_name" content="Rudra Kar blog" />
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<base href="https://rudra.dev/posts/rendering-markdown-from-flask/">
+<link rel="canonical" href="https://rudra.dev/posts/rendering-markdown-from-flask/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/rendering-markdown-from-flask/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/rendering-markdown-from-flask/" />
+<meta property="og:url" content="https://rudra.dev/posts/rendering-markdown-from-flask/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="mrprofessor" />
+<meta name="twitter:title" content="Rendering markdown from Flask" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+    <link rel="alternate" hreflang="en" href="https://rudra.dev/posts/rendering-markdown-from-flask/" title="English">
+ 
+
+
+<meta property="og:updated_time" content=2020-02-04T00:00:00Z />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2020-02-04T00:00:00Z />
+<meta property="article:published_time" content=2020-02-04T00:00:00Z />
+
+
+    <meta property="og:article:author" content="Rudra kar" />
+    <meta property="article:author" content="Rudra kar" />
+    <meta name="author" content="Rudra kar" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Rendering markdown from Flask",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2020-02-04",
+      "description": "",
+      "wordCount":  288 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2020-02-04",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra kar",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            
+            
+                <a class="active-link" href="/">← home</a>
+            
+            
+	<main>
+		<article>
+			<h1>Rendering markdown from Flask</h1>
+
+			
+				<time>Feb 04, 2020</time>
+			
+
+			
+
+			
+			<div class="tags">
+				<ul>
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/flask">flask</a></li>
+					
+					<li><a href="/tags/markdown">markdown</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<div class="blog-post-content">
+				
+				<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="/posts/rendering-markdown-from-flask/#lets-go-hacking">Let&rsquo;s go hacking</a></li>
+<li><a href="/posts/rendering-markdown-from-flask/#not-quite-there-yet">Not quite there yet!</a></li>
+<li><a href="/posts/rendering-markdown-from-flask/#gimme-the-code">Gimme the code!</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<p>In this post I am going to plug about a cool trick(probably useless)
+that I discovered geeking around the internet.</p>
+<p>I was building a tiny
+<a href="https://github.com/solitudenote/gitkeeper">microservice</a> which would
+let the client side application securely authenticate with GitHub. After
+writing the only required API, I wanted to render the <em>README.md</em> file
+on the index page.</p>
+<p>So I planned to convert markdown to html and serve the resultant string
+everytime we hit the index.</p>
+<h2 id="lets-go-hacking">Let&rsquo;s go hacking</h2>
+<p><em>Required packages</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pip3 install Flask markdown
+</span></span></code></pre></div><p><em>app.py</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">markdown</span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">flask</span> <span style="color:#069;font-weight:bold">import</span> Flask
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">markdown.extensions.fenced_code</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#555">=</span> Flask(__name__)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#99f">@app.route</span>(<span style="color:#c30">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">index</span>():
+</span></span><span style="display:flex;"><span>    readme_file <span style="color:#555">=</span> <span style="color:#366">open</span>(<span style="color:#c30">&#34;README.md&#34;</span>, <span style="color:#c30">&#34;r&#34;</span>)
+</span></span><span style="display:flex;"><span>    md_template_string <span style="color:#555">=</span> markdown<span style="color:#555">.</span>markdown(
+</span></span><span style="display:flex;"><span>        readme_file<span style="color:#555">.</span>read(), extensions<span style="color:#555">=</span>[<span style="color:#c30">&#34;fenced_code&#34;</span>]
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> md_template_string
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">if</span> __name__ <span style="color:#555">==</span> <span style="color:#c30">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    app<span style="color:#555">.</span>run()
+</span></span></code></pre></div><p>In the above snippet we are using <a href="https://flask.palletsprojects.com">Flask</a>(my current favorite) as the web framework, <a href="https://github.com/Python-Markdown/markdown">Python-Markdown</a> to convert markdown files to HTML, and <a href="https://python-markdown.github.io/extensions/fenced_code_blocks/">fenced_code</a> extension to support code blocks.</p>
+<p>And it looked something like this</p>
+<div class="post-image">
+  <img src="/images/markdown-render-plain.png" />
+</div>
+<h2 id="not-quite-there-yet">Not quite there yet!</h2>
+<p>Well even though <a href="https://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a> remains my hero, fortunately I do not share his <a href="https://stallman.org/">taste</a> on web design. So without
+over-engineering our little snippet I thought of adding syntax highlighting with <a href="https://pygments.org/">pygments</a> and <a href="https://python-markdown.github.io/extensions/code_hilite/">CodeHilite</a> extension.</p>
+<p>Let&rsquo;s generate css for syntax highlighting using pygments</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">pygments.formatters</span> <span style="color:#069;font-weight:bold">import</span> HtmlFormatter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>formatter <span style="color:#555">=</span> HtmlFormatter(style<span style="color:#555">=</span><span style="color:#c30">&#34;emacs&#34;</span>,full<span style="color:#555">=</span><span style="color:#069;font-weight:bold">True</span>,cssclass<span style="color:#555">=</span><span style="color:#c30">&#34;codehilite&#34;</span>)
+</span></span><span style="display:flex;"><span>css_string <span style="color:#555">=</span> formatter<span style="color:#555">.</span>get_style_defs()
+</span></span></code></pre></div><p>Now we need to append the css_string to the markdown converted HTML string.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>md_css_string <span style="color:#555">=</span> <span style="color:#c30">&#34;&lt;style&gt;&#34;</span> <span style="color:#555">+</span> css_string <span style="color:#555">+</span> <span style="color:#c30">&#34;&lt;/style&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>md_template <span style="color:#555">=</span> md_css_string <span style="color:#555">+</span> md_template_string
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">return</span> md_template
+</span></span></code></pre></div><blockquote>
+<p>Alternatively we can use
+<a href="https://github.com/richleland/pygments-css">pygments-css</a>
+repository to get pre-generated CSS files.</p>
+</blockquote>
+<p>Let&rsquo;s see how the final version looks!</p>
+<div class="post-image">
+  <img src="/images/markdown-render-hl.png" />
+</div>
+<p><em>Much better if you ask me!</em></p>
+<h2 id="gimme-the-code">Gimme the code!</h2>
+<p>Here is the full source code running on Glitch.</p>
+<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+  <iframe
+    src="https://glitch.com/embed/#!/embed/silken-football?path=app.py&previewSize=0&sidebarCollapsed=true"
+    title="silken-football on Glitch"
+    style="height: 100%; width: 100%; border: 0;">
+  </iframe>
+</div>
+<p>Feel free to remix and play around. Adios!</p>
+
+			</div>
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		
+		<nav>
+			<ul>
+				
+				<li><a href="/resume/">résumé</a></li>
+				
+				<li><a href="/uses/">uses</a></li>
+				
+			</ul>
+		</nav>
+		
+	</div>
+
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+             }
+         }
+     }())
+    </script>
+
+    <script>
+     
+     
+     
+     
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    </script>
+
+    
+    
+
+    
+    
+
+</html>

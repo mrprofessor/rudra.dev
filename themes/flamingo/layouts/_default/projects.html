@@ -1,0 +1,30 @@
+{{ define "main" }}
+<main>
+    <div class="project-board">
+        {{- range .Site.Params.projects -}}
+            <div class="card">
+                <article>
+                    <h4>{{ .name }}</h4>
+                    <div>
+                        <span>
+                            <p>{{ .description }}</p>
+                        </span>
+                    </div>
+                    <div class="custom-card-footer" />
+                    <a href={{ .sourceLink }}
+                       target="_blank"
+                       rel="noreferrer"
+                       class="custom-button"
+                    >source</a>
+                    <a href={{ .demoLink }}
+                       target="_blank"
+                       rel="noreferrer"
+                       class="custom-button"
+                    >demo</a>
+                    </div>
+                </article>
+            </div>
+        {{- end -}}
+    </div>
+</main>
+{{ end }}

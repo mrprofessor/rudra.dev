@@ -1,0 +1,23 @@
+<article class="list-item">
+    <div class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+
+    <!-- Add tags -->
+    <!-- {{ range .Params.tags }}
+         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+         {{ end }}
+    -->
+
+    <span className="date-label">
+        {{ .Date.Format "2" }}{{ if in (slice 1 21 31) .Date.Day}}st{{ else if in (slice 2 22) .Date.Day}}nd{{ else if in (slice 3 23) .Date.Day}}rd{{ else }}th{{ end }} {{ .Date.Format "Jan, 2006" }}
+    </span>
+
+    <!-- <div>
+         {{ .Summary }}
+         {{ if .Truncated }}
+         <a href="{{ .Permalink }}">Read more...</a>
+         {{ end }}
+         </div>
+    -->
+</article>

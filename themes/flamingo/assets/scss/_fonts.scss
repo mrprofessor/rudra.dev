@@ -1,0 +1,43 @@
+// Font family
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+// Import Iosevka font
+@font-face {
+    font-family: 'Iosevka';
+    src: url('/fonts/Iosevka-Regular.woff2') format('woff2'),
+         url('/fonts/Iosevka-Italic.woff2') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+code[class*="language-"], nav, .blog-list {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.025rem;
+}
+
+tags {
+    // font-family: 'IBM Plex Mono', monospace;
+}
+
+article h1 {
+    // font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+}
+
+.slim-description {
+    // font-family: 'IBM Plex Mono', monospace;
+}

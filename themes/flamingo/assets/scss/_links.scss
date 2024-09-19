@@ -1,0 +1,10 @@
+.active-link {
+  color: $active-link-color;
+}
+
+.disabled-link {
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}

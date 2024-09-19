@@ -1,0 +1,36 @@
+{{ define "main" }}
+    <main>
+        {{ if (or (eq .Page.Name "Posts") (.Page.IsHome)) }}
+            {{ partial "post-description.html" .}}
+        {{ else if (eq .Page.Name "Logs") }}
+            {{ partial "log-description.html" }}
+        {{ else if (eq .Page.Name "Keyboards") }}
+            {{ partial "keyboards-description.html" }}
+        {{ end }}
+
+        <div class="blog-list">
+            <!-- First list the custom keyboards and then the vintage ones -->
+            {{ if (eq .Page.Name "Keyboards") }}
+            <div class="collection-board">
+              {{ range .Paginator.Pages }}
+                {{if in .Params.tags "custom"}}
+                    {{ .Render "keyboards-summary" }}
+                    {{ end }}
+              {{ end }}
+              {{ range .Paginator.Pages }}
+                {{if in .Params.tags "vintage"}}
+                    {{ .Render "keyboards-summary" }}
+                {{ end }}
+            {{ end }}
+            </div>
+            <!-- Default listing for everything else -->
+            {{ else }}
+                {{ range .Paginator.Pages }}
+                    {{ .Render "summary" }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <!-- {{ partial "pagination.html" . }} -->
+    </main>
+    <!-- {{ partial "sidebar.html" . }} -->
+{{ end }}

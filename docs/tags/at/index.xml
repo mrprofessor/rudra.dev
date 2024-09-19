@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AT on rudra kar</title>
+    <link>https://rudra.dev/tags/at/</link>
+    <description>Recent content in AT on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/tags/at/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM Model F AT</title>
+      <link>https://rudra.dev/keyboards/ibm_model_f_at/</link>
+      <pubDate>Sat, 11 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/ibm_model_f_at/</guid>
+      <description>History This keyboard originally came with IBM Personal Computer AT (PC/AT). This computer was released in 1984, and IBM has produced over 100,000 units before discontinuing them in 1987. Some sources say that the AT stands for Advanced Technology.&#xA;IBM Model F AT key units This model was a successor to the very famous and now weird XT layout. The IBM PS/2 (Personal System/2) was the successor to the IBM PC/AT, and with it came the venerable model M keyboard.</description>
+    </item>
+  </channel>
+</rss>

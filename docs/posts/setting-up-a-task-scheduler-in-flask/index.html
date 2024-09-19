@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        
+            <title itemprop="name">Setting up a celery task scheduler in Flask</title>
+        
+
+        
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Kar">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.605fa9ca3b66276ca2908f0ea89d95e2f9621847c1f4427da10156a5c248c1cf.css" media="screen">
+
+        
+
+        
+        
+
+<meta property="og:title" content="Setting up a celery task scheduler in Flask" />
+<meta name="twitter:title" content="Setting up a celery task scheduler in Flask" />
+<meta itemprop="name" content="Setting up a celery task scheduler in Flask" />
+<meta name="application-name" content="Setting up a celery task scheduler in Flask" />
+<meta property="og:site_name" content="Rudra Kar blog" />
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<base href="https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/">
+<link rel="canonical" href="https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/" />
+<meta property="og:url" content="https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="mrprofessor" />
+<meta name="twitter:title" content="Setting up a celery task scheduler in Flask" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+    <link rel="alternate" hreflang="en" href="https://rudra.dev/posts/setting-up-a-task-scheduler-in-flask/" title="English">
+ 
+
+
+<meta property="og:updated_time" content=2019-11-30T00:00:00Z />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2019-11-30T00:00:00Z />
+<meta property="article:published_time" content=2019-11-30T00:00:00Z />
+
+
+    <meta property="og:article:author" content="Rudra kar" />
+    <meta property="article:author" content="Rudra kar" />
+    <meta name="author" content="Rudra kar" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Setting up a celery task scheduler in Flask",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2019-11-30",
+      "description": "",
+      "wordCount":  915 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2019-11-30",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra kar",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            
+            
+                <a class="active-link" href="/">← home</a>
+            
+            
+	<main>
+		<article>
+			<h1>Setting up a celery task scheduler in Flask</h1>
+
+			
+				<time>Nov 30, 2019</time>
+			
+
+			
+
+			
+			<div class="tags">
+				<ul>
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/flask">flask</a></li>
+					
+					<li><a href="/tags/celery">celery</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<div class="blog-post-content">
+				
+				<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="/posts/setting-up-a-task-scheduler-in-flask/#lets-go-hacking">Let&rsquo;s go hacking</a></li>
+<li><a href="/posts/setting-up-a-task-scheduler-in-flask/#monitoring-events">Monitoring events</a></li>
+<li><a href="/posts/setting-up-a-task-scheduler-in-flask/#conclusion">Conclusion</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<p>The first thing that comes to mind when considering a task scheduler is a
+CRON job. As most of today&rsquo;s servers are hosted on Linux machines, setting
+a cron job for a periodic task might seem like a good option for many.
+However, in production, having a crontab can be nothing but a pain. It can
+be tricky to configure different time zones depending on the location of
+the server.</p>
+<p>The biggest problem with this approach arises when the application is
+scaled across multiple web servers. Instead of running one cron job, we
+could be running multiple cron jobs, which might lead to race conditions.
+Additionally, it&rsquo;s hard to debug if something goes wrong with the task.</p>
+<p>With Flask, there are multiple ways to address this problem, and <a href="http://www.celeryproject.org/">Celery</a>
+is one of the most popular solutions. Celery addresses the above issues
+quite gracefully. It uses the same time zones as <a href="https://pypi.org/project/pytz/">pytz</a>, which helps in
+accurately calculating time zones and setting the scheduler timings.</p>
+<p>Celery uses a backend message broker (Redis or RabbitMQ) to save the state
+of the schedule, acting as a centralized database server for multiple
+Celery workers running on different web servers. The message broker
+ensures that the task is run only once per the schedule, thus eliminating
+race conditions.</p>
+<p>Monitoring real-time events is also supported by Celery. It includes a
+beautiful built-in terminal interface that shows all the current events. A
+nice standalone project, <a href="https://flower.readthedocs.io/en/latest/">Flower</a>, provides a web-based tool to administer
+Celery workers and tasks. It also supports asynchronous task execution,
+which is handy for long-running tasks.</p>
+<h2 id="lets-go-hacking">Let&rsquo;s go hacking</h2>
+<blockquote>
+<p>Here, we will be using a Dockerized environment. The installation of
+Redis and Celery can differ from system to system, and Docker
+environments are pretty common nowadays for such exercises without
+worrying much about local development infrastructure.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>flask-celery
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>│  app.py
+</span></span><span style="display:flex;"><span>│  docker-compose.yml
+</span></span><span style="display:flex;"><span>│  Dockerfile
+</span></span><span style="display:flex;"><span>│  entrypoint.sh
+</span></span><span style="display:flex;"><span>│  requirements.txt
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>└────────────────────────
+</span></span></code></pre></div><p>Let’s start with the Dockerfile.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#c30"> python:3.7</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># Create a directory named flask</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#069;font-weight:bold">RUN</span> mkdir flask<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># Copy everything to flask folder</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#069;font-weight:bold">COPY</span> . /flask/<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># Make flask as working directory</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#069;font-weight:bold">WORKDIR</span><span style="color:#c30"> /flask</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># Install the Python libraries</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#069;font-weight:bold">RUN</span> pip3 install --no-cache-dir -r requirements.txt<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#069;font-weight:bold">EXPOSE</span><span style="color:#c30"> 5000</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#09f;font-style:italic"># Run the entrypoint script</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span><span style="color:#069;font-weight:bold">CMD</span> [<span style="color:#c30">&#34;bash&#34;</span>, <span style="color:#c30">&#34;entrypoint.sh&#34;</span>]<span style="color:#a00;background-color:#faa">
+</span></span></span></code></pre></div><p>The packages required for this application are mentioned in the
+requirements.txt file.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Flask==1.0.2
+</span></span><span style="display:flex;"><span>celery==4.3.0
+</span></span><span style="display:flex;"><span>redis==3.3.11
+</span></span></code></pre></div><p>The entry point script goes here.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#099">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#099"></span>
+</span></span><span style="display:flex;"><span>flask run --host<span style="color:#555">=</span>0.0.0.0 --port <span style="color:#f60">5000</span>
+</span></span></code></pre></div><p>Celery uses a message broker to pass messages between the web app and
+Celery workers. Here, we will set up a Redis container to be used as the
+message broker.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span>version: <span style="color:#c30">&#34;3.7&#34;</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>services:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>  redis:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    container_name: redis_dev_container<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    image: redis<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    ports:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>      - <span style="color:#c30">&#34;6379:6379&#34;</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>  flask_service:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    container_name: flask_dev_container<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    restart: always<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    image: flask<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    build:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>      context: ./<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>      dockerfile: Dockerfile<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    depends_on:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>        - redis<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    ports:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>      - <span style="color:#c30">&#34;5000:5000&#34;</span><span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    volumes:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>      - ./:/flask<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>    environment:<span style="color:#a00;background-color:#faa">
+</span></span></span><span style="display:flex;"><span><span style="color:#a00;background-color:#faa"></span>        - <span style="color:#033">FLASK_DEBUG</span><span style="color:#555">=</span><span style="color:#f60">1</span><span style="color:#a00;background-color:#faa">
+</span></span></span></code></pre></div><p>Now we are all set to start our little experiment. We have a Redis
+container running on port 6379 and a Flask container running on
+<code>localhost:5000</code>. Let’s add a simple API to test whether our tiny web
+application works.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">flask</span> <span style="color:#069;font-weight:bold">import</span> Flask
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#555">=</span> Flask(__name__)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#99f">@app.route</span>(<span style="color:#c30">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">index_view</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#c30">&#34;Flask-celery task scheduler!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">if</span> __name__ <span style="color:#555">==</span> <span style="color:#c30">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    app<span style="color:#555">.</span>run()
+</span></span></code></pre></div><p>And voila!</p>
+<div class="post-image">
+  <img src="/images/hello-scheduler.png" />
+</div>
+<p>Now, we will build a simple timer application that will show the elapsed
+time since the application started. We need to configure Celery with the
+Redis server URL, and we will also use another Redis database to store
+the time.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">flask</span> <span style="color:#069;font-weight:bold">import</span> Flask
+</span></span><span style="display:flex;"><span>  <span style="color:#069;font-weight:bold">from</span> <span style="color:#0cf;font-weight:bold">celery</span> <span style="color:#069;font-weight:bold">import</span> Celery
+</span></span><span style="display:flex;"><span>  <span style="color:#069;font-weight:bold">import</span> <span style="color:#0cf;font-weight:bold">redis</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  app <span style="color:#555">=</span> Flask(__name__)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#09f;font-style:italic"># Add Redis URL configurations</span>
+</span></span><span style="display:flex;"><span>  app<span style="color:#555">.</span>config[<span style="color:#c30">&#34;CELERY_BROKER_URL&#34;</span>] <span style="color:#555">=</span> <span style="color:#c30">&#34;redis://redis:6379/0&#34;</span>
+</span></span><span style="display:flex;"><span>  app<span style="color:#555">.</span>config[<span style="color:#c30">&#34;CELERY_RESULT_BACKEND&#34;</span>] <span style="color:#555">=</span> <span style="color:#c30">&#34;redis://redis:6379/0&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#09f;font-style:italic"># Connect Redis db</span>
+</span></span><span style="display:flex;"><span>  redis_db <span style="color:#555">=</span> redis<span style="color:#555">.</span>Redis(
+</span></span><span style="display:flex;"><span>      host<span style="color:#555">=</span><span style="color:#c30">&#34;redis&#34;</span>, port<span style="color:#555">=</span><span style="color:#c30">&#34;6379&#34;</span>, db<span style="color:#555">=</span><span style="color:#f60">1</span>, charset<span style="color:#555">=</span><span style="color:#c30">&#34;utf-8&#34;</span>, decode_responses<span style="color:#555">=</span><span style="color:#069;font-weight:bold">True</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#09f;font-style:italic"># Initialize timer in Redis</span>
+</span></span><span style="display:flex;"><span>  redis_db<span style="color:#555">.</span>mset({<span style="color:#c30">&#34;minute&#34;</span>: <span style="color:#f60">0</span>, <span style="color:#c30">&#34;second&#34;</span>: <span style="color:#f60">0</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#09f;font-style:italic"># Add periodic tasks</span>
+</span></span><span style="display:flex;"><span>  celery_beat_schedule <span style="color:#555">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#c30">&#34;time_scheduler&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#c30">&#34;task&#34;</span>: <span style="color:#c30">&#34;app.timer&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#09f;font-style:italic"># Run every second</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#c30">&#34;schedule&#34;</span>: <span style="color:#f60">1.0</span>,
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Initialize Celery and update its config</span>
+</span></span><span style="display:flex;"><span>celery <span style="color:#555">=</span> Celery(app<span style="color:#555">.</span>name)
+</span></span><span style="display:flex;"><span>celery<span style="color:#555">.</span>conf<span style="color:#555">.</span>update(
+</span></span><span style="display:flex;"><span>    result_backend<span style="color:#555">=</span>app<span style="color:#555">.</span>config[<span style="color:#c30">&#34;CELERY_RESULT_BACKEND&#34;</span>],
+</span></span><span style="display:flex;"><span>    broker_url<span style="color:#555">=</span>app<span style="color:#555">.</span>config[<span style="color:#c30">&#34;CELERY_BROKER_URL&#34;</span>],
+</span></span><span style="display:flex;"><span>    timezone<span style="color:#555">=</span><span style="color:#c30">&#34;UTC&#34;</span>,
+</span></span><span style="display:flex;"><span>    task_serializer<span style="color:#555">=</span><span style="color:#c30">&#34;json&#34;</span>,
+</span></span><span style="display:flex;"><span>    accept_content<span style="color:#555">=</span>[<span style="color:#c30">&#34;json&#34;</span>],
+</span></span><span style="display:flex;"><span>    result_serializer<span style="color:#555">=</span><span style="color:#c30">&#34;json&#34;</span>,
+</span></span><span style="display:flex;"><span>    beat_schedule<span style="color:#555">=</span>celery_beat_schedule,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#99f">@app.route</span>(<span style="color:#c30">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">index_view</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#c30">&#34;Flask-celery task scheduler!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#99f">@app.route</span>(<span style="color:#c30">&#34;/timer&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">timer_view</span>():
+</span></span><span style="display:flex;"><span>    time_counter <span style="color:#555">=</span> redis_db<span style="color:#555">.</span>mget([<span style="color:#c30">&#34;minute&#34;</span>, <span style="color:#c30">&#34;second&#34;</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">return</span> <span style="color:#c30">f</span><span style="color:#c30">&#34;Minute: </span><span style="color:#a00">{</span>time_counter[<span style="color:#f60">0</span>]<span style="color:#a00">}</span><span style="color:#c30">, Second: </span><span style="color:#a00">{</span>time_counter[<span style="color:#f60">1</span>]<span style="color:#a00">}</span><span style="color:#c30">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#99f">@celery.task</span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">def</span> <span style="color:#c0f">timer</span>():
+</span></span><span style="display:flex;"><span>    second_counter <span style="color:#555">=</span> <span style="color:#366">int</span>(redis_db<span style="color:#555">.</span>get(<span style="color:#c30">&#34;second&#34;</span>)) <span style="color:#555">+</span> <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">if</span> second_counter <span style="color:#555">&gt;=</span> <span style="color:#f60">59</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#09f;font-style:italic"># Reset the counter</span>
+</span></span><span style="display:flex;"><span>        redis_db<span style="color:#555">.</span>set(<span style="color:#c30">&#34;second&#34;</span>, <span style="color:#f60">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#09f;font-style:italic"># Increment the minute</span>
+</span></span><span style="display:flex;"><span>        redis_db<span style="color:#555">.</span>set(<span style="color:#c30">&#34;minute&#34;</span>, <span style="color:#366">int</span>(redis_db<span style="color:#555">.</span>get(<span style="color:#c30">&#34;minute&#34;</span>)) <span style="color:#555">+</span> <span style="color:#f60">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#069;font-weight:bold">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#09f;font-style:italic"># Increment the second</span>
+</span></span><span style="display:flex;"><span>        redis_db<span style="color:#555">.</span>set(<span style="color:#c30">&#34;second&#34;</span>, second_counter)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">if</span> __name__ <span style="color:#555">==</span> <span style="color:#c30">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    app<span style="color:#555">.</span>run()
+</span></span></code></pre></div><p>Let’s update the <code>entrypoint.js</code> to run both the Celery worker and the
+beat server as background processes.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#099">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#099"></span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Run Celery worker</span>
+</span></span><span style="display:flex;"><span>celery -A app.celery worker --loglevel<span style="color:#555">=</span>INFO --detach --pidfile<span style="color:#555">=</span><span style="color:#c30">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"># Run Celery Beat</span>
+</span></span><span style="display:flex;"><span>celery -A app.celery beat --loglevel<span style="color:#555">=</span>INFO --detach --pidfile<span style="color:#555">=</span><span style="color:#c30">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>flask run --host<span style="color:#555">=</span>0.0.0.0 --port <span style="color:#f60">5000</span>
+</span></span></code></pre></div><p>Our very own timer</p>
+<div class="post-image">
+  <img src="/images/timer.png" />
+</div>
+<blockquote>
+<p>This application is only for demonstration purposes. The counter won’t
+be accurate as the task processing time is not taken into account
+while calculating the time.</p>
+</blockquote>
+<h2 id="monitoring-events">Monitoring events</h2>
+<p>Celery has rich support for monitoring various statistics for tasks,
+workers, and events. We need to log into the container to enable and
+monitor events.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker <span style="color:#366">exec</span> -it flask_dev_container bash
+</span></span></code></pre></div><p>Enable and list all events.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>celery -A app.celery control enable_events
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>celery -A app.celery events
+</span></span></code></pre></div><p>This spins up a nice interactive terminal UI listing all the details of
+the scheduled tasks.</p>
+<div class="post-image">
+  <img src="/images/events.png" />
+</div>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this post, I have used Celery as a better alternative to crontabs,
+even though the primary purpose of Celery is processing task queues.
+Both the Celery worker and beat server can be run on different
+containers as running background processes on the web container is not
+considered best practice.</p>
+<p>Unless you are creating a stupid timer application.</p>
+<p>The above-mentioned code can be found here:
+<a href="https://github.com/mrprofessor/celery-timer/">repo</a></p>
+<p>Adios!</p>
+
+			</div>
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		
+		<nav>
+			<ul>
+				
+				<li><a href="/resume/">résumé</a></li>
+				
+				<li><a href="/uses/">uses</a></li>
+				
+			</ul>
+		</nav>
+		
+	</div>
+
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+             }
+         }
+     }())
+    </script>
+
+    <script>
+     
+     
+     
+     
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    </script>
+
+    
+    
+
+    
+    
+
+</html>

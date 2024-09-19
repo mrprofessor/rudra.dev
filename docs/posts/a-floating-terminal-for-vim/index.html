@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        
+            <title itemprop="name">A floating terminal for (Neo)vim</title>
+        
+
+        
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Kar">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.605fa9ca3b66276ca2908f0ea89d95e2f9621847c1f4427da10156a5c248c1cf.css" media="screen">
+
+        
+
+        
+        
+
+<meta property="og:title" content="A floating terminal for (Neo)vim" />
+<meta name="twitter:title" content="A floating terminal for (Neo)vim" />
+<meta itemprop="name" content="A floating terminal for (Neo)vim" />
+<meta name="application-name" content="A floating terminal for (Neo)vim" />
+<meta property="og:site_name" content="Rudra Kar blog" />
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<base href="https://rudra.dev/posts/a-floating-terminal-for-vim/">
+<link rel="canonical" href="https://rudra.dev/posts/a-floating-terminal-for-vim/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/a-floating-terminal-for-vim/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/a-floating-terminal-for-vim/" />
+<meta property="og:url" content="https://rudra.dev/posts/a-floating-terminal-for-vim/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="mrprofessor" />
+<meta name="twitter:title" content="A floating terminal for (Neo)vim" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+    <link rel="alternate" hreflang="en" href="https://rudra.dev/posts/a-floating-terminal-for-vim/" title="English">
+ 
+
+
+<meta property="og:updated_time" content=2019-10-12T00:00:00Z />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2019-10-12T00:00:00Z />
+<meta property="article:published_time" content=2019-10-12T00:00:00Z />
+
+
+    <meta property="og:article:author" content="Rudra kar" />
+    <meta property="article:author" content="Rudra kar" />
+    <meta name="author" content="Rudra kar" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "A floating terminal for (Neo)vim",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2019-10-12",
+      "description": "",
+      "wordCount":  298 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2019-10-12",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra kar",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            
+            
+                <a class="active-link" href="/">← home</a>
+            
+            
+	<main>
+		<article>
+			<h1>A floating terminal for (Neo)vim</h1>
+
+			
+				<time>Oct 12, 2019</time>
+			
+
+			
+
+			
+			<div class="tags">
+				<ul>
+					
+					<li><a href="/tags/unix">unix</a></li>
+					
+					<li><a href="/tags/vim">vim</a></li>
+					
+					<li><a href="/tags/neovim">neovim</a></li>
+					
+					<li><a href="/tags/editor">editor</a></li>
+					
+					<li><a href="/tags/productivity">productivity</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<div class="blog-post-content">
+				
+				<p>I love working in terminal and editing with
+<a href="https://neovim.io/">(Neo)vim</a>. Though I have been using vim since my
+college days, for past two years I am using it as my full-time editor.</p>
+<p>I remember vividly when I first switched to vim at work. It was a
+horrible experience for the first week which made me flood my vimrc file
+with plugins to make it work. I have definitely moved past that phase
+and learned to <a href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118">grok</a> vi since then.</p>
+<p>Even now sometimes I tend to miss many nicer features of a full blown
+<a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>,
+like better language support, familiar clipboard management and inbuilt
+terminal support. Thanks to the developers of Neovim, vim users can use
+the full potential of terminal without quitting or stopping the editor</p>
+<p>Last week I came across a plugin named
+<a href="https://github.com/voldikss/vim-floaterm">vim-termfloat</a> which uses
+Neovim&rsquo;s floating window and I realized that I have been(subconsciously)
+wanting this feature for a really long time. This plugin lets me open my
+terminal, restart my server, close the terminal and get back to my
+editor with a few keystrokes.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#09f;font-style:italic">&#34; Float baby float</span>
+</span></span><span style="display:flex;"><span>Plugin <span style="color:#c30">&#39;voldikss/vim-floaterm&#39;</span>
+</span></span></code></pre></div><p>I have also remapped my <code>&lt;leader&gt;t</code> to toggle the floating terminal.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span>noremap  &lt;leader&gt;t  :FloatermToggle&lt;CR&gt;i
+</span></span><span style="display:flex;"><span>noremap! &lt;leader&gt;t  &lt;Esc&gt;:FloatermToggle&lt;CR&gt;i
+</span></span><span style="display:flex;"><span>tnoremap &lt;leader&gt;t  &lt;C-\&gt;&lt;C-n&gt;:FloatermToggle&lt;CR&gt;
+</span></span></code></pre></div><p>I have resized the terminal window and set the transparency to zero.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">let</span> g:floaterm_width = <span style="color:#f60">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#069;font-weight:bold">let</span> g:floaterm_winblend = <span style="color:#f60">0</span>
+</span></span></code></pre></div><p>Time for some action then! Let&rsquo;s quickly run a python script without
+bothering to leave the window.</p>
+<div class="post-image">
+  <img src="/images/py-demo.gif" />
+</div>
+<p>The following example shows how I ran gatsby while writing this blog
+post.</p>
+<div class="post-image">
+  <img src="/images/gatsby-dev.gif" />
+</div>
+<p>Yeah of course I can still use the in built terminal of neovim in a
+different pane or window, but this plugin really makes it easy.</p>
+<p>Anyways I did a lot of research on effectively creating these gif files.
+Well that&rsquo;s for another post.</p>
+<p>Adios!</p>
+
+			</div>
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		
+		<nav>
+			<ul>
+				
+				<li><a href="/resume/">résumé</a></li>
+				
+				<li><a href="/uses/">uses</a></li>
+				
+			</ul>
+		</nav>
+		
+	</div>
+
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+             }
+         }
+     }())
+    </script>
+
+    <script>
+     
+     
+     
+     
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    </script>
+
+    
+    
+
+    
+    
+
+</html>

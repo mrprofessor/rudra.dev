@@ -1,0 +1,12 @@
+#+hugo_base_dir: ../
+#+hugo_section: resume
+#+author: rudra kar
+
+* Résumé
+:PROPERTIES:
+:CUSTOM_ID: rudra-kar
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_LAYOUT: single
+:END:
+
+My résumé is available upon request. Please feel free to reach out to me at contact[at]rudra.dev.

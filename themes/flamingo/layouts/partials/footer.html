@@ -1,0 +1,21 @@
+<footer>
+	<div class="bottom-nav">
+		{{ with .Site.Menus.secondary }}
+		<nav>
+			<ul>
+				{{ range . }}
+				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				{{ end }}
+			</ul>
+		</nav>
+		{{ end }}
+	</div>
+
+
+	{{ if eq .IsPage true }}
+		{{ if (or (eq .Section "posts") (eq .Section "logs") (eq .Section "keyboards")) }}
+			{{ partial "comments.html" }}
+		{{ end }}
+	{{ end }}
+	<!-- <p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p> -->
+</footer>

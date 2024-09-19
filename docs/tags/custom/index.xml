@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Custom on rudra kar</title>
+    <link>https://rudra.dev/tags/custom/</link>
+    <description>Recent content in Custom on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/tags/custom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NCR 80 - Beige</title>
+      <link>https://rudra.dev/keyboards/ncr_80_smk_buid/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/ncr_80_smk_buid/</guid>
+      <description>Configuration NCR 80 Round 2 Case Alps + MX + SMK PCB and Fr4 plate by Maelk SMK 2nd generation switches with MX mount (New Old Stock) CRP APL keycaps + GMK Color ring SMK 2nd gen switches GMK Color ring </description>
+    </item>
+    <item>
+      <title>TGR Jane V2 ME</title>
+      <link>https://rudra.dev/keyboards/tgr_jan_v2_me/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/tgr_jan_v2_me/</guid>
+      <description>Configuration Design by Yuktsi Silver aluminium case with Suave blue back plate TGR Jane PCB KFE CE Aluminium Plate Cherry MX Black HyperGlides (Broken-in, Lubed and filmed) GMK Serika keycaps TX AP stabilizers Top mount configuration Jane V2 ME Backplate The toblerone Pheobe, Jane &amp; the plant Yet another top-down photo </description>
+    </item>
+    <item>
+      <title>NCR 80</title>
+      <link>https://rudra.dev/keyboards/ncr_80_alps_buid/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/ncr_80_alps_buid/</guid>
+      <description>Configuration NCR 80 Round 2 Case Alps + MX PCB and Fr4 plate by Maelk NOS Alps SKCM Whites DCS Pingmaster keycaps </description>
+    </item>
+    <item>
+      <title>Frog TKL</title>
+      <link>https://rudra.dev/keyboards/frog_tkl/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/frog_tkl/</guid>
+      <description>Configuration Design by Geon, from geon.works Burgundy aluminium case Waffling 80 PCB by 4pplet FR4 Plate made by 4pplet Original Space invader stabilizers Hi-tek 725(space invader) Black switches Harvested space invader keycaps Tadpole mount </description>
+    </item>
+    <item>
+      <title>F1-8X 722</title>
+      <link>https://rudra.dev/keyboards/f18x_722/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/f18x_722/</guid>
+      <description>Configuration Design by Geon, from geon.works Raw machined aluminium case MW8X hotswap PCB by Maelk 1.0 aluminium standard leaf spring V4 plate by Geon C3 Stabilizers Cherry MX Black switches (Hyperglides) CRP APL 2.2 keycaps O-ring/Gasket mount The catto F1 722 with DCS Solarized The wall Plate and the switches Glory shots Cat butt pics tilt </description>
+    </item>
+    <item>
+      <title>KFE CE</title>
+      <link>https://rudra.dev/keyboards/kfe_ce/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/kfe_ce/</guid>
+      <description>Configuration Design by Bisoromi(Inspired from OTD Koala, designed by Korellas) Royal purple aluminium case H88c PCB and Jane v2 alps aluminium plate C3 Stabilizers Alps SKCM Orange DCS 9009 Alps keycaps Top mount configuration Alps SKCM Orange KFE CE with external brass weights KFE CE with external aluminium weights </description>
+    </item>
+    <item>
+      <title>Rama U-80A seq2</title>
+      <link>https://rudra.dev/keyboards/rama_u80a_seq2/</link>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/rama_u80a_seq2/</guid>
+      <description> I don&amp;rsquo;t own this keyboard anymore.&#xA;Configuration Design by Rama Soya(Beige-ish) aluminium case Wilba U-80A hotswappable PCB C3 Equalz stabilizers Cherry MX clone Gazzew Boba U4t 62g (Unlubed) MT3 Elvish base keycaps U-80a with MT3 GodSpeed set </description>
+    </item>
+    <item>
+      <title>CherryB Freyr</title>
+      <link>https://rudra.dev/keyboards/cherryb_freyr/</link>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/cherryb_freyr/</guid>
+      <description>Configuration Design by CherryB Black aluminium case CherryB PCB and aluminium plate Durock v2 stabilizers Cherry MX clone JWICK all blacks, lubed with krytox 205g0 GMK Space Cadet II Freyr weight Freyr with GMK Serika R2 Freyr with GMK Space Cadet II </description>
+    </item>
+  </channel>
+</rss>

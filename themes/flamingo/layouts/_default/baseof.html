@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Favicon -->
+        {{ with .Site.Params.favicon }}<link rel="icon" type="image/png" href="{{ . }}" />{{ end }}
+
+        {{ if eq .IsPage true }}
+            <title itemprop="name">{{ .Title }}</title>
+        {{ else }}
+            <title itemprop="name">{{ .Title }} | {{ .Site.Params.description }}</title>
+		{{ end }}
+
+        
+        {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+        {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+        {{ $styles := resources.Get "scss/main.scss" | resources.ToCSS | minify | fingerprint}}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+
+        {{ with .OutputFormats.Get "RSS" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+        {{- end }}
+
+        <!-- Meta tags -->
+        {{ partial "meta" . }}
+
+    </head>
+    <body>
+        <div class="layout">
+            <!-- Only list and post pages should have Nav -->
+            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "logs"))) }}
+                <a class="active-link" href="/">← home</a>
+            {{ else }}
+                {{ partial "header" . }}
+            {{ end }}
+            {{ block "main" . }}{{ end }}
+            {{ partial "footer" . }}
+        </div>
+    </body>
+
+    <script>
+     // TODO
+     // Use Hugo templating to achieve this
+     // Script to check active nav menu
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+             }
+         }
+     }())
+    </script>
+
+    <script>
+     // Script to add # to headers
+     // var tags = ["H2", "H3", "H4", "H5", "H6"]
+     // function addAnchor(element) {
+     //     if (tags.includes(element.nodeName)) {
+     //        headerLvl = Number(element.nodeName[1])
+     //        element.innerText = "#".repeat(headerLvl) + " " + element.innerText
+     //     }
+     // }
+
+     // document.addEventListener('DOMContentLoaded', function () {
+     //     var elements = []
+     //     for (i = 0; i < tags.length; i++) {
+     //        var headers = document.querySelectorAll('article ' + tags[i])
+     //        if (headers) {
+     //            headers.forEach(addAnchor)
+     //        }
+     //     }
+     // })
+    </script>
+
+    <!-- Posthog -->
+    <!-- <script>
+         !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+         posthog.init('uZJ_bhngsKFhhPaqWyp_2lc-HyE8vY5XKneeAMWS9cE', {api_host: 'https://profhog.herokuapp.com'})
+         </script> -->
+
+    <!-- Ackee -->
+    <!-- <script async
+         src="https://prof-ackee.herokuapp.com/tracker.js"
+         data-ackee-server="https://prof-ackee.herokuapp.com"
+         data-ackee-domain-id="45af9210-721f-4c09-a69d-77e66fe7bc5d"
+         >
+         </script> -->
+
+</html>

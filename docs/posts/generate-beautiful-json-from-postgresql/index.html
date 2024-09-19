@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico" />
+
+        
+            <title itemprop="name">Generate beautiful JSON from PostgreSQL</title>
+        
+
+        
+        <meta name="description" content="thoughts, obsessions and mostly rants">
+        <meta name="author" content="Rudra Kar">
+
+        
+        <link rel="stylesheet" href="/scss/main.min.605fa9ca3b66276ca2908f0ea89d95e2f9621847c1f4427da10156a5c248c1cf.css" media="screen">
+
+        
+
+        
+        
+
+<meta property="og:title" content="Generate beautiful JSON from PostgreSQL" />
+<meta name="twitter:title" content="Generate beautiful JSON from PostgreSQL" />
+<meta itemprop="name" content="Generate beautiful JSON from PostgreSQL" />
+<meta name="application-name" content="Generate beautiful JSON from PostgreSQL" />
+<meta property="og:site_name" content="Rudra Kar blog" />
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<base href="https://rudra.dev/posts/generate-beautiful-json-from-postgresql/">
+<link rel="canonical" href="https://rudra.dev/posts/generate-beautiful-json-from-postgresql/" itemprop="url" />
+<meta name="url" content="https://rudra.dev/posts/generate-beautiful-json-from-postgresql/" />
+<meta name="twitter:url" content="https://rudra.dev/posts/generate-beautiful-json-from-postgresql/" />
+<meta property="og:url" content="https://rudra.dev/posts/generate-beautiful-json-from-postgresql/" />
+
+
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="mrprofessor" />
+<meta name="twitter:title" content="Generate beautiful JSON from PostgreSQL" />
+
+
+<meta property="og:locale" content="en">
+<meta name="language" content="English">
+
+    <link rel="alternate" hreflang="en" href="https://rudra.dev/posts/generate-beautiful-json-from-postgresql/" title="English">
+ 
+
+
+<meta property="og:updated_time" content=2020-05-19T00:00:00Z />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://rudra.dev/sitemap.xml" />
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="https://github.com/mrprofessor" />
+<meta property="og:article:published_time" content=2020-05-19T00:00:00Z />
+<meta property="article:published_time" content=2020-05-19T00:00:00Z />
+
+
+    <meta property="og:article:author" content="Rudra kar" />
+    <meta property="article:author" content="Rudra kar" />
+    <meta name="author" content="Rudra kar" />
+
+
+
+
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Generate beautiful JSON from PostgreSQL",
+      "author": {
+        "@type": "Person",
+        "name": "https:\/\/github.com\/mrprofessor"
+      },
+      "datePublished": "2020-05-19",
+      "description": "",
+      "wordCount":  789 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2020-05-19",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "rudra kar",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+
+
+ 
+
+
+
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="@weary_beard">
+<meta name="twitter:creator" content="@weary_beard" />
+
+
+
+
+
+
+
+
+
+
+
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="Rudra Kar blog" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
+
+
+    </head>
+    <body>
+        <div class="layout">
+            
+            
+                <a class="active-link" href="/">← home</a>
+            
+            
+	<main>
+		<article>
+			<h1>Generate beautiful JSON from PostgreSQL</h1>
+
+			
+				<time>May 19, 2020</time>
+			
+
+			
+
+			
+			<div class="tags">
+				<ul>
+					
+					<li><a href="/tags/postgresql">postgresql</a></li>
+					
+					<li><a href="/tags/json">json</a></li>
+					
+					<li><a href="/tags/sql">sql</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<div class="blog-post-content">
+				
+				<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="/posts/generate-beautiful-json-from-postgresql/#1-get-the-table-data-as-json-objects">1. Get the table data as JSON objects</a></li>
+<li><a href="/posts/generate-beautiful-json-from-postgresql/#2-get-the-table-data-with-specific-columns">2. Get the table data with specific columns</a></li>
+<li><a href="/posts/generate-beautiful-json-from-postgresql/#3-get-the-table-data-as-a-single-json-object">3. Get the table data as a single JSON object</a></li>
+<li><a href="/posts/generate-beautiful-json-from-postgresql/#4-build-json-object-with-multiple-tables">4. Build JSON object with multiple tables</a></li>
+<li><a href="/posts/generate-beautiful-json-from-postgresql/#5-build-json-object-by-resolving-foreign-keys">5. Build JSON object by resolving foreign keys</a></li>
+<li><a href="/posts/generate-beautiful-json-from-postgresql/#conclusion">Conclusion</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<p>PostgreSQL provides a set of built-in <a href="https://www.postgresql.org/docs/current/functions-json.html#FUNCTIONS-JSON-CREATION-TABLE">JSON
+creation functions</a> that can be used to build basic JSON structures. This increases the performance up to 10 times more than building it at the back-end layer.</p>
+<blockquote>
+<p>This post is about building different JSON structures using PostgreSQL
+built-in functions. It doesn&rsquo;t talk about storing and manipulating
+JSON in PostgreSQL.</p>
+</blockquote>
+<p>In order to proceed with some examples, first we need to setup a test
+database.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">DATABASE</span><span style="color:#bbb"> </span>jsonland<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Let&rsquo;s create the following tables.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">TABLE</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>id<span style="color:#bbb"> </span><span style="color:#366">SERIAL</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NULL</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>name<span style="color:#bbb"> </span><span style="color:#366">VARCHAR</span>(<span style="color:#f60">100</span>),<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>email_address<span style="color:#bbb"> </span><span style="color:#366">VARCHAR</span>(<span style="color:#f60">150</span>),<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#069;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">KEY</span>(id)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>team<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>id<span style="color:#bbb"> </span><span style="color:#366">SERIAL</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NULL</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>name<span style="color:#bbb"> </span><span style="color:#366">VARCHAR</span>(<span style="color:#f60">100</span>),<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#069;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">KEY</span>(id)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>team_user<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>id<span style="color:#bbb"> </span><span style="color:#366">SERIAL</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NULL</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>team_id<span style="color:#bbb"> </span><span style="color:#366">INTEGER</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NULL</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>user_id<span style="color:#bbb"> </span><span style="color:#366">INTEGER</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">NULL</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#069;font-weight:bold">FOREIGN</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">KEY</span>(team_id)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">REFERENCES</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;team&#34;</span><span style="color:#bbb"> </span>(id),<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#069;font-weight:bold">FOREIGN</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">KEY</span>(user_id)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">REFERENCES</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb"> </span>(id),<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#069;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">KEY</span>(id)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>)<span style="color:#bbb">
+</span></span></span></code></pre></div><p>Let&rsquo;s Seed the tables with random data.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">INTO</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;team&#34;</span><span style="color:#bbb"> </span>(<span style="color:#c30">&#34;id&#34;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#34;name&#34;</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#f60">1</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;team1&#39;</span>),<span style="color:#bbb"> </span>(<span style="color:#f60">2</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;team2&#39;</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">INTO</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb"> </span>(<span style="color:#c30">&#34;id&#34;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#34;name&#34;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#34;email_address&#34;</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#f60">1</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;user1&#39;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;user1@mail.com&#39;</span>),<span style="color:#bbb"> </span>(<span style="color:#f60">2</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;user2&#39;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;user2@mail.com&#39;</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">INTO</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;team_user&#34;</span><span style="color:#bbb"> </span>(<span style="color:#c30">&#34;id&#34;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#34;team_id&#34;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#34;user_id&#34;</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#f60">1</span>,<span style="color:#bbb"> </span><span style="color:#f60">1</span>,<span style="color:#bbb"> </span><span style="color:#f60">1</span>),<span style="color:#bbb"> </span>(<span style="color:#f60">2</span>,<span style="color:#bbb"> </span><span style="color:#f60">1</span>,<span style="color:#bbb"> </span><span style="color:#f60">2</span>),<span style="color:#bbb"> </span>(<span style="color:#f60">3</span>,<span style="color:#bbb"> </span><span style="color:#f60">2</span>,<span style="color:#bbb"> </span><span style="color:#f60">2</span>);<span style="color:#bbb">
+</span></span></span></code></pre></div><p>We have created three tables i.e. <code>team</code>, <code>user</code> and <code>team_user</code>.
+<code>team_user</code> table maps one-to-may the relationship between users and
+teams.</p>
+<h2 id="1-get-the-table-data-as-json-objects">1. Get the table data as JSON objects</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>row_to_json(<span style="color:#c30">&#34;user&#34;</span>)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">-----------------------------------------------------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span>row_to_json<span style="color:#bbb">                                               </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#09f;font-style:italic">-----------------------------------------------------------|
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;id&#34;</span>:<span style="color:#f60">1</span>,<span style="color:#c30">&#34;name&#34;</span>:<span style="color:#c30">&#34;user1&#34;</span>,<span style="color:#c30">&#34;email_address&#34;</span>:<span style="color:#c30">&#34;user1@gmail.com&#34;</span><span style="color:#a00;background-color:#faa">}</span><span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;id&#34;</span>:<span style="color:#f60">2</span>,<span style="color:#c30">&#34;name&#34;</span>:<span style="color:#c30">&#34;user2&#34;</span>,<span style="color:#c30">&#34;email_address&#34;</span>:<span style="color:#c30">&#34;user2@gmail.com&#34;</span><span style="color:#a00;background-color:#faa">}</span><span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">-----------------------------------------------------------+
+</span></span></span></code></pre></div><p>The above mentioned query will return all the columns of each row as
+JSON objects.</p>
+<h2 id="2-get-the-table-data-with-specific-columns">2. Get the table data with specific columns</h2>
+<p>We can specify the particular columns we need rather than getting all at
+once.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>row_to_json(<span style="color:#069;font-weight:bold">row</span>(<span style="color:#c30">&#39;id&#39;</span>,<span style="color:#bbb"> </span><span style="color:#c30">&#39;name&#39;</span>))<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span>;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">-------------------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span>row_to_json<span style="color:#bbb">             </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#09f;font-style:italic">-------------------------|
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;f1&#34;</span>:<span style="color:#c30">&#34;id&#34;</span>,<span style="color:#c30">&#34;f2&#34;</span>:<span style="color:#c30">&#34;name&#34;</span><span style="color:#a00;background-color:#faa">}</span><span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;f1&#34;</span>:<span style="color:#c30">&#34;id&#34;</span>,<span style="color:#c30">&#34;f2&#34;</span>:<span style="color:#c30">&#34;name&#34;</span><span style="color:#a00;background-color:#faa">}</span><span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">-------------------------+
+</span></span></span></code></pre></div><p>Now certainly the keys <code>f1</code> and <code>f2</code> in the objects are not very useful
+to us. We would rather want the column names instead of those keys.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>row_to_json(users)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#bbb"> </span>(<span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>id,<span style="color:#bbb"> </span>name<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span>)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">AS</span><span style="color:#bbb"> </span>users;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">-------------------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span>row_to_json<span style="color:#bbb">             </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#09f;font-style:italic">-------------------------|
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;id&#34;</span>:<span style="color:#f60">1</span>,<span style="color:#c30">&#34;name&#34;</span>:<span style="color:#c30">&#34;user1&#34;</span><span style="color:#a00;background-color:#faa">}</span><span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;id&#34;</span>:<span style="color:#f60">2</span>,<span style="color:#c30">&#34;name&#34;</span>:<span style="color:#c30">&#34;user2&#34;</span><span style="color:#a00;background-color:#faa">}</span><span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">-------------------------+
+</span></span></span></code></pre></div><h2 id="3-get-the-table-data-as-a-single-json-object">3. Get the table data as a single JSON object</h2>
+<p>The above examples return us multiple JSON objects(one for each row).
+Ideally we would want a single array of these objects which won&rsquo;t need
+any further manipulation at back-end layer.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>array_to_json(array_agg(row_to_json(users)))<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>id,<span style="color:#bbb"> </span>name<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>)<span style="color:#bbb"> </span>users<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#09f;font-style:italic">-- OR
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>json_agg(row_to_json(users))<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#069;font-weight:bold">FROM</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>id,<span style="color:#bbb"> </span>name<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>)<span style="color:#bbb"> </span>users<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">----------------------------------------------------+
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span>json_agg<span style="color:#bbb">                                           </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">|</span><span style="color:#09f;font-style:italic">----------------------------------------------------|
+</span></span></span><span style="display:flex;"><span><span style="color:#09f;font-style:italic"></span><span style="color:#555">|</span><span style="color:#bbb"> </span>[<span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;id&#34;</span>:<span style="color:#f60">1</span>,<span style="color:#c30">&#34;name&#34;</span>:<span style="color:#c30">&#34;user1&#34;</span><span style="color:#a00;background-color:#faa">}</span>,<span style="color:#bbb"> </span><span style="color:#a00;background-color:#faa">{</span><span style="color:#c30">&#34;id&#34;</span>:<span style="color:#f60">2</span>,<span style="color:#c30">&#34;name&#34;</span>:<span style="color:#c30">&#34;user2&#34;</span><span style="color:#a00;background-color:#faa">}</span>]<span style="color:#bbb"> </span><span style="color:#555">|</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#555">+</span><span style="color:#09f;font-style:italic">----------------------------------------------------+
+</span></span></span></code></pre></div><p>In the above query we are aggregating all the JSON objects and using
+<code>array_agg</code> and then converting them to JSON by applying <code>array_to_json</code>
+function.</p>
+<p>Also we could do the yield the same results by using <code>json_agg</code>
+function, which results into an object instead of JSON string.</p>
+<h2 id="4-build-json-object-with-multiple-tables">4. Build JSON object with multiple tables</h2>
+<p>We can also build a new JSON object by using <code>json_build_object</code> and
+specify the keys and values. Let&rsquo;s create an object that will contain
+data from both team and user table.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>json_build_object(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#c30">&#39;users&#39;</span>,<span style="color:#bbb"> </span>(<span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>json_agg(row_to_json(<span style="color:#c30">&#34;user&#34;</span>))<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span>),<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span><span style="color:#c30">&#39;teams&#39;</span>,<span style="color:#bbb"> </span>(<span style="color:#069;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>json_agg(row_to_json(<span style="color:#c30">&#34;team&#34;</span>))<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;team&#34;</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>)<span style="color:#bbb">
+</span></span></span></code></pre></div><p>This query generates a JSON structure that will have all the users and
+teams each as arrays of objects.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;users&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">1</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;user1&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;email_address&#34;</span>: <span style="color:#c30">&#34;user1@mail.com&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">2</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;user2&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;email_address&#34;</span>: <span style="color:#c30">&#34;user2@mail.com&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#309;font-weight:bold">&#34;teams&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">1</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;team1&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">2</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;team2&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="5-build-json-object-by-resolving-foreign-keys">5. Build JSON object by resolving foreign keys</h2>
+<p>We can generate JSON structures by resolving foreign key references and
+joining multiple tables.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#069;font-weight:bold">select</span><span style="color:#bbb"> </span>json_agg(row_to_json(tu))<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#069;font-weight:bold">select</span><span style="color:#bbb"> </span>id,<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#069;font-weight:bold">select</span><span style="color:#bbb"> </span>row_to_json(team)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span>team<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">where</span><span style="color:#bbb"> </span>team_user.team_id<span style="color:#bbb"> </span><span style="color:#555">=</span><span style="color:#bbb"> </span>team.id<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>)<span style="color:#bbb"> </span>team,<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">            </span><span style="color:#069;font-weight:bold">select</span><span style="color:#bbb"> </span>row_to_json(<span style="color:#c30">&#34;user&#34;</span>)<span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb"> </span><span style="color:#069;font-weight:bold">where</span><span style="color:#bbb"> </span>team_user.user_id<span style="color:#bbb"> </span><span style="color:#555">=</span><span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span>.id<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>)<span style="color:#bbb"> </span><span style="color:#c30">&#34;user&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#069;font-weight:bold">from</span><span style="color:#bbb"> </span>team_user<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>)<span style="color:#bbb"> </span>tu<span style="color:#bbb">
+</span></span></span></code></pre></div><p>This query contains multiple sub-queries to generate a complex
+structure. It resolved the references of <code>team_id</code> and <code>user_id</code> into
+the corresponding row.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">1</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;team&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">1</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;team1&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;user&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">1</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;user1&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;email_address&#34;</span>: <span style="color:#c30">&#34;user1@mail.com&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">2</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;team&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">1</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;team1&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;user&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">2</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;user2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;email_address&#34;</span>: <span style="color:#c30">&#34;user2@mail.com&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">3</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;team&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">2</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;team2&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#309;font-weight:bold">&#34;user&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;id&#34;</span>: <span style="color:#f60">2</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;name&#34;</span>: <span style="color:#c30">&#34;user2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#309;font-weight:bold">&#34;email_address&#34;</span>: <span style="color:#c30">&#34;user2@mail.com&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Even though PostgreSQL is almost always faster than the back-end
+language based JSON generation, the query can get complex really quickly
+as we have nested structures. As long as we understand the basic JSON
+functions and sub-queries we can build almost any kind of structure
+without stressing the back-end processes.</p>
+
+			</div>
+	</main>
+	
+
+            <footer>
+	<div class="bottom-nav">
+		
+		<nav>
+			<ul>
+				
+				<li><a href="/resume/">résumé</a></li>
+				
+				<li><a href="/uses/">uses</a></li>
+				
+			</ul>
+		</nav>
+		
+	</div>
+
+
+	
+		
+			<div>
+    <script src="https://utteranc.es/client.js"
+            repo="mrprofessor/rudra.dev"
+            issue-term="pathname"
+            label="rudra.dev"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+		
+	
+	
+</footer>
+
+        </div>
+    </body>
+
+    <script>
+     
+     
+     
+     (function() {
+         const links = document.querySelectorAll("nav a")
+         const currentUrl = location.href
+
+         for (const link of links) {
+             if (location.href.split("/").length === 4 && link.href.endsWith("/posts/")) {
+                 link.classList.add("active-link")
+                 break;
+             }
+
+             if (link.href === currentUrl) {
+                link.classList.add("active-link")
+                console.log(link.href)
+             }
+         }
+     }())
+    </script>
+
+    <script>
+     
+     
+     
+     
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    </script>
+
+    
+    
+
+    
+    
+
+</html>

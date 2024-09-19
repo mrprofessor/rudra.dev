@@ -1,0 +1,106 @@
+baseURL = "https://rudra.dev/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+pygmentsCodefences = true
+pygmentsStyle = "manni"
+paginate = 30
+
+title = "rudra kar"
+theme = "flamingo"
+[markup.goldmark.renderer]
+unsafe = true
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+publishDir = "docs"
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 11
+
+  [[menu.main]]
+    identifier = "keyboards"
+    name = "keyboards"
+    url = "/keyboards/"
+    weight = 12
+
+
+  [[menu.secondary]]
+    identifier = "resume"
+    name = "résumé"
+    url = "/resume/"
+    weight = 10
+
+  [[menu.secondary]]
+    identifier = "uses"
+    name = "uses"
+    url = "/uses/"
+    weight = 10
+
+  # [[menu.secondary]]
+  #   identifier = "logs"
+  #   name = "logs"
+  #   url = "/logs/"
+  #   weight = 12
+
+
+[params]
+  author = "Rudra Kar"
+  description = "thoughts, obsessions and mostly rants"
+  sitename = "Rudra Kar blog"
+  github = "https://github.com/mrprofessor"
+  twitter = "@weary_beard"
+  favicon = "/images/favicon.ico"
+  mainSections = "posts"
+  mainSummary = '''Thoughts, obsessions, and
+  mostly rants. FYI: Posts older than 6 months? Yeah, no promises on
+  those. Time moves on, and so do I. Proceed at your own risk!'''
+
+
+# Projects list
+[[params.projects]]
+  name = "solitude"
+  description = "A git based note taking application. 📚"
+  demoLink = "https://solitudenote.github.io/solitude/"
+  sourceLink = "https://github.com/solitudenote/solitude"
+
+
+[[params.projects]]
+  name = "gitkeeper"
+  description = "A tiny microservice for client side GitHub authentication."
+  demoLink = "https://solitudenote-gitkeeper.glitch.me/"
+  sourceLink = "https://github.com/solitudenote/gitkeeper"
+
+
+[[params.projects]]
+  demoLink = ""
+  sourceLink = "https://github.com/mrprofessor/obliterate"
+  description = "A command line tool written in rust to replace rm."
+  name = "obliterate"
+
+[[params.projects]]
+  demoLink = "https://rudra.dev/"
+  sourceLink = "https://github.com/mrprofessor/rudra.dev"
+  description = "Personal blog built using Org-mode and Hugo."
+  name = "rudra.dev"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1

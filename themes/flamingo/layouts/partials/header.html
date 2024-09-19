@@ -1,0 +1,24 @@
+<header>
+	<!-- title wrapper -->
+	<div class="title-wrapper">
+		<a href="/">
+            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "logs"))) }}
+			    <h2 class="single-page-title">{{ .Site.Title }}</h2>
+            {{ else }}
+			    <h2 class="title">{{ .Site.Title }}</h2>
+            {{ end }}
+		</a>
+
+		{{ with .Site.Menus.main }}
+		<nav>
+			<ul>
+				{{ range . }}
+				<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+				{{ end }}
+			</ul>
+		</nav>
+		{{ end }}
+	</div>
+	<!-- title wrapper end -->
+
+</header>

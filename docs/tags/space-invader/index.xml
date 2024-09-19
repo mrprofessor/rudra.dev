@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Space-Invader on rudra kar</title>
+    <link>https://rudra.dev/tags/space-invader/</link>
+    <description>Recent content in Space-Invader on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/tags/space-invader/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frog TKL</title>
+      <link>https://rudra.dev/keyboards/frog_tkl/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/frog_tkl/</guid>
+      <description>Configuration Design by Geon, from geon.works Burgundy aluminium case Waffling 80 PCB by 4pplet FR4 Plate made by 4pplet Original Space invader stabilizers Hi-tek 725(space invader) Black switches Harvested space invader keycaps Tadpole mount </description>
+    </item>
+    <item>
+      <title>NMB RT-8700 series keyboard</title>
+      <link>https://rudra.dev/keyboards/nmb_8700_series/</link>
+      <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/nmb_8700_series/</guid>
+      <description>History RT-8700 is a series of full-sized keyboards manufactured by NMB in the mid-’90s. They came with the fifth generation Hi-Tek series 725 switches, which is the last generation of its type.&#xA;Unlike the 4th generation boards, these have a smaller footprint and thinner bezels. Here is the original Ad for these boards.&#xA;NMB RT-8700 series keyboard Ad source VintKeys NMB used to market them as the “Right Touch” keyboard, and these were the alternatives of the venerable IBM Model M and Northgate Omnikey 101s, among others.</description>
+    </item>
+    <item>
+      <title>Televideo 990/995 DEC keyboard</title>
+      <link>https://rudra.dev/keyboards/televideo_99x_dec/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/keyboards/televideo_99x_dec/</guid>
+      <description>History This keyboard was manufactured by NMB in the early &amp;rsquo;90s for Televideo terminals. This particular board was made for the Televideo 99X series of terminals. This layout is known as DEC layout, named after Digital Equipment Corporation and uses a different protocol to communicate with the Terminals.&#xA;Acquisition I was lucky enough to get into the largest vintage computer keyboard group-buy in history. Inoznez, used his parent&amp;rsquo;s farm to store the boards and slowly shipped them out all over the world.</description>
+    </item>
+  </channel>
+</rss>

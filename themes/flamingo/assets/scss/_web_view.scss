@@ -1,0 +1,49 @@
+@media only screen and (min-width: 600px) {
+
+  html {
+    font-size: $global-font-size;
+  }
+
+  .layout {
+    .title-wrapper {
+      @include flexify;
+      flex-direction: row;
+    }
+    .title {
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+  }
+
+
+  .blog-list {
+    .list-item {
+      @include flexify;
+      flex-direction: unset;
+      padding: 0;
+      margin-bottom: 0.5rem;
+    }
+    .date-label {
+      font-size: 100%;
+      margin-right: 0;
+    }
+  }
+  .project-board {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .highlight {
+    @include full-width-web;
+  }
+
+  .post-image {
+    @include full-width-web;
+  }
+
+  .collection-card {
+      flex: 0 1 48%;
+      margin-bottom: 1rem;
+  }
+}

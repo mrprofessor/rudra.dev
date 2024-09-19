@@ -1,0 +1,165 @@
+<!-- SEO !-->
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta itemprop="name" content="{{ .Title }}" />
+<meta name="application-name" content="{{ .Title }}" />
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<base href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<!-- mrprofessor -->
+<meta property="og:article:author" content="mrprofessor" />
+<meta property="article:author" content="mrprofessor" />
+<meta name="author" content="mrprofessor" />
+
+<!-- TODO -->
+<!-- Add a default image for posts that don't have one -->
+{{ if .Params.Cover }}
+  <meta property="og:image" content="{{ .Params.Cover | absURL }}" />
+  <meta property="twitter:image" content="{{ .Params.Cover | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Params.Cover | absURL }}" />
+{{ else if .Params.Image }}
+  <meta property="og:image" content="{{ .Params.Image | absURL }}" />
+  <meta property="twitter:image" content="{{ .Params.Image | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Params.Image | absURL }}" />
+{{ end }}
+
+<!-- Twitter stuff -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creater" content="mrprofessor" />
+<meta name="twitter:title" content="{{ .Title }}" />
+
+
+<meta property="og:locale" content="{{ .Language.Lang }}">
+<meta name="language" content="{{ .Language.LanguageName }}">
+{{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+ {{ end }}
+
+
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+<!-- Sitemap & RSS Feed Tags -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
+
+<!-- FIXME -->
+{{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+
+<!-- Pagination meta tags for list pages only -->
+<!-- To make sure this renders only in the article page, we check the section -->
+{{ if eq .Section "posts" }}
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="{{ .Site.Params.github }}" />
+<meta property="og:article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+<meta property="article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+
+{{ with .Site.Params.author }}
+    <meta property="og:article:author" content="{{humanize . }}" />
+    <meta property="article:author" content="{{humanize . }}" />
+    <meta name="author" content="{{humanize . }}" />
+{{ end }}
+
+<!-- FIXME -->
+{{ with .Site.Params.category }}
+    <meta name="news_keywords" content="{{ index . 0 }}" />
+    <meta property="article:section" content="{{ index . 0 }}" />
+{{ end }}
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": {{ .Title }},
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.github }}"
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02" }}",
+      "description": {{ .Description }},
+      "wordCount": {{ .WordCount }},
+      "mainEntityOfPage": "True",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+      "image": {
+        "@type": "imageObject",
+        "url": "{{ with .Params.image }}{{ .Permalink }}{{ end }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "imageObject",
+          "url": "https://rudra.dev/images/favicon.ico"
+        }
+      }
+    }
+  </script>
+{{ end }}
+
+ 
+{{ if eq .Section "about" }}
+<!-- Pagination meta tags for list pages only -->
+<meta property="og:type" content="website" />
+<meta name="author" content="{{ .Site.Params.author }}" />
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{ .Permalink }}",
+    "sameAs": [
+      "{{ .Site.Params.twitter }}",
+      "{{ .Site.Params.github }}"
+    ],
+    "name": "{{ .Title }}",
+    "logo": "https://rudra.dev/images/favicon.ico"
+      // "fdf": '{{ path.Join .Site.BaseURL .Site.Params.favicon }}'
+  }
+</script>
+{{ end }}
+
+
+<!-- Search Engine Crawler Tags -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+<!-- Specific Social Media Tags -->
+<meta name="twitter:site" content="{{ .Site.Params.twitter }}">
+<meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+
+
+<!--            -->
+<!-- Other Tags -->
+<!--            -->
+
+<!-- Manifest File -->
+<!-- FIXME -->
+<!--<link rel="manifest" href="{{ .Site.BaseURL }}manifest.json" />-->
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#141414" />
+<meta name="msapplication-TileColor" content="#141414" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.sitename }}" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
