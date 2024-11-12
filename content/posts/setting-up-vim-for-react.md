@@ -2,7 +2,7 @@
 title = "Setting up (Neo)vim for React development"
 author = ["rudra kar"]
 date = 2019-05-03
-tags = ["vim", "react", "editor", "javascript", "web"]
+tags = ["vim", "react", "editor", "javascript", "web", "archive"]
 draft = false
 aliases = "/post/setting-up-vim-for-react"
 +++

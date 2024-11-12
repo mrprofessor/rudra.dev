@@ -2,7 +2,7 @@
 title = "Setting up a celery task scheduler in Flask"
 author = ["rudra kar"]
 date = 2019-11-30
-tags = ["python", "flask", "celery"]
+tags = ["python", "flask", "celery", "archive"]
 draft = false
 aliases = "/post/setting-up-a-task-scheduler-in-flask"
 +++

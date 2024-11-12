@@ -2,7 +2,7 @@
 title = "Maintaining multiple GitHub accounts"
 author = ["rudra kar"]
 date = 2018-02-24
-tags = ["git", "github"]
+tags = ["git", "github", "archive"]
 draft = false
 aliases = "/post/maintaining-multiple-github-accounts"
 +++

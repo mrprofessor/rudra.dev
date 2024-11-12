@@ -2,7 +2,7 @@
 title = "Configuring nodejs and npm behind a proxy"
 author = ["rudra kar"]
 date = 2017-05-27
-tags = ["node", "npm", "productivity"]
+tags = ["node", "npm", "productivity", "archive"]
 draft = false
 aliases = "/post/configuring-npm-behind-a-proxy"
 +++

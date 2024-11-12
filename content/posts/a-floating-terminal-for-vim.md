@@ -2,7 +2,7 @@
 title = "A floating terminal for (Neo)vim"
 author = ["rudra kar"]
 date = 2019-10-12
-tags = ["unix", "vim", "neovim", "editor", "productivity"]
+tags = ["unix", "vim", "neovim", "editor", "productivity", "archive"]
 draft = false
 aliases = "/post/a-floating-terminal-for-vim"
 +++

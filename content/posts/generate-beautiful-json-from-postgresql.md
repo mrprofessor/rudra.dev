@@ -2,7 +2,7 @@
 title = "Generate beautiful JSON from PostgreSQL"
 author = ["rudra kar"]
 date = 2020-05-19
-tags = ["postgresql", "json", "sql"]
+tags = ["postgresql", "json", "sql", "archive"]
 draft = false
 aliases = "/post/generate-beautiful-json-from-postgresql"
 +++

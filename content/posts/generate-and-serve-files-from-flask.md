@@ -2,7 +2,7 @@
 title = "Generate and serve files from Flask"
 author = ["rudra kar"]
 date = 2019-10-05
-tags = ["python", "flask"]
+tags = ["python", "flask", "archive"]
 draft = false
 aliases = "/post/generate-and-serve-files-from-flask"
 +++

@@ -67,9 +67,10 @@ publishDir = "docs"
   twitter = "@weary_beard"
   favicon = "/images/favicon.ico"
   mainSections = "posts"
-  mainSummary = '''Thoughts, obsessions, and
-  mostly rants. FYI: Posts older than 6 months? Yeah, no promises on
-  those. Time moves on, and so do I. Proceed at your own risk!'''
+  mainSummary = '''Thoughts, obsessions, and mostly rants. FYI: Posts
+  older than 6 months are like that milk carton at the back of your
+  fridge. Proceed at your own risk!'''
+
 
 
 # Projects list

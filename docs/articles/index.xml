@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on rudra kar</title>
+    <link>https://rudra.dev/articles/</link>
+    <description>Recent content in Articles on rudra kar</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rudra.dev/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recreational programming as a hobby</title>
+      <link>https://rudra.dev/articles/recreational-programming-as-a-hobby/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://rudra.dev/articles/recreational-programming-as-a-hobby/</guid>
+      <description>Table of Contents Abstract Abstract For a long period of time, there existed a small group of people who wouldn&amp;rsquo;t program for a living, rather program to either solve problems or just have fun. I was lucky enough to have a job that lets me write programs for money, and over the time it grayed the line between programming for fun vs programming for money.</description>
+    </item>
+  </channel>
+</rss>

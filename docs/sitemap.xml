@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rudra.dev/articles/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rudra.dev/articles/recreational-programming-as-a-hobby/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rudra.dev/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rudra.dev/tags/alps/</loc>
     <lastmod>2023-10-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -15,9 +24,6 @@
     <lastmod>2023-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rudra.dev/keyboards/ncr_80_smk_buid/</loc>
-    <lastmod>2023-10-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rudra.dev/</loc>
     <lastmod>2023-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rudra.dev/tags/</loc>
@@ -162,6 +168,9 @@
     <lastmod>2021-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rudra.dev/posts/a-minimal-tmux-configuration-from-scratch/</loc>
+    <lastmod>2021-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rudra.dev/tags/archive/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rudra.dev/tags/mac/</loc>

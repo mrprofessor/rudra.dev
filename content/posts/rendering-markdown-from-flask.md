@@ -2,7 +2,7 @@
 title = "Rendering markdown from Flask"
 author = ["rudra kar"]
 date = 2020-02-04
-tags = ["python", "flask", "markdown"]
+tags = ["python", "flask", "markdown", "archive"]
 draft = false
 aliases = "/post/rendering-markdown-from-flask"
 +++

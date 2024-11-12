@@ -2,7 +2,7 @@
 title = "A minimal tmux configuration from scratch"
 author = ["rudra kar"]
 date = 2021-03-14
-tags = ["tmux", "productivity", "unix", "mac"]
+tags = ["tmux", "productivity", "unix", "mac", "archive"]
 draft = false
 +++
 

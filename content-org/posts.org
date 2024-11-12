@@ -24,7 +24,7 @@
 :CUSTOM_ID: posts
 :END:
 
-** Configuring nodejs and npm behind a proxy :node:npm:productivity:
+** Configuring nodejs and npm behind a proxy :node:npm:productivity:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: configuring-npm-behind-a-proxy
    :EXPORT_DATE: 2017-05-27
@@ -62,7 +62,7 @@ on port 80 (in which case =<port>= is not required).
 Once you have set these, your npm install, =npm i -g etc=. would work
 properly.
 
-** Maintaining multiple GitHub accounts :git:github:
+** Maintaining multiple GitHub accounts :git:github:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: maintaining-multiple-github-accounts
    :EXPORT_DATE: 2018-02-24
@@ -105,7 +105,7 @@ And that five minute I save every day from this hack..spends for...I
 don't know.
 
 Adios.
-** Setting up (Neo)vim for React development :vim:react:editor:javascript:web:
+** Setting up (Neo)vim for React development :vim:react:editor:javascript:web:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: setting-up-vim-for-react
    :EXPORT_DATE: 2019-05-03
@@ -235,7 +235,7 @@ on [[https://twitter.com/ThisIsRudra][Twitter]].
 
 My full vim setup can be found
 [[https://github.com/mrprofessor/dotfiles/blob/master/.vimrc][here]].
-** Generate and serve files from Flask :python:flask:
+** Generate and serve files from Flask :python:flask:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: generate-and-serve-files-from-flask
    :EXPORT_DATE: 2019-10-05
@@ -349,7 +349,7 @@ Here is the full source code with a working example.
 
 Feel free to edit and play around. Adios!
 
-** A floating terminal for (Neo)vim :unix:vim:neovim:editor:productivity:
+** A floating terminal for (Neo)vim :unix:vim:neovim:editor:productivity:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: a-floating-terminal-for-vim
    :EXPORT_DATE: 2019-10-12
@@ -426,7 +426,7 @@ Well that's for another post.
 
 Adios!
 
-** Setting up a celery task scheduler in Flask         :python:flask:celery:
+** Setting up a celery task scheduler in Flask :python:flask:celery:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: setting-up-a-task-scheduler-in-flask
    :EXPORT_DATE: 2019-11-30
@@ -737,7 +737,7 @@ The above-mentioned code can be found here:
 
 Adios!
 
-** Rendering markdown from Flask :python:flask:markdown:
+** Rendering markdown from Flask :python:flask:markdown:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: rendering-markdown-from-flask
    :EXPORT_DATE: 2020-02-04
@@ -862,7 +862,7 @@ Here is the full source code running on Glitch.
 
 Feel free to remix and play around. Adios!
 
-** Building a GitHub authentication service :github:auth:flask:python:
+** Building a GitHub authentication service :github:auth:flask:python:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: building-a-github-auth-service
    :EXPORT_DATE: 2020-04-11
@@ -1019,7 +1019,7 @@ The complete source code can be found
 [[https://github.com/solitudenote/gitkeeper][here]]. Feel free to fork
 and play around. Adios.
 
-** Generate beautiful JSON from PostgreSQL :postgresql:json:sql:
+** Generate beautiful JSON from PostgreSQL :postgresql:json:sql:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: generate-beautiful-json-from-postgresql
    :EXPORT_DATE: 2020-05-19
@@ -1296,7 +1296,7 @@ as we have nested structures. As long as we understand the basic JSON
 functions and sub-queries we can build almost any kind of structure
 without stressing the back-end processes.
 
-** A minimal tmux configuration from scratch :tmux:productivity:unix:mac:
+** A minimal tmux configuration from scratch :tmux:productivity:unix:mac:archive:
    :PROPERTIES:
    :EXPORT_FILE_NAME: a-minimal-tmux-configuration-from-scratch
    :EXPORT_DATE: 2021-03-14
